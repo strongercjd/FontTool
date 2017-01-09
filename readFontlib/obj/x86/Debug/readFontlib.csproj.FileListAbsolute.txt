@@ -1,0 +1,9 @@
+E:\tempBuild\c#\File\readFontlib\readFontlib\obj\x86\Debug\readFontlib.readFontlib.resources
+E:\tempBuild\c#\File\readFontlib\readFontlib\obj\x86\Debug\readFontlib.Properties.Resources.resources
+E:\tempBuild\c#\File\readFontlib\readFontlib\obj\x86\Debug\readFontlib.csproj.GenerateResource.Cache
+E:\tempBuild\c#\File\readFontlib\readFontlib\obj\x86\Debug\readFontlib.csprojResolveAssemblyReference.cache
+E:\tempBuild\c#\File\readFontlib\readFontlib\bin\Debug\字库读取器V2.0.exe
+E:\tempBuild\c#\File\readFontlib\readFontlib\bin\Debug\字库读取器V2.0.pdb
+E:\tempBuild\c#\File\readFontlib\readFontlib\obj\x86\Debug\字库读取器V2.0.exe
+E:\tempBuild\c#\File\readFontlib\readFontlib\obj\x86\Debug\字库读取器V2.0.pdb
+E:\tempBuild\c#\File\readFontlib\readFontlib\bin\Debug\Resources\ziku
