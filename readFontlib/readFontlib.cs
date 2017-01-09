@@ -420,6 +420,7 @@ namespace readFontlib
             quWeiFlag = true;
             comboBoxQu.Enabled = true;
             comboBoxWei.Enabled = true;
+
         }
 
         private void calIndex()
