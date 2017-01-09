@@ -338,7 +338,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 412);
+            this.ClientSize = new System.Drawing.Size(695, 411);
             this.Controls.Add(this.groupBoxData);
             this.Controls.Add(this.groupBoxSet);
             this.Controls.Add(this.groupBoxpic);
@@ -347,6 +347,7 @@
             this.MinimumSize = new System.Drawing.Size(711, 450);
             this.Name = "readFontlib";
             this.Text = "字库读取器V2.1";
+            this.Load += new System.EventHandler(this.readFontlib_Load);
             this.groupBoxpic.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).EndInit();
             this.groupBoxSet.ResumeLayout(false);

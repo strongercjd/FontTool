@@ -398,21 +398,28 @@ namespace readFontlib
 
         private void numericUpDownIndex_DoubleClick(object sender, EventArgs e)
         {
-            if ((fontPath != null) && (File.Exists(fontPath)))
-            {
-                if (quWeiFlag)
-                {
-                    quWeiFlag = true;
-                    comboBoxQu.Enabled = false;
-                    comboBoxWei.Enabled = false;
-                }
-                else
-                {
-                    quWeiFlag = true;
-                    comboBoxQu.Enabled = true;
-                    comboBoxWei.Enabled = true;
-                }
-            }
+            //if ((fontPath != null) && (File.Exists(fontPath)))
+            //{
+            //    if (quWeiFlag)
+            //    {
+            //        quWeiFlag = true;
+            //        comboBoxQu.Enabled = false;
+            //        comboBoxWei.Enabled = false;
+            //    }
+            //    else
+            //    {
+            //        quWeiFlag = true;
+            //        comboBoxQu.Enabled = true;
+            //        comboBoxWei.Enabled = true;
+            //    }
+            //}
+        }
+
+        private void readFontlib_Load(object sender, EventArgs e)
+        {
+            quWeiFlag = true;
+            comboBoxQu.Enabled = true;
+            comboBoxWei.Enabled = true;
         }
 
         private void calIndex()

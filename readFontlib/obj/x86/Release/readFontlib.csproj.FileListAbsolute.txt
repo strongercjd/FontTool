@@ -7,3 +7,12 @@ E:\tempBuild\c#\File\readFontlib\readFontlib\bin\Release\字库读取器V2.1.pdb
 E:\tempBuild\c#\File\readFontlib\readFontlib\obj\x86\Release\字库读取器V2.1.exe
 E:\tempBuild\c#\File\readFontlib\readFontlib\obj\x86\Release\字库读取器V2.1.pdb
 E:\tempBuild\c#\File\readFontlib\readFontlib\obj\x86\Release\readFontlib.csprojResolveAssemblyReference.cache
+D:\git code\readFontlib\readFontlib\obj\x86\Release\字库读取器V2.1.exe
+D:\git code\readFontlib\readFontlib\obj\x86\Release\字库读取器V2.1.pdb
+D:\git code\readFontlib\readFontlib\bin\Release\Resources\ziku
+D:\git code\readFontlib\readFontlib\bin\Release\字库读取器V2.1.exe
+D:\git code\readFontlib\readFontlib\bin\Release\字库读取器V2.1.pdb
+D:\git code\readFontlib\readFontlib\obj\x86\Release\readFontlib.csprojResolveAssemblyReference.cache
+D:\git code\readFontlib\readFontlib\obj\x86\Release\readFontlib.readFontlib.resources
+D:\git code\readFontlib\readFontlib\obj\x86\Release\readFontlib.Properties.Resources.resources
+D:\git code\readFontlib\readFontlib\obj\x86\Release\readFontlib.csproj.GenerateResource.Cache
