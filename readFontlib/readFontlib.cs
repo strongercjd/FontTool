@@ -299,6 +299,7 @@ namespace readFontlib
         private void buttonSaveBMP_Click(object sender, EventArgs e)
         {
             writeFontData();
+            MessageBox.Show("成功保存这个字模");
         }
 
         private void radioButtonFontLib_CheckedChanged(object sender, EventArgs e)

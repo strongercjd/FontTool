@@ -201,7 +201,7 @@
             this.textBoxFontName.ReadOnly = true;
             this.textBoxFontName.Size = new System.Drawing.Size(169, 21);
             this.textBoxFontName.TabIndex = 6;
-            this.textBoxFontName.Text = "小凡系列";
+            this.textBoxFontName.Text = "打开字库";
             this.textBoxFontName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDownHeight
@@ -311,7 +311,7 @@
             this.richTextBoxData.ReadOnly = true;
             this.richTextBoxData.Size = new System.Drawing.Size(263, 247);
             this.richTextBoxData.TabIndex = 2;
-            this.richTextBoxData.Text = "\n\n\n\n\n小凡系列——字库读取器V2.1\n版权所有（C）2016";
+            this.richTextBoxData.Text = "\n\n\n\n\n字库读取器V2.1\n版权所有（C）2016";
             this.toolTipReadFont.SetToolTip(this.richTextBoxData, "双击取反");
             this.richTextBoxData.DoubleClick += new System.EventHandler(this.richTextBoxData_DoubleClick);
             // 
