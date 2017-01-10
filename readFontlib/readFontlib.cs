@@ -446,20 +446,38 @@ namespace readFontlib
                 {
                     int Y = contextMenuPoint.Y;
                     int X = contextMenuPoint.X;
-                    if((X > 97)&& (Y > 97))
+
+                    int X_start = (386 - width * 12) / 2;
+                    int Y_start = (386 - height * 12) / 2;
+                    if ((X > X_start) && (Y > Y_start))
                     {
-                        int x_pain = (X - 97) / 12;
-                        int y_pain = (Y - 97) / 12;
-                        date_cache = data[y_pain * 2 + x_pain / 8];
-                        if (x_pain > 7)
+                        int x_pain = (X - X_start) / 12;
+                        int y_pain = (Y - Y_start) / 12;
+                        date_cache = data[y_pain * ((uniwidth / 8) + 1) + x_pain / 8];
+                        if (x_pain > 23)
                         {
-                            wei_num = x_pain - 8;
+                            wei_num = x_pain - 24;
                         }
-                        else {
-                            wei_num = x_pain;
+                        else
+                        {
+                            if (x_pain > 15)
+                            {
+                                wei_num = x_pain - 16;
+                            }
+                            else
+                            {
+                                if (x_pain > 7)
+                                {
+                                    wei_num = x_pain - 8;
+                                }
+                                else
+                                {
+                                    wei_num = x_pain;
+                                }
+                            }
                         }
-                        date_cache = date_cache ^ (0X80>>wei_num);
-                        data[y_pain * 2 + x_pain / 8] = (byte)date_cache;
+                        date_cache = date_cache ^ (0X80 >> wei_num);
+                        data[y_pain * ((uniwidth / 8) + 1) + x_pain / 8] = (byte)date_cache;
                         paintFont();
                         buttonGetData_Click(this, null);
                     }
