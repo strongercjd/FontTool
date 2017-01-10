@@ -25,6 +25,7 @@ namespace readFontlib
         string fontPath;
         bool quWeiFlag;
         bool lockFlag;
+        bool editFlag;
 
 
         private void dataInit()
@@ -37,6 +38,7 @@ namespace readFontlib
             index = 0;
             quWeiFlag = false;
             lockFlag = false;
+            editFlag = false;//默认查看状态
             bmp = new Bitmap(1, 1, System.Drawing.Imaging.PixelFormat.Format1bppIndexed);
             numericUpDownWidth.Value = 16;
             numericUpDownHeight.Value = 16;
@@ -423,6 +425,25 @@ namespace readFontlib
 
         }
 
+        private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (editFlag == true)
+            {
+                Point contextMenuPoint = pictureBoxFont.PointToClient(Control.MousePosition);
+                if (e.Button == MouseButtons.Left)//鼠标左键
+                {
+                    //paintFont(true, true, changeX, changeY);
+                    //mouseClickFlag = 1;
+                }
+                else
+                {
+                    //paintFont(true, false, changeX, changeY);
+                    //mouseClickFlag = 2;
+                }
+
+            }
+        }
+
         private void calIndex()
         {
             int qu, wei;
@@ -442,43 +463,16 @@ namespace readFontlib
 
         private void pictureBoxFont_DoubleClick(object sender, EventArgs e)
         {
-            int i;
-            uniwidth = 10;
-            uniheight = 10;
-            width = 16;
-            height = 16;
-            index = 0;
-            quWeiFlag = false;
-            lockFlag = false;
-            radioButtonFontLib.Checked = true;
-            numericUpDownWidth.Value = 16;
-            numericUpDownHeight.Value = 16;
-            for (i = 0; i < 2048; i++)
+            if (editFlag == false)
             {
-                data[i] = 0;
+                editFlag = true;
+                MessageBox.Show("编辑模式");
             }
-            comboBoxQu.SelectedIndex = 0;
-            comboBoxWei.SelectedIndex = 0;
-            comboBoxQu.Enabled = false;
-            comboBoxWei.Enabled = false;
-            numericUpDownWidth.Value = 16;
-            numericUpDownHeight.Value = 16;
-            readDefaultFontData();
-            paintFont();
-            textBoxFontName.Text = "小凡系列";
-            textBoxFontName.BackColor = Color.White;
-            textBoxFontName.ForeColor = Color.Red;
-            FontStyle style = FontStyle.Bold;
-            Font tmpFont = new Font("宋体", 12, style);
-            richTextBoxData.Font = tmpFont;
-            richTextBoxData.Text = "\n\n\n\n\n小凡系列——字库读取器V2.1\n版权所有（C）2016";
-            richTextBoxData.SelectAll();
-            richTextBoxData.SelectionAlignment = HorizontalAlignment.Center;
-            richTextBoxData.Enabled = false;
-            richTextBoxData.BackColor = Color.White;
-            richTextBoxData.ForeColor = Color.Red;
-
-            //FontStyle style = FontStyle.Regular;
+            else
+            {
+                editFlag = true;
+                MessageBox.Show("查看模式");
+            }
         }
     }
 }

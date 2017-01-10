@@ -80,8 +80,9 @@
             this.pictureBoxFont.Size = new System.Drawing.Size(390, 390);
             this.pictureBoxFont.TabIndex = 0;
             this.pictureBoxFont.TabStop = false;
-            this.toolTipReadFont.SetToolTip(this.pictureBoxFont, "双击复位");
+            this.toolTipReadFont.SetToolTip(this.pictureBoxFont, "双击改变模式");
             this.pictureBoxFont.DoubleClick += new System.EventHandler(this.pictureBoxFont_DoubleClick);
+            this.pictureBoxFont.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseDown);
             // 
             // groupBoxSet
             // 
