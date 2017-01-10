@@ -29,6 +29,7 @@ namespace readFontlib
         bool editFlag;
 
 
+
         private void dataInit()
         {
             int i;
@@ -94,6 +95,30 @@ namespace readFontlib
             }*/
             stream.Dispose();
         }
+
+        private void writeFontData()
+        {
+            int i, startPosition, writeLenth;
+            try
+            {
+                FileStream fs_write = new FileStream(fontPath, FileMode.Open, FileAccess.Write);
+                StreamWriter br = new StreamWriter(fs_write);
+                writeLenth = height * (width / 8 + (((width % 8) != 0) ? 1 : 0));
+                startPosition = writeLenth * index;
+                br.BaseStream.Seek(startPosition, SeekOrigin.Begin);
+                for (i = 0; i < writeLenth; i++)
+                {
+                     br.Write(data[i]);
+                }
+                br.Close();
+                fs_write.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(this, e.Message, "小凡", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void readFontData()
         {
             int i, startPosition, readLenth;
@@ -453,6 +478,11 @@ namespace readFontlib
                         data[y_pain * 2 + x_pain / 8] = (byte)date_cache;
                         paintFont();
                         buttonGetData_Click(this, null);
+                        for (int i = 0; i < 2048; i++)
+                        {
+                            data[i] = 0;
+                        }
+                        writeFontData();
 
                     }
 
