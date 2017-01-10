@@ -166,10 +166,10 @@
             this.radioButtonUnit.AutoSize = true;
             this.radioButtonUnit.Location = new System.Drawing.Point(8, 69);
             this.radioButtonUnit.Name = "radioButtonUnit";
-            this.radioButtonUnit.Size = new System.Drawing.Size(71, 16);
+            this.radioButtonUnit.Size = new System.Drawing.Size(53, 16);
             this.radioButtonUnit.TabIndex = 1;
             this.radioButtonUnit.TabStop = true;
-            this.radioButtonUnit.Text = "单元宽高";
+            this.radioButtonUnit.Text = "ASCII";
             this.radioButtonUnit.UseVisualStyleBackColor = true;
             this.radioButtonUnit.CheckedChanged += new System.EventHandler(this.radioButtonUnit_CheckedChanged);
             // 
@@ -263,10 +263,10 @@
             this.radioButtonFontLib.AutoSize = true;
             this.radioButtonFontLib.Location = new System.Drawing.Point(8, 42);
             this.radioButtonFontLib.Name = "radioButtonFontLib";
-            this.radioButtonFontLib.Size = new System.Drawing.Size(71, 16);
+            this.radioButtonFontLib.Size = new System.Drawing.Size(59, 16);
             this.radioButtonFontLib.TabIndex = 0;
             this.radioButtonFontLib.TabStop = true;
-            this.radioButtonFontLib.Text = "字库宽高";
+            this.radioButtonFontLib.Text = "GB2312";
             this.radioButtonFontLib.UseVisualStyleBackColor = true;
             this.radioButtonFontLib.CheckedChanged += new System.EventHandler(this.radioButtonFontLib_CheckedChanged);
             // 
@@ -311,7 +311,7 @@
             this.richTextBoxData.ReadOnly = true;
             this.richTextBoxData.Size = new System.Drawing.Size(263, 247);
             this.richTextBoxData.TabIndex = 2;
-            this.richTextBoxData.Text = "\n\n\n\n\n字库读取器V2.1\n版权所有（C）2016";
+            this.richTextBoxData.Text = "\n\n\n\n\n字库读取&修改器权所有（C）2016";
             this.toolTipReadFont.SetToolTip(this.richTextBoxData, "双击取反");
             this.richTextBoxData.DoubleClick += new System.EventHandler(this.richTextBoxData_DoubleClick);
             // 
@@ -346,7 +346,7 @@
             this.MaximumSize = new System.Drawing.Size(711, 450);
             this.MinimumSize = new System.Drawing.Size(711, 450);
             this.Name = "readFontlib";
-            this.Text = "字库读取器V2.1";
+            this.Text = "字库读取&修改器";
             this.Load += new System.EventHandler(this.readFontlib_Load);
             this.groupBoxpic.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).EndInit();

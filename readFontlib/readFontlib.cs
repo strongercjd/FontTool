@@ -27,6 +27,7 @@ namespace readFontlib
         bool quWeiFlag;
         bool lockFlag;
         bool editFlag;
+        bool ASCII_Flag;
 
 
 
@@ -96,7 +97,7 @@ namespace readFontlib
             stream.Dispose();
         }
 
-        private void writeFontData()
+        private void writeFontData()//把修改后的字模信息写入字库文件
         {
             int i, startPosition, writeLenth;
             try
@@ -119,7 +120,7 @@ namespace readFontlib
             }
         }
 
-        private void readFontData()
+        private void readFontData()//读字库数据
         {
             int i, startPosition, readLenth;
             try
@@ -302,9 +303,18 @@ namespace readFontlib
             MessageBox.Show("成功保存这个字模");
         }
 
-        private void radioButtonFontLib_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonFontLib_CheckedChanged(object sender, EventArgs e)//选中GB2312
         {
             lockFlag = true;
+            comboBoxQu.Enabled = true;
+
+            ASCII_Flag = false;
+            comboBoxWei.Items.Clear();
+            for (int i = 161; i < 255; i++)
+            {
+                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
+            }
+            //comboBoxWei.SelectedIndex = 161.ToString("X2");
             if (radioButtonFontLib.Checked)
             {
                 numericUpDownWidth.Maximum = (picSize + spaceSize) / (uniwidth + spaceSize);
@@ -314,17 +324,25 @@ namespace readFontlib
             }
             lockFlag = false;
         }
-        private void radioButtonUnit_CheckedChanged(object sender, EventArgs e)
+        private void radioButtonUnit_CheckedChanged(object sender, EventArgs e)//选中ASCII
         {
-            lockFlag = true;
-            if (radioButtonUnit.Checked)
+            //lockFlag = true;
+            //if (radioButtonUnit.Checked)
+            //{
+            //    numericUpDownWidth.Maximum = (picSize + spaceSize) / width - spaceSize;
+            //    numericUpDownHeight.Maximum = (picSize + spaceSize) / height - spaceSize;
+            //    numericUpDownWidth.Value = uniwidth;
+            //    numericUpDownHeight.Value = uniheight;
+            //}
+            //lockFlag = false;
+            comboBoxQu.Enabled = false;
+            ASCII_Flag = true;
+            comboBoxWei.Items.Clear();
+            for (int i = 0; i < 256; i++)
             {
-                numericUpDownWidth.Maximum = (picSize + spaceSize) / width - spaceSize;
-                numericUpDownHeight.Maximum = (picSize + spaceSize) / height - spaceSize;
-                numericUpDownWidth.Value = uniwidth;
-                numericUpDownHeight.Value = uniheight;
+                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
             }
-            lockFlag = false;
+            comboBoxWei.SelectedIndex = 0;
         }
 
         private void numericUpDownWidth_ValueChanged(object sender, EventArgs e)
@@ -497,7 +515,15 @@ namespace readFontlib
             int qu, wei;
             qu = comboBoxQu.SelectedIndex;
             wei = comboBoxWei.SelectedIndex;
-            numericUpDownIndex.Value = qu * 94 + wei;
+            if (ASCII_Flag == true)
+            {
+                numericUpDownIndex.Value = wei;
+            }
+            else
+            {
+                numericUpDownIndex.Value = qu * 94 + wei;
+            }
+            
         }
         private void comboBoxQu_SelectedIndexChanged(object sender, EventArgs e)
         {
