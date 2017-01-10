@@ -134,7 +134,7 @@
             this.buttonSaveBMP.Name = "buttonSaveBMP";
             this.buttonSaveBMP.Size = new System.Drawing.Size(39, 56);
             this.buttonSaveBMP.TabIndex = 11;
-            this.buttonSaveBMP.Text = "保存BMP";
+            this.buttonSaveBMP.Text = "保存这个字模";
             this.buttonSaveBMP.UseVisualStyleBackColor = true;
             this.buttonSaveBMP.Click += new System.EventHandler(this.buttonSaveBMP_Click);
             // 

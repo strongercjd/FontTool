@@ -102,7 +102,7 @@ namespace readFontlib
             try
             {
                 FileStream fs_write = new FileStream(fontPath, FileMode.Open, FileAccess.Write);
-                StreamWriter br = new StreamWriter(fs_write);
+                BinaryWriter br = new BinaryWriter(fs_write);
                 writeLenth = height * (width / 8 + (((width % 8) != 0) ? 1 : 0));
                 startPosition = writeLenth * index;
                 br.BaseStream.Seek(startPosition, SeekOrigin.Begin);
@@ -298,23 +298,7 @@ namespace readFontlib
         }
         private void buttonSaveBMP_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveBMP = new SaveFileDialog();
-            saveBMP.Filter = "32位位图|*.bmp";
-            saveBMP.RestoreDirectory = true; //记忆上次浏览路径
-            try
-            {
-                if ((saveBMP.ShowDialog() == DialogResult.OK) && (saveBMP.FileName != ""))
-                {
-                    createBMP();
-                    bmp.Save(saveBMP.FileName);
-                    MessageBox.Show(this, "保存为" + getFontName(saveBMP.FileName) + "成功！", "小凡提示：", MessageBoxButtons.OK, MessageBoxIcon.None);
-                }
-                saveBMP.Dispose();
-            }
-            catch (Exception a)
-            {
-                MessageBox.Show(this, a.Message, "小凡提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            writeFontData();
         }
 
         private void radioButtonFontLib_CheckedChanged(object sender, EventArgs e)
@@ -478,12 +462,6 @@ namespace readFontlib
                         data[y_pain * 2 + x_pain / 8] = (byte)date_cache;
                         paintFont();
                         buttonGetData_Click(this, null);
-                        for (int i = 0; i < 2048; i++)
-                        {
-                            data[i] = 0;
-                        }
-                        writeFontData();
-
                     }
 
                 }
