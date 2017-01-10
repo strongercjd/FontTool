@@ -10,6 +10,7 @@ using System.IO;
 using System.Reflection;
 using System.Resources;
 
+
 namespace readFontlib
 {
     public partial class readFontlib : Form
@@ -427,18 +428,38 @@ namespace readFontlib
 
         private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)
         {
+            int wei_num;
+            int date_cache;
             if (editFlag == true)
             {
                 Point contextMenuPoint = pictureBoxFont.PointToClient(Control.MousePosition);
                 if (e.Button == MouseButtons.Left)//鼠标左键
                 {
-                    //paintFont(true, true, changeX, changeY);
-                    //mouseClickFlag = 1;
+                    int Y = contextMenuPoint.Y;
+                    int X = contextMenuPoint.X;
+                    if((X > 97)&& (Y > 97))
+                    {
+                        int x_pain = (X - 97) / 12;
+                        int y_pain = (Y - 97) / 12;
+                        date_cache = data[y_pain * 2 + x_pain / 8];
+                        if (x_pain > 7)
+                        {
+                            wei_num = x_pain - 8;
+                        }
+                        else {
+                            wei_num = x_pain;
+                        }
+                        date_cache = date_cache ^ (0X80>>wei_num);
+                        data[y_pain * 2 + x_pain / 8] = (byte)date_cache;
+                        paintFont();
+                        buttonGetData_Click(this, null);
+
+                    }
+
                 }
                 else
                 {
-                    //paintFont(true, false, changeX, changeY);
-                    //mouseClickFlag = 2;
+
                 }
 
             }
@@ -470,7 +491,7 @@ namespace readFontlib
             }
             else
             {
-                editFlag = true;
+                editFlag = false;
                 MessageBox.Show("查看模式");
             }
         }

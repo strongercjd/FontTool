@@ -77,7 +77,7 @@
             // 
             this.pictureBoxFont.Location = new System.Drawing.Point(5, 15);
             this.pictureBoxFont.Name = "pictureBoxFont";
-            this.pictureBoxFont.Size = new System.Drawing.Size(390, 390);
+            this.pictureBoxFont.Size = new System.Drawing.Size(386, 386);
             this.pictureBoxFont.TabIndex = 0;
             this.pictureBoxFont.TabStop = false;
             this.toolTipReadFont.SetToolTip(this.pictureBoxFont, "双击改变模式");
@@ -158,7 +158,6 @@
             this.numericUpDownIndex.Name = "numericUpDownIndex";
             this.numericUpDownIndex.Size = new System.Drawing.Size(52, 21);
             this.numericUpDownIndex.TabIndex = 9;
-            this.toolTipReadFont.SetToolTip(this.numericUpDownIndex, "双击启用区位码，仅支持GB2312编码");
             this.numericUpDownIndex.ValueChanged += new System.EventHandler(this.numericUpDownIndex_ValueChanged);
             this.numericUpDownIndex.DoubleClick += new System.EventHandler(this.numericUpDownIndex_DoubleClick);
             // 
