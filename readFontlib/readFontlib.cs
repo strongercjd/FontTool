@@ -31,7 +31,7 @@ namespace readFontlib
 
 
 
-        private void dataInit()
+        private void dataInit()//数据初始化，在读取字库时调用
         {
             int i;
             uniwidth = 10;
@@ -79,7 +79,7 @@ namespace readFontlib
             richTextBoxData.BackColor = Color.White;
             richTextBoxData.ForeColor = Color.Red;
         }
-        private void readDefaultFontData()
+        private void readDefaultFontData()//读取默认字库数据
         {
             int i;
             numericUpDownIndex.Maximum = 3;
@@ -116,11 +116,11 @@ namespace readFontlib
             }
             catch (Exception e)
             {
-                MessageBox.Show(this, e.Message, "小凡", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, e.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void readFontData()//读字库数据
+        private void readFontData()//读指定位置字库数据
         {
             int i, startPosition, readLenth;
             try
@@ -139,10 +139,10 @@ namespace readFontlib
             }
             catch (Exception e)
             {
-                MessageBox.Show(this, e.Message, "小凡", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, e.Message, "message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void paintFont()
+        private void paintFont()//显示当前字模数据到字库区域
         {
             int x, y;
             int picSx, picSy;
@@ -214,30 +214,30 @@ namespace readFontlib
             else if (fileFlag == 1)
             {
                 textBoxFontName.Clear();
-                MessageBox.Show(this, "路径为空！\n请选择文件路径！", "小凡提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, "路径为空！\n请选择文件路径！", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 textBoxFontName.Clear();
-                MessageBox.Show(this, "文件不存在！路径及文件名为：" + fontPath + "\n请重新选择文件！文件找不到了。。", "小凡提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(this, "文件不存在！路径及文件名为：" + fontPath + "\n请重新选择文件！文件找不到了。。", "提示：", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private string getFontName(string path)
+        private string getFontName(string path)//读取字库名字
         {
             string a = "";
             string[] strArray = path.Split('\\');
             a = strArray[strArray.Length - 1];
             return a;
         }
-        private void recalSize()
+        private void recalSize()//读取字库里字模的个数
         {
             int readLenth;
             FileInfo fontInfo = new FileInfo(fontPath);
             readLenth = height * (width / 8 + (((width % 8) != 0) ? 1 : 0));
             numericUpDownIndex.Maximum = fontInfo.Length / readLenth - 1;
         }
-        private void buttonReadFont_Click(object sender, EventArgs e)
+        private void buttonReadFont_Click(object sender, EventArgs e)//读取字库名按钮单击事件
         {
             FontStyle style = FontStyle.Regular;
             Font tmpFont = new Font("宋体", 9, style);
@@ -251,14 +251,14 @@ namespace readFontlib
                 textBoxFontName.TextAlign = HorizontalAlignment.Left;
                 textBoxFontName.ForeColor = Color.Black;
                 textBoxFontName.Font = tmpFont;
-                textBoxFontName.Text = getFontName(fontFile.FileName);
+                textBoxFontName.Text = getFontName(fontFile.FileName);//获取字库的名字
                 numericUpDownIndex.Value = 0;
                 recalSize();//!<读完字库文件后需要计算字库内文字的个数
                 displayFont();
             }
         }
 
-        private void numericUpDownIndex_ValueChanged(object sender, EventArgs e)
+        private void numericUpDownIndex_ValueChanged(object sender, EventArgs e)//编号改变事件
         {
             if ((fontPath != null) && (File.Exists(fontPath)))
             {
@@ -297,7 +297,7 @@ namespace readFontlib
             bmp = textBitmap;
             //textBitmap.Dispose();不能释放
         }
-        private void buttonSaveBMP_Click(object sender, EventArgs e)
+        private void buttonSaveBMP_Click(object sender, EventArgs e)//保存字模按钮单击事件
         {
             writeFontData();
             MessageBox.Show("成功保存这个字模");
@@ -345,7 +345,7 @@ namespace readFontlib
             comboBoxWei.SelectedIndex = 0;
         }
 
-        private void numericUpDownWidth_ValueChanged(object sender, EventArgs e)
+        private void numericUpDownWidth_ValueChanged(object sender, EventArgs e)//字模宽度改变事件
         {
             if (!lockFlag)
             {
@@ -367,7 +367,7 @@ namespace readFontlib
                 }
             }
         }
-        private void numericUpDownHeight_ValueChanged(object sender, EventArgs e)
+        private void numericUpDownHeight_ValueChanged(object sender, EventArgs e)//字模高度改变事件
         {
             if (!lockFlag)
             {
@@ -390,7 +390,7 @@ namespace readFontlib
             }
         }
 
-        private void buttonGetData_Click(object sender, EventArgs e)
+        private void buttonGetData_Click(object sender, EventArgs e)//读取字模数据按钮单击事件
         {
             int i, readLenth;
             FontStyle style = FontStyle.Regular;
@@ -409,7 +409,7 @@ namespace readFontlib
             labelByteNum.Text = readLenth.ToString();
         }
 
-        private void richTextBoxData_DoubleClick(object sender, EventArgs e)
+        private void richTextBoxData_DoubleClick(object sender, EventArgs e)//读取出字模数据框双击事件
         {
             try
             {
@@ -454,7 +454,7 @@ namespace readFontlib
 
         }
 
-        private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)
+        private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)//字模显示区鼠标左键按下事件
         {
             int wei_num;
             int date_cache;
@@ -472,7 +472,12 @@ namespace readFontlib
                     {
                         int x_pain = (X - X_start) / 12;
                         int y_pain = (Y - Y_start) / 12;
-                        date_cache = data[y_pain * ((uniwidth / 8) + 1) + x_pain / 8];
+                        if((width % 8) == 0){
+                          date_cache = data[y_pain * (width / 8) + x_pain / 8];
+                        }else{
+                          date_cache = data[y_pain * ((width / 8) + 1) + x_pain / 8];
+                        }
+                        
                         if (x_pain > 23)
                         {
                             wei_num = x_pain - 24;
@@ -496,7 +501,11 @@ namespace readFontlib
                             }
                         }
                         date_cache = date_cache ^ (0X80 >> wei_num);
-                        data[y_pain * ((uniwidth / 8) + 1) + x_pain / 8] = (byte)date_cache;
+                        if((width % 8) == 0){
+                          data[y_pain * (width / 8) + x_pain / 8] = (byte)date_cache;
+                        }else{
+                          data[y_pain * ((width / 8) + 1) + x_pain / 8] = (byte)date_cache;
+                        }
                         paintFont();
                         buttonGetData_Click(this, null);
                     }
@@ -535,7 +544,7 @@ namespace readFontlib
             calIndex();
         }
 
-        private void pictureBoxFont_DoubleClick(object sender, EventArgs e)
+        private void pictureBoxFont_DoubleClick(object sender, EventArgs e)//字模显示区双击事件
         {
             if (editFlag == false)
             {
