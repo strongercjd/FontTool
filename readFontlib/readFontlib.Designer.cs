@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(readFontlib));
             this.groupBoxpic = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.pictureBoxFont = new System.Windows.Forms.PictureBox();
             this.groupBoxSet = new System.Windows.Forms.GroupBox();
             this.comboBoxWei = new System.Windows.Forms.ComboBox();
             this.comboBoxQu = new System.Windows.Forms.ComboBox();
-            this.buttonSaveBMP = new System.Windows.Forms.Button();
             this.labelIndex = new System.Windows.Forms.Label();
             this.numericUpDownIndex = new System.Windows.Forms.NumericUpDown();
             this.radioButtonUnit = new System.Windows.Forms.RadioButton();
@@ -47,7 +48,9 @@
             this.labelHeight = new System.Windows.Forms.Label();
             this.labelWidth = new System.Windows.Forms.Label();
             this.radioButtonFontLib = new System.Windows.Forms.RadioButton();
+            this.buttonSaveBMP = new System.Windows.Forms.Button();
             this.groupBoxData = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.labelByteNum = new System.Windows.Forms.Label();
             this.labelNum = new System.Windows.Forms.Label();
             this.richTextBoxData = new System.Windows.Forms.RichTextBox();
@@ -65,6 +68,8 @@
             // 
             // groupBoxpic
             // 
+            this.groupBoxpic.Controls.Add(this.radioButton1);
+            this.groupBoxpic.Controls.Add(this.radioButton3);
             this.groupBoxpic.Controls.Add(this.pictureBoxFont);
             this.groupBoxpic.Location = new System.Drawing.Point(2, 3);
             this.groupBoxpic.Name = "groupBoxpic";
@@ -73,25 +78,48 @@
             this.groupBoxpic.TabStop = false;
             this.groupBoxpic.Text = "字模区";
             // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(215, 11);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(71, 16);
+            this.radioButton3.TabIndex = 3;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "编辑模式";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(128, 11);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(71, 16);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "查看模式";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
             // pictureBoxFont
             // 
-            this.pictureBoxFont.Location = new System.Drawing.Point(5, 15);
+            this.pictureBoxFont.Location = new System.Drawing.Point(8, 33);
             this.pictureBoxFont.Name = "pictureBoxFont";
             this.pictureBoxFont.Size = new System.Drawing.Size(386, 386);
             this.pictureBoxFont.TabIndex = 0;
             this.pictureBoxFont.TabStop = false;
             this.toolTipReadFont.SetToolTip(this.pictureBoxFont, "双击改变模式");
-            this.pictureBoxFont.DoubleClick += new System.EventHandler(this.pictureBoxFont_DoubleClick);
             this.pictureBoxFont.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseDown);
             // 
             // groupBoxSet
             // 
+            this.groupBoxSet.Controls.Add(this.radioButtonUnit);
+            this.groupBoxSet.Controls.Add(this.radioButtonFontLib);
             this.groupBoxSet.Controls.Add(this.comboBoxWei);
             this.groupBoxSet.Controls.Add(this.comboBoxQu);
-            this.groupBoxSet.Controls.Add(this.buttonSaveBMP);
             this.groupBoxSet.Controls.Add(this.labelIndex);
             this.groupBoxSet.Controls.Add(this.numericUpDownIndex);
-            this.groupBoxSet.Controls.Add(this.radioButtonUnit);
             this.groupBoxSet.Controls.Add(this.buttonReadFont);
             this.groupBoxSet.Controls.Add(this.labelFontName);
             this.groupBoxSet.Controls.Add(this.textBoxFontName);
@@ -99,10 +127,9 @@
             this.groupBoxSet.Controls.Add(this.numericUpDownWidth);
             this.groupBoxSet.Controls.Add(this.labelHeight);
             this.groupBoxSet.Controls.Add(this.labelWidth);
-            this.groupBoxSet.Controls.Add(this.radioButtonFontLib);
             this.groupBoxSet.Location = new System.Drawing.Point(412, 3);
             this.groupBoxSet.Name = "groupBoxSet";
-            this.groupBoxSet.Size = new System.Drawing.Size(280, 100);
+            this.groupBoxSet.Size = new System.Drawing.Size(322, 100);
             this.groupBoxSet.TabIndex = 1;
             this.groupBoxSet.TabStop = false;
             this.groupBoxSet.Text = "设置";
@@ -111,7 +138,7 @@
             // 
             this.comboBoxWei.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxWei.FormattingEnabled = true;
-            this.comboBoxWei.Location = new System.Drawing.Point(196, 63);
+            this.comboBoxWei.Location = new System.Drawing.Point(253, 70);
             this.comboBoxWei.Name = "comboBoxWei";
             this.comboBoxWei.Size = new System.Drawing.Size(41, 20);
             this.comboBoxWei.TabIndex = 14;
@@ -121,27 +148,16 @@
             // 
             this.comboBoxQu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxQu.FormattingEnabled = true;
-            this.comboBoxQu.Location = new System.Drawing.Point(146, 64);
+            this.comboBoxQu.Location = new System.Drawing.Point(196, 70);
             this.comboBoxQu.Name = "comboBoxQu";
             this.comboBoxQu.Size = new System.Drawing.Size(39, 20);
             this.comboBoxQu.TabIndex = 13;
             this.toolTipReadFont.SetToolTip(this.comboBoxQu, "默认GB2312编码");
             // 
-            // buttonSaveBMP
-            // 
-            this.buttonSaveBMP.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonSaveBMP.Location = new System.Drawing.Point(241, 38);
-            this.buttonSaveBMP.Name = "buttonSaveBMP";
-            this.buttonSaveBMP.Size = new System.Drawing.Size(39, 56);
-            this.buttonSaveBMP.TabIndex = 11;
-            this.buttonSaveBMP.Text = "保存这个字模";
-            this.buttonSaveBMP.UseVisualStyleBackColor = true;
-            this.buttonSaveBMP.Click += new System.EventHandler(this.buttonSaveBMP_Click);
-            // 
             // labelIndex
             // 
             this.labelIndex.AutoSize = true;
-            this.labelIndex.Location = new System.Drawing.Point(144, 44);
+            this.labelIndex.Location = new System.Drawing.Point(194, 42);
             this.labelIndex.Name = "labelIndex";
             this.labelIndex.Size = new System.Drawing.Size(41, 12);
             this.labelIndex.TabIndex = 10;
@@ -149,7 +165,7 @@
             // 
             // numericUpDownIndex
             // 
-            this.numericUpDownIndex.Location = new System.Drawing.Point(185, 38);
+            this.numericUpDownIndex.Location = new System.Drawing.Point(241, 38);
             this.numericUpDownIndex.Maximum = new decimal(new int[] {
             256,
             0,
@@ -159,12 +175,11 @@
             this.numericUpDownIndex.Size = new System.Drawing.Size(52, 21);
             this.numericUpDownIndex.TabIndex = 9;
             this.numericUpDownIndex.ValueChanged += new System.EventHandler(this.numericUpDownIndex_ValueChanged);
-            this.numericUpDownIndex.DoubleClick += new System.EventHandler(this.numericUpDownIndex_DoubleClick);
             // 
             // radioButtonUnit
             // 
             this.radioButtonUnit.AutoSize = true;
-            this.radioButtonUnit.Location = new System.Drawing.Point(8, 69);
+            this.radioButtonUnit.Location = new System.Drawing.Point(8, 66);
             this.radioButtonUnit.Name = "radioButtonUnit";
             this.radioButtonUnit.Size = new System.Drawing.Size(53, 16);
             this.radioButtonUnit.TabIndex = 1;
@@ -175,7 +190,7 @@
             // 
             // buttonReadFont
             // 
-            this.buttonReadFont.Location = new System.Drawing.Point(240, 12);
+            this.buttonReadFont.Location = new System.Drawing.Point(253, 13);
             this.buttonReadFont.Name = "buttonReadFont";
             this.buttonReadFont.Size = new System.Drawing.Size(40, 23);
             this.buttonReadFont.TabIndex = 8;
@@ -199,14 +214,14 @@
             this.textBoxFontName.Location = new System.Drawing.Point(65, 15);
             this.textBoxFontName.Name = "textBoxFontName";
             this.textBoxFontName.ReadOnly = true;
-            this.textBoxFontName.Size = new System.Drawing.Size(169, 21);
+            this.textBoxFontName.Size = new System.Drawing.Size(182, 21);
             this.textBoxFontName.TabIndex = 6;
             this.textBoxFontName.Text = "打开字库";
             this.textBoxFontName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericUpDownHeight
             // 
-            this.numericUpDownHeight.Location = new System.Drawing.Point(103, 65);
+            this.numericUpDownHeight.Location = new System.Drawing.Point(146, 69);
             this.numericUpDownHeight.Minimum = new decimal(new int[] {
             1,
             0,
@@ -224,7 +239,7 @@
             // 
             // numericUpDownWidth
             // 
-            this.numericUpDownWidth.Location = new System.Drawing.Point(103, 38);
+            this.numericUpDownWidth.Location = new System.Drawing.Point(146, 37);
             this.numericUpDownWidth.Minimum = new decimal(new int[] {
             1,
             0,
@@ -243,7 +258,7 @@
             // labelHeight
             // 
             this.labelHeight.AutoSize = true;
-            this.labelHeight.Location = new System.Drawing.Point(80, 71);
+            this.labelHeight.Location = new System.Drawing.Point(109, 78);
             this.labelHeight.Name = "labelHeight";
             this.labelHeight.Size = new System.Drawing.Size(29, 12);
             this.labelHeight.TabIndex = 3;
@@ -252,7 +267,7 @@
             // labelWidth
             // 
             this.labelWidth.AutoSize = true;
-            this.labelWidth.Location = new System.Drawing.Point(80, 44);
+            this.labelWidth.Location = new System.Drawing.Point(109, 44);
             this.labelWidth.Name = "labelWidth";
             this.labelWidth.Size = new System.Drawing.Size(29, 12);
             this.labelWidth.TabIndex = 2;
@@ -263,32 +278,57 @@
             this.radioButtonFontLib.AutoSize = true;
             this.radioButtonFontLib.Location = new System.Drawing.Point(8, 42);
             this.radioButtonFontLib.Name = "radioButtonFontLib";
-            this.radioButtonFontLib.Size = new System.Drawing.Size(59, 16);
+            this.radioButtonFontLib.Size = new System.Drawing.Size(60, 18);
             this.radioButtonFontLib.TabIndex = 0;
             this.radioButtonFontLib.TabStop = true;
             this.radioButtonFontLib.Text = "GB2312";
+            this.radioButtonFontLib.UseCompatibleTextRendering = true;
             this.radioButtonFontLib.UseVisualStyleBackColor = true;
             this.radioButtonFontLib.CheckedChanged += new System.EventHandler(this.radioButtonFontLib_CheckedChanged);
             // 
+            // buttonSaveBMP
+            // 
+            this.buttonSaveBMP.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonSaveBMP.Location = new System.Drawing.Point(65, 20);
+            this.buttonSaveBMP.Name = "buttonSaveBMP";
+            this.buttonSaveBMP.Size = new System.Drawing.Size(68, 40);
+            this.buttonSaveBMP.TabIndex = 11;
+            this.buttonSaveBMP.Text = "保存字模";
+            this.buttonSaveBMP.UseVisualStyleBackColor = true;
+            this.buttonSaveBMP.Click += new System.EventHandler(this.buttonSaveBMP_Click);
+            // 
             // groupBoxData
             // 
+            this.groupBoxData.Controls.Add(this.checkBox1);
             this.groupBoxData.Controls.Add(this.labelByteNum);
             this.groupBoxData.Controls.Add(this.labelNum);
+            this.groupBoxData.Controls.Add(this.buttonSaveBMP);
             this.groupBoxData.Controls.Add(this.richTextBoxData);
             this.groupBoxData.Controls.Add(this.labelFontInfo);
             this.groupBoxData.Controls.Add(this.buttonGetData);
             this.groupBoxData.Location = new System.Drawing.Point(412, 109);
             this.groupBoxData.Name = "groupBoxData";
-            this.groupBoxData.Size = new System.Drawing.Size(280, 299);
+            this.groupBoxData.Size = new System.Drawing.Size(322, 319);
             this.groupBoxData.TabIndex = 2;
             this.groupBoxData.TabStop = false;
             this.groupBoxData.Text = "数据区";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(146, 20);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(78, 16);
+            this.checkBox1.TabIndex = 12;
+            this.checkBox1.Text = "添加0X和,";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // labelByteNum
             // 
             this.labelByteNum.AutoSize = true;
             this.labelByteNum.ForeColor = System.Drawing.Color.Blue;
-            this.labelByteNum.Location = new System.Drawing.Point(239, 20);
+            this.labelByteNum.Location = new System.Drawing.Point(299, 51);
             this.labelByteNum.Name = "labelByteNum";
             this.labelByteNum.Size = new System.Drawing.Size(11, 12);
             this.labelByteNum.TabIndex = 4;
@@ -297,19 +337,19 @@
             // labelNum
             // 
             this.labelNum.AutoSize = true;
-            this.labelNum.Location = new System.Drawing.Point(175, 20);
+            this.labelNum.Location = new System.Drawing.Point(241, 51);
             this.labelNum.Name = "labelNum";
-            this.labelNum.Size = new System.Drawing.Size(65, 12);
+            this.labelNum.Size = new System.Drawing.Size(53, 12);
             this.labelNum.TabIndex = 3;
-            this.labelNum.Text = "字节个数：";
+            this.labelNum.Text = "字节数：";
             // 
             // richTextBoxData
             // 
             this.richTextBoxData.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBoxData.Location = new System.Drawing.Point(8, 44);
+            this.richTextBoxData.Location = new System.Drawing.Point(6, 66);
             this.richTextBoxData.Name = "richTextBoxData";
             this.richTextBoxData.ReadOnly = true;
-            this.richTextBoxData.Size = new System.Drawing.Size(263, 247);
+            this.richTextBoxData.Size = new System.Drawing.Size(308, 247);
             this.richTextBoxData.TabIndex = 2;
             this.richTextBoxData.Text = "\n\n\n\n\n字库读取&修改器权所有（C）2016";
             this.toolTipReadFont.SetToolTip(this.richTextBoxData, "双击取反");
@@ -318,7 +358,7 @@
             // labelFontInfo
             // 
             this.labelFontInfo.AutoSize = true;
-            this.labelFontInfo.Location = new System.Drawing.Point(73, 20);
+            this.labelFontInfo.Location = new System.Drawing.Point(139, 51);
             this.labelFontInfo.Name = "labelFontInfo";
             this.labelFontInfo.Size = new System.Drawing.Size(65, 12);
             this.labelFontInfo.TabIndex = 1;
@@ -326,9 +366,9 @@
             // 
             // buttonGetData
             // 
-            this.buttonGetData.Location = new System.Drawing.Point(6, 15);
+            this.buttonGetData.Location = new System.Drawing.Point(3, 20);
             this.buttonGetData.Name = "buttonGetData";
-            this.buttonGetData.Size = new System.Drawing.Size(61, 23);
+            this.buttonGetData.Size = new System.Drawing.Size(61, 40);
             this.buttonGetData.TabIndex = 0;
             this.buttonGetData.Text = "获取数据";
             this.buttonGetData.UseVisualStyleBackColor = true;
@@ -338,17 +378,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 411);
+            this.ClientSize = new System.Drawing.Size(734, 431);
             this.Controls.Add(this.groupBoxData);
             this.Controls.Add(this.groupBoxSet);
             this.Controls.Add(this.groupBoxpic);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(711, 450);
+            this.MaximumSize = new System.Drawing.Size(750, 470);
             this.MinimumSize = new System.Drawing.Size(711, 450);
             this.Name = "readFontlib";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "字库读取&修改器";
             this.Load += new System.EventHandler(this.readFontlib_Load);
             this.groupBoxpic.ResumeLayout(false);
+            this.groupBoxpic.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).EndInit();
             this.groupBoxSet.ResumeLayout(false);
             this.groupBoxSet.PerformLayout();
@@ -387,6 +429,9 @@
         private System.Windows.Forms.Label labelNum;
         private System.Windows.Forms.ComboBox comboBoxWei;
         private System.Windows.Forms.ComboBox comboBoxQu;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

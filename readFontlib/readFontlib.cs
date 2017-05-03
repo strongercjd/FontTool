@@ -28,6 +28,7 @@ namespace readFontlib
         bool lockFlag;
         bool editFlag;
         bool ASCII_Flag;
+        bool showFlag;//1：获取的字模显示0X00，  0：显示 00 
 
 
 
@@ -64,7 +65,7 @@ namespace readFontlib
             this.comboBoxQu.SelectedIndexChanged += new System.EventHandler(this.comboBoxQu_SelectedIndexChanged);
             this.comboBoxWei.SelectedIndexChanged += new System.EventHandler(this.comboBoxWei_SelectedIndexChanged);
 
-            readDefaultFontData();
+            // readDefaultFontData();
         }
         public readFontlib()
         {
@@ -147,12 +148,14 @@ namespace readFontlib
             int x, y;
             int picSx, picSy;
             int num,num1;
+            int i;
             Bitmap p = new Bitmap(picSize, picSize);
             Graphics g = Graphics.FromImage(p); //!<创建一个图形类
 
             Pen blackPen = new Pen(Color.Black, brushSize);    //!<黑色画笔，画笔宽度为1
             Pen whitePen = new Pen(Color.White, brushSize);    //!<白色画笔
-            Pen bluePen = new Pen(Color.Blue, brushSize);      //!<蓝色画笔
+            Pen bluePen  = new Pen(Color.Blue, brushSize);      //!<蓝色画笔
+            Pen redPen   = new Pen(Color.Red, brushSize);      //!<红色画笔
             Brush blackBrush = blackPen.Brush;
             Brush whiteBrush = whitePen.Brush;
 
@@ -163,7 +166,7 @@ namespace readFontlib
             picSx = (picSize - width * uniwidth - spaceSize * (width - 1)) / 2;
             picSy = (picSize - height * uniheight - spaceSize * (height - 1)) / 2;
 
-
+            i = 0;
             for (y = 0; y < height; y++)
             {
                 for (x = 0; x < width; x++)
@@ -176,20 +179,38 @@ namespace readFontlib
                         bluePanel.X = x * (uniwidth + spaceSize) + picSx;
                         bluePanel.Y = y * (uniheight + spaceSize) + picSy;
 
-                        g.DrawRectangle(bluePen, bluePanel);
+                        if ((i == 8)|| (i == 0))
+                        {
+                            i = 0;
+                            g.DrawRectangle(redPen, bluePanel); 
+                        }
+                        else {
+                            g.DrawRectangle(bluePen, bluePanel);
+                        }
                         //g.FillRectangle(whiteBrush, bluePanel);
                     }
                     else
                     {
                         blackPanel.X = x * (uniwidth + spaceSize) + picSx;
                         blackPanel.Y = y * (uniheight + spaceSize) + picSy;
-                        g.DrawRectangle(blackPen, blackPanel);
-                        g.FillRectangle(blackBrush, blackPanel);
+                        //if ((i == 8) || (i == 0))
+                        //{
+                        //    i = 0;
+                        //    g.DrawRectangle(redPen, bluePanel);
+                        //    g.FillRectangle(blackBrush, blackPanel);
+                        //}
+                        //else
+                        //{
+                            g.DrawRectangle(blackPen, blackPanel);
+                            g.FillRectangle(blackBrush, blackPanel);
+                        //} 
                     }
+                    i++;
                 }
+                i = 0;
             }
             pictureBoxFont.Image = p;
-            //p.Save("F:\\2.bmp");
+            //p.Save("D:\\pictrue.bmp");
         }
         private void displayFont()
         {
@@ -237,7 +258,7 @@ namespace readFontlib
             readLenth = height * (width / 8 + (((width % 8) != 0) ? 1 : 0));
             numericUpDownIndex.Maximum = fontInfo.Length / readLenth - 1;
         }
-        private void buttonReadFont_Click(object sender, EventArgs e)//读取字库名按钮单击事件
+        private void buttonReadFont_Click (object sender, EventArgs e)//读取字库名按钮单击事件
         {
             FontStyle style = FontStyle.Regular;
             Font tmpFont = new Font("宋体", 9, style);
@@ -267,36 +288,10 @@ namespace readFontlib
             }
             else
             {
-                index = (int)numericUpDownIndex.Value;
-                readDefaultFontData();
-                paintFont();
+                MessageBox.Show("请首先打开一个字库文件");
             }
         }
 
-        private void createBMP()
-        {
-            int x, y,num,num1;
-            int Width = width;
-            int Height = height;
-            Bitmap textBitmap = new Bitmap(Width, Height);
-            Graphics textG = Graphics.FromImage(textBitmap);
-            textG.FillRectangle(new SolidBrush(Color.Black), 0, 0, textBitmap.Width, textBitmap.Height);
-            for (y = 0; y < height; y++)
-            {
-                for (x = 0; x < width; x++)
-                {
-                    num1 = (width / 8) + ((width % 8 != 0) ? 1 : 0);
-                    num = ((x + 1) / 8) + (((x + 1) % 8 != 0) ? 1 : 0);
-                    num = num1 * y + num - 1;
-                    if (((data[num] >> (7 - x % 8)) & 0x01) == 1)
-                    {
-                        textG.FillRectangle(new SolidBrush(Color.White), x, y, 1, 1);
-                    }
-                }
-            }
-            bmp = textBitmap;
-            //textBitmap.Dispose();不能释放
-        }
         private void buttonSaveBMP_Click(object sender, EventArgs e)//保存字模按钮单击事件
         {
             writeFontData();
@@ -307,6 +302,7 @@ namespace readFontlib
         {
             lockFlag = true;
             comboBoxQu.Enabled = true;
+            comboBoxWei.Enabled = true;
 
             ASCII_Flag = false;
             comboBoxWei.Items.Clear();
@@ -326,15 +322,6 @@ namespace readFontlib
         }
         private void radioButtonUnit_CheckedChanged(object sender, EventArgs e)//选中ASCII
         {
-            //lockFlag = true;
-            //if (radioButtonUnit.Checked)
-            //{
-            //    numericUpDownWidth.Maximum = (picSize + spaceSize) / width - spaceSize;
-            //    numericUpDownHeight.Maximum = (picSize + spaceSize) / height - spaceSize;
-            //    numericUpDownWidth.Value = uniwidth;
-            //    numericUpDownHeight.Value = uniheight;
-            //}
-            //lockFlag = false;
             comboBoxQu.Enabled = false;
             ASCII_Flag = true;
             comboBoxWei.Items.Clear();
@@ -403,7 +390,12 @@ namespace readFontlib
             richTextBoxData.Clear();
             for (i = 0; i < readLenth; i++)
             {
-                richTextBoxData.Text += data[i].ToString("X2").ToUpper() + " ";
+                if (showFlag) {
+                    richTextBoxData.Text += "0X" + data[i].ToString("X2").ToUpper() + ", ";
+                } else {
+                    richTextBoxData.Text += data[i].ToString("X2").ToUpper() + " ";
+                }
+                
             }
             labelFontInfo.Text = "字库信息：" + width.ToString() + "*" + height.ToString();
             labelByteNum.Text = readLenth.ToString();
@@ -411,8 +403,6 @@ namespace readFontlib
 
         private void richTextBoxData_DoubleClick(object sender, EventArgs e)//读取出字模数据框双击事件
         {
-            try
-            {
                 string[] strCheckArray = (richTextBoxData.Text.Trim()).Split(' ');
                 string temp = string.Empty;
                 foreach (var tmp in strCheckArray)
@@ -420,30 +410,6 @@ namespace readFontlib
                     temp += ((~System.Convert.ToByte(tmp, 16)) & 0xFF).ToString("X2").ToUpper() + " ";
                 }
                 richTextBoxData.Text = temp;
-            }
-            catch (Exception a)
-            {
-                
-            }
-        }
-
-        private void numericUpDownIndex_DoubleClick(object sender, EventArgs e)
-        {
-            //if ((fontPath != null) && (File.Exists(fontPath)))
-            //{
-            //    if (quWeiFlag)
-            //    {
-            //        quWeiFlag = true;
-            //        comboBoxQu.Enabled = false;
-            //        comboBoxWei.Enabled = false;
-            //    }
-            //    else
-            //    {
-            //        quWeiFlag = true;
-            //        comboBoxQu.Enabled = true;
-            //        comboBoxWei.Enabled = true;
-            //    }
-            //}
         }
 
         private void readFontlib_Load(object sender, EventArgs e)
@@ -451,6 +417,7 @@ namespace readFontlib
             quWeiFlag = true;
             comboBoxQu.Enabled = true;
             comboBoxWei.Enabled = true;
+            radioButtonFontLib.Checked = true;
 
         }
 
@@ -519,7 +486,37 @@ namespace readFontlib
             }
         }
 
-        private void calIndex()
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)//选中查看模式
+        {
+            editFlag = false;
+            buttonSaveBMP.Enabled = false;
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)//选中编辑模式
+        {
+            editFlag = true;
+            buttonSaveBMP.Enabled = true;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.CheckState == CheckState.Checked)
+            {
+                showFlag = true;
+            }
+            else if (checkBox1.CheckState == CheckState.Unchecked)
+            {
+                showFlag = false;
+            }
+            else
+            {
+                MessageBox.Show("checkBox1 控件处于不确定状态");
+            }
+            buttonGetData_Click(this, null);
+
+        }
+
+        private void calIndex()//区位改变时计算字模的位置
         {
             int qu, wei;
             qu = comboBoxQu.SelectedIndex;
@@ -534,28 +531,14 @@ namespace readFontlib
             }
             
         }
-        private void comboBoxQu_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxQu_SelectedIndexChanged(object sender, EventArgs e)//区码改变
         {
             calIndex();
         }
 
-        private void comboBoxWei_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxWei_SelectedIndexChanged(object sender, EventArgs e)//位码改变
         {
             calIndex();
-        }
-
-        private void pictureBoxFont_DoubleClick(object sender, EventArgs e)//字模显示区双击事件
-        {
-            if (editFlag == false)
-            {
-                editFlag = true;
-                MessageBox.Show("编辑模式");
-            }
-            else
-            {
-                editFlag = false;
-                MessageBox.Show("查看模式");
-            }
         }
     }
 }
