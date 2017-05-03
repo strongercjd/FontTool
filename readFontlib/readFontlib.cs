@@ -391,7 +391,7 @@ namespace readFontlib
             for (i = 0; i < readLenth; i++)
             {
                 if (showFlag) {
-                    richTextBoxData.Text += "0X" + data[i].ToString("X2").ToUpper() + ", ";
+                    richTextBoxData.Text += "0X" + data[i].ToString("X2").ToUpper() + ",";
                 } else {
                     richTextBoxData.Text += data[i].ToString("X2").ToUpper() + " ";
                 }
