@@ -113,7 +113,6 @@
             this.pictureBoxFont.Size = new System.Drawing.Size(386, 386);
             this.pictureBoxFont.TabIndex = 0;
             this.pictureBoxFont.TabStop = false;
-            this.toolTipReadFont.SetToolTip(this.pictureBoxFont, "双击改变模式");
             this.pictureBoxFont.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseDown);
             // 
             // groupBoxSet
@@ -324,7 +323,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(78, 16);
             this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "添加0X和,";
+            this.checkBox1.Text = "添加0x和,";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 

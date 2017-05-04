@@ -148,7 +148,10 @@ namespace readFontlib
             int x, y;
             int picSx, picSy;
             int num,num1;
-            int i;
+            int num_x, num_y;
+            string str;
+            int num2;
+
             Bitmap p = new Bitmap(picSize, picSize);
             Graphics g = Graphics.FromImage(p); //!<创建一个图形类
 
@@ -161,12 +164,39 @@ namespace readFontlib
 
             Rectangle whitePanel = new Rectangle(startx, starty, width, height);
             Rectangle blackPanel = new Rectangle(startx, starty, uniwidth, uniheight);
-            Rectangle bluePanel = new Rectangle(startx, starty, uniwidth, uniheight);
+            Rectangle bluePanel  = new Rectangle(startx, starty, uniwidth, uniheight);
 
             picSx = (picSize - width * uniwidth - spaceSize * (width - 1)) / 2;
             picSy = (picSize - height * uniheight - spaceSize * (height - 1)) / 2;
 
-            i = 0;
+            num_x = picSx - 12;
+            num_y = picSy - 12;
+
+            Font f = new Font("Arial", 8, FontStyle.Bold);
+            PointF pf = new PointF(num_x, num_y);
+            /* 写X轴的数字 */
+            num2 = 0;
+            for (y = 0; y < width ; y++)
+            {
+                if(num2 == 8)
+                    num2 = 0;
+                pf.X += 12;
+                str = Convert.ToString(num2);
+                g.DrawString(str, f, Brushes.Red, pf);
+                num2++;
+            }
+            /* 写Y轴的数字 */
+            pf.X = num_x-2;
+            pf.Y = num_y;
+            for (x = 0; x < height; x++)
+            {
+                pf.Y += 12;
+                str = Convert.ToString(x+1);
+                g.DrawString(str, f, Brushes.Red, pf);
+            }
+            
+            
+
             for (y = 0; y < height; y++)
             {
                 for (x = 0; x < width; x++)
@@ -178,36 +208,16 @@ namespace readFontlib
                     {
                         bluePanel.X = x * (uniwidth + spaceSize) + picSx;
                         bluePanel.Y = y * (uniheight + spaceSize) + picSy;
-
-                        if ((i == 8)|| (i == 0))
-                        {
-                            i = 0;
-                            g.DrawRectangle(redPen, bluePanel); 
-                        }
-                        else {
-                            g.DrawRectangle(bluePen, bluePanel);
-                        }
-                        //g.FillRectangle(whiteBrush, bluePanel);
+                        g.DrawRectangle(bluePen, bluePanel);
                     }
                     else
                     {
                         blackPanel.X = x * (uniwidth + spaceSize) + picSx;
                         blackPanel.Y = y * (uniheight + spaceSize) + picSy;
-                        //if ((i == 8) || (i == 0))
-                        //{
-                        //    i = 0;
-                        //    g.DrawRectangle(redPen, bluePanel);
-                        //    g.FillRectangle(blackBrush, blackPanel);
-                        //}
-                        //else
-                        //{
-                            g.DrawRectangle(blackPen, blackPanel);
-                            g.FillRectangle(blackBrush, blackPanel);
-                        //} 
+                        g.DrawRectangle(blackPen, blackPanel);
+                        g.FillRectangle(blackBrush, blackPanel); 
                     }
-                    i++;
                 }
-                i = 0;
             }
             pictureBoxFont.Image = p;
             //p.Save("D:\\pictrue.bmp");
@@ -391,7 +401,7 @@ namespace readFontlib
             for (i = 0; i < readLenth; i++)
             {
                 if (showFlag) {
-                    richTextBoxData.Text += "0X" + data[i].ToString("X2").ToUpper() + ",";
+                    richTextBoxData.Text += "0x" + data[i].ToString("X2").ToUpper() + ",";
                 } else {
                     richTextBoxData.Text += data[i].ToString("X2").ToUpper() + " ";
                 }
