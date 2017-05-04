@@ -30,7 +30,7 @@ namespace readFontlib
         bool ASCII_Flag;
         bool showFlag;//1：获取的字模显示0X00，  0：显示 00 
 
-
+        Timer time1 = new Timer();
 
         private void dataInit()//数据初始化，在读取字库时调用
         {
@@ -419,6 +419,11 @@ namespace readFontlib
             comboBoxWei.Enabled = true;
             radioButtonFontLib.Checked = true;
 
+            this.time1.Interval = 1000;
+            this.time1.Tick += new System.EventHandler(this.timer_Tick);
+            this.time1.Start();
+            textBoxtime.Text = DateTime.Now.ToString();
+
         }
 
         private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)//字模显示区鼠标左键按下事件
@@ -496,6 +501,22 @@ namespace readFontlib
         {
             editFlag = true;
             buttonSaveBMP.Enabled = true;
+        }
+
+        private void logo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)//点击公司logo
+        {
+            //System.Diagnostics.Process.Start("iexplore.exe", "http://www.onbonbx.com");
+            System.Diagnostics.Process.Start("http://www.onbonbx.com");
+        }
+
+        private void author_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://user.qzone.qq.com/1601438030/main");
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            textBoxtime.Text = DateTime.Now.ToString();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

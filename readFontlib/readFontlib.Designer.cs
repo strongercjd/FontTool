@@ -31,15 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(readFontlib));
             this.groupBoxpic = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.pictureBoxFont = new System.Windows.Forms.PictureBox();
             this.groupBoxSet = new System.Windows.Forms.GroupBox();
+            this.radioButtonUnit = new System.Windows.Forms.RadioButton();
+            this.radioButtonFontLib = new System.Windows.Forms.RadioButton();
             this.comboBoxWei = new System.Windows.Forms.ComboBox();
             this.comboBoxQu = new System.Windows.Forms.ComboBox();
             this.labelIndex = new System.Windows.Forms.Label();
             this.numericUpDownIndex = new System.Windows.Forms.NumericUpDown();
-            this.radioButtonUnit = new System.Windows.Forms.RadioButton();
             this.buttonReadFont = new System.Windows.Forms.Button();
             this.labelFontName = new System.Windows.Forms.Label();
             this.textBoxFontName = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.numericUpDownWidth = new System.Windows.Forms.NumericUpDown();
             this.labelHeight = new System.Windows.Forms.Label();
             this.labelWidth = new System.Windows.Forms.Label();
-            this.radioButtonFontLib = new System.Windows.Forms.RadioButton();
             this.buttonSaveBMP = new System.Windows.Forms.Button();
             this.groupBoxData = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -57,6 +57,10 @@
             this.labelFontInfo = new System.Windows.Forms.Label();
             this.buttonGetData = new System.Windows.Forms.Button();
             this.toolTipReadFont = new System.Windows.Forms.ToolTip(this.components);
+            this.logo = new System.Windows.Forms.LinkLabel();
+            this.author = new System.Windows.Forms.LinkLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.textBoxtime = new System.Windows.Forms.TextBox();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -78,18 +82,6 @@
             this.groupBoxpic.TabStop = false;
             this.groupBoxpic.Text = "字模区";
             // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(215, 11);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(71, 16);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "编辑模式";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -101,6 +93,18 @@
             this.radioButton1.Text = "查看模式";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(215, 11);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(71, 16);
+            this.radioButton3.TabIndex = 3;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "编辑模式";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // pictureBoxFont
             // 
@@ -133,6 +137,31 @@
             this.groupBoxSet.TabIndex = 1;
             this.groupBoxSet.TabStop = false;
             this.groupBoxSet.Text = "设置";
+            // 
+            // radioButtonUnit
+            // 
+            this.radioButtonUnit.AutoSize = true;
+            this.radioButtonUnit.Location = new System.Drawing.Point(8, 66);
+            this.radioButtonUnit.Name = "radioButtonUnit";
+            this.radioButtonUnit.Size = new System.Drawing.Size(53, 16);
+            this.radioButtonUnit.TabIndex = 1;
+            this.radioButtonUnit.TabStop = true;
+            this.radioButtonUnit.Text = "ASCII";
+            this.radioButtonUnit.UseVisualStyleBackColor = true;
+            this.radioButtonUnit.CheckedChanged += new System.EventHandler(this.radioButtonUnit_CheckedChanged);
+            // 
+            // radioButtonFontLib
+            // 
+            this.radioButtonFontLib.AutoSize = true;
+            this.radioButtonFontLib.Location = new System.Drawing.Point(8, 42);
+            this.radioButtonFontLib.Name = "radioButtonFontLib";
+            this.radioButtonFontLib.Size = new System.Drawing.Size(60, 18);
+            this.radioButtonFontLib.TabIndex = 0;
+            this.radioButtonFontLib.TabStop = true;
+            this.radioButtonFontLib.Text = "GB2312";
+            this.radioButtonFontLib.UseCompatibleTextRendering = true;
+            this.radioButtonFontLib.UseVisualStyleBackColor = true;
+            this.radioButtonFontLib.CheckedChanged += new System.EventHandler(this.radioButtonFontLib_CheckedChanged);
             // 
             // comboBoxWei
             // 
@@ -175,18 +204,6 @@
             this.numericUpDownIndex.Size = new System.Drawing.Size(52, 21);
             this.numericUpDownIndex.TabIndex = 9;
             this.numericUpDownIndex.ValueChanged += new System.EventHandler(this.numericUpDownIndex_ValueChanged);
-            // 
-            // radioButtonUnit
-            // 
-            this.radioButtonUnit.AutoSize = true;
-            this.radioButtonUnit.Location = new System.Drawing.Point(8, 66);
-            this.radioButtonUnit.Name = "radioButtonUnit";
-            this.radioButtonUnit.Size = new System.Drawing.Size(53, 16);
-            this.radioButtonUnit.TabIndex = 1;
-            this.radioButtonUnit.TabStop = true;
-            this.radioButtonUnit.Text = "ASCII";
-            this.radioButtonUnit.UseVisualStyleBackColor = true;
-            this.radioButtonUnit.CheckedChanged += new System.EventHandler(this.radioButtonUnit_CheckedChanged);
             // 
             // buttonReadFont
             // 
@@ -272,19 +289,6 @@
             this.labelWidth.Size = new System.Drawing.Size(29, 12);
             this.labelWidth.TabIndex = 2;
             this.labelWidth.Text = "宽：";
-            // 
-            // radioButtonFontLib
-            // 
-            this.radioButtonFontLib.AutoSize = true;
-            this.radioButtonFontLib.Location = new System.Drawing.Point(8, 42);
-            this.radioButtonFontLib.Name = "radioButtonFontLib";
-            this.radioButtonFontLib.Size = new System.Drawing.Size(60, 18);
-            this.radioButtonFontLib.TabIndex = 0;
-            this.radioButtonFontLib.TabStop = true;
-            this.radioButtonFontLib.Text = "GB2312";
-            this.radioButtonFontLib.UseCompatibleTextRendering = true;
-            this.radioButtonFontLib.UseVisualStyleBackColor = true;
-            this.radioButtonFontLib.CheckedChanged += new System.EventHandler(this.radioButtonFontLib_CheckedChanged);
             // 
             // buttonSaveBMP
             // 
@@ -374,16 +378,55 @@
             this.buttonGetData.UseVisualStyleBackColor = true;
             this.buttonGetData.Click += new System.EventHandler(this.buttonGetData_Click);
             // 
+            // logo
+            // 
+            this.logo.AutoSize = true;
+            this.logo.Location = new System.Drawing.Point(12, 440);
+            this.logo.Name = "logo";
+            this.logo.Size = new System.Drawing.Size(149, 12);
+            this.logo.TabIndex = 3;
+            this.logo.TabStop = true;
+            this.logo.Text = "上海仰邦科技股份有限公司";
+            this.logo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logo_LinkClicked);
+            // 
+            // author
+            // 
+            this.author.AutoSize = true;
+            this.author.Location = new System.Drawing.Point(168, 440);
+            this.author.Name = "author";
+            this.author.Size = new System.Drawing.Size(71, 12);
+            this.author.TabIndex = 4;
+            this.author.TabStop = true;
+            this.author.Text = "Author：CJD";
+            this.author.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author_LinkClicked);
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // textBoxtime
+            // 
+            this.textBoxtime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxtime.Location = new System.Drawing.Point(608, 437);
+            this.textBoxtime.Multiline = true;
+            this.textBoxtime.Name = "textBoxtime";
+            this.textBoxtime.ReadOnly = true;
+            this.textBoxtime.Size = new System.Drawing.Size(118, 21);
+            this.textBoxtime.TabIndex = 5;
+            // 
             // readFontlib
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 431);
+            this.ClientSize = new System.Drawing.Size(734, 461);
+            this.Controls.Add(this.textBoxtime);
+            this.Controls.Add(this.author);
+            this.Controls.Add(this.logo);
             this.Controls.Add(this.groupBoxData);
             this.Controls.Add(this.groupBoxSet);
             this.Controls.Add(this.groupBoxpic);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(750, 470);
+            this.MaximumSize = new System.Drawing.Size(750, 500);
             this.MinimumSize = new System.Drawing.Size(711, 450);
             this.Name = "readFontlib";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
@@ -400,6 +443,7 @@
             this.groupBoxData.ResumeLayout(false);
             this.groupBoxData.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -432,6 +476,10 @@
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.LinkLabel logo;
+        private System.Windows.Forms.LinkLabel author;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.TextBox textBoxtime;
     }
 }
 
