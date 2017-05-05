@@ -103,6 +103,7 @@
             this.radioButton3.TabIndex = 3;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "编辑模式";
+            this.toolTipReadFont.SetToolTip(this.radioButton3, "编辑模式下，按住左键可以移动快速绘制，按住右键可以移动快速擦除");
             this.radioButton3.UseVisualStyleBackColor = true;
             this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
@@ -114,6 +115,8 @@
             this.pictureBoxFont.TabIndex = 0;
             this.pictureBoxFont.TabStop = false;
             this.pictureBoxFont.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseDown);
+            this.pictureBoxFont.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseMove);
+            this.pictureBoxFont.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseUp);
             // 
             // groupBoxSet
             // 

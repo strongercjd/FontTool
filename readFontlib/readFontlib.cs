@@ -29,6 +29,7 @@ namespace readFontlib
         bool editFlag;
         bool ASCII_Flag;
         bool showFlag;//1：获取的字模显示0X00，  0：显示 00 
+        public bool begin = false;
 
         Timer time1 = new Timer();
 
@@ -433,7 +434,6 @@ namespace readFontlib
             this.time1.Tick += new System.EventHandler(this.timer_Tick);
             this.time1.Start();
             textBoxtime.Text = DateTime.Now.ToString();
-
         }
 
         private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)//字模显示区鼠标左键按下事件
@@ -442,6 +442,7 @@ namespace readFontlib
             int date_cache;
             if (editFlag == true)
             {
+                begin = true;
                 Point contextMenuPoint = pictureBoxFont.PointToClient(Control.MousePosition);
                 if (e.Button == MouseButtons.Left)//鼠标左键
                 {
@@ -527,6 +528,88 @@ namespace readFontlib
         private void timer_Tick(object sender, EventArgs e)
         {
             textBoxtime.Text = DateTime.Now.ToString();
+        }
+
+        private void pictureBoxFont_MouseMove(object sender, MouseEventArgs e)
+        {
+            int wei_num;
+            int date_cache;
+            if (editFlag == true)
+            {
+                if (begin)
+                {
+                    Point contextMenuPoint = pictureBoxFont.PointToClient(Control.MousePosition);
+                    
+                        int Y = contextMenuPoint.Y;
+                        int X = contextMenuPoint.X;
+
+                        int X_start = (386 - width * 12) / 2;
+                        int Y_start = (386 - height * 12) / 2;
+                        if ((X > X_start) && (Y > Y_start))
+                        {
+                            int x_pain = (X - X_start) / 12;
+                            int y_pain = (Y - Y_start) / 12;
+                            if ((width % 8) == 0)
+                            {
+                                date_cache = data[y_pain * (width / 8) + x_pain / 8];
+                            }
+                            else
+                            {
+                                date_cache = data[y_pain * ((width / 8) + 1) + x_pain / 8];
+                            }
+
+                            if (x_pain > 23)
+                            {
+                                wei_num = x_pain - 24;
+                            }
+                            else
+                            {
+                                if (x_pain > 15)
+                                {
+                                    wei_num = x_pain - 16;
+                                }
+                                else
+                                {
+                                    if (x_pain > 7)
+                                    {
+                                        wei_num = x_pain - 8;
+                                    }
+                                    else
+                                    {
+                                        wei_num = x_pain;
+                                    }
+                                }
+                            }
+                        if (e.Button == MouseButtons.Left)//鼠标左键
+                        {
+                            date_cache = date_cache | (0X80 >> wei_num);
+                        }
+                        if (e.Button == MouseButtons.Right)//鼠标右键
+                        {
+                            date_cache &= ~(0X80 >> wei_num);
+                        }
+                        if ((width % 8) == 0)
+                            {
+                                data[y_pain * (width / 8) + x_pain / 8] = (byte)date_cache;
+                            }
+                            else
+                            {
+                                data[y_pain * ((width / 8) + 1) + x_pain / 8] = (byte)date_cache;
+                            }
+                            paintFont();
+                            buttonGetData_Click(this, null);
+                        }
+                }
+
+            }
+        }
+
+        private void pictureBoxFont_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (editFlag == true)
+            {
+                begin = false;
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
