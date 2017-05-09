@@ -163,7 +163,8 @@ namespace readFontlib
             Brush blackBrush = blackPen.Brush;
             Brush whiteBrush = whitePen.Brush;
 
-            Rectangle whitePanel = new Rectangle(startx, starty, width, height);
+            //Rectangle whitePanel = new Rectangle(startx, starty, width, height);
+            Rectangle whitePanel = new Rectangle(startx, starty, uniwidth, uniheight);
             Rectangle blackPanel = new Rectangle(startx, starty, uniwidth, uniheight);
             Rectangle bluePanel  = new Rectangle(startx, starty, uniwidth, uniheight);
 
@@ -353,7 +354,7 @@ namespace readFontlib
                 }
                 else if (radioButtonUnit.Checked)
                 {
-                    uniwidth = (int)numericUpDownWidth.Value;
+                    /* uni */width = (int)numericUpDownWidth.Value;
                 }
                 if ((fontPath != null) && (File.Exists(fontPath)))
                 {
@@ -375,7 +376,7 @@ namespace readFontlib
                 }
                 else if (radioButtonUnit.Checked)
                 {
-                    uniheight = (int)numericUpDownHeight.Value;
+                    /* uni */height = (int)numericUpDownHeight.Value;
                 }
                 if ((fontPath != null) && (File.Exists(fontPath)))
                 {
