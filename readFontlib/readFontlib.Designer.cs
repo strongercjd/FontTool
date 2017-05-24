@@ -61,6 +61,9 @@
             this.author = new System.Windows.Forms.LinkLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.textBoxtime = new System.Windows.Forms.TextBox();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -68,6 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
             this.groupBoxData.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxpic
@@ -75,7 +80,7 @@
             this.groupBoxpic.Controls.Add(this.View_mode_Button);
             this.groupBoxpic.Controls.Add(this.edit_mode_Button);
             this.groupBoxpic.Controls.Add(this.pictureBoxFont);
-            this.groupBoxpic.Location = new System.Drawing.Point(2, 3);
+            this.groupBoxpic.Location = new System.Drawing.Point(3, 14);
             this.groupBoxpic.Name = "groupBoxpic";
             this.groupBoxpic.Size = new System.Drawing.Size(400, 410);
             this.groupBoxpic.TabIndex = 0;
@@ -133,7 +138,7 @@
             this.groupBoxSet.Controls.Add(this.numericUpDownWidth);
             this.groupBoxSet.Controls.Add(this.labelHeight);
             this.groupBoxSet.Controls.Add(this.labelWidth);
-            this.groupBoxSet.Location = new System.Drawing.Point(412, 3);
+            this.groupBoxSet.Location = new System.Drawing.Point(434, 14);
             this.groupBoxSet.Name = "groupBoxSet";
             this.groupBoxSet.Size = new System.Drawing.Size(322, 100);
             this.groupBoxSet.TabIndex = 1;
@@ -312,7 +317,7 @@
             this.groupBoxData.Controls.Add(this.richTextBoxData);
             this.groupBoxData.Controls.Add(this.labelFontInfo);
             this.groupBoxData.Controls.Add(this.buttonGetData);
-            this.groupBoxData.Location = new System.Drawing.Point(412, 109);
+            this.groupBoxData.Location = new System.Drawing.Point(434, 114);
             this.groupBoxData.Name = "groupBoxData";
             this.groupBoxData.Size = new System.Drawing.Size(322, 319);
             this.groupBoxData.TabIndex = 2;
@@ -382,7 +387,7 @@
             // logo
             // 
             this.logo.AutoSize = true;
-            this.logo.Location = new System.Drawing.Point(12, 440);
+            this.logo.Location = new System.Drawing.Point(4, 490);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(149, 12);
             this.logo.TabIndex = 3;
@@ -393,7 +398,7 @@
             // author
             // 
             this.author.AutoSize = true;
-            this.author.Location = new System.Drawing.Point(168, 440);
+            this.author.Location = new System.Drawing.Point(171, 490);
             this.author.Name = "author";
             this.author.Size = new System.Drawing.Size(71, 12);
             this.author.TabIndex = 4;
@@ -408,27 +413,58 @@
             // textBoxtime
             // 
             this.textBoxtime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxtime.Location = new System.Drawing.Point(608, 437);
+            this.textBoxtime.Location = new System.Drawing.Point(659, 490);
             this.textBoxtime.Multiline = true;
             this.textBoxtime.Name = "textBoxtime";
             this.textBoxtime.ReadOnly = true;
             this.textBoxtime.Size = new System.Drawing.Size(118, 21);
             this.textBoxtime.TabIndex = 5;
             // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Location = new System.Drawing.Point(7, 12);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(774, 475);
+            this.tabControl.TabIndex = 4;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBoxpic);
+            this.tabPage1.Controls.Add(this.groupBoxSet);
+            this.tabPage1.Controls.Add(this.groupBoxData);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(766, 449);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "查看编辑";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(766, 449);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "制作字库";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // readFontlib
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 461);
+            this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.textBoxtime);
             this.Controls.Add(this.author);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.groupBoxData);
-            this.Controls.Add(this.groupBoxSet);
-            this.Controls.Add(this.groupBoxpic);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(750, 500);
-            this.MinimumSize = new System.Drawing.Size(711, 450);
+            this.MaximumSize = new System.Drawing.Size(800, 550);
+            this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "readFontlib";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "字库读取&修改器";
@@ -443,6 +479,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).EndInit();
             this.groupBoxData.ResumeLayout(false);
             this.groupBoxData.PerformLayout();
+            this.tabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,6 +519,9 @@
         private System.Windows.Forms.LinkLabel author;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TextBox textBoxtime;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
