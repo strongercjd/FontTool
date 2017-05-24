@@ -62,8 +62,15 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.textBoxtime = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.view_edit_fontlib = new System.Windows.Forms.TabPage();
+            this.make_fontlib = new System.Windows.Forms.TabPage();
+            this.jineima = new System.Windows.Forms.TabPage();
+            this.message = new System.Windows.Forms.Label();
+            this.input_textBox = new System.Windows.Forms.TextBox();
+            this.Transfor_button = new System.Windows.Forms.Button();
+            this.yima_listBox = new System.Windows.Forms.ListBox();
+            this.clear_button = new System.Windows.Forms.Button();
+            this.yima_textBox = new System.Windows.Forms.TextBox();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -72,7 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
             this.groupBoxData.SuspendLayout();
             this.tabControl.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.view_edit_fontlib.SuspendLayout();
+            this.jineima.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxpic
@@ -422,36 +430,108 @@
             // 
             // tabControl
             // 
-            this.tabControl.Controls.Add(this.tabPage1);
-            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.view_edit_fontlib);
+            this.tabControl.Controls.Add(this.make_fontlib);
+            this.tabControl.Controls.Add(this.jineima);
             this.tabControl.Location = new System.Drawing.Point(7, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(774, 475);
             this.tabControl.TabIndex = 4;
             // 
-            // tabPage1
+            // view_edit_fontlib
             // 
-            this.tabPage1.Controls.Add(this.groupBoxpic);
-            this.tabPage1.Controls.Add(this.groupBoxSet);
-            this.tabPage1.Controls.Add(this.groupBoxData);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(766, 449);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "查看编辑";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.view_edit_fontlib.Controls.Add(this.groupBoxpic);
+            this.view_edit_fontlib.Controls.Add(this.groupBoxSet);
+            this.view_edit_fontlib.Controls.Add(this.groupBoxData);
+            this.view_edit_fontlib.Location = new System.Drawing.Point(4, 22);
+            this.view_edit_fontlib.Name = "view_edit_fontlib";
+            this.view_edit_fontlib.Padding = new System.Windows.Forms.Padding(3);
+            this.view_edit_fontlib.Size = new System.Drawing.Size(766, 449);
+            this.view_edit_fontlib.TabIndex = 0;
+            this.view_edit_fontlib.Text = "查看编辑";
+            this.view_edit_fontlib.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // make_fontlib
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(766, 449);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "制作字库";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.make_fontlib.Location = new System.Drawing.Point(4, 22);
+            this.make_fontlib.Name = "make_fontlib";
+            this.make_fontlib.Padding = new System.Windows.Forms.Padding(3);
+            this.make_fontlib.Size = new System.Drawing.Size(766, 449);
+            this.make_fontlib.TabIndex = 1;
+            this.make_fontlib.Text = "制作字库";
+            this.make_fontlib.UseVisualStyleBackColor = true;
+            // 
+            // jineima
+            // 
+            this.jineima.Controls.Add(this.yima_textBox);
+            this.jineima.Controls.Add(this.clear_button);
+            this.jineima.Controls.Add(this.yima_listBox);
+            this.jineima.Controls.Add(this.Transfor_button);
+            this.jineima.Controls.Add(this.input_textBox);
+            this.jineima.Controls.Add(this.message);
+            this.jineima.Location = new System.Drawing.Point(4, 22);
+            this.jineima.Name = "jineima";
+            this.jineima.Padding = new System.Windows.Forms.Padding(3);
+            this.jineima.Size = new System.Drawing.Size(766, 449);
+            this.jineima.TabIndex = 2;
+            this.jineima.Text = "机内码查询";
+            this.jineima.UseVisualStyleBackColor = true;
+            // 
+            // message
+            // 
+            this.message.AutoSize = true;
+            this.message.Location = new System.Drawing.Point(53, 37);
+            this.message.Name = "message";
+            this.message.Size = new System.Drawing.Size(101, 12);
+            this.message.TabIndex = 0;
+            this.message.Text = "输入要转码的文字";
+            // 
+            // input_textBox
+            // 
+            this.input_textBox.Location = new System.Drawing.Point(55, 66);
+            this.input_textBox.Name = "input_textBox";
+            this.input_textBox.Size = new System.Drawing.Size(361, 21);
+            this.input_textBox.TabIndex = 1;
+            this.input_textBox.Text = "上海仰邦科技股份有限公司";
+            // 
+            // Transfor_button
+            // 
+            this.Transfor_button.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Transfor_button.Location = new System.Drawing.Point(422, 66);
+            this.Transfor_button.Name = "Transfor_button";
+            this.Transfor_button.Size = new System.Drawing.Size(56, 23);
+            this.Transfor_button.TabIndex = 2;
+            this.Transfor_button.Text = "译码";
+            this.Transfor_button.UseVisualStyleBackColor = true;
+            this.Transfor_button.Click += new System.EventHandler(this.Transfor_button_Click);
+            // 
+            // yima_listBox
+            // 
+            this.yima_listBox.FormattingEnabled = true;
+            this.yima_listBox.ItemHeight = 12;
+            this.yima_listBox.Location = new System.Drawing.Point(55, 115);
+            this.yima_listBox.Name = "yima_listBox";
+            this.yima_listBox.Size = new System.Drawing.Size(245, 232);
+            this.yima_listBox.TabIndex = 4;
+            // 
+            // clear_button
+            // 
+            this.clear_button.Location = new System.Drawing.Point(484, 66);
+            this.clear_button.Name = "clear_button";
+            this.clear_button.Size = new System.Drawing.Size(58, 24);
+            this.clear_button.TabIndex = 5;
+            this.clear_button.Text = "清除";
+            this.clear_button.UseVisualStyleBackColor = true;
+            this.clear_button.Click += new System.EventHandler(this.clear_button_Click);
+            // 
+            // yima_textBox
+            // 
+            this.yima_textBox.Location = new System.Drawing.Point(316, 115);
+            this.yima_textBox.Multiline = true;
+            this.yima_textBox.Name = "yima_textBox";
+            this.yima_textBox.Size = new System.Drawing.Size(247, 232);
+            this.yima_textBox.TabIndex = 6;
             // 
             // readFontlib
             // 
@@ -480,7 +560,9 @@
             this.groupBoxData.ResumeLayout(false);
             this.groupBoxData.PerformLayout();
             this.tabControl.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.view_edit_fontlib.ResumeLayout(false);
+            this.jineima.ResumeLayout(false);
+            this.jineima.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,8 +602,15 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TextBox textBoxtime;
         private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage view_edit_fontlib;
+        private System.Windows.Forms.TabPage make_fontlib;
+        private System.Windows.Forms.TabPage jineima;
+        private System.Windows.Forms.Button Transfor_button;
+        private System.Windows.Forms.TextBox input_textBox;
+        private System.Windows.Forms.Label message;
+        private System.Windows.Forms.Button clear_button;
+        private System.Windows.Forms.ListBox yima_listBox;
+        private System.Windows.Forms.TextBox yima_textBox;
     }
 }
 

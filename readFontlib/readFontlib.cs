@@ -613,11 +613,14 @@ namespace readFontlib
             buttonGetData_Click(this, null);
         }
 
+
         private void Save_font_button_Click(object sender, EventArgs e)//保存字模按钮单击事件
         {
             writeFontData();
             MessageBox.Show("成功保存这个字模");
         }
+
+
 
         private void calIndex()//区位改变时计算字模的位置
         {
@@ -643,5 +646,42 @@ namespace readFontlib
         {
             calIndex();
         }
+
+
+
+        private void Transfor_button_Click(object sender, EventArgs e)
+        {
+            if (input_textBox.Text == "")
+            {
+                MessageBox.Show("请输入译码文字");
+                return;
+            }
+
+            byte[] array = System.Text.Encoding.Default.GetBytes(input_textBox.Text);
+            for (int i = 0; i < array.Length; i = i + 2)
+            {
+                string jinei;
+                //string guobiao, quwei;
+                //int gb, qw;
+                jinei = Convert.ToString(array[i], 16) + Convert.ToString(array[i + 1], 16);
+                //gb = Convert.ToInt32(jinei, 16) - Convert.ToInt32("8080", 16);
+                //guobiao = Convert.ToString(gb, 16);
+                //qw = gb - Convert.ToInt32("2020", 16);
+                //quwei = Convert.ToString(qw, 16);
+
+                //yima_listBox.Items.Add(input_textBox.Text.Substring(i / 2, 1) + "的机内码是：" + jinei + ",国标码是：" + guobiao + ",区位码是：" + quwei);
+                yima_listBox.Items.Add(input_textBox.Text.Substring(i / 2, 1) + "  的机内码是：" + jinei);
+                yima_textBox.Text += array[i].ToString("X2").ToUpper() + " "+ array[i + 1].ToString("X2").ToUpper() + " ";
+            }
+        }
+
+        private void clear_button_Click(object sender, EventArgs e)
+        {
+            yima_listBox.Items.Clear();
+            input_textBox.Clear();
+            yima_textBox.Clear();
+        }
+
+
     }
 }
