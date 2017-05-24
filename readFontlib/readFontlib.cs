@@ -304,12 +304,6 @@ namespace readFontlib
             }
         }
 
-        private void buttonSaveBMP_Click(object sender, EventArgs e)//保存字模按钮单击事件
-        {
-            writeFontData();
-            MessageBox.Show("成功保存这个字模");
-        }
-
         private void radioButtonFontLib_CheckedChanged(object sender, EventArgs e)//选中GB2312
         {
             lockFlag = true;
@@ -402,7 +396,8 @@ namespace readFontlib
             richTextBoxData.Clear();
             for (i = 0; i < readLenth; i++)
             {
-                if (showFlag) {
+                if (check_data_format.Checked == true)
+                {
                     richTextBoxData.Text += "0x" + data[i].ToString("X2").ToUpper() + ",";
                 } else {
                     richTextBoxData.Text += data[i].ToString("X2").ToUpper() + " ";
@@ -503,18 +498,6 @@ namespace readFontlib
             }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)//选中查看模式
-        {
-            editFlag = false;
-            buttonSaveBMP.Enabled = false;
-        }
-
-        private void radioButton3_CheckedChanged(object sender, EventArgs e)//选中编辑模式
-        {
-            editFlag = true;
-            buttonSaveBMP.Enabled = true;
-        }
-
         private void logo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)//点击公司logo
         {
             //System.Diagnostics.Process.Start("iexplore.exe", "http://www.onbonbx.com");
@@ -613,22 +596,27 @@ namespace readFontlib
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void View_mode_Button_CheckedChanged(object sender, EventArgs e)//选中查看模式
         {
-            if (checkBox1.CheckState == CheckState.Checked)
-            {
-                showFlag = true;
-            }
-            else if (checkBox1.CheckState == CheckState.Unchecked)
-            {
-                showFlag = false;
-            }
-            else
-            {
-                MessageBox.Show("checkBox1 控件处于不确定状态");
-            }
-            buttonGetData_Click(this, null);
+            editFlag = false;
+            Save_font_button.Enabled = false;
+        }
 
+        private void edit_mode_Button_CheckedChanged(object sender, EventArgs e)//选中编辑模式
+        {
+            editFlag = true;
+            Save_font_button.Enabled = true;
+        }
+
+        private void check_data_format_CheckedChanged(object sender, EventArgs e)//是否添加0x
+        {
+            buttonGetData_Click(this, null);
+        }
+
+        private void Save_font_button_Click(object sender, EventArgs e)//保存字模按钮单击事件
+        {
+            writeFontData();
+            MessageBox.Show("成功保存这个字模");
         }
 
         private void calIndex()//区位改变时计算字模的位置

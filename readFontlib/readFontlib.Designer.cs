@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(readFontlib));
             this.groupBoxpic = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.View_mode_Button = new System.Windows.Forms.RadioButton();
+            this.edit_mode_Button = new System.Windows.Forms.RadioButton();
             this.pictureBoxFont = new System.Windows.Forms.PictureBox();
             this.groupBoxSet = new System.Windows.Forms.GroupBox();
             this.radioButtonUnit = new System.Windows.Forms.RadioButton();
@@ -48,9 +48,9 @@
             this.numericUpDownWidth = new System.Windows.Forms.NumericUpDown();
             this.labelHeight = new System.Windows.Forms.Label();
             this.labelWidth = new System.Windows.Forms.Label();
-            this.buttonSaveBMP = new System.Windows.Forms.Button();
+            this.Save_font_button = new System.Windows.Forms.Button();
             this.groupBoxData = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.check_data_format = new System.Windows.Forms.CheckBox();
             this.labelByteNum = new System.Windows.Forms.Label();
             this.labelNum = new System.Windows.Forms.Label();
             this.richTextBoxData = new System.Windows.Forms.RichTextBox();
@@ -72,8 +72,8 @@
             // 
             // groupBoxpic
             // 
-            this.groupBoxpic.Controls.Add(this.radioButton1);
-            this.groupBoxpic.Controls.Add(this.radioButton3);
+            this.groupBoxpic.Controls.Add(this.View_mode_Button);
+            this.groupBoxpic.Controls.Add(this.edit_mode_Button);
             this.groupBoxpic.Controls.Add(this.pictureBoxFont);
             this.groupBoxpic.Location = new System.Drawing.Point(2, 3);
             this.groupBoxpic.Name = "groupBoxpic";
@@ -82,30 +82,30 @@
             this.groupBoxpic.TabStop = false;
             this.groupBoxpic.Text = "字模区";
             // 
-            // radioButton1
+            // View_mode_Button
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(128, 11);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 16);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "查看模式";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.View_mode_Button.AutoSize = true;
+            this.View_mode_Button.Location = new System.Drawing.Point(128, 11);
+            this.View_mode_Button.Name = "View_mode_Button";
+            this.View_mode_Button.Size = new System.Drawing.Size(71, 16);
+            this.View_mode_Button.TabIndex = 2;
+            this.View_mode_Button.TabStop = true;
+            this.View_mode_Button.Text = "查看模式";
+            this.View_mode_Button.UseVisualStyleBackColor = true;
+            this.View_mode_Button.CheckedChanged += new System.EventHandler(this.View_mode_Button_CheckedChanged);
             // 
-            // radioButton3
+            // edit_mode_Button
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(215, 11);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(71, 16);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "编辑模式";
-            this.toolTipReadFont.SetToolTip(this.radioButton3, "编辑模式下，按住左键可以移动快速绘制，按住右键可以移动快速擦除");
-            this.radioButton3.UseVisualStyleBackColor = true;
-            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            this.edit_mode_Button.AutoSize = true;
+            this.edit_mode_Button.Location = new System.Drawing.Point(215, 11);
+            this.edit_mode_Button.Name = "edit_mode_Button";
+            this.edit_mode_Button.Size = new System.Drawing.Size(71, 16);
+            this.edit_mode_Button.TabIndex = 3;
+            this.edit_mode_Button.TabStop = true;
+            this.edit_mode_Button.Text = "编辑模式";
+            this.toolTipReadFont.SetToolTip(this.edit_mode_Button, "编辑模式下，按住左键可以移动快速绘制，按住右键可以移动快速擦除");
+            this.edit_mode_Button.UseVisualStyleBackColor = true;
+            this.edit_mode_Button.CheckedChanged += new System.EventHandler(this.edit_mode_Button_CheckedChanged);
             // 
             // pictureBoxFont
             // 
@@ -292,23 +292,23 @@
             this.labelWidth.TabIndex = 2;
             this.labelWidth.Text = "宽：";
             // 
-            // buttonSaveBMP
+            // Save_font_button
             // 
-            this.buttonSaveBMP.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonSaveBMP.Location = new System.Drawing.Point(65, 20);
-            this.buttonSaveBMP.Name = "buttonSaveBMP";
-            this.buttonSaveBMP.Size = new System.Drawing.Size(68, 40);
-            this.buttonSaveBMP.TabIndex = 11;
-            this.buttonSaveBMP.Text = "保存字模";
-            this.buttonSaveBMP.UseVisualStyleBackColor = true;
-            this.buttonSaveBMP.Click += new System.EventHandler(this.buttonSaveBMP_Click);
+            this.Save_font_button.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Save_font_button.Location = new System.Drawing.Point(65, 20);
+            this.Save_font_button.Name = "Save_font_button";
+            this.Save_font_button.Size = new System.Drawing.Size(68, 40);
+            this.Save_font_button.TabIndex = 11;
+            this.Save_font_button.Text = "保存字模";
+            this.Save_font_button.UseVisualStyleBackColor = true;
+            this.Save_font_button.Click += new System.EventHandler(this.Save_font_button_Click);
             // 
             // groupBoxData
             // 
-            this.groupBoxData.Controls.Add(this.checkBox1);
+            this.groupBoxData.Controls.Add(this.check_data_format);
             this.groupBoxData.Controls.Add(this.labelByteNum);
             this.groupBoxData.Controls.Add(this.labelNum);
-            this.groupBoxData.Controls.Add(this.buttonSaveBMP);
+            this.groupBoxData.Controls.Add(this.Save_font_button);
             this.groupBoxData.Controls.Add(this.richTextBoxData);
             this.groupBoxData.Controls.Add(this.labelFontInfo);
             this.groupBoxData.Controls.Add(this.buttonGetData);
@@ -319,16 +319,15 @@
             this.groupBoxData.TabStop = false;
             this.groupBoxData.Text = "数据区";
             // 
-            // checkBox1
+            // check_data_format
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(146, 20);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 16);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "添加0x和,";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.check_data_format.AutoSize = true;
+            this.check_data_format.Location = new System.Drawing.Point(146, 20);
+            this.check_data_format.Name = "check_data_format";
+            this.check_data_format.Size = new System.Drawing.Size(78, 16);
+            this.check_data_format.TabIndex = 12;
+            this.check_data_format.Text = "添加0x和,";
+            this.check_data_format.UseVisualStyleBackColor = true;
             // 
             // labelByteNum
             // 
@@ -465,7 +464,7 @@
         private System.Windows.Forms.Label labelHeight;
         private System.Windows.Forms.Label labelWidth;
         private System.Windows.Forms.RadioButton radioButtonFontLib;
-        private System.Windows.Forms.Button buttonSaveBMP;
+        private System.Windows.Forms.Button Save_font_button;
         private System.Windows.Forms.GroupBox groupBoxData;
         private System.Windows.Forms.RichTextBox richTextBoxData;
         private System.Windows.Forms.Label labelFontInfo;
@@ -475,9 +474,9 @@
         private System.Windows.Forms.Label labelNum;
         private System.Windows.Forms.ComboBox comboBoxWei;
         private System.Windows.Forms.ComboBox comboBoxQu;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.RadioButton edit_mode_Button;
+        private System.Windows.Forms.RadioButton View_mode_Button;
+        private System.Windows.Forms.CheckBox check_data_format;
         private System.Windows.Forms.LinkLabel logo;
         private System.Windows.Forms.LinkLabel author;
         private System.Windows.Forms.Timer timer;
