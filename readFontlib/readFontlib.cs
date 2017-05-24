@@ -33,6 +33,8 @@ namespace readFontlib
 
         Timer time1 = new Timer();
 
+
+        #region 字库查看修改的代码
         private void dataInit()//数据初始化，在读取字库时调用
         {
             int i;
@@ -642,13 +644,16 @@ namespace readFontlib
             calIndex();
         }
 
+
+
         private void comboBoxWei_SelectedIndexChanged(object sender, EventArgs e)//位码改变
         {
             calIndex();
         }
+        #endregion 字库查看修改的代码
 
 
-
+        #region 机内码查询的代码
         private void Transfor_button_Click(object sender, EventArgs e)
         {
             if (input_textBox.Text == "")
@@ -681,6 +686,72 @@ namespace readFontlib
             input_textBox.Clear();
             yima_textBox.Clear();
         }
+
+        #endregion 机内码查询的代码
+
+
+
+        #region CRC16校验的代码
+        static int crc16(byte[] data, int size)
+        {
+            int crc = 0x0;
+            byte data_t;
+            int i = 0;
+            int j = 0;
+            if (data == null)
+            {
+                return 0;
+            }
+            for (j = 0; j < size; j++)
+            {
+                data_t = data[j];
+                crc = (data_t ^ (crc));
+                for (i = 0; i < 8; i++)
+                {
+                    if ((crc & 0x1) == 1)
+                    {
+                        crc = (crc >> 1) ^ 0xA001;
+                    }
+                    else
+                    {
+                        crc >>= 1;
+                    }
+                }
+            }
+            return crc;
+        }
+
+        
+        private void crc_check_button_Click(object sender, EventArgs e)
+        {
+            int mycrc = 0;
+            int i = 0;
+            try
+            {
+                string[] strCheckArray = crc_data_richTextBox.Text.Split(' ');
+                byte[] myarray = new byte[strCheckArray.Length];
+                foreach (var tmp in strCheckArray)
+                {
+                    myarray[i++] = System.Convert.ToByte(tmp, 16);
+                }
+                mycrc = crc16(myarray, i);
+                crc_textBox.Text = (mycrc & 0xff).ToString("X2").ToUpper() + " " + ((mycrc >> 8) & 0xff).ToString("X2").ToUpper();
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("请输入正确格式的数据！");
+            }
+        }
+
+        private void crc_clear_button_Click(object sender, EventArgs e)
+        {
+            crc_data_richTextBox.Clear();
+            crc_textBox.Clear();
+        }
+
+        #endregion CRC16校验的代码
 
 
     }

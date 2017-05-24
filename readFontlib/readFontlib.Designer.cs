@@ -65,12 +65,18 @@
             this.view_edit_fontlib = new System.Windows.Forms.TabPage();
             this.make_fontlib = new System.Windows.Forms.TabPage();
             this.jineima = new System.Windows.Forms.TabPage();
-            this.message = new System.Windows.Forms.Label();
-            this.input_textBox = new System.Windows.Forms.TextBox();
-            this.Transfor_button = new System.Windows.Forms.Button();
-            this.yima_listBox = new System.Windows.Forms.ListBox();
-            this.clear_button = new System.Windows.Forms.Button();
             this.yima_textBox = new System.Windows.Forms.TextBox();
+            this.clear_button = new System.Windows.Forms.Button();
+            this.yima_listBox = new System.Windows.Forms.ListBox();
+            this.Transfor_button = new System.Windows.Forms.Button();
+            this.input_textBox = new System.Windows.Forms.TextBox();
+            this.message = new System.Windows.Forms.Label();
+            this.CRC16 = new System.Windows.Forms.TabPage();
+            this.check_groupBox = new System.Windows.Forms.GroupBox();
+            this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.crc_textBox = new System.Windows.Forms.TextBox();
+            this.crc_check_button = new System.Windows.Forms.Button();
+            this.crc_clear_button = new System.Windows.Forms.Button();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -81,6 +87,8 @@
             this.tabControl.SuspendLayout();
             this.view_edit_fontlib.SuspendLayout();
             this.jineima.SuspendLayout();
+            this.CRC16.SuspendLayout();
+            this.check_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxpic
@@ -433,6 +441,7 @@
             this.tabControl.Controls.Add(this.view_edit_fontlib);
             this.tabControl.Controls.Add(this.make_fontlib);
             this.tabControl.Controls.Add(this.jineima);
+            this.tabControl.Controls.Add(this.CRC16);
             this.tabControl.Location = new System.Drawing.Point(7, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -478,22 +487,32 @@
             this.jineima.Text = "机内码查询";
             this.jineima.UseVisualStyleBackColor = true;
             // 
-            // message
+            // yima_textBox
             // 
-            this.message.AutoSize = true;
-            this.message.Location = new System.Drawing.Point(53, 37);
-            this.message.Name = "message";
-            this.message.Size = new System.Drawing.Size(101, 12);
-            this.message.TabIndex = 0;
-            this.message.Text = "输入要转码的文字";
+            this.yima_textBox.Location = new System.Drawing.Point(316, 115);
+            this.yima_textBox.Multiline = true;
+            this.yima_textBox.Name = "yima_textBox";
+            this.yima_textBox.Size = new System.Drawing.Size(247, 232);
+            this.yima_textBox.TabIndex = 6;
             // 
-            // input_textBox
+            // clear_button
             // 
-            this.input_textBox.Location = new System.Drawing.Point(55, 66);
-            this.input_textBox.Name = "input_textBox";
-            this.input_textBox.Size = new System.Drawing.Size(361, 21);
-            this.input_textBox.TabIndex = 1;
-            this.input_textBox.Text = "上海仰邦科技股份有限公司";
+            this.clear_button.Location = new System.Drawing.Point(484, 66);
+            this.clear_button.Name = "clear_button";
+            this.clear_button.Size = new System.Drawing.Size(58, 24);
+            this.clear_button.TabIndex = 5;
+            this.clear_button.Text = "清除";
+            this.clear_button.UseVisualStyleBackColor = true;
+            this.clear_button.Click += new System.EventHandler(this.clear_button_Click);
+            // 
+            // yima_listBox
+            // 
+            this.yima_listBox.FormattingEnabled = true;
+            this.yima_listBox.ItemHeight = 12;
+            this.yima_listBox.Location = new System.Drawing.Point(55, 115);
+            this.yima_listBox.Name = "yima_listBox";
+            this.yima_listBox.Size = new System.Drawing.Size(245, 232);
+            this.yima_listBox.TabIndex = 4;
             // 
             // Transfor_button
             // 
@@ -506,32 +525,83 @@
             this.Transfor_button.UseVisualStyleBackColor = true;
             this.Transfor_button.Click += new System.EventHandler(this.Transfor_button_Click);
             // 
-            // yima_listBox
+            // input_textBox
             // 
-            this.yima_listBox.FormattingEnabled = true;
-            this.yima_listBox.ItemHeight = 12;
-            this.yima_listBox.Location = new System.Drawing.Point(55, 115);
-            this.yima_listBox.Name = "yima_listBox";
-            this.yima_listBox.Size = new System.Drawing.Size(245, 232);
-            this.yima_listBox.TabIndex = 4;
+            this.input_textBox.Location = new System.Drawing.Point(55, 66);
+            this.input_textBox.Name = "input_textBox";
+            this.input_textBox.Size = new System.Drawing.Size(361, 21);
+            this.input_textBox.TabIndex = 1;
+            this.input_textBox.Text = "上海仰邦科技股份有限公司";
             // 
-            // clear_button
+            // message
             // 
-            this.clear_button.Location = new System.Drawing.Point(484, 66);
-            this.clear_button.Name = "clear_button";
-            this.clear_button.Size = new System.Drawing.Size(58, 24);
-            this.clear_button.TabIndex = 5;
-            this.clear_button.Text = "清除";
-            this.clear_button.UseVisualStyleBackColor = true;
-            this.clear_button.Click += new System.EventHandler(this.clear_button_Click);
+            this.message.AutoSize = true;
+            this.message.Location = new System.Drawing.Point(53, 37);
+            this.message.Name = "message";
+            this.message.Size = new System.Drawing.Size(101, 12);
+            this.message.TabIndex = 0;
+            this.message.Text = "输入要转码的汉字";
             // 
-            // yima_textBox
+            // CRC16
             // 
-            this.yima_textBox.Location = new System.Drawing.Point(316, 115);
-            this.yima_textBox.Multiline = true;
-            this.yima_textBox.Name = "yima_textBox";
-            this.yima_textBox.Size = new System.Drawing.Size(247, 232);
-            this.yima_textBox.TabIndex = 6;
+            this.CRC16.Controls.Add(this.crc_clear_button);
+            this.CRC16.Controls.Add(this.crc_check_button);
+            this.CRC16.Controls.Add(this.crc_textBox);
+            this.CRC16.Controls.Add(this.check_groupBox);
+            this.CRC16.Location = new System.Drawing.Point(4, 22);
+            this.CRC16.Name = "CRC16";
+            this.CRC16.Padding = new System.Windows.Forms.Padding(3);
+            this.CRC16.Size = new System.Drawing.Size(766, 449);
+            this.CRC16.TabIndex = 3;
+            this.CRC16.Text = "CRC16校验";
+            this.CRC16.UseVisualStyleBackColor = true;
+            // 
+            // check_groupBox
+            // 
+            this.check_groupBox.Controls.Add(this.crc_data_richTextBox);
+            this.check_groupBox.Location = new System.Drawing.Point(136, 30);
+            this.check_groupBox.Name = "check_groupBox";
+            this.check_groupBox.Size = new System.Drawing.Size(337, 276);
+            this.check_groupBox.TabIndex = 0;
+            this.check_groupBox.TabStop = false;
+            this.check_groupBox.Text = "校验区";
+            // 
+            // crc_data_richTextBox
+            // 
+            this.crc_data_richTextBox.Location = new System.Drawing.Point(7, 20);
+            this.crc_data_richTextBox.Name = "crc_data_richTextBox";
+            this.crc_data_richTextBox.Size = new System.Drawing.Size(324, 249);
+            this.crc_data_richTextBox.TabIndex = 0;
+            this.crc_data_richTextBox.Text = "01 00 00 80 00 00 00 00 00 00 FE 02 28 00 A3 06 01 23 00 00 01 1F 00 00 00 00 00 " +
+    "00 04 00 10 00 00 00 00 02 00 00 00 00 02 02 01 00 00 0A 04 00 00 00 D1 F6 B0 EE" +
+    "";
+            // 
+            // crc_textBox
+            // 
+            this.crc_textBox.Location = new System.Drawing.Point(327, 330);
+            this.crc_textBox.Name = "crc_textBox";
+            this.crc_textBox.Size = new System.Drawing.Size(84, 21);
+            this.crc_textBox.TabIndex = 1;
+            // 
+            // crc_check_button
+            // 
+            this.crc_check_button.Location = new System.Drawing.Point(258, 328);
+            this.crc_check_button.Name = "crc_check_button";
+            this.crc_check_button.Size = new System.Drawing.Size(63, 23);
+            this.crc_check_button.TabIndex = 2;
+            this.crc_check_button.Text = "校验";
+            this.crc_check_button.UseVisualStyleBackColor = true;
+            this.crc_check_button.Click += new System.EventHandler(this.crc_check_button_Click);
+            // 
+            // crc_clear_button
+            // 
+            this.crc_clear_button.Location = new System.Drawing.Point(423, 328);
+            this.crc_clear_button.Name = "crc_clear_button";
+            this.crc_clear_button.Size = new System.Drawing.Size(50, 23);
+            this.crc_clear_button.TabIndex = 3;
+            this.crc_clear_button.Text = "清除";
+            this.crc_clear_button.UseVisualStyleBackColor = true;
+            this.crc_clear_button.Click += new System.EventHandler(this.crc_clear_button_Click);
             // 
             // readFontlib
             // 
@@ -563,6 +633,9 @@
             this.view_edit_fontlib.ResumeLayout(false);
             this.jineima.ResumeLayout(false);
             this.jineima.PerformLayout();
+            this.CRC16.ResumeLayout(false);
+            this.CRC16.PerformLayout();
+            this.check_groupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,6 +684,12 @@
         private System.Windows.Forms.Button clear_button;
         private System.Windows.Forms.ListBox yima_listBox;
         private System.Windows.Forms.TextBox yima_textBox;
+        private System.Windows.Forms.TabPage CRC16;
+        private System.Windows.Forms.Button crc_clear_button;
+        private System.Windows.Forms.Button crc_check_button;
+        private System.Windows.Forms.TextBox crc_textBox;
+        private System.Windows.Forms.GroupBox check_groupBox;
+        private System.Windows.Forms.RichTextBox crc_data_richTextBox;
     }
 }
 
