@@ -72,11 +72,30 @@
             this.input_textBox = new System.Windows.Forms.TextBox();
             this.message = new System.Windows.Forms.Label();
             this.CRC16 = new System.Windows.Forms.TabPage();
+            this.crc_clear_button = new System.Windows.Forms.Button();
+            this.crc_check_button = new System.Windows.Forms.Button();
+            this.crc_textBox = new System.Windows.Forms.TextBox();
             this.check_groupBox = new System.Windows.Forms.GroupBox();
             this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.crc_textBox = new System.Windows.Forms.TextBox();
-            this.crc_check_button = new System.Windows.Forms.Button();
-            this.crc_clear_button = new System.Windows.Forms.Button();
+            this.preview_groupBox = new System.Windows.Forms.GroupBox();
+            this.font_groupBox = new System.Windows.Forms.GroupBox();
+            this.set_groupBox = new System.Windows.Forms.GroupBox();
+            this.message_groupBox = new System.Windows.Forms.GroupBox();
+            this.check_font_button = new System.Windows.Forms.Button();
+            this.font_label = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.font_view_label = new System.Windows.Forms.Label();
+            this.font_viwer_textBox = new System.Windows.Forms.TextBox();
+            this.font_width_label = new System.Windows.Forms.Label();
+            this.font_height_label = new System.Windows.Forms.Label();
+            this.level_label = new System.Windows.Forms.Label();
+            this.vertical_label = new System.Windows.Forms.Label();
+            this.width_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.height_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.level_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.vertical_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.make_font_button = new System.Windows.Forms.Button();
+            this.font_message_textBox = new System.Windows.Forms.TextBox();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -86,9 +105,18 @@
             this.groupBoxData.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.view_edit_fontlib.SuspendLayout();
+            this.make_fontlib.SuspendLayout();
             this.jineima.SuspendLayout();
             this.CRC16.SuspendLayout();
             this.check_groupBox.SuspendLayout();
+            this.font_groupBox.SuspendLayout();
+            this.set_groupBox.SuspendLayout();
+            this.message_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxpic
@@ -463,6 +491,9 @@
             // 
             // make_fontlib
             // 
+            this.make_fontlib.Controls.Add(this.set_groupBox);
+            this.make_fontlib.Controls.Add(this.font_groupBox);
+            this.make_fontlib.Controls.Add(this.preview_groupBox);
             this.make_fontlib.Location = new System.Drawing.Point(4, 22);
             this.make_fontlib.Name = "make_fontlib";
             this.make_fontlib.Padding = new System.Windows.Forms.Padding(3);
@@ -556,6 +587,33 @@
             this.CRC16.Text = "CRC16校验";
             this.CRC16.UseVisualStyleBackColor = true;
             // 
+            // crc_clear_button
+            // 
+            this.crc_clear_button.Location = new System.Drawing.Point(423, 328);
+            this.crc_clear_button.Name = "crc_clear_button";
+            this.crc_clear_button.Size = new System.Drawing.Size(50, 23);
+            this.crc_clear_button.TabIndex = 3;
+            this.crc_clear_button.Text = "清除";
+            this.crc_clear_button.UseVisualStyleBackColor = true;
+            this.crc_clear_button.Click += new System.EventHandler(this.crc_clear_button_Click);
+            // 
+            // crc_check_button
+            // 
+            this.crc_check_button.Location = new System.Drawing.Point(258, 328);
+            this.crc_check_button.Name = "crc_check_button";
+            this.crc_check_button.Size = new System.Drawing.Size(63, 23);
+            this.crc_check_button.TabIndex = 2;
+            this.crc_check_button.Text = "校验";
+            this.crc_check_button.UseVisualStyleBackColor = true;
+            this.crc_check_button.Click += new System.EventHandler(this.crc_check_button_Click);
+            // 
+            // crc_textBox
+            // 
+            this.crc_textBox.Location = new System.Drawing.Point(327, 330);
+            this.crc_textBox.Name = "crc_textBox";
+            this.crc_textBox.Size = new System.Drawing.Size(84, 21);
+            this.crc_textBox.TabIndex = 1;
+            // 
             // check_groupBox
             // 
             this.check_groupBox.Controls.Add(this.crc_data_richTextBox);
@@ -576,32 +634,180 @@
     "00 04 00 10 00 00 00 00 02 00 00 00 00 02 02 01 00 00 0A 04 00 00 00 D1 F6 B0 EE" +
     "";
             // 
-            // crc_textBox
+            // preview_groupBox
             // 
-            this.crc_textBox.Location = new System.Drawing.Point(327, 330);
-            this.crc_textBox.Name = "crc_textBox";
-            this.crc_textBox.Size = new System.Drawing.Size(84, 21);
-            this.crc_textBox.TabIndex = 1;
+            this.preview_groupBox.Location = new System.Drawing.Point(16, 19);
+            this.preview_groupBox.Name = "preview_groupBox";
+            this.preview_groupBox.Size = new System.Drawing.Size(372, 415);
+            this.preview_groupBox.TabIndex = 0;
+            this.preview_groupBox.TabStop = false;
+            this.preview_groupBox.Text = "预览";
             // 
-            // crc_check_button
+            // font_groupBox
             // 
-            this.crc_check_button.Location = new System.Drawing.Point(258, 328);
-            this.crc_check_button.Name = "crc_check_button";
-            this.crc_check_button.Size = new System.Drawing.Size(63, 23);
-            this.crc_check_button.TabIndex = 2;
-            this.crc_check_button.Text = "校验";
-            this.crc_check_button.UseVisualStyleBackColor = true;
-            this.crc_check_button.Click += new System.EventHandler(this.crc_check_button_Click);
+            this.font_groupBox.Controls.Add(this.font_viwer_textBox);
+            this.font_groupBox.Controls.Add(this.font_view_label);
+            this.font_groupBox.Controls.Add(this.numericUpDown1);
+            this.font_groupBox.Controls.Add(this.font_label);
+            this.font_groupBox.Controls.Add(this.check_font_button);
+            this.font_groupBox.Controls.Add(this.message_groupBox);
+            this.font_groupBox.Location = new System.Drawing.Point(406, 19);
+            this.font_groupBox.Name = "font_groupBox";
+            this.font_groupBox.Size = new System.Drawing.Size(343, 182);
+            this.font_groupBox.TabIndex = 1;
+            this.font_groupBox.TabStop = false;
+            this.font_groupBox.Text = "字体";
             // 
-            // crc_clear_button
+            // set_groupBox
             // 
-            this.crc_clear_button.Location = new System.Drawing.Point(423, 328);
-            this.crc_clear_button.Name = "crc_clear_button";
-            this.crc_clear_button.Size = new System.Drawing.Size(50, 23);
-            this.crc_clear_button.TabIndex = 3;
-            this.crc_clear_button.Text = "清除";
-            this.crc_clear_button.UseVisualStyleBackColor = true;
-            this.crc_clear_button.Click += new System.EventHandler(this.crc_clear_button_Click);
+            this.set_groupBox.Controls.Add(this.make_font_button);
+            this.set_groupBox.Controls.Add(this.vertical_numericUpDown);
+            this.set_groupBox.Controls.Add(this.level_numericUpDown);
+            this.set_groupBox.Controls.Add(this.height_numericUpDown);
+            this.set_groupBox.Controls.Add(this.width_numericUpDown);
+            this.set_groupBox.Controls.Add(this.vertical_label);
+            this.set_groupBox.Controls.Add(this.level_label);
+            this.set_groupBox.Controls.Add(this.font_height_label);
+            this.set_groupBox.Controls.Add(this.font_width_label);
+            this.set_groupBox.Location = new System.Drawing.Point(406, 208);
+            this.set_groupBox.Name = "set_groupBox";
+            this.set_groupBox.Size = new System.Drawing.Size(343, 226);
+            this.set_groupBox.TabIndex = 2;
+            this.set_groupBox.TabStop = false;
+            this.set_groupBox.Text = "设置";
+            // 
+            // message_groupBox
+            // 
+            this.message_groupBox.Controls.Add(this.font_message_textBox);
+            this.message_groupBox.Location = new System.Drawing.Point(7, 21);
+            this.message_groupBox.Name = "message_groupBox";
+            this.message_groupBox.Size = new System.Drawing.Size(147, 155);
+            this.message_groupBox.TabIndex = 0;
+            this.message_groupBox.TabStop = false;
+            this.message_groupBox.Text = "字体信息";
+            // 
+            // check_font_button
+            // 
+            this.check_font_button.Location = new System.Drawing.Point(182, 21);
+            this.check_font_button.Name = "check_font_button";
+            this.check_font_button.Size = new System.Drawing.Size(155, 31);
+            this.check_font_button.TabIndex = 1;
+            this.check_font_button.Text = "选择字体";
+            this.check_font_button.UseVisualStyleBackColor = true;
+            this.check_font_button.Click += new System.EventHandler(this.check_font_button_Click);
+            // 
+            // font_label
+            // 
+            this.font_label.AutoSize = true;
+            this.font_label.Location = new System.Drawing.Point(180, 84);
+            this.font_label.Name = "font_label";
+            this.font_label.Size = new System.Drawing.Size(65, 12);
+            this.font_label.TabIndex = 2;
+            this.font_label.Text = "字体大小：";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(242, 82);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(85, 21);
+            this.numericUpDown1.TabIndex = 3;
+            // 
+            // font_view_label
+            // 
+            this.font_view_label.AutoSize = true;
+            this.font_view_label.Location = new System.Drawing.Point(180, 122);
+            this.font_view_label.Name = "font_view_label";
+            this.font_view_label.Size = new System.Drawing.Size(65, 12);
+            this.font_view_label.TabIndex = 4;
+            this.font_view_label.Text = "预览字符：";
+            // 
+            // font_viwer_textBox
+            // 
+            this.font_viwer_textBox.Location = new System.Drawing.Point(242, 119);
+            this.font_viwer_textBox.Name = "font_viwer_textBox";
+            this.font_viwer_textBox.Size = new System.Drawing.Size(85, 21);
+            this.font_viwer_textBox.TabIndex = 5;
+            // 
+            // font_width_label
+            // 
+            this.font_width_label.AutoSize = true;
+            this.font_width_label.Location = new System.Drawing.Point(38, 41);
+            this.font_width_label.Name = "font_width_label";
+            this.font_width_label.Size = new System.Drawing.Size(41, 12);
+            this.font_width_label.TabIndex = 0;
+            this.font_width_label.Text = "宽度：";
+            // 
+            // font_height_label
+            // 
+            this.font_height_label.AutoSize = true;
+            this.font_height_label.Location = new System.Drawing.Point(38, 84);
+            this.font_height_label.Name = "font_height_label";
+            this.font_height_label.Size = new System.Drawing.Size(41, 12);
+            this.font_height_label.TabIndex = 1;
+            this.font_height_label.Text = "高度：";
+            // 
+            // level_label
+            // 
+            this.level_label.AutoSize = true;
+            this.level_label.Location = new System.Drawing.Point(180, 39);
+            this.level_label.Name = "level_label";
+            this.level_label.Size = new System.Drawing.Size(65, 12);
+            this.level_label.TabIndex = 2;
+            this.level_label.Text = "水平偏移：";
+            // 
+            // vertical_label
+            // 
+            this.vertical_label.AutoSize = true;
+            this.vertical_label.Location = new System.Drawing.Point(180, 75);
+            this.vertical_label.Name = "vertical_label";
+            this.vertical_label.Size = new System.Drawing.Size(65, 12);
+            this.vertical_label.TabIndex = 3;
+            this.vertical_label.Text = "垂直偏移：";
+            // 
+            // width_numericUpDown
+            // 
+            this.width_numericUpDown.Location = new System.Drawing.Point(86, 39);
+            this.width_numericUpDown.Name = "width_numericUpDown";
+            this.width_numericUpDown.Size = new System.Drawing.Size(88, 21);
+            this.width_numericUpDown.TabIndex = 4;
+            // 
+            // height_numericUpDown
+            // 
+            this.height_numericUpDown.Location = new System.Drawing.Point(88, 75);
+            this.height_numericUpDown.Name = "height_numericUpDown";
+            this.height_numericUpDown.Size = new System.Drawing.Size(86, 21);
+            this.height_numericUpDown.TabIndex = 5;
+            // 
+            // level_numericUpDown
+            // 
+            this.level_numericUpDown.Location = new System.Drawing.Point(242, 37);
+            this.level_numericUpDown.Name = "level_numericUpDown";
+            this.level_numericUpDown.Size = new System.Drawing.Size(83, 21);
+            this.level_numericUpDown.TabIndex = 6;
+            // 
+            // vertical_numericUpDown
+            // 
+            this.vertical_numericUpDown.Location = new System.Drawing.Point(242, 73);
+            this.vertical_numericUpDown.Name = "vertical_numericUpDown";
+            this.vertical_numericUpDown.Size = new System.Drawing.Size(83, 21);
+            this.vertical_numericUpDown.TabIndex = 7;
+            // 
+            // make_font_button
+            // 
+            this.make_font_button.Location = new System.Drawing.Point(227, 133);
+            this.make_font_button.Name = "make_font_button";
+            this.make_font_button.Size = new System.Drawing.Size(75, 32);
+            this.make_font_button.TabIndex = 8;
+            this.make_font_button.Text = "制作字库";
+            this.make_font_button.UseVisualStyleBackColor = true;
+            // 
+            // font_message_textBox
+            // 
+            this.font_message_textBox.Location = new System.Drawing.Point(7, 21);
+            this.font_message_textBox.Multiline = true;
+            this.font_message_textBox.Name = "font_message_textBox";
+            this.font_message_textBox.Size = new System.Drawing.Size(134, 128);
+            this.font_message_textBox.TabIndex = 0;
             // 
             // readFontlib
             // 
@@ -631,11 +837,23 @@
             this.groupBoxData.PerformLayout();
             this.tabControl.ResumeLayout(false);
             this.view_edit_fontlib.ResumeLayout(false);
+            this.make_fontlib.ResumeLayout(false);
             this.jineima.ResumeLayout(false);
             this.jineima.PerformLayout();
             this.CRC16.ResumeLayout(false);
             this.CRC16.PerformLayout();
             this.check_groupBox.ResumeLayout(false);
+            this.font_groupBox.ResumeLayout(false);
+            this.font_groupBox.PerformLayout();
+            this.set_groupBox.ResumeLayout(false);
+            this.set_groupBox.PerformLayout();
+            this.message_groupBox.ResumeLayout(false);
+            this.message_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -690,6 +908,25 @@
         private System.Windows.Forms.TextBox crc_textBox;
         private System.Windows.Forms.GroupBox check_groupBox;
         private System.Windows.Forms.RichTextBox crc_data_richTextBox;
+        private System.Windows.Forms.GroupBox set_groupBox;
+        private System.Windows.Forms.Button make_font_button;
+        private System.Windows.Forms.NumericUpDown vertical_numericUpDown;
+        private System.Windows.Forms.NumericUpDown level_numericUpDown;
+        private System.Windows.Forms.NumericUpDown height_numericUpDown;
+        private System.Windows.Forms.NumericUpDown width_numericUpDown;
+        private System.Windows.Forms.Label vertical_label;
+        private System.Windows.Forms.Label level_label;
+        private System.Windows.Forms.Label font_height_label;
+        private System.Windows.Forms.Label font_width_label;
+        private System.Windows.Forms.GroupBox font_groupBox;
+        private System.Windows.Forms.TextBox font_viwer_textBox;
+        private System.Windows.Forms.Label font_view_label;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label font_label;
+        private System.Windows.Forms.Button check_font_button;
+        private System.Windows.Forms.GroupBox message_groupBox;
+        private System.Windows.Forms.GroupBox preview_groupBox;
+        private System.Windows.Forms.TextBox font_message_textBox;
     }
 }
 

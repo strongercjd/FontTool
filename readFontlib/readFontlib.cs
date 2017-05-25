@@ -680,6 +680,8 @@ namespace readFontlib
             }
         }
 
+
+
         private void clear_button_Click(object sender, EventArgs e)
         {
             yima_listBox.Items.Clear();
@@ -753,6 +755,29 @@ namespace readFontlib
 
         #endregion CRC16校验的代码
 
+
+        #region 制作字库的代码
+        private void check_font_button_Click(object sender, EventArgs e)
+        {
+            //if (this.fontDlg.ShowDialog() == DialogResult.OK)
+            //{
+            //    int fontSize = int.Parse(this.fontDlg.Font.SizeInPoints.ToString("##"));
+            //    this.nudFontSize.Value = fontSize;      //同步设置“字体大小”数字框的值。
+
+            //    //重新设置选用的字体。
+            //    this.MatCharFont.MatFont =
+            //        new Font(this.fontDlg.Font.FontFamily, (float)fontSize,
+            //                 this.fontDlg.Font.Style, this.fontDlg.Font.Unit);
+            //    //更新字符预览。
+            //    this.pnlView.BackgroundImage = this.MatCharFont.MatBitmap;
+
+            //    //更新当前字体信息。
+            //    this.txtFontInfo.Clear();
+            //    this.txtFontInfo.Text = this.MatCharFont.GetMatFontInfo();
+            //}
+
+        }
+        #endregion 制作字库的代码
 
     }
 }
