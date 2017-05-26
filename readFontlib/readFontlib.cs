@@ -812,10 +812,70 @@ namespace readFontlib
                 this.UIEnabled(false);
 
                 //启动点阵数据文件生成的辅助线程。
-                //this.bgwFileBuilder.RunWorkerAsync(this.saveFileDlg.FileName);
+                this.bgwFileBuilder.RunWorkerAsync(this.saveFileDlg.FileName);
             }
         }
 
+        private void bgwFileBuilder_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string path = (string)e.Argument;
+
+            using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+            {
+                ////将点阵字体的字符宽度和高度写入文件的头部。
+                //fs.WriteByte((byte)Math.Min(this.MatCharFont.CharWidth, 100));
+                //fs.WriteByte((byte)Math.Min(this.MatCharFont.CharHeight, 100));
+
+                //在GB2312编码的汉字字库中，共有 8178 个字符；
+                //遍历每一个字符，生成它们的点阵数据文件。
+                for (int i = 0; i < 8178; i++)
+                {
+                    //设置汉字的区位码。
+                    byte[] bt = new byte[2];
+                    bt[0] = (byte)(Math.Floor((double)i / 94) + 161);
+                    bt[1] = (byte)(i % 94 + 161);
+
+                    //按照区位码，解码成汉字字符。
+                    this.MatCharFont.DemoChar = Encoding.GetEncoding("GB2312").GetString(bt);
+
+                    //获取字符的点阵数据。
+                    Byte[] byteArray = this.MatCharFont.GetDemoCharMatrixBytes();
+
+                    //写入文件。
+                    foreach (Byte ba in byteArray)
+                    {
+                        fs.WriteByte(ba);
+                    }
+
+                    ////报告文件生成进度。
+                    ////设置判断条件，可以减少重复的进度报告，提高执行效率。
+                    //if ((i % 82 == 0) || (i == 8177))
+                    //{
+                    //    int procPercent = (int)((double)i / 8177 * 100);
+                    //    this.bgwFileBuilder.ReportProgress(procPercent);
+                    //}
+                }
+
+                //清除文件流的缓冲区，关闭文件。
+                fs.Flush();
+                fs.Close();
+            }
+
+        }
+
+        private void bgwFileBuilder_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            MessageBox.Show("点阵字库文件生成过程结束！", "系统提示",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //恢复窗口的UI界面。
+            this.UIEnabled(true);
+            //this.tssLblStatus.Text = "就绪";
+            if (this.MatCharFont.IsEqualWH)
+            {
+                this.height_numericUpDown.Enabled = false;
+            }
+        }
 
         private void UIEnabled(bool isEnabled)
         {

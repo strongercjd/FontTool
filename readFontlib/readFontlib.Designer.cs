@@ -101,6 +101,7 @@
             this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
             this.fontDlg = new System.Windows.Forms.FontDialog();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
+            this.bgwFileBuilder = new System.ComponentModel.BackgroundWorker();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -872,7 +873,12 @@
             // 
             // saveFileDlg
             // 
-            this.saveFileDlg.Filter = "点阵汉字文件(*.bin)|*.bin|所有文件(*.*)|*.*";
+            this.saveFileDlg.Filter = "点阵汉字文件(*.DZK)|*.DZK|所有文件(*.*)|*.*";
+            // 
+            // bgwFileBuilder
+            // 
+            this.bgwFileBuilder.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwFileBuilder_DoWork);
+            this.bgwFileBuilder.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwFileBuilder_RunWorkerCompleted);
             // 
             // readFontlib
             // 
@@ -998,6 +1004,7 @@
         private System.Windows.Forms.RadioButton rdBtnStandard;
         private System.Windows.Forms.RadioButton rdBtnNonStandard;
         private System.Windows.Forms.SaveFileDialog saveFileDlg;
+        private System.ComponentModel.BackgroundWorker bgwFileBuilder;
     }
 }
 
