@@ -65,6 +65,8 @@
             this.view_edit_fontlib = new System.Windows.Forms.TabPage();
             this.make_fontlib = new System.Windows.Forms.TabPage();
             this.set_groupBox = new System.Windows.Forms.GroupBox();
+            this.rdBtnNonStandard = new System.Windows.Forms.RadioButton();
+            this.rdBtnStandard = new System.Windows.Forms.RadioButton();
             this.make_font_button = new System.Windows.Forms.Button();
             this.vertical_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.level_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -83,6 +85,7 @@
             this.message_groupBox = new System.Windows.Forms.GroupBox();
             this.font_message_textBox = new System.Windows.Forms.TextBox();
             this.preview_groupBox = new System.Windows.Forms.GroupBox();
+            this.font_viwer_panel = new System.Windows.Forms.Panel();
             this.jineima = new System.Windows.Forms.TabPage();
             this.yima_textBox = new System.Windows.Forms.TextBox();
             this.clear_button = new System.Windows.Forms.Button();
@@ -96,10 +99,7 @@
             this.crc_textBox = new System.Windows.Forms.TextBox();
             this.check_groupBox = new System.Windows.Forms.GroupBox();
             this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.font_viwer_panel = new System.Windows.Forms.Panel();
             this.fontDlg = new System.Windows.Forms.FontDialog();
-            this.rdBtnStandard = new System.Windows.Forms.RadioButton();
-            this.rdBtnNonStandard = new System.Windows.Forms.RadioButton();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
@@ -528,6 +528,30 @@
             this.set_groupBox.TabStop = false;
             this.set_groupBox.Text = "设置";
             // 
+            // rdBtnNonStandard
+            // 
+            this.rdBtnNonStandard.AutoSize = true;
+            this.rdBtnNonStandard.Checked = true;
+            this.rdBtnNonStandard.Location = new System.Drawing.Point(40, 120);
+            this.rdBtnNonStandard.Name = "rdBtnNonStandard";
+            this.rdBtnNonStandard.Size = new System.Drawing.Size(71, 16);
+            this.rdBtnNonStandard.TabIndex = 10;
+            this.rdBtnNonStandard.TabStop = true;
+            this.rdBtnNonStandard.Text = "宽高不等";
+            this.rdBtnNonStandard.UseVisualStyleBackColor = true;
+            this.rdBtnNonStandard.CheckedChanged += new System.EventHandler(this.rdBtnNonStandard_CheckedChanged);
+            // 
+            // rdBtnStandard
+            // 
+            this.rdBtnStandard.AutoSize = true;
+            this.rdBtnStandard.Location = new System.Drawing.Point(129, 120);
+            this.rdBtnStandard.Name = "rdBtnStandard";
+            this.rdBtnStandard.Size = new System.Drawing.Size(71, 16);
+            this.rdBtnStandard.TabIndex = 9;
+            this.rdBtnStandard.Text = "高宽相等";
+            this.rdBtnStandard.UseVisualStyleBackColor = true;
+            this.rdBtnStandard.CheckedChanged += new System.EventHandler(this.rdBtnStandard_CheckedChanged);
+            // 
             // make_font_button
             // 
             this.make_font_button.Location = new System.Drawing.Point(227, 133);
@@ -704,6 +728,16 @@
             this.preview_groupBox.TabStop = false;
             this.preview_groupBox.Text = "预览";
             // 
+            // font_viwer_panel
+            // 
+            this.font_viwer_panel.BackColor = System.Drawing.SystemColors.Control;
+            this.font_viwer_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.font_viwer_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.font_viwer_panel.Location = new System.Drawing.Point(3, 17);
+            this.font_viwer_panel.Name = "font_viwer_panel";
+            this.font_viwer_panel.Size = new System.Drawing.Size(366, 395);
+            this.font_viwer_panel.TabIndex = 0;
+            // 
             // jineima
             // 
             this.jineima.Controls.Add(this.yima_textBox);
@@ -836,40 +870,6 @@
     "00 04 00 10 00 00 00 00 02 00 00 00 00 02 02 01 00 00 0A 04 00 00 00 D1 F6 B0 EE" +
     "";
             // 
-            // font_viwer_panel
-            // 
-            this.font_viwer_panel.BackColor = System.Drawing.SystemColors.Control;
-            this.font_viwer_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.font_viwer_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.font_viwer_panel.Location = new System.Drawing.Point(3, 17);
-            this.font_viwer_panel.Name = "font_viwer_panel";
-            this.font_viwer_panel.Size = new System.Drawing.Size(366, 395);
-            this.font_viwer_panel.TabIndex = 0;
-            // 
-            // rdBtnStandard
-            // 
-            this.rdBtnStandard.AutoSize = true;
-            this.rdBtnStandard.Location = new System.Drawing.Point(129, 120);
-            this.rdBtnStandard.Name = "rdBtnStandard";
-            this.rdBtnStandard.Size = new System.Drawing.Size(71, 16);
-            this.rdBtnStandard.TabIndex = 9;
-            this.rdBtnStandard.Text = "高宽相等";
-            this.rdBtnStandard.UseVisualStyleBackColor = true;
-            this.rdBtnStandard.CheckedChanged += new System.EventHandler(this.rdBtnStandard_CheckedChanged);
-            // 
-            // rdBtnNonStandard
-            // 
-            this.rdBtnNonStandard.AutoSize = true;
-            this.rdBtnNonStandard.Checked = true;
-            this.rdBtnNonStandard.Location = new System.Drawing.Point(40, 120);
-            this.rdBtnNonStandard.Name = "rdBtnNonStandard";
-            this.rdBtnNonStandard.Size = new System.Drawing.Size(71, 16);
-            this.rdBtnNonStandard.TabIndex = 10;
-            this.rdBtnNonStandard.TabStop = true;
-            this.rdBtnNonStandard.Text = "宽高不等";
-            this.rdBtnNonStandard.UseVisualStyleBackColor = true;
-            this.rdBtnNonStandard.CheckedChanged += new System.EventHandler(this.rdBtnNonStandard_CheckedChanged);
-            // 
             // saveFileDlg
             // 
             this.saveFileDlg.Filter = "点阵汉字文件(*.bin)|*.bin|所有文件(*.*)|*.*";
@@ -888,7 +888,7 @@
             this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "readFontlib";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
-            this.Text = "字库读取&修改器";
+            this.Text = "字库卡工具";
             this.Load += new System.EventHandler(this.readFontlib_Load);
             this.groupBoxpic.ResumeLayout(false);
             this.groupBoxpic.PerformLayout();

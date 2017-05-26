@@ -329,7 +329,7 @@ namespace readFontlib
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("字体：" + this.MatFont.FontFamily.Name);
+            sb.AppendLine("字    体：" + this.MatFont.FontFamily.Name);
             sb.AppendLine("字体大小：" + this.MatFont.SizeInPoints.ToString("##"));
             sb.AppendLine("字体样式：" + this.MatFont.Style.ToString());
 
