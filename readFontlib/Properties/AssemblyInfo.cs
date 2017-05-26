@@ -9,8 +9,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("微软中国")]
-[assembly: AssemblyProduct("字库读取器")]
-[assembly: AssemblyCopyright("Copyright © 小凡系列 2016")]
+[assembly: AssemblyProduct("字库工具")]
+[assembly: AssemblyCopyright("Copyright © 微光倾城 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

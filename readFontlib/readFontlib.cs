@@ -11,6 +11,12 @@ using System.Reflection;
 using System.Resources;
 
 
+
+using System.Drawing.Drawing2D;
+//using System.Threading;
+
+
+
 namespace readFontlib
 {
     public partial class readFontlib : Form
@@ -432,6 +438,7 @@ namespace readFontlib
             this.time1.Tick += new System.EventHandler(this.timer_Tick);
             this.time1.Start();
             textBoxtime.Text = DateTime.Now.ToString();
+            this.makefont_DataInFormLoad();
         }
 
         private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)//字模显示区鼠标左键按下事件
@@ -747,6 +754,8 @@ namespace readFontlib
             }
         }
 
+
+
         private void crc_clear_button_Click(object sender, EventArgs e)
         {
             crc_data_richTextBox.Clear();
@@ -757,25 +766,178 @@ namespace readFontlib
 
 
         #region 制作字库的代码
+
+        private MatrixFont MatCharFont;
+
+        private void font_size_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            //重新设置选用的字体。
+            this.MatCharFont.MatFont =
+                new Font(this.MatCharFont.MatFont.FontFamily,
+                         (float)this.font_size_numericUpDown.Value,
+                         this.MatCharFont.MatFont.Style);
+            //更新字符预览。
+            this.font_viwer_panel.BackgroundImage = this.MatCharFont.MatBitmap;
+
+            //更新当前字体信息。
+            this.font_message_textBox.Clear();
+            this.font_message_textBox.Text = this.MatCharFont.GetMatFontInfo();
+        }
+
+        private void rdBtnStandard_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.rdBtnStandard.Checked)
+            {
+                this.font_width_label.Text = "大小：";
+                this.font_height_label.Text = "  ";
+                this.height_numericUpDown.Enabled = false;
+            }
+        }
+
+        private void rdBtnNonStandard_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.rdBtnNonStandard.Checked)
+            {
+                this.font_width_label.Text = "宽度：";
+                this.font_height_label.Text = "高度：";
+                this.height_numericUpDown.Enabled = true;
+            }
+        }
+
+        private void make_font_button_Click(object sender, EventArgs e)
+        {
+            if (this.saveFileDlg.ShowDialog() == DialogResult.OK)
+            {
+                //停止UI界面上的控件对 MatCharFont(MatrixFont 类) 对象数据的操作。
+                this.UIEnabled(false);
+
+                //启动点阵数据文件生成的辅助线程。
+                //this.bgwFileBuilder.RunWorkerAsync(this.saveFileDlg.FileName);
+            }
+        }
+
+
+        private void UIEnabled(bool isEnabled)
+        {
+            this.check_font_button.Enabled = isEnabled;           //“选择字体”按钮。
+            this.font_viwer_textBox.Enabled = isEnabled;        //“当前字符：”文本框。
+            this.font_size_numericUpDown.Enabled = isEnabled;       //“字体大小：”数字框。
+
+            this.font_viwer_panel.Enabled = isEnabled;         //“当前字符预览”下的Panel。
+
+            this.rdBtnStandard.Enabled = isEnabled;     //“高宽相等”单选按钮。
+            this.rdBtnNonStandard.Enabled = isEnabled;  //“高宽不相等”单选按钮。
+
+            this.width_numericUpDown.Enabled = isEnabled;          //字体“宽度：”数字框。
+            this.height_numericUpDown.Enabled = isEnabled;         //字体“高度：”数字框。
+            this.level_numericUpDown.Enabled = isEnabled;        //字体“水平偏移：”数字框。
+            this.vertical_numericUpDown.Enabled = isEnabled;        //字体“垂直偏移：”数字框。
+
+            //this.btnBuilderChar.Enabled = isEnabled;        //“生成当前字符点阵数据”按钮。
+            this.make_font_button.Enabled = isEnabled;  //“生成字库的点阵数据文件”按钮。
+
+            ////文件生成过程时使用的进度条（确定其是否可见）。
+            //this.pgbBuilderProc.Visible = !isEnabled;
+
+            //设置UI控件是否与数据对象(MatrixFont类对象)进行绑定操作。
+            this.UIBindingData(isEnabled);
+        }
+
+        /// <summary>
+        /// 直接初始化字段数据的方法。
+        /// </summary>
+        private void makefont_DataInFormLoad()
+        {
+            //创建 MatrixFont 对象。
+            Font matFont = new Font(this.Font.FontFamily, (float)this.font_size_numericUpDown.Value);
+            this.MatCharFont = new MatrixFont(matFont, '陈', (int)this.width_numericUpDown.Value,
+                            (int)this.height_numericUpDown.Value, (int)this.level_numericUpDown.Value,
+                            (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked);
+
+            //将窗体上的一些控件与 MatCharFont 对象的一些属性绑定，方便操作。
+            this.UIBindingData(true);
+
+            //监视 MatCharFont 对象的数据操作是否有误。
+            //this.errorProvider.DataSource = this.MatCharFont;
+
+            //初始化窗体的一些控件属性。
+            this.font_width_label.Text = "宽度：";
+            this.font_height_label.Text = "高度：";
+            this.height_numericUpDown.Enabled = true;
+            this.font_message_textBox.Text = this.MatCharFont.GetMatFontInfo();
+        }
+
         private void check_font_button_Click(object sender, EventArgs e)
         {
-            //if (this.fontDlg.ShowDialog() == DialogResult.OK)
-            //{
-            //    int fontSize = int.Parse(this.fontDlg.Font.SizeInPoints.ToString("##"));
-            //    this.nudFontSize.Value = fontSize;      //同步设置“字体大小”数字框的值。
+            if (this.fontDlg.ShowDialog() == DialogResult.OK)
+            {
+                int fontSize = int.Parse(this.fontDlg.Font.SizeInPoints.ToString("##"));
+                this.font_size_numericUpDown.Value = fontSize;      //同步设置“字体大小”数字框的值。
 
-            //    //重新设置选用的字体。
-            //    this.MatCharFont.MatFont =
-            //        new Font(this.fontDlg.Font.FontFamily, (float)fontSize,
-            //                 this.fontDlg.Font.Style, this.fontDlg.Font.Unit);
-            //    //更新字符预览。
-            //    this.pnlView.BackgroundImage = this.MatCharFont.MatBitmap;
+                //重新设置选用的字体。
+                this.MatCharFont.MatFont =
+                    new Font(this.fontDlg.Font.FontFamily, (float)fontSize,
+                             this.fontDlg.Font.Style, this.fontDlg.Font.Unit);
+                //更新字符预览。
+                this.font_viwer_panel.BackgroundImage = this.MatCharFont.MatBitmap;
 
-            //    //更新当前字体信息。
-            //    this.txtFontInfo.Clear();
-            //    this.txtFontInfo.Text = this.MatCharFont.GetMatFontInfo();
-            //}
+                //更新当前字体信息。
+                this.font_message_textBox.Clear();
+                this.font_message_textBox.Text = this.MatCharFont.GetMatFontInfo();
+            }
 
+        }
+
+
+        /// <summary>
+        /// 设置窗体UI界面的一些控件是否要绑定到数据对象(MatrixFont类对象)进行交互操作。
+        /// </summary>
+        /// <param name="isBinding">
+        /// UI控件是否要绑定到数据对象(MatrixFont类对象)，值true表示绑定，false表示不绑定。
+        /// </param>
+        private void UIBindingData(bool isBinding)
+        {
+            if (isBinding)
+            {
+                //“当前字符：”文本框。
+                this.font_viwer_textBox.DataBindings.Add("Text", this.MatCharFont, "DemoChar",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                //“高宽相等”单选按钮。
+                this.rdBtnStandard.DataBindings.Add("Checked", this.MatCharFont, "IsEqualWH",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                //字体“宽度：”数字框。
+                this.width_numericUpDown.DataBindings.Add("Value", this.MatCharFont, "CharWidth",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                //字体“高度：”数字框。
+                this.height_numericUpDown.DataBindings.Add("Value", this.MatCharFont, "CharHeight",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                //字体“水平偏移：”数字框。
+                this.level_numericUpDown.DataBindings.Add("Value", this.MatCharFont, "OffsetX",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                //字体“垂直偏移：”数字框。
+                this.vertical_numericUpDown.DataBindings.Add("Value", this.MatCharFont, "OffsetY",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                //“当前字符预览”下的Panel。
+                this.font_viwer_panel.DataBindings.Add("BackgroundImage", this.MatCharFont, "MatBitmap",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+            }
+            else
+            {
+                this.font_viwer_textBox.DataBindings.Clear();       //“当前字符：”文本框。
+                this.rdBtnStandard.DataBindings.Clear();            //“高宽相等”单选按钮。
+                this.width_numericUpDown.DataBindings.Clear();         //字体“宽度：”数字框。
+                this.height_numericUpDown.DataBindings.Clear();        //字体“高度：”数字框。
+                this.level_numericUpDown.DataBindings.Clear();       //字体“水平偏移：”数字框。
+                this.vertical_numericUpDown.DataBindings.Clear();       //字体“垂直偏移：”数字框。
+                this.font_viwer_panel.DataBindings.Clear();          //“当前字符预览”下的Panel。
+                this.font_viwer_panel.BackgroundImage = null;        //清除“当前字符预览”下的Panel的背景图片。
+            }
         }
         #endregion 制作字库的代码
 

@@ -64,6 +64,25 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.view_edit_fontlib = new System.Windows.Forms.TabPage();
             this.make_fontlib = new System.Windows.Forms.TabPage();
+            this.set_groupBox = new System.Windows.Forms.GroupBox();
+            this.make_font_button = new System.Windows.Forms.Button();
+            this.vertical_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.level_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.height_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.width_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.vertical_label = new System.Windows.Forms.Label();
+            this.level_label = new System.Windows.Forms.Label();
+            this.font_height_label = new System.Windows.Forms.Label();
+            this.font_width_label = new System.Windows.Forms.Label();
+            this.font_groupBox = new System.Windows.Forms.GroupBox();
+            this.font_viwer_textBox = new System.Windows.Forms.TextBox();
+            this.font_view_label = new System.Windows.Forms.Label();
+            this.font_size_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.font_label = new System.Windows.Forms.Label();
+            this.check_font_button = new System.Windows.Forms.Button();
+            this.message_groupBox = new System.Windows.Forms.GroupBox();
+            this.font_message_textBox = new System.Windows.Forms.TextBox();
+            this.preview_groupBox = new System.Windows.Forms.GroupBox();
             this.jineima = new System.Windows.Forms.TabPage();
             this.yima_textBox = new System.Windows.Forms.TextBox();
             this.clear_button = new System.Windows.Forms.Button();
@@ -77,25 +96,11 @@
             this.crc_textBox = new System.Windows.Forms.TextBox();
             this.check_groupBox = new System.Windows.Forms.GroupBox();
             this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.preview_groupBox = new System.Windows.Forms.GroupBox();
-            this.font_groupBox = new System.Windows.Forms.GroupBox();
-            this.set_groupBox = new System.Windows.Forms.GroupBox();
-            this.message_groupBox = new System.Windows.Forms.GroupBox();
-            this.check_font_button = new System.Windows.Forms.Button();
-            this.font_label = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.font_view_label = new System.Windows.Forms.Label();
-            this.font_viwer_textBox = new System.Windows.Forms.TextBox();
-            this.font_width_label = new System.Windows.Forms.Label();
-            this.font_height_label = new System.Windows.Forms.Label();
-            this.level_label = new System.Windows.Forms.Label();
-            this.vertical_label = new System.Windows.Forms.Label();
-            this.width_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.height_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.level_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.vertical_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.make_font_button = new System.Windows.Forms.Button();
-            this.font_message_textBox = new System.Windows.Forms.TextBox();
+            this.font_viwer_panel = new System.Windows.Forms.Panel();
+            this.fontDlg = new System.Windows.Forms.FontDialog();
+            this.rdBtnStandard = new System.Windows.Forms.RadioButton();
+            this.rdBtnNonStandard = new System.Windows.Forms.RadioButton();
+            this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -106,17 +111,18 @@
             this.tabControl.SuspendLayout();
             this.view_edit_fontlib.SuspendLayout();
             this.make_fontlib.SuspendLayout();
+            this.set_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).BeginInit();
+            this.font_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.font_size_numericUpDown)).BeginInit();
+            this.message_groupBox.SuspendLayout();
+            this.preview_groupBox.SuspendLayout();
             this.jineima.SuspendLayout();
             this.CRC16.SuspendLayout();
             this.check_groupBox.SuspendLayout();
-            this.font_groupBox.SuspendLayout();
-            this.set_groupBox.SuspendLayout();
-            this.message_groupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxpic
@@ -502,6 +508,202 @@
             this.make_fontlib.Text = "制作字库";
             this.make_fontlib.UseVisualStyleBackColor = true;
             // 
+            // set_groupBox
+            // 
+            this.set_groupBox.Controls.Add(this.rdBtnNonStandard);
+            this.set_groupBox.Controls.Add(this.rdBtnStandard);
+            this.set_groupBox.Controls.Add(this.make_font_button);
+            this.set_groupBox.Controls.Add(this.vertical_numericUpDown);
+            this.set_groupBox.Controls.Add(this.level_numericUpDown);
+            this.set_groupBox.Controls.Add(this.height_numericUpDown);
+            this.set_groupBox.Controls.Add(this.width_numericUpDown);
+            this.set_groupBox.Controls.Add(this.vertical_label);
+            this.set_groupBox.Controls.Add(this.level_label);
+            this.set_groupBox.Controls.Add(this.font_height_label);
+            this.set_groupBox.Controls.Add(this.font_width_label);
+            this.set_groupBox.Location = new System.Drawing.Point(406, 208);
+            this.set_groupBox.Name = "set_groupBox";
+            this.set_groupBox.Size = new System.Drawing.Size(343, 226);
+            this.set_groupBox.TabIndex = 2;
+            this.set_groupBox.TabStop = false;
+            this.set_groupBox.Text = "设置";
+            // 
+            // make_font_button
+            // 
+            this.make_font_button.Location = new System.Drawing.Point(227, 133);
+            this.make_font_button.Name = "make_font_button";
+            this.make_font_button.Size = new System.Drawing.Size(75, 32);
+            this.make_font_button.TabIndex = 8;
+            this.make_font_button.Text = "制作字库";
+            this.make_font_button.UseVisualStyleBackColor = true;
+            this.make_font_button.Click += new System.EventHandler(this.make_font_button_Click);
+            // 
+            // vertical_numericUpDown
+            // 
+            this.vertical_numericUpDown.Location = new System.Drawing.Point(242, 73);
+            this.vertical_numericUpDown.Name = "vertical_numericUpDown";
+            this.vertical_numericUpDown.Size = new System.Drawing.Size(83, 21);
+            this.vertical_numericUpDown.TabIndex = 7;
+            // 
+            // level_numericUpDown
+            // 
+            this.level_numericUpDown.Location = new System.Drawing.Point(242, 37);
+            this.level_numericUpDown.Name = "level_numericUpDown";
+            this.level_numericUpDown.Size = new System.Drawing.Size(83, 21);
+            this.level_numericUpDown.TabIndex = 6;
+            // 
+            // height_numericUpDown
+            // 
+            this.height_numericUpDown.Location = new System.Drawing.Point(88, 75);
+            this.height_numericUpDown.Name = "height_numericUpDown";
+            this.height_numericUpDown.Size = new System.Drawing.Size(86, 21);
+            this.height_numericUpDown.TabIndex = 5;
+            this.height_numericUpDown.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            // 
+            // width_numericUpDown
+            // 
+            this.width_numericUpDown.Location = new System.Drawing.Point(86, 39);
+            this.width_numericUpDown.Name = "width_numericUpDown";
+            this.width_numericUpDown.Size = new System.Drawing.Size(88, 21);
+            this.width_numericUpDown.TabIndex = 4;
+            this.width_numericUpDown.Value = new decimal(new int[] {
+            16,
+            0,
+            0,
+            0});
+            // 
+            // vertical_label
+            // 
+            this.vertical_label.AutoSize = true;
+            this.vertical_label.Location = new System.Drawing.Point(180, 75);
+            this.vertical_label.Name = "vertical_label";
+            this.vertical_label.Size = new System.Drawing.Size(65, 12);
+            this.vertical_label.TabIndex = 3;
+            this.vertical_label.Text = "垂直偏移：";
+            // 
+            // level_label
+            // 
+            this.level_label.AutoSize = true;
+            this.level_label.Location = new System.Drawing.Point(180, 39);
+            this.level_label.Name = "level_label";
+            this.level_label.Size = new System.Drawing.Size(65, 12);
+            this.level_label.TabIndex = 2;
+            this.level_label.Text = "水平偏移：";
+            // 
+            // font_height_label
+            // 
+            this.font_height_label.AutoSize = true;
+            this.font_height_label.Location = new System.Drawing.Point(38, 82);
+            this.font_height_label.Name = "font_height_label";
+            this.font_height_label.Size = new System.Drawing.Size(41, 12);
+            this.font_height_label.TabIndex = 1;
+            this.font_height_label.Text = "高度：";
+            // 
+            // font_width_label
+            // 
+            this.font_width_label.AutoSize = true;
+            this.font_width_label.Location = new System.Drawing.Point(38, 41);
+            this.font_width_label.Name = "font_width_label";
+            this.font_width_label.Size = new System.Drawing.Size(41, 12);
+            this.font_width_label.TabIndex = 0;
+            this.font_width_label.Text = "宽度：";
+            // 
+            // font_groupBox
+            // 
+            this.font_groupBox.Controls.Add(this.font_viwer_textBox);
+            this.font_groupBox.Controls.Add(this.font_view_label);
+            this.font_groupBox.Controls.Add(this.font_size_numericUpDown);
+            this.font_groupBox.Controls.Add(this.font_label);
+            this.font_groupBox.Controls.Add(this.check_font_button);
+            this.font_groupBox.Controls.Add(this.message_groupBox);
+            this.font_groupBox.Location = new System.Drawing.Point(406, 19);
+            this.font_groupBox.Name = "font_groupBox";
+            this.font_groupBox.Size = new System.Drawing.Size(343, 182);
+            this.font_groupBox.TabIndex = 1;
+            this.font_groupBox.TabStop = false;
+            this.font_groupBox.Text = "字体";
+            // 
+            // font_viwer_textBox
+            // 
+            this.font_viwer_textBox.Location = new System.Drawing.Point(242, 119);
+            this.font_viwer_textBox.Name = "font_viwer_textBox";
+            this.font_viwer_textBox.Size = new System.Drawing.Size(85, 21);
+            this.font_viwer_textBox.TabIndex = 5;
+            // 
+            // font_view_label
+            // 
+            this.font_view_label.AutoSize = true;
+            this.font_view_label.Location = new System.Drawing.Point(180, 122);
+            this.font_view_label.Name = "font_view_label";
+            this.font_view_label.Size = new System.Drawing.Size(65, 12);
+            this.font_view_label.TabIndex = 4;
+            this.font_view_label.Text = "预览字符：";
+            // 
+            // font_size_numericUpDown
+            // 
+            this.font_size_numericUpDown.Location = new System.Drawing.Point(242, 82);
+            this.font_size_numericUpDown.Name = "font_size_numericUpDown";
+            this.font_size_numericUpDown.Size = new System.Drawing.Size(85, 21);
+            this.font_size_numericUpDown.TabIndex = 3;
+            this.font_size_numericUpDown.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.font_size_numericUpDown.ValueChanged += new System.EventHandler(this.font_size_numericUpDown_ValueChanged);
+            // 
+            // font_label
+            // 
+            this.font_label.AutoSize = true;
+            this.font_label.Location = new System.Drawing.Point(180, 84);
+            this.font_label.Name = "font_label";
+            this.font_label.Size = new System.Drawing.Size(65, 12);
+            this.font_label.TabIndex = 2;
+            this.font_label.Text = "字体大小：";
+            // 
+            // check_font_button
+            // 
+            this.check_font_button.Location = new System.Drawing.Point(182, 21);
+            this.check_font_button.Name = "check_font_button";
+            this.check_font_button.Size = new System.Drawing.Size(155, 31);
+            this.check_font_button.TabIndex = 1;
+            this.check_font_button.Text = "选择字体";
+            this.check_font_button.UseVisualStyleBackColor = true;
+            this.check_font_button.Click += new System.EventHandler(this.check_font_button_Click);
+            // 
+            // message_groupBox
+            // 
+            this.message_groupBox.Controls.Add(this.font_message_textBox);
+            this.message_groupBox.Location = new System.Drawing.Point(7, 21);
+            this.message_groupBox.Name = "message_groupBox";
+            this.message_groupBox.Size = new System.Drawing.Size(147, 155);
+            this.message_groupBox.TabIndex = 0;
+            this.message_groupBox.TabStop = false;
+            this.message_groupBox.Text = "字体信息";
+            // 
+            // font_message_textBox
+            // 
+            this.font_message_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.font_message_textBox.Location = new System.Drawing.Point(7, 21);
+            this.font_message_textBox.Multiline = true;
+            this.font_message_textBox.Name = "font_message_textBox";
+            this.font_message_textBox.Size = new System.Drawing.Size(134, 128);
+            this.font_message_textBox.TabIndex = 0;
+            // 
+            // preview_groupBox
+            // 
+            this.preview_groupBox.Controls.Add(this.font_viwer_panel);
+            this.preview_groupBox.Location = new System.Drawing.Point(16, 19);
+            this.preview_groupBox.Name = "preview_groupBox";
+            this.preview_groupBox.Size = new System.Drawing.Size(372, 415);
+            this.preview_groupBox.TabIndex = 0;
+            this.preview_groupBox.TabStop = false;
+            this.preview_groupBox.Text = "预览";
+            // 
             // jineima
             // 
             this.jineima.Controls.Add(this.yima_textBox);
@@ -634,180 +836,43 @@
     "00 04 00 10 00 00 00 00 02 00 00 00 00 02 02 01 00 00 0A 04 00 00 00 D1 F6 B0 EE" +
     "";
             // 
-            // preview_groupBox
+            // font_viwer_panel
             // 
-            this.preview_groupBox.Location = new System.Drawing.Point(16, 19);
-            this.preview_groupBox.Name = "preview_groupBox";
-            this.preview_groupBox.Size = new System.Drawing.Size(372, 415);
-            this.preview_groupBox.TabIndex = 0;
-            this.preview_groupBox.TabStop = false;
-            this.preview_groupBox.Text = "预览";
+            this.font_viwer_panel.BackColor = System.Drawing.SystemColors.Control;
+            this.font_viwer_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.font_viwer_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.font_viwer_panel.Location = new System.Drawing.Point(3, 17);
+            this.font_viwer_panel.Name = "font_viwer_panel";
+            this.font_viwer_panel.Size = new System.Drawing.Size(366, 395);
+            this.font_viwer_panel.TabIndex = 0;
             // 
-            // font_groupBox
+            // rdBtnStandard
             // 
-            this.font_groupBox.Controls.Add(this.font_viwer_textBox);
-            this.font_groupBox.Controls.Add(this.font_view_label);
-            this.font_groupBox.Controls.Add(this.numericUpDown1);
-            this.font_groupBox.Controls.Add(this.font_label);
-            this.font_groupBox.Controls.Add(this.check_font_button);
-            this.font_groupBox.Controls.Add(this.message_groupBox);
-            this.font_groupBox.Location = new System.Drawing.Point(406, 19);
-            this.font_groupBox.Name = "font_groupBox";
-            this.font_groupBox.Size = new System.Drawing.Size(343, 182);
-            this.font_groupBox.TabIndex = 1;
-            this.font_groupBox.TabStop = false;
-            this.font_groupBox.Text = "字体";
+            this.rdBtnStandard.AutoSize = true;
+            this.rdBtnStandard.Location = new System.Drawing.Point(129, 120);
+            this.rdBtnStandard.Name = "rdBtnStandard";
+            this.rdBtnStandard.Size = new System.Drawing.Size(71, 16);
+            this.rdBtnStandard.TabIndex = 9;
+            this.rdBtnStandard.Text = "高宽相等";
+            this.rdBtnStandard.UseVisualStyleBackColor = true;
+            this.rdBtnStandard.CheckedChanged += new System.EventHandler(this.rdBtnStandard_CheckedChanged);
             // 
-            // set_groupBox
+            // rdBtnNonStandard
             // 
-            this.set_groupBox.Controls.Add(this.make_font_button);
-            this.set_groupBox.Controls.Add(this.vertical_numericUpDown);
-            this.set_groupBox.Controls.Add(this.level_numericUpDown);
-            this.set_groupBox.Controls.Add(this.height_numericUpDown);
-            this.set_groupBox.Controls.Add(this.width_numericUpDown);
-            this.set_groupBox.Controls.Add(this.vertical_label);
-            this.set_groupBox.Controls.Add(this.level_label);
-            this.set_groupBox.Controls.Add(this.font_height_label);
-            this.set_groupBox.Controls.Add(this.font_width_label);
-            this.set_groupBox.Location = new System.Drawing.Point(406, 208);
-            this.set_groupBox.Name = "set_groupBox";
-            this.set_groupBox.Size = new System.Drawing.Size(343, 226);
-            this.set_groupBox.TabIndex = 2;
-            this.set_groupBox.TabStop = false;
-            this.set_groupBox.Text = "设置";
+            this.rdBtnNonStandard.AutoSize = true;
+            this.rdBtnNonStandard.Checked = true;
+            this.rdBtnNonStandard.Location = new System.Drawing.Point(40, 120);
+            this.rdBtnNonStandard.Name = "rdBtnNonStandard";
+            this.rdBtnNonStandard.Size = new System.Drawing.Size(71, 16);
+            this.rdBtnNonStandard.TabIndex = 10;
+            this.rdBtnNonStandard.TabStop = true;
+            this.rdBtnNonStandard.Text = "宽高不等";
+            this.rdBtnNonStandard.UseVisualStyleBackColor = true;
+            this.rdBtnNonStandard.CheckedChanged += new System.EventHandler(this.rdBtnNonStandard_CheckedChanged);
             // 
-            // message_groupBox
+            // saveFileDlg
             // 
-            this.message_groupBox.Controls.Add(this.font_message_textBox);
-            this.message_groupBox.Location = new System.Drawing.Point(7, 21);
-            this.message_groupBox.Name = "message_groupBox";
-            this.message_groupBox.Size = new System.Drawing.Size(147, 155);
-            this.message_groupBox.TabIndex = 0;
-            this.message_groupBox.TabStop = false;
-            this.message_groupBox.Text = "字体信息";
-            // 
-            // check_font_button
-            // 
-            this.check_font_button.Location = new System.Drawing.Point(182, 21);
-            this.check_font_button.Name = "check_font_button";
-            this.check_font_button.Size = new System.Drawing.Size(155, 31);
-            this.check_font_button.TabIndex = 1;
-            this.check_font_button.Text = "选择字体";
-            this.check_font_button.UseVisualStyleBackColor = true;
-            this.check_font_button.Click += new System.EventHandler(this.check_font_button_Click);
-            // 
-            // font_label
-            // 
-            this.font_label.AutoSize = true;
-            this.font_label.Location = new System.Drawing.Point(180, 84);
-            this.font_label.Name = "font_label";
-            this.font_label.Size = new System.Drawing.Size(65, 12);
-            this.font_label.TabIndex = 2;
-            this.font_label.Text = "字体大小：";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(242, 82);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(85, 21);
-            this.numericUpDown1.TabIndex = 3;
-            // 
-            // font_view_label
-            // 
-            this.font_view_label.AutoSize = true;
-            this.font_view_label.Location = new System.Drawing.Point(180, 122);
-            this.font_view_label.Name = "font_view_label";
-            this.font_view_label.Size = new System.Drawing.Size(65, 12);
-            this.font_view_label.TabIndex = 4;
-            this.font_view_label.Text = "预览字符：";
-            // 
-            // font_viwer_textBox
-            // 
-            this.font_viwer_textBox.Location = new System.Drawing.Point(242, 119);
-            this.font_viwer_textBox.Name = "font_viwer_textBox";
-            this.font_viwer_textBox.Size = new System.Drawing.Size(85, 21);
-            this.font_viwer_textBox.TabIndex = 5;
-            // 
-            // font_width_label
-            // 
-            this.font_width_label.AutoSize = true;
-            this.font_width_label.Location = new System.Drawing.Point(38, 41);
-            this.font_width_label.Name = "font_width_label";
-            this.font_width_label.Size = new System.Drawing.Size(41, 12);
-            this.font_width_label.TabIndex = 0;
-            this.font_width_label.Text = "宽度：";
-            // 
-            // font_height_label
-            // 
-            this.font_height_label.AutoSize = true;
-            this.font_height_label.Location = new System.Drawing.Point(38, 84);
-            this.font_height_label.Name = "font_height_label";
-            this.font_height_label.Size = new System.Drawing.Size(41, 12);
-            this.font_height_label.TabIndex = 1;
-            this.font_height_label.Text = "高度：";
-            // 
-            // level_label
-            // 
-            this.level_label.AutoSize = true;
-            this.level_label.Location = new System.Drawing.Point(180, 39);
-            this.level_label.Name = "level_label";
-            this.level_label.Size = new System.Drawing.Size(65, 12);
-            this.level_label.TabIndex = 2;
-            this.level_label.Text = "水平偏移：";
-            // 
-            // vertical_label
-            // 
-            this.vertical_label.AutoSize = true;
-            this.vertical_label.Location = new System.Drawing.Point(180, 75);
-            this.vertical_label.Name = "vertical_label";
-            this.vertical_label.Size = new System.Drawing.Size(65, 12);
-            this.vertical_label.TabIndex = 3;
-            this.vertical_label.Text = "垂直偏移：";
-            // 
-            // width_numericUpDown
-            // 
-            this.width_numericUpDown.Location = new System.Drawing.Point(86, 39);
-            this.width_numericUpDown.Name = "width_numericUpDown";
-            this.width_numericUpDown.Size = new System.Drawing.Size(88, 21);
-            this.width_numericUpDown.TabIndex = 4;
-            // 
-            // height_numericUpDown
-            // 
-            this.height_numericUpDown.Location = new System.Drawing.Point(88, 75);
-            this.height_numericUpDown.Name = "height_numericUpDown";
-            this.height_numericUpDown.Size = new System.Drawing.Size(86, 21);
-            this.height_numericUpDown.TabIndex = 5;
-            // 
-            // level_numericUpDown
-            // 
-            this.level_numericUpDown.Location = new System.Drawing.Point(242, 37);
-            this.level_numericUpDown.Name = "level_numericUpDown";
-            this.level_numericUpDown.Size = new System.Drawing.Size(83, 21);
-            this.level_numericUpDown.TabIndex = 6;
-            // 
-            // vertical_numericUpDown
-            // 
-            this.vertical_numericUpDown.Location = new System.Drawing.Point(242, 73);
-            this.vertical_numericUpDown.Name = "vertical_numericUpDown";
-            this.vertical_numericUpDown.Size = new System.Drawing.Size(83, 21);
-            this.vertical_numericUpDown.TabIndex = 7;
-            // 
-            // make_font_button
-            // 
-            this.make_font_button.Location = new System.Drawing.Point(227, 133);
-            this.make_font_button.Name = "make_font_button";
-            this.make_font_button.Size = new System.Drawing.Size(75, 32);
-            this.make_font_button.TabIndex = 8;
-            this.make_font_button.Text = "制作字库";
-            this.make_font_button.UseVisualStyleBackColor = true;
-            // 
-            // font_message_textBox
-            // 
-            this.font_message_textBox.Location = new System.Drawing.Point(7, 21);
-            this.font_message_textBox.Multiline = true;
-            this.font_message_textBox.Name = "font_message_textBox";
-            this.font_message_textBox.Size = new System.Drawing.Size(134, 128);
-            this.font_message_textBox.TabIndex = 0;
+            this.saveFileDlg.Filter = "点阵汉字文件(*.bin)|*.bin|所有文件(*.*)|*.*";
             // 
             // readFontlib
             // 
@@ -838,22 +903,23 @@
             this.tabControl.ResumeLayout(false);
             this.view_edit_fontlib.ResumeLayout(false);
             this.make_fontlib.ResumeLayout(false);
+            this.set_groupBox.ResumeLayout(false);
+            this.set_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).EndInit();
+            this.font_groupBox.ResumeLayout(false);
+            this.font_groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.font_size_numericUpDown)).EndInit();
+            this.message_groupBox.ResumeLayout(false);
+            this.message_groupBox.PerformLayout();
+            this.preview_groupBox.ResumeLayout(false);
             this.jineima.ResumeLayout(false);
             this.jineima.PerformLayout();
             this.CRC16.ResumeLayout(false);
             this.CRC16.PerformLayout();
             this.check_groupBox.ResumeLayout(false);
-            this.font_groupBox.ResumeLayout(false);
-            this.font_groupBox.PerformLayout();
-            this.set_groupBox.ResumeLayout(false);
-            this.set_groupBox.PerformLayout();
-            this.message_groupBox.ResumeLayout(false);
-            this.message_groupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -921,12 +987,17 @@
         private System.Windows.Forms.GroupBox font_groupBox;
         private System.Windows.Forms.TextBox font_viwer_textBox;
         private System.Windows.Forms.Label font_view_label;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown font_size_numericUpDown;
         private System.Windows.Forms.Label font_label;
         private System.Windows.Forms.Button check_font_button;
         private System.Windows.Forms.GroupBox message_groupBox;
         private System.Windows.Forms.GroupBox preview_groupBox;
         private System.Windows.Forms.TextBox font_message_textBox;
+        private System.Windows.Forms.Panel font_viwer_panel;
+        private System.Windows.Forms.FontDialog fontDlg;
+        private System.Windows.Forms.RadioButton rdBtnStandard;
+        private System.Windows.Forms.RadioButton rdBtnNonStandard;
+        private System.Windows.Forms.SaveFileDialog saveFileDlg;
     }
 }
 
