@@ -88,23 +88,7 @@ namespace readFontlib
             richTextBoxData.BackColor = Color.White;
             richTextBoxData.ForeColor = Color.Red;
         }
-        private void readDefaultFontData()//读取默认字库数据
-        {
-            int i;
-            numericUpDownIndex.Maximum = 3;
-            Assembly assembly = Assembly.GetExecutingAssembly();
-            Stream stream = assembly.GetManifestResourceStream("readFontlib.Resources.ziku");
-            for (i = 0; i < index+1;i++ )
-            {
-                stream.Read(data, 0, 32);
-            }
-            /*richTextBoxData.Clear();
-            for (i = 0; i < 32;i++ )
-            {
-                richTextBoxData.Text += data[i].ToString("X2").ToUpper() + " ";
-            }*/
-            stream.Dispose();
-        }
+
 
         private void writeFontData()//把修改后的字模信息写入字库文件
         {
@@ -310,7 +294,21 @@ namespace readFontlib
                 MessageBox.Show("请首先打开一个字库文件");
             }
         }
-
+        private void GBK_radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxQu.Enabled = true;
+            comboBoxWei.Enabled = true;
+            comboBoxWei.Items.Clear();
+            for (int i = 64; i < 255; i++)
+            {
+                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
+            }
+            comboBoxQu.Items.Clear();
+            for (int i = 129; i < 255; i++)
+            {
+                comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
+            }
+        }
         private void radioButtonFontLib_CheckedChanged(object sender, EventArgs e)//选中GB2312
         {
             lockFlag = true;
@@ -324,13 +322,13 @@ namespace readFontlib
                 comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
             }
             //comboBoxWei.SelectedIndex = 161.ToString("X2");
-            if (radioButtonFontLib.Checked)
-            {
-                numericUpDownWidth.Maximum = (picSize + spaceSize) / (uniwidth + spaceSize);
-                numericUpDownHeight.Maximum = (picSize + spaceSize) / (uniheight + spaceSize);
-                numericUpDownWidth.Value = width;
-                numericUpDownHeight.Value = height;
-            }
+            //if (radioButtonFontLib.Checked)
+            //{
+            //    numericUpDownWidth.Maximum = (picSize + spaceSize) / (uniwidth + spaceSize);
+            //    numericUpDownHeight.Maximum = (picSize + spaceSize) / (uniheight + spaceSize);
+            //    numericUpDownWidth.Value = width;
+            //    numericUpDownHeight.Value = height;
+            //}
             lockFlag = false;
         }
         private void radioButtonUnit_CheckedChanged(object sender, EventArgs e)//选中ASCII
@@ -635,23 +633,25 @@ namespace readFontlib
             int qu, wei;
             qu = comboBoxQu.SelectedIndex;
             wei = comboBoxWei.SelectedIndex;
-            if (ASCII_Flag == true)
+            if (radioButtonUnit.Checked == true)
             {
                 numericUpDownIndex.Value = wei;
             }
-            else
+            if (radioButtonFontLib.Checked == true)
             {
                 numericUpDownIndex.Value = qu * 94 + wei;
             }
-            
+            if (GBK_radioButton.Checked == true)
+            {
+                numericUpDownIndex.Value = qu * 191 + wei;
+            }
+
+
         }
         private void comboBoxQu_SelectedIndexChanged(object sender, EventArgs e)//区码改变
         {
             calIndex();
         }
-
-
-
         private void comboBoxWei_SelectedIndexChanged(object sender, EventArgs e)//位码改变
         {
             calIndex();
@@ -858,37 +858,106 @@ namespace readFontlib
                 ////将点阵字体的字符宽度和高度写入文件的头部。
                 //fs.WriteByte((byte)Math.Min(this.MatCharFont.CharWidth, 100));
                 //fs.WriteByte((byte)Math.Min(this.MatCharFont.CharHeight, 100));
-
-                //在GB2312编码的汉字字库中，共有 8178 个字符；
-                //遍历每一个字符，生成它们的点阵数据文件。
-                for (int i = 0; i < 8178; i++)
+                if(GB2312.Checked == true)
                 {
-                    //设置汉字的区位码。
-                    byte[] bt = new byte[2];
-                    bt[0] = (byte)(Math.Floor((double)i / 94) + 161);
-                    bt[1] = (byte)(i % 94 + 161);
-
-                    //按照区位码，解码成汉字字符。
-                    this.MatCharFont.DemoChar = Encoding.GetEncoding("GB2312").GetString(bt);
-
-                    //获取字符的点阵数据。
-                    Byte[] byteArray = this.MatCharFont.GetDemoCharMatrixBytes();
-
-                    //写入文件。
-                    foreach (Byte ba in byteArray)
+                    //在GB2312编码的汉字字库中，共有 8178 个字符；
+                    //遍历每一个字符，生成它们的点阵数据文件。
+                    for (int i = 0; i < 8178; i++)
                     {
-                        fs.WriteByte(ba);
-                    }
+                        //设置汉字的区位码。
+                        byte[] bt = new byte[2];
+                        bt[0] = (byte)(Math.Floor((double)i / 94) + 161);
+                        bt[1] = (byte)(i % 94 + 161);
 
-                    //报告文件生成进度。
-                    //设置判断条件，可以减少重复的进度报告，提高执行效率。
-                    if ((i % 82 == 0) || (i == 8177))
-                    {
-                        int procPercent = (int)((double)i / 8177 * 100);
-                        this.pgbBuilderProc.Value = procPercent;
-                        this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
+                        //按照区位码，解码成汉字字符。
+                        this.MatCharFont.DemoChar = Encoding.GetEncoding("GB2312").GetString(bt);
+
+                        //获取字符的点阵数据。
+                        Byte[] byteArray = this.MatCharFont.GetDemoCharMatrixBytes();
+
+                        //写入文件。
+                        foreach (Byte ba in byteArray)
+                        {
+                            fs.WriteByte(ba);
+                        }
+
+                        //报告文件生成进度。
+                        //设置判断条件，可以减少重复的进度报告，提高执行效率。
+                        if ((i % 82 == 0) || (i == 8177))
+                        {
+                            int procPercent = (int)((double)i / 8177 * 100);
+                            this.pgbBuilderProc.Value = procPercent;
+                            this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
+                        }
                     }
                 }
+                if (GBK.Checked == true)
+                {
+                    //在GBK编码的汉字字库中，共有 8178 个字符；
+                    //遍历每一个字符，生成它们的点阵数据文件。
+                    for (Int32 i = 0; i < 23940; i++)
+                    {
+                        //设置汉字的区位码。
+                        byte[] bt = new byte[2];
+                        bt[0] = (byte)(Math.Floor((double)i / 191) + 64);
+                        bt[1] = (byte)(i % 191 + 128);
+
+                        //按照区位码，解码成汉字字符。
+                        this.MatCharFont.DemoChar = Encoding.GetEncoding("GBk").GetString(bt);
+
+                        //获取字符的点阵数据。
+                        Byte[] byteArray = this.MatCharFont.GetDemoCharMatrixBytes();
+
+                        //写入文件。
+                        foreach (Byte ba in byteArray)
+                        {
+                            fs.WriteByte(ba);
+                        }
+
+                        //报告文件生成进度。
+                        //设置判断条件，可以减少重复的进度报告，提高执行效率。
+                        if ((i % 82 == 0) || (i == 23940))
+                        {
+                            int procPercent = (int)((double)i / 23940 * 100);
+                            this.pgbBuilderProc.Value = procPercent;
+                            this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
+                        }
+                    }
+                }
+                if (ASCII.Checked == true)
+                {
+                    //在GB2312编码的汉字字库中，共有 8178 个字符；
+                    //遍历每一个字符，生成它们的点阵数据文件。
+                    for (int i = 0; i < 8178; i++)
+                    {
+                        //设置汉字的区位码。
+                        byte[] bt = new byte[2];
+                        bt[0] = (byte)(Math.Floor((double)i / 94) + 161);
+                        bt[1] = (byte)(i % 94 + 161);
+
+                        //按照区位码，解码成汉字字符。
+                        this.MatCharFont.DemoChar = Encoding.GetEncoding("GB2312").GetString(bt);
+
+                        //获取字符的点阵数据。
+                        Byte[] byteArray = this.MatCharFont.GetDemoCharMatrixBytes();
+
+                        //写入文件。
+                        foreach (Byte ba in byteArray)
+                        {
+                            fs.WriteByte(ba);
+                        }
+
+                        //报告文件生成进度。
+                        //设置判断条件，可以减少重复的进度报告，提高执行效率。
+                        if ((i % 82 == 0) || (i == 8177))
+                        {
+                            int procPercent = (int)((double)i / 8177 * 100);
+                            this.pgbBuilderProc.Value = procPercent;
+                            this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
+                        }
+                    }
+                }
+
 
                 //清除文件流的缓冲区，关闭文件。
                 fs.Flush();

@@ -240,6 +240,7 @@
             this.GBK_radioButton.TabIndex = 15;
             this.GBK_radioButton.Text = "GBK";
             this.GBK_radioButton.UseVisualStyleBackColor = true;
+            this.GBK_radioButton.CheckedChanged += new System.EventHandler(this.GBK_radioButton_CheckedChanged);
             // 
             // radioButtonUnit
             // 
