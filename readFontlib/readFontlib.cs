@@ -806,6 +806,9 @@ namespace readFontlib
 
         private void make_font_button_Click(object sender, EventArgs e)
         {
+            pgbBuilderProc.Visible = true;
+            statusStripProc.Visible = true;
+            
             if (this.saveFileDlg.ShowDialog() == DialogResult.OK)
             {
                 //停止UI界面上的控件对 MatCharFont(MatrixFont 类) 对象数据的操作。
@@ -819,7 +822,7 @@ namespace readFontlib
         private void bgwFileBuilder_DoWork(object sender, DoWorkEventArgs e)
         {
             string path = (string)e.Argument;
-
+            
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
                 ////将点阵字体的字符宽度和高度写入文件的头部。
@@ -847,13 +850,14 @@ namespace readFontlib
                         fs.WriteByte(ba);
                     }
 
-                    ////报告文件生成进度。
-                    ////设置判断条件，可以减少重复的进度报告，提高执行效率。
-                    //if ((i % 82 == 0) || (i == 8177))
-                    //{
-                    //    int procPercent = (int)((double)i / 8177 * 100);
-                    //    this.bgwFileBuilder.ReportProgress(procPercent);
-                    //}
+                    //报告文件生成进度。
+                    //设置判断条件，可以减少重复的进度报告，提高执行效率。
+                    if ((i % 82 == 0) || (i == 8177))
+                    {
+                        int procPercent = (int)((double)i / 8177 * 100);
+                        this.pgbBuilderProc.Value = procPercent;
+                        this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
+                    }
                 }
 
                 //清除文件流的缓冲区，关闭文件。
@@ -870,7 +874,10 @@ namespace readFontlib
 
             //恢复窗口的UI界面。
             this.UIEnabled(true);
-            //this.tssLblStatus.Text = "就绪";
+            this.tssLblStatus.Text = "";
+            this.pgbBuilderProc.Value = 0;
+            statusStripProc.Visible = false;
+            pgbBuilderProc.Visible = false;
             if (this.MatCharFont.IsEqualWH)
             {
                 this.height_numericUpDown.Enabled = false;

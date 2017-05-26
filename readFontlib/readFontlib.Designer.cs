@@ -64,6 +64,9 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.view_edit_fontlib = new System.Windows.Forms.TabPage();
             this.make_fontlib = new System.Windows.Forms.TabPage();
+            this.pgbBuilderProc = new System.Windows.Forms.ProgressBar();
+            this.statusStripProc = new System.Windows.Forms.StatusStrip();
+            this.tssLblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.set_groupBox = new System.Windows.Forms.GroupBox();
             this.rdBtnNonStandard = new System.Windows.Forms.RadioButton();
             this.rdBtnStandard = new System.Windows.Forms.RadioButton();
@@ -112,6 +115,7 @@
             this.tabControl.SuspendLayout();
             this.view_edit_fontlib.SuspendLayout();
             this.make_fontlib.SuspendLayout();
+            this.statusStripProc.SuspendLayout();
             this.set_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).BeginInit();
@@ -498,6 +502,8 @@
             // 
             // make_fontlib
             // 
+            this.make_fontlib.Controls.Add(this.pgbBuilderProc);
+            this.make_fontlib.Controls.Add(this.statusStripProc);
             this.make_fontlib.Controls.Add(this.set_groupBox);
             this.make_fontlib.Controls.Add(this.font_groupBox);
             this.make_fontlib.Controls.Add(this.preview_groupBox);
@@ -508,6 +514,30 @@
             this.make_fontlib.TabIndex = 1;
             this.make_fontlib.Text = "制作字库";
             this.make_fontlib.UseVisualStyleBackColor = true;
+            // 
+            // pgbBuilderProc
+            // 
+            this.pgbBuilderProc.Location = new System.Drawing.Point(284, 423);
+            this.pgbBuilderProc.Name = "pgbBuilderProc";
+            this.pgbBuilderProc.Size = new System.Drawing.Size(449, 23);
+            this.pgbBuilderProc.TabIndex = 4;
+            this.pgbBuilderProc.Visible = false;
+            // 
+            // statusStripProc
+            // 
+            this.statusStripProc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssLblStatus});
+            this.statusStripProc.Location = new System.Drawing.Point(3, 424);
+            this.statusStripProc.Name = "statusStripProc";
+            this.statusStripProc.Size = new System.Drawing.Size(760, 22);
+            this.statusStripProc.TabIndex = 3;
+            this.statusStripProc.Text = "statusStrip1";
+            this.statusStripProc.Visible = false;
+            // 
+            // tssLblStatus
+            // 
+            this.tssLblStatus.Name = "tssLblStatus";
+            this.tssLblStatus.Size = new System.Drawing.Size(0, 17);
             // 
             // set_groupBox
             // 
@@ -522,7 +552,7 @@
             this.set_groupBox.Controls.Add(this.level_label);
             this.set_groupBox.Controls.Add(this.font_height_label);
             this.set_groupBox.Controls.Add(this.font_width_label);
-            this.set_groupBox.Location = new System.Drawing.Point(406, 208);
+            this.set_groupBox.Location = new System.Drawing.Point(406, 195);
             this.set_groupBox.Name = "set_groupBox";
             this.set_groupBox.Size = new System.Drawing.Size(343, 226);
             this.set_groupBox.TabIndex = 2;
@@ -645,7 +675,7 @@
             this.font_groupBox.Controls.Add(this.font_label);
             this.font_groupBox.Controls.Add(this.check_font_button);
             this.font_groupBox.Controls.Add(this.message_groupBox);
-            this.font_groupBox.Location = new System.Drawing.Point(406, 19);
+            this.font_groupBox.Location = new System.Drawing.Point(406, 6);
             this.font_groupBox.Name = "font_groupBox";
             this.font_groupBox.Size = new System.Drawing.Size(343, 182);
             this.font_groupBox.TabIndex = 1;
@@ -722,7 +752,7 @@
             // preview_groupBox
             // 
             this.preview_groupBox.Controls.Add(this.font_viwer_panel);
-            this.preview_groupBox.Location = new System.Drawing.Point(16, 19);
+            this.preview_groupBox.Location = new System.Drawing.Point(6, 6);
             this.preview_groupBox.Name = "preview_groupBox";
             this.preview_groupBox.Size = new System.Drawing.Size(372, 415);
             this.preview_groupBox.TabIndex = 0;
@@ -909,6 +939,9 @@
             this.tabControl.ResumeLayout(false);
             this.view_edit_fontlib.ResumeLayout(false);
             this.make_fontlib.ResumeLayout(false);
+            this.make_fontlib.PerformLayout();
+            this.statusStripProc.ResumeLayout(false);
+            this.statusStripProc.PerformLayout();
             this.set_groupBox.ResumeLayout(false);
             this.set_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).EndInit();
@@ -1005,6 +1038,9 @@
         private System.Windows.Forms.RadioButton rdBtnNonStandard;
         private System.Windows.Forms.SaveFileDialog saveFileDlg;
         private System.ComponentModel.BackgroundWorker bgwFileBuilder;
+        private System.Windows.Forms.StatusStrip statusStripProc;
+        private System.Windows.Forms.ToolStripStatusLabel tssLblStatus;
+        private System.Windows.Forms.ProgressBar pgbBuilderProc;
     }
 }
 
