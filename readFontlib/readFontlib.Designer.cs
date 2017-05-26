@@ -35,6 +35,9 @@
             this.edit_mode_Button = new System.Windows.Forms.RadioButton();
             this.pictureBoxFont = new System.Windows.Forms.PictureBox();
             this.groupBoxSet = new System.Windows.Forms.GroupBox();
+            this.down_button = new System.Windows.Forms.Button();
+            this.up_button = new System.Windows.Forms.Button();
+            this.GBK_radioButton = new System.Windows.Forms.RadioButton();
             this.radioButtonUnit = new System.Windows.Forms.RadioButton();
             this.radioButtonFontLib = new System.Windows.Forms.RadioButton();
             this.comboBoxWei = new System.Windows.Forms.ComboBox();
@@ -64,6 +67,10 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.view_edit_fontlib = new System.Windows.Forms.TabPage();
             this.make_fontlib = new System.Windows.Forms.TabPage();
+            this.binama_groupBox = new System.Windows.Forms.GroupBox();
+            this.ASCII = new System.Windows.Forms.RadioButton();
+            this.GB2312 = new System.Windows.Forms.RadioButton();
+            this.GBK = new System.Windows.Forms.RadioButton();
             this.pgbBuilderProc = new System.Windows.Forms.ProgressBar();
             this.statusStripProc = new System.Windows.Forms.StatusStrip();
             this.tssLblStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -105,13 +112,6 @@
             this.fontDlg = new System.Windows.Forms.FontDialog();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.bgwFileBuilder = new System.ComponentModel.BackgroundWorker();
-            this.GBK_radioButton = new System.Windows.Forms.RadioButton();
-            this.up_button = new System.Windows.Forms.Button();
-            this.down_button = new System.Windows.Forms.Button();
-            this.GB2312 = new System.Windows.Forms.RadioButton();
-            this.GBK = new System.Windows.Forms.RadioButton();
-            this.ASCII = new System.Windows.Forms.RadioButton();
-            this.binama_groupBox = new System.Windows.Forms.GroupBox();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -122,6 +122,7 @@
             this.tabControl.SuspendLayout();
             this.view_edit_fontlib.SuspendLayout();
             this.make_fontlib.SuspendLayout();
+            this.binama_groupBox.SuspendLayout();
             this.statusStripProc.SuspendLayout();
             this.set_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).BeginInit();
@@ -135,7 +136,6 @@
             this.jineima.SuspendLayout();
             this.CRC16.SuspendLayout();
             this.check_groupBox.SuspendLayout();
-            this.binama_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxpic
@@ -210,6 +210,36 @@
             this.groupBoxSet.TabIndex = 1;
             this.groupBoxSet.TabStop = false;
             this.groupBoxSet.Text = "设置";
+            // 
+            // down_button
+            // 
+            this.down_button.Location = new System.Drawing.Point(196, 102);
+            this.down_button.Name = "down_button";
+            this.down_button.Size = new System.Drawing.Size(78, 26);
+            this.down_button.TabIndex = 17;
+            this.down_button.Text = "下一个";
+            this.down_button.UseVisualStyleBackColor = true;
+            this.down_button.Click += new System.EventHandler(this.down_button_Click);
+            // 
+            // up_button
+            // 
+            this.up_button.Location = new System.Drawing.Point(99, 102);
+            this.up_button.Name = "up_button";
+            this.up_button.Size = new System.Drawing.Size(78, 26);
+            this.up_button.TabIndex = 16;
+            this.up_button.Text = "上一个";
+            this.up_button.UseVisualStyleBackColor = true;
+            this.up_button.Click += new System.EventHandler(this.up_button_Click);
+            // 
+            // GBK_radioButton
+            // 
+            this.GBK_radioButton.AutoSize = true;
+            this.GBK_radioButton.Location = new System.Drawing.Point(8, 71);
+            this.GBK_radioButton.Name = "GBK_radioButton";
+            this.GBK_radioButton.Size = new System.Drawing.Size(41, 16);
+            this.GBK_radioButton.TabIndex = 15;
+            this.GBK_radioButton.Text = "GBK";
+            this.GBK_radioButton.UseVisualStyleBackColor = true;
             // 
             // radioButtonUnit
             // 
@@ -527,6 +557,51 @@
             this.make_fontlib.TabIndex = 1;
             this.make_fontlib.Text = "制作字库";
             this.make_fontlib.UseVisualStyleBackColor = true;
+            // 
+            // binama_groupBox
+            // 
+            this.binama_groupBox.Controls.Add(this.ASCII);
+            this.binama_groupBox.Controls.Add(this.GB2312);
+            this.binama_groupBox.Controls.Add(this.GBK);
+            this.binama_groupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.binama_groupBox.Location = new System.Drawing.Point(406, 209);
+            this.binama_groupBox.Name = "binama_groupBox";
+            this.binama_groupBox.Size = new System.Drawing.Size(343, 46);
+            this.binama_groupBox.TabIndex = 14;
+            this.binama_groupBox.TabStop = false;
+            this.binama_groupBox.Text = "编码选择";
+            // 
+            // ASCII
+            // 
+            this.ASCII.AutoSize = true;
+            this.ASCII.Location = new System.Drawing.Point(242, 24);
+            this.ASCII.Name = "ASCII";
+            this.ASCII.Size = new System.Drawing.Size(53, 16);
+            this.ASCII.TabIndex = 13;
+            this.ASCII.Text = "ASCII";
+            this.ASCII.UseVisualStyleBackColor = true;
+            // 
+            // GB2312
+            // 
+            this.GB2312.AutoSize = true;
+            this.GB2312.Checked = true;
+            this.GB2312.Location = new System.Drawing.Point(29, 24);
+            this.GB2312.Name = "GB2312";
+            this.GB2312.Size = new System.Drawing.Size(59, 16);
+            this.GB2312.TabIndex = 11;
+            this.GB2312.TabStop = true;
+            this.GB2312.Text = "GB2312";
+            this.GB2312.UseVisualStyleBackColor = true;
+            // 
+            // GBK
+            // 
+            this.GBK.AutoSize = true;
+            this.GBK.Location = new System.Drawing.Point(148, 24);
+            this.GBK.Name = "GBK";
+            this.GBK.Size = new System.Drawing.Size(41, 16);
+            this.GBK.TabIndex = 12;
+            this.GBK.Text = "GBK";
+            this.GBK.UseVisualStyleBackColor = true;
             // 
             // pgbBuilderProc
             // 
@@ -916,87 +991,12 @@
             // 
             // saveFileDlg
             // 
-            this.saveFileDlg.Filter = "点阵汉字文件(*.DZK)|*.DZK|所有文件(*.*)|*.*";
+            this.saveFileDlg.Filter = "仰邦字库卡字库文件(*.BXZK)|*.BXZK";
             // 
             // bgwFileBuilder
             // 
             this.bgwFileBuilder.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwFileBuilder_DoWork);
             this.bgwFileBuilder.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwFileBuilder_RunWorkerCompleted);
-            // 
-            // GBK_radioButton
-            // 
-            this.GBK_radioButton.AutoSize = true;
-            this.GBK_radioButton.Location = new System.Drawing.Point(8, 71);
-            this.GBK_radioButton.Name = "GBK_radioButton";
-            this.GBK_radioButton.Size = new System.Drawing.Size(41, 16);
-            this.GBK_radioButton.TabIndex = 15;
-            this.GBK_radioButton.Text = "GBK";
-            this.GBK_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // up_button
-            // 
-            this.up_button.Location = new System.Drawing.Point(99, 102);
-            this.up_button.Name = "up_button";
-            this.up_button.Size = new System.Drawing.Size(78, 26);
-            this.up_button.TabIndex = 16;
-            this.up_button.Text = "上一个";
-            this.up_button.UseVisualStyleBackColor = true;
-            this.up_button.Click += new System.EventHandler(this.up_button_Click);
-            // 
-            // down_button
-            // 
-            this.down_button.Location = new System.Drawing.Point(196, 102);
-            this.down_button.Name = "down_button";
-            this.down_button.Size = new System.Drawing.Size(78, 26);
-            this.down_button.TabIndex = 17;
-            this.down_button.Text = "下一个";
-            this.down_button.UseVisualStyleBackColor = true;
-            this.down_button.Click += new System.EventHandler(this.down_button_Click);
-            // 
-            // GB2312
-            // 
-            this.GB2312.AutoSize = true;
-            this.GB2312.Checked = true;
-            this.GB2312.Location = new System.Drawing.Point(29, 24);
-            this.GB2312.Name = "GB2312";
-            this.GB2312.Size = new System.Drawing.Size(59, 16);
-            this.GB2312.TabIndex = 11;
-            this.GB2312.TabStop = true;
-            this.GB2312.Text = "GB2312";
-            this.GB2312.UseVisualStyleBackColor = true;
-            // 
-            // GBK
-            // 
-            this.GBK.AutoSize = true;
-            this.GBK.Location = new System.Drawing.Point(148, 24);
-            this.GBK.Name = "GBK";
-            this.GBK.Size = new System.Drawing.Size(41, 16);
-            this.GBK.TabIndex = 12;
-            this.GBK.Text = "GBK";
-            this.GBK.UseVisualStyleBackColor = true;
-            // 
-            // ASCII
-            // 
-            this.ASCII.AutoSize = true;
-            this.ASCII.Location = new System.Drawing.Point(242, 24);
-            this.ASCII.Name = "ASCII";
-            this.ASCII.Size = new System.Drawing.Size(53, 16);
-            this.ASCII.TabIndex = 13;
-            this.ASCII.Text = "ASCII";
-            this.ASCII.UseVisualStyleBackColor = true;
-            // 
-            // binama_groupBox
-            // 
-            this.binama_groupBox.Controls.Add(this.ASCII);
-            this.binama_groupBox.Controls.Add(this.GB2312);
-            this.binama_groupBox.Controls.Add(this.GBK);
-            this.binama_groupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.binama_groupBox.Location = new System.Drawing.Point(406, 209);
-            this.binama_groupBox.Name = "binama_groupBox";
-            this.binama_groupBox.Size = new System.Drawing.Size(343, 46);
-            this.binama_groupBox.TabIndex = 14;
-            this.binama_groupBox.TabStop = false;
-            this.binama_groupBox.Text = "编码选择";
             // 
             // readFontlib
             // 
@@ -1028,6 +1028,8 @@
             this.view_edit_fontlib.ResumeLayout(false);
             this.make_fontlib.ResumeLayout(false);
             this.make_fontlib.PerformLayout();
+            this.binama_groupBox.ResumeLayout(false);
+            this.binama_groupBox.PerformLayout();
             this.statusStripProc.ResumeLayout(false);
             this.statusStripProc.PerformLayout();
             this.set_groupBox.ResumeLayout(false);
@@ -1047,8 +1049,6 @@
             this.CRC16.ResumeLayout(false);
             this.CRC16.PerformLayout();
             this.check_groupBox.ResumeLayout(false);
-            this.binama_groupBox.ResumeLayout(false);
-            this.binama_groupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

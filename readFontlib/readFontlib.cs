@@ -807,6 +807,36 @@ namespace readFontlib
         {
             pgbBuilderProc.Visible = true;
             statusStripProc.Visible = true;
+            if (ASCII.Checked == true)
+            {
+                this.saveFileDlg.FileName = "En" + "_" + this.MatCharFont.MatFont.SizeInPoints.ToString("##") + "_"
+                                            + width_numericUpDown.Value + height_numericUpDown.Value;
+            }
+            else
+            {
+                switch (this.MatCharFont.MatFont.FontFamily.Name)
+                {
+                    case "宋体": this.saveFileDlg.FileName = "SongTi" + "_"; break;
+                    case "黑体": this.saveFileDlg.FileName = "HeiTi" + "_"; break;
+                    case "楷体": this.saveFileDlg.FileName = "KaiTi" + "_"; break;
+                    case "隶书": this.saveFileDlg.FileName = "LiShu" + "_"; break;
+                    default: this.saveFileDlg.FileName = "QiTa" + "_"; break;
+                }
+                this.saveFileDlg.FileName += this.MatCharFont.MatFont.SizeInPoints.ToString("##") + "_"
+                                            + width_numericUpDown.Value + height_numericUpDown.Value + "_"; //--保存的名字
+                if (GB2312.Checked == true)
+                {
+                    this.saveFileDlg.FileName += "GB2312";
+                }
+                else
+                {
+                    if (GBK.Checked == true)
+                    {
+                        this.saveFileDlg.FileName += "GBK";
+                    }
+                }
+            }
+
             
             if (this.saveFileDlg.ShowDialog() == DialogResult.OK)
             {
@@ -814,6 +844,7 @@ namespace readFontlib
                 this.UIEnabled(false);
 
                 //启动点阵数据文件生成的辅助线程。
+                
                 this.bgwFileBuilder.RunWorkerAsync(this.saveFileDlg.FileName);
             }
         }
