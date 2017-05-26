@@ -58,12 +58,11 @@ namespace readFontlib
             for (i = 0; i < 2048; i++) {
                 data[i] = 0;
             }
-            for (i = 161; i < 248;i++ )
+            for (i = 161; i < 248; i++)
             {
                 comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
-                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
             }
-            for (i = 248; i < 255; i++)
+            for (i = 161; i < 255; i++)
             {
                 comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
             }
@@ -882,6 +881,41 @@ namespace readFontlib
             {
                 this.height_numericUpDown.Enabled = false;
             }
+        }
+
+        private void up_button_Click(object sender, EventArgs e)
+        {
+            if ((fontPath != null) && (File.Exists(fontPath)))
+            {
+                index = (int)numericUpDownIndex.Value;
+                index = index - 1;
+                numericUpDownIndex.Value = index;
+                displayFont();
+            }
+            else
+            {
+                MessageBox.Show("请首先打开一个字库文件");
+            }
+        }
+
+        private void down_button_Click(object sender, EventArgs e)
+        {
+            if ((fontPath != null) && (File.Exists(fontPath)))
+            {
+                index = (int)numericUpDownIndex.Value;
+                index = index + 1;
+                numericUpDownIndex.Value = index;
+                displayFont();
+            }
+            else
+            {
+                MessageBox.Show("请首先打开一个字库文件");
+            }
+        }
+
+        private void check_data_format_CheckedChanged_1(object sender, EventArgs e)
+        {
+            buttonGetData_Click(this, null);
         }
 
         private void UIEnabled(bool isEnabled)
