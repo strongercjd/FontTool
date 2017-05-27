@@ -895,15 +895,26 @@ namespace readFontlib
                 {
                     //在GBK编码的汉字字库中，共有 8178 个字符；
                     //遍历每一个字符，生成它们的点阵数据文件。
-                    for (Int32 i = 0; i < 23940; i++)
+                    for (uint i = 0; i < 23940; i++)
                     {
                         //设置汉字的区位码。
                         byte[] bt = new byte[2];
-                        bt[0] = (byte)(Math.Floor((double)i / 191) + 64);
-                        bt[1] = (byte)(i % 191 + 128);
+                        bt[0] = (byte)(Math.Floor((double)i / 191) + 129);
+                        bt[1] = (byte)(i % 191 + 64);
+                        if (bt[1] == 127)
+                        {
+                            bt[1] += 1;
+                            i++;
+                        }
+                        if (bt[1] == 255)
+                        {
+                            bt[0] += 1;
+                            bt[1]  = 0;
+                            i++;
+                        }
 
                         //按照区位码，解码成汉字字符。
-                        this.MatCharFont.DemoChar = Encoding.GetEncoding("GBk").GetString(bt);
+                        this.MatCharFont.DemoChar = Encoding.GetEncoding("GBK").GetString(bt);
 
                         //获取字符的点阵数据。
                         Byte[] byteArray = this.MatCharFont.GetDemoCharMatrixBytes();
