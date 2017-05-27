@@ -254,13 +254,6 @@ namespace readFontlib
             a = strArray[strArray.Length - 1];
             return a;
         }
-        private void recalSize()//读取字库里字模的个数
-        {
-            int readLenth;
-            FileInfo fontInfo = new FileInfo(fontPath);
-            readLenth = height * (width / 8 + (((width % 8) != 0) ? 1 : 0));
-            numericUpDownIndex.Maximum = fontInfo.Length / readLenth - 1;
-        }
         private void buttonReadFont_Click (object sender, EventArgs e)//读取字库名按钮单击事件
         {
             FontStyle style = FontStyle.Regular;
@@ -277,7 +270,6 @@ namespace readFontlib
                 textBoxFontName.Font = tmpFont;
                 textBoxFontName.Text = getFontName(fontFile.FileName);//获取字库的名字
                 numericUpDownIndex.Value = 0;
-                recalSize();//!<读完字库文件后需要计算字库内文字的个数
                 displayFont();
             }
         }
@@ -294,13 +286,17 @@ namespace readFontlib
                 MessageBox.Show("请首先打开一个字库文件");
             }
         }
-        private void GBK_radioButton_CheckedChanged(object sender, EventArgs e)
+        private void GBK_radioButton_CheckedChanged(object sender, EventArgs e)//选中GBK
         {
             comboBoxQu.Enabled = true;
             comboBoxWei.Enabled = true;
             comboBoxWei.Items.Clear();
             for (int i = 64; i < 255; i++)
             {
+                if (i == 127)
+                {
+                    i++;
+                }
                 comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
             }
             comboBoxQu.Items.Clear();
@@ -315,31 +311,32 @@ namespace readFontlib
             comboBoxQu.Enabled = true;
             comboBoxWei.Enabled = true;
 
-            ASCII_Flag = false;
+            comboBoxQu.Items.Clear();
+            for (int i = 161; i < 255; i++)
+            {
+                comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
+            }
             comboBoxWei.Items.Clear();
             for (int i = 161; i < 255; i++)
             {
                 comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
             }
-            //comboBoxWei.SelectedIndex = 161.ToString("X2");
-            //if (radioButtonFontLib.Checked)
-            //{
-            //    numericUpDownWidth.Maximum = (picSize + spaceSize) / (uniwidth + spaceSize);
-            //    numericUpDownHeight.Maximum = (picSize + spaceSize) / (uniheight + spaceSize);
-            //    numericUpDownWidth.Value = width;
-            //    numericUpDownHeight.Value = height;
-            //}
+
             lockFlag = false;
         }
         private void radioButtonUnit_CheckedChanged(object sender, EventArgs e)//选中ASCII
         {
-            comboBoxQu.Enabled = false;
-            ASCII_Flag = true;
+            comboBoxQu.Items.Clear();
+            for (int i = 0; i < 256; i++)
+            {
+                comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
+            }
             comboBoxWei.Items.Clear();
             for (int i = 0; i < 256; i++)
             {
                 comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
             }
+            comboBoxQu.Enabled = false;
             comboBoxWei.SelectedIndex = 0;
         }
 
@@ -893,9 +890,10 @@ namespace readFontlib
                 }
                 if (GBK.Checked == true)
                 {
-                    //在GBK编码的汉字字库中，共有 8178 个字符；
+                    //在GBK编码的汉字字库中，共有 26208 个字符；
                     //遍历每一个字符，生成它们的点阵数据文件。
-                    for (uint i = 0; i < 23940; i++)
+                    //for (uint i = 0; i < 23940; i++)
+                    for (uint i = 0; i < 26208; i++)
                     {
                         //设置汉字的区位码。
                         byte[] bt = new byte[2];
@@ -927,9 +925,9 @@ namespace readFontlib
 
                         //报告文件生成进度。
                         //设置判断条件，可以减少重复的进度报告，提高执行效率。
-                        if ((i % 82 == 0) || (i == 23940))
+                        if ((i % 82 == 0) || (i == 26208))
                         {
-                            int procPercent = (int)((double)i / 23940 * 100);
+                            int procPercent = (int)((double)i / 26208 * 100);
                             this.pgbBuilderProc.Value = procPercent;
                             this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
                         }
