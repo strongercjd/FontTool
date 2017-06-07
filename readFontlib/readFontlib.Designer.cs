@@ -112,6 +112,7 @@
             this.fontDlg = new System.Windows.Forms.FontDialog();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.bgwFileBuilder = new System.ComponentModel.BackgroundWorker();
+            this.author_qq_picture = new System.Windows.Forms.PictureBox();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -136,6 +137,7 @@
             this.jineima.SuspendLayout();
             this.CRC16.SuspendLayout();
             this.check_groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.author_qq_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBoxpic
@@ -999,11 +1001,23 @@
             this.bgwFileBuilder.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwFileBuilder_DoWork);
             this.bgwFileBuilder.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwFileBuilder_RunWorkerCompleted);
             // 
+            // author_qq_picture
+            // 
+            this.author_qq_picture.Image = ((System.Drawing.Image)(resources.GetObject("author_qq_picture.Image")));
+            this.author_qq_picture.InitialImage = null;
+            this.author_qq_picture.Location = new System.Drawing.Point(248, 486);
+            this.author_qq_picture.Name = "author_qq_picture";
+            this.author_qq_picture.Size = new System.Drawing.Size(32, 28);
+            this.author_qq_picture.TabIndex = 6;
+            this.author_qq_picture.TabStop = false;
+            this.author_qq_picture.Click += new System.EventHandler(this.author_qq_picture_Click);
+            // 
             // readFontlib
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 511);
+            this.Controls.Add(this.author_qq_picture);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.textBoxtime);
             this.Controls.Add(this.author);
@@ -1050,6 +1064,7 @@
             this.CRC16.ResumeLayout(false);
             this.CRC16.PerformLayout();
             this.check_groupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.author_qq_picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1139,6 +1154,7 @@
         private System.Windows.Forms.RadioButton GBK;
         private System.Windows.Forms.RadioButton GB2312;
         private System.Windows.Forms.GroupBox binama_groupBox;
+        private System.Windows.Forms.PictureBox author_qq_picture;
     }
 }
 

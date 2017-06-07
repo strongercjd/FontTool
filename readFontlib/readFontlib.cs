@@ -1149,5 +1149,13 @@ namespace readFontlib
         }
         #endregion 制作字库的代码
 
+
+        private void author_qq_picture_Click(object sender, EventArgs e)
+        {
+            //string url = "http://wpa.qq.com/msgrd?v=3&uin=" + 1601438030 + "&site=qq&menu=yes";
+            string url = "http://wpa.qq.com/msgrd?v=3&uin=1601438030&site=qq&menu=yes";
+            System.Diagnostics.Process.Start(url);
+        }
+
     }
 }
