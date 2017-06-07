@@ -935,17 +935,13 @@ namespace readFontlib
                 }
                 if (ASCII.Checked == true)
                 {
-                    //在GB2312编码的汉字字库中，共有 8178 个字符；
+                    //在ASCII编码的字库中，共有 256 个字符；
                     //遍历每一个字符，生成它们的点阵数据文件。
-                    for (int i = 0; i < 8178; i++)
+                    for (int i = 0; i < 256; i++)
                     {
-                        //设置汉字的区位码。
-                        byte[] bt = new byte[2];
-                        bt[0] = (byte)(Math.Floor((double)i / 94) + 161);
-                        bt[1] = (byte)(i % 94 + 161);
-
-                        //按照区位码，解码成汉字字符。
-                        this.MatCharFont.DemoChar = Encoding.GetEncoding("GB2312").GetString(bt);
+                        System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
+                        byte[] byte_ascii_Array = new byte[] { (byte)i };
+                        this.MatCharFont.DemoChar = asciiEncoding.GetString(byte_ascii_Array);
 
                         //获取字符的点阵数据。
                         Byte[] byteArray = this.MatCharFont.GetDemoCharMatrixBytes();
@@ -958,9 +954,9 @@ namespace readFontlib
 
                         //报告文件生成进度。
                         //设置判断条件，可以减少重复的进度报告，提高执行效率。
-                        if ((i % 82 == 0) || (i == 8177))
+                        if ((i % 82 == 0) || (i == 256))
                         {
-                            int procPercent = (int)((double)i / 8177 * 100);
+                            int procPercent = (int)((double)i / 256 * 100);
                             this.pgbBuilderProc.Value = procPercent;
                             this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
                         }
@@ -1061,8 +1057,10 @@ namespace readFontlib
             //创建 MatrixFont 对象。
             Font matFont = new Font(this.Font.FontFamily, (float)this.font_size_numericUpDown.Value);
             this.MatCharFont = new MatrixFont(matFont, '陈', (int)this.width_numericUpDown.Value,
-                            (int)this.height_numericUpDown.Value, (int)this.level_numericUpDown.Value,
-                            (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked);
+                         (int)this.height_numericUpDown.Value, (int)this.level_numericUpDown.Value,
+                         (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked);
+
+                
 
             //将窗体上的一些控件与 MatCharFont 对象的一些属性绑定，方便操作。
             this.UIBindingData(true);
