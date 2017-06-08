@@ -13,9 +13,8 @@ using System.Resources;
 
 
 using System.Drawing.Drawing2D;
-//using System.Threading;
-
-
+using System.Threading;
+using System.Globalization;
 
 namespace readFontlib
 {
@@ -37,7 +36,7 @@ namespace readFontlib
         bool showFlag;//1：获取的字模显示0X00，  0：显示 00 
         public bool begin = false;
 
-        Timer time1 = new Timer();
+        System.Windows.Forms.Timer time1 = new System.Windows.Forms.Timer();
 
 
         #region 字库查看修改的代码
@@ -1049,6 +1048,8 @@ namespace readFontlib
             this.UIBindingData(isEnabled);
         }
 
+
+
         /// <summary>
         /// 直接初始化字段数据的方法。
         /// </summary>
@@ -1156,6 +1157,121 @@ namespace readFontlib
             string url = "http://wpa.qq.com/msgrd?v=3&uin=1601438030&site=qq&menu=yes";
             System.Diagnostics.Process.Start(url);
         }
+
+        private void 中文繁体ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CHT");
+            UpDataMainFormUILanguage();
+        }
+
+        private void 中文简体ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CHS");
+            UpDataMainFormUILanguage();
+        }
+
+        private void 英文ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            UpDataMainFormUILanguage();
+        }
+
+        //根据当前的语言区域,更新主窗口的语言信息
+        private void UpDataMainFormUILanguage()
+        {
+            ResourceManager rm = new ResourceManager(typeof(readFontlib));
+            UpDataMainFormMenuLanguage(rm);
+            UpDataMainFormToolBarLanguage(rm);
+        }
+
+        //根据当前的语言区域,更新主窗口菜单的语言
+        private void UpDataMainFormMenuLanguage(ResourceManager rm)
+        {
+            #region 查看编辑区域
+
+            groupBoxpic.Text = rm.GetString("groupBoxpic");
+            View_mode_Button.Text = rm.GetString("View_mode_Button");
+            edit_mode_Button.Text = rm.GetString("edit_mode_Button");
+            groupBoxSet.Text = rm.GetString("groupBoxSet");
+            labelFontName.Text = rm.GetString("labelFontName");
+            textBoxFontName.Text = rm.GetString("textBoxFontName");
+
+            buttonReadFont.Text = rm.GetString("buttonReadFont");
+            labelWidth.Text = rm.GetString("labelWidth");
+            labelHeight.Text = rm.GetString("labelHeight");
+            labelIndex.Text = rm.GetString("labelIndex");
+            up_button.Text = rm.GetString("up_button");
+            down_button.Text = rm.GetString("down_button");
+
+            groupBoxData.Text = rm.GetString("groupBoxData");
+            buttonGetData.Text = rm.GetString("buttonGetData");
+            Save_font_button.Text = rm.GetString("Save_font_button");
+            check_data_format.Text = rm.GetString("check_data_format");
+            labelFontInfo.Text = rm.GetString("labelFontInfo");
+            labelNum.Text = rm.GetString("labelNum");
+
+            #endregion 查看编辑区域
+
+
+            #region 制作字库区域
+            preview_groupBox.Text = rm.GetString("preview_groupBox");
+            font_groupBox.Text = rm.GetString("font_groupBox");
+            message_groupBox.Text = rm.GetString("message_groupBox");
+            check_font_button.Text = rm.GetString("check_font_button");
+            font_label.Text = rm.GetString("font_label");
+            font_view_label.Text = rm.GetString("font_view_label");
+
+            binama_groupBox.Text = rm.GetString("binama_groupBox");
+            set_groupBox.Text = rm.GetString("set_groupBox");
+            font_width_label.Text = rm.GetString("font_width_label");
+            font_height_label.Text = rm.GetString("font_height_label");
+            level_label.Text = rm.GetString("level_label");
+            vertical_label.Text = rm.GetString("vertical_label");
+
+            rdBtnNonStandard.Text = rm.GetString("rdBtnNonStandard");
+            rdBtnStandard.Text = rm.GetString("rdBtnStandard");
+            make_font_button.Text = rm.GetString("make_font_button");
+            #endregion 制作字库区域
+
+
+            #region 机内码查询区域
+            message.Text = rm.GetString("message");
+            Transfor_button.Text = rm.GetString("Transfor_button");
+            clear_button.Text = rm.GetString("clear_button");
+            #endregion 机内码查询区域
+
+            #region CRC16校验区域
+            check_groupBox.Text = rm.GetString("check_groupBox");
+            crc_check_button.Text = rm.GetString("crc_check_button");
+            crc_clear_button.Text = rm.GetString("crc_clear_button");
+            #endregion CRC16校验区域
+
+            return;
+        }
+
+        //根据当前的语言区域,更新主窗口工具栏的语言
+        private void UpDataMainFormToolBarLanguage(ResourceManager rm)
+        {
+            //fileButtonCreate.ToolTipText = rm.GetString("fileButtonCreate");
+            //fileButtonOpen.ToolTipText = rm.GetString("fileButtonOpen");
+            //fileButtonSave.ToolTipText = rm.GetString("fileButtonSave");
+
+            //operationButtonCut.ToolTipText = rm.GetString("operationButtonCut");
+            //operationButtonCopy.ToolTipText = rm.GetString("operationButtonCopy");
+            //operationButtonPaste.ToolTipText = rm.GetString("operationButtonPaste");
+
+            //operationButtonUndo.ToolTipText = rm.GetString("operationButtonUndo");
+            //operationButtonRedo.ToolTipText = rm.GetString("operationButtonRedo");
+
+            //displayButtonZoomIn.ToolTipText = rm.GetString("displayButtonZoomIn");
+            //displayButtonZoomOut.ToolTipText = rm.GetString("displayButtonZoomOut");
+
+            //toolBoxPopButton.Text = rm.GetString("toolBoxPopButton");
+
+            return;
+        }
+
+
 
     }
 }

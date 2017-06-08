@@ -74,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="readFontlib.en.resx">
+      <DependentUpon>readFontlib.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="readFontlib.resx">
       <DependentUpon>readFontlib.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +102,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="readFontLib.ico" />
+    <EmbeddedResource Include="readFontlib.zh-CHS.resx">
+      <DependentUpon>readFontlib.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="readFontlib.zh-CHT.resx">
+      <DependentUpon>readFontlib.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\ziku">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
