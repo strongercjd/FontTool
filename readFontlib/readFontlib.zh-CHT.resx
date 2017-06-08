@@ -175,6 +175,9 @@
   <data name="labelNum" xml:space="preserve">
     <value>字節數</value>
   </data>
+  <data name="copyright" xml:space="preserve">
+    <value>    字庫卡工具版權所有（C）2017</value>
+  </data>
  <!-- 查看编辑区域 —— end -->
  
  <!-- 制作字库区域 —— start -->
@@ -226,6 +229,9 @@
   <data name="make_font_button" xml:space="preserve">
     <value>製作字庫</value>
   </data>
+  <data name="makefontsize" xml:space="preserve">
+    <value>大小</value>
+  </data>
   <!-- 制作字库区域 —— end -->
   
   <!-- 机内码查询区域 —— start -->
@@ -259,8 +265,8 @@
   <!-- CRC16校验区域 —— end -->
   
   <!-- 标题栏区域 —— start -->
-  <data name="选择语言" xml:space="preserve">
-    <value>選擇語言</value>
+  <data name="语言" xml:space="preserve">
+    <value>語言</value>
   </data>
   <data name="中文简体" xml:space="preserve">
     <value>中文簡體</value>
@@ -275,4 +281,8 @@
     <value>關於</value>
   </data>
   <!-- 标题栏区域 —— end -->
+  
+  <data name="mes_openfile" xml:space="preserve">
+    <value>請首先打開一個字庫文件</value>
+  </data>
 </root>

@@ -35,6 +35,10 @@ namespace readFontlib
         bool ASCII_Flag;
         bool showFlag;//1：获取的字模显示0X00，  0：显示 00 
         public bool begin = false;
+        string message_openfile = "请首先打开一个字库文件";
+        string makefontsize = "大小：";
+        string makefontwidth = "宽度：";
+        string makefontheight = "高度：";
 
         System.Windows.Forms.Timer time1 = new System.Windows.Forms.Timer();
 
@@ -282,7 +286,7 @@ namespace readFontlib
             }
             else
             {
-                MessageBox.Show("请首先打开一个字库文件");
+                MessageBox.Show(message_openfile);
             }
         }
         private void GBK_radioButton_CheckedChanged(object sender, EventArgs e)//选中GBK
@@ -783,7 +787,7 @@ namespace readFontlib
         {
             if (this.rdBtnStandard.Checked)
             {
-                this.font_width_label.Text = "大小：";
+                this.font_width_label.Text = makefontsize;
                 this.font_height_label.Text = "  ";
                 this.height_numericUpDown.Enabled = false;
             }
@@ -793,8 +797,8 @@ namespace readFontlib
         {
             if (this.rdBtnNonStandard.Checked)
             {
-                this.font_width_label.Text = "宽度：";
-                this.font_height_label.Text = "高度：";
+                this.font_width_label.Text = makefontwidth;
+                this.font_height_label.Text = makefontheight;
                 this.height_numericUpDown.Enabled = true;
             }
         }
@@ -998,7 +1002,7 @@ namespace readFontlib
             }
             else
             {
-                MessageBox.Show("请首先打开一个字库文件");
+                MessageBox.Show(message_openfile);
             }
         }
 
@@ -1013,7 +1017,7 @@ namespace readFontlib
             }
             else
             {
-                MessageBox.Show("请首先打开一个字库文件");
+                MessageBox.Show(message_openfile);
             }
         }
 
@@ -1188,9 +1192,8 @@ namespace readFontlib
         private void UpDataMainFormMenuLanguage(ResourceManager rm)
         {
             #region 查看编辑区域
-            //tabControl.TabPages.
             tabControl.TabPages[0].Text = rm.GetString("TabPages0"); 
-             groupBoxpic.Text = rm.GetString("groupBoxpic");
+            groupBoxpic.Text = rm.GetString("groupBoxpic");
             View_mode_Button.Text = rm.GetString("View_mode_Button");
             edit_mode_Button.Text = rm.GetString("edit_mode_Button");
             groupBoxSet.Text = rm.GetString("groupBoxSet");
@@ -1210,6 +1213,8 @@ namespace readFontlib
             check_data_format.Text = rm.GetString("check_data_format");
             labelFontInfo.Text = rm.GetString("labelFontInfo");
             labelNum.Text = rm.GetString("labelNum");
+            richTextBoxData.Text = "";
+            richTextBoxData.AppendText ("\n" + "\n" + "\n" + "\n" + rm.GetString("copyright"));
 
             #endregion 查看编辑区域
 
@@ -1233,6 +1238,9 @@ namespace readFontlib
             rdBtnNonStandard.Text = rm.GetString("rdBtnNonStandard");
             rdBtnStandard.Text = rm.GetString("rdBtnStandard");
             make_font_button.Text = rm.GetString("make_font_button");
+            makefontsize = rm.GetString("makefontsize");
+            makefontwidth = rm.GetString("font_width_label"); 
+            makefontheight = rm.GetString("font_height_label");
             #endregion 制作字库区域
 
 
@@ -1250,31 +1258,19 @@ namespace readFontlib
             crc_clear_button.Text = rm.GetString("crc_clear_button");
             #endregion CRC16校验区域
 
+            message_openfile = rm.GetString("mes_openfile");
+
             return;
         }
 
         //根据当前的语言区域,更新主窗口工具栏的语言
         private void UpDataMainFormToolBarLanguage(ResourceManager rm)
         {
-            选择语言ToolStripMenuItem.Text = rm.GetString("选择语言");
+            语言ToolStripMenuItem.Text = rm.GetString("语言");
             中文简体ToolStripMenuItem.Text = rm.GetString("中文简体");
             中文繁体ToolStripMenuItem.Text = rm.GetString("中文繁体");
             英文ToolStripMenuItem.Text = rm.GetString("英文");
             关于ToolStripMenuItem.Text = rm.GetString("关于");
-            //fileButtonOpen.ToolTipText = rm.GetString("fileButtonOpen");
-            //fileButtonSave.ToolTipText = rm.GetString("fileButtonSave");
-
-            //operationButtonCut.ToolTipText = rm.GetString("operationButtonCut");
-            //operationButtonCopy.ToolTipText = rm.GetString("operationButtonCopy");
-            //operationButtonPaste.ToolTipText = rm.GetString("operationButtonPaste");
-
-            //operationButtonUndo.ToolTipText = rm.GetString("operationButtonUndo");
-            //operationButtonRedo.ToolTipText = rm.GetString("operationButtonRedo");
-
-            //displayButtonZoomIn.ToolTipText = rm.GetString("displayButtonZoomIn");
-            //displayButtonZoomOut.ToolTipText = rm.GetString("displayButtonZoomOut");
-
-            //toolBoxPopButton.Text = rm.GetString("toolBoxPopButton");
 
             return;
         }

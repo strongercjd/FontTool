@@ -776,7 +776,7 @@
 
 
 
-字库卡工具权所有（C）2017</value>
+字库卡工具版权所有（C）2017</value>
   </data>
   <data name="&gt;&gt;richTextBoxData.Name" xml:space="preserve">
     <value>richTextBoxData</value>
@@ -2127,11 +2127,11 @@
   <data name="英文ToolStripMenuItem.Text" xml:space="preserve">
     <value>英文</value>
   </data>
-  <data name="选择语言ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 21</value>
+  <data name="语言ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 21</value>
   </data>
-  <data name="选择语言ToolStripMenuItem.Text" xml:space="preserve">
-    <value>选择语言</value>
+  <data name="语言ToolStripMenuItem.Text" xml:space="preserve">
+    <value>语言</value>
   </data>
   <data name="关于ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 21</value>
@@ -2296,10 +2296,10 @@
   <data name="&gt;&gt;bgwFileBuilder.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;选择语言ToolStripMenuItem.Name" xml:space="preserve">
-    <value>选择语言ToolStripMenuItem</value>
+  <data name="&gt;&gt;语言ToolStripMenuItem.Name" xml:space="preserve">
+    <value>语言ToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;选择语言ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;语言ToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;中文简体ToolStripMenuItem.Name" xml:space="preserve">

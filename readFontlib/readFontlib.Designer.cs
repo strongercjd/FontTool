@@ -114,7 +114,7 @@
             this.bgwFileBuilder = new System.ComponentModel.BackgroundWorker();
             this.author_qq_picture = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.选择语言ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.语言ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.中文简体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -763,19 +763,19 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.选择语言ToolStripMenuItem,
+            this.语言ToolStripMenuItem,
             this.关于ToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
-            // 选择语言ToolStripMenuItem
+            // 语言ToolStripMenuItem
             // 
-            this.选择语言ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.语言ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.中文简体ToolStripMenuItem,
             this.中文繁体ToolStripMenuItem,
             this.英文ToolStripMenuItem});
-            this.选择语言ToolStripMenuItem.Name = "选择语言ToolStripMenuItem";
-            resources.ApplyResources(this.选择语言ToolStripMenuItem, "选择语言ToolStripMenuItem");
+            this.语言ToolStripMenuItem.Name = "语言ToolStripMenuItem";
+            resources.ApplyResources(this.语言ToolStripMenuItem, "语言ToolStripMenuItem");
             // 
             // 中文简体ToolStripMenuItem
             // 
@@ -942,7 +942,7 @@
         private System.Windows.Forms.GroupBox binama_groupBox;
         private System.Windows.Forms.PictureBox author_qq_picture;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 选择语言ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 语言ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 中文简体ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 中文繁体ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 英文ToolStripMenuItem;

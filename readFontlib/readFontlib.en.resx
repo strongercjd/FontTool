@@ -175,6 +175,9 @@
   <data name="labelNum" xml:space="preserve">
     <value>byte num</value>
   </data>
+  <data name="copyright" xml:space="preserve">
+    <value>Font card tool Copyright (C) 2017</value>
+  </data>
  <!-- 查看编辑区域 —— end -->
  
  <!-- 制作字库区域 —— start -->
@@ -212,10 +215,10 @@
     <value>height</value>
   </data>
   <data name="level_label" xml:space="preserve">
-    <value>x move</value>
+    <value>X move</value>
   </data>
   <data name="vertical_label" xml:space="preserve">
-    <value>y move</value>
+    <value>Y move</value>
   </data>
   <data name="rdBtnNonStandard" xml:space="preserve">
     <value>notequal</value>
@@ -225,6 +228,9 @@
   </data>
   <data name="make_font_button" xml:space="preserve">
     <value>make font</value>
+  </data>
+  <data name="makefontsize" xml:space="preserve">
+    <value>size</value>
   </data>
   <!-- 制作字库区域 —— end -->
   
@@ -259,8 +265,8 @@
   <!-- CRC16校验区域 —— end -->
   
   <!-- 标题栏区域 —— start -->
-  <data name="选择语言" xml:space="preserve">
-    <value>check language</value>
+  <data name="语言" xml:space="preserve">
+    <value>language</value>
   </data>
   <data name="中文简体" xml:space="preserve">
     <value>Chinese(simplified)</value>
@@ -275,4 +281,8 @@
     <value>about</value>
   </data>
   <!-- 标题栏区域 —— end -->
+  
+  <data name="mes_openfile" xml:space="preserve">
+    <value>Please open a font file first</value>
+  </data>
 </root>
