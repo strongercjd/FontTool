@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
  <!-- 查看编辑区域 —— start -->
+  <data name="TabPages0" xml:space="preserve">
+    <value>查看编辑</value>
+  </data>
   <data name="groupBoxpic" xml:space="preserve">
     <value>字模区</value>
   </data>
@@ -175,6 +178,9 @@
  <!-- 查看编辑区域 —— end -->
  
  <!-- 制作字库区域 —— start -->
+  <data name="TabPages1" xml:space="preserve">
+    <value>制作字库</value>
+  </data>
   <data name="preview_groupBox" xml:space="preserve">
     <value>预览</value>
   </data>
@@ -223,6 +229,9 @@
   <!-- 制作字库区域 —— end -->
   
   <!-- 机内码查询区域 —— start -->
+  <data name="TabPages2" xml:space="preserve">
+    <value>机内码查询</value>
+  </data>
   <data name="message" xml:space="preserve">
     <value>输入要转码的汉字</value>
   </data>
@@ -235,6 +244,9 @@
   <!-- 机内码查询区域 —— end -->
   
   <!-- CRC16校验区域 —— start -->
+  <data name="TabPages3" xml:space="preserve">
+    <value>CRC16校验</value>
+  </data>
   <data name="check_groupBox" xml:space="preserve">
     <value>校验区</value>
   </data>
@@ -245,4 +257,22 @@
     <value>清除</value>
   </data>
   <!-- CRC16校验区域 —— end -->
+  
+  <!-- 标题栏区域 —— start -->
+  <data name="选择语言" xml:space="preserve">
+    <value>选择语言</value>
+  </data>
+  <data name="中文简体" xml:space="preserve">
+    <value>中文简体</value>
+  </data>
+  <data name="中文繁体" xml:space="preserve">
+    <value>中文繁体</value>
+  </data>
+  <data name="英文" xml:space="preserve">
+    <value>英文</value>
+  </data>
+  <data name="关于" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <!-- 标题栏区域 —— end -->
 </root>

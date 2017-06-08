@@ -1188,8 +1188,9 @@ namespace readFontlib
         private void UpDataMainFormMenuLanguage(ResourceManager rm)
         {
             #region 查看编辑区域
-
-            groupBoxpic.Text = rm.GetString("groupBoxpic");
+            //tabControl.TabPages.
+            tabControl.TabPages[0].Text = rm.GetString("TabPages0"); 
+             groupBoxpic.Text = rm.GetString("groupBoxpic");
             View_mode_Button.Text = rm.GetString("View_mode_Button");
             edit_mode_Button.Text = rm.GetString("edit_mode_Button");
             groupBoxSet.Text = rm.GetString("groupBoxSet");
@@ -1214,6 +1215,7 @@ namespace readFontlib
 
 
             #region 制作字库区域
+            tabControl.TabPages[1].Text = rm.GetString("TabPages1");
             preview_groupBox.Text = rm.GetString("preview_groupBox");
             font_groupBox.Text = rm.GetString("font_groupBox");
             message_groupBox.Text = rm.GetString("message_groupBox");
@@ -1235,12 +1237,14 @@ namespace readFontlib
 
 
             #region 机内码查询区域
+            tabControl.TabPages[2].Text = rm.GetString("TabPages2");
             message.Text = rm.GetString("message");
             Transfor_button.Text = rm.GetString("Transfor_button");
             clear_button.Text = rm.GetString("clear_button");
             #endregion 机内码查询区域
 
             #region CRC16校验区域
+            tabControl.TabPages[3].Text = rm.GetString("TabPages3");
             check_groupBox.Text = rm.GetString("check_groupBox");
             crc_check_button.Text = rm.GetString("crc_check_button");
             crc_clear_button.Text = rm.GetString("crc_clear_button");
@@ -1252,7 +1256,11 @@ namespace readFontlib
         //根据当前的语言区域,更新主窗口工具栏的语言
         private void UpDataMainFormToolBarLanguage(ResourceManager rm)
         {
-            //fileButtonCreate.ToolTipText = rm.GetString("fileButtonCreate");
+            选择语言ToolStripMenuItem.Text = rm.GetString("选择语言");
+            中文简体ToolStripMenuItem.Text = rm.GetString("中文简体");
+            中文繁体ToolStripMenuItem.Text = rm.GetString("中文繁体");
+            英文ToolStripMenuItem.Text = rm.GetString("英文");
+            关于ToolStripMenuItem.Text = rm.GetString("关于");
             //fileButtonOpen.ToolTipText = rm.GetString("fileButtonOpen");
             //fileButtonSave.ToolTipText = rm.GetString("fileButtonSave");
 
