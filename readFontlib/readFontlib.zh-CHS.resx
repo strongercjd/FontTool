@@ -117,6 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+ <!-- 查看编辑区域 —— start -->
   <data name="groupBoxpic" xml:space="preserve">
     <value>字模区</value>
   </data>
@@ -171,6 +172,9 @@
   <data name="labelNum" xml:space="preserve">
     <value>字节数</value>
   </data>
+ <!-- 查看编辑区域 —— end -->
+ 
+ <!-- 制作字库区域 —— start -->
   <data name="preview_groupBox" xml:space="preserve">
     <value>预览</value>
   </data>
@@ -216,6 +220,9 @@
   <data name="make_font_button" xml:space="preserve">
     <value>制作字库</value>
   </data>
+  <!-- 制作字库区域 —— end -->
+  
+  <!-- 机内码查询区域 —— start -->
   <data name="message" xml:space="preserve">
     <value>输入要转码的汉字</value>
   </data>
@@ -225,6 +232,9 @@
   <data name="clear_button" xml:space="preserve">
     <value>清除</value>
   </data>
+  <!-- 机内码查询区域 —— end -->
+  
+  <!-- CRC16校验区域 —— start -->
   <data name="check_groupBox" xml:space="preserve">
     <value>校验区</value>
   </data>
@@ -234,4 +244,5 @@
   <data name="crc_clear_button" xml:space="preserve">
     <value>清除</value>
   </data>
+  <!-- CRC16校验区域 —— end -->
 </root>

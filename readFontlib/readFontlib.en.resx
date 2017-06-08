@@ -117,121 +117,132 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+ <!-- 查看编辑区域 —— start -->
   <data name="groupBoxpic" xml:space="preserve">
-    <value>字模区</value>
+    <value>font area</value>
   </data>
   <data name="View_mode_Button" xml:space="preserve">
-    <value>查看模式</value>
+    <value>view mode</value>
   </data>
   <data name="edit_mode_Button" xml:space="preserve">
-    <value>编辑模式</value>
+    <value>edit mode</value>
   </data>
   <data name="groupBoxSet" xml:space="preserve">
-    <value>设置</value>
+    <value>set</value>
   </data>
   <data name="labelFontName" xml:space="preserve">
-    <value>字库名</value>
+    <value>font name</value>
   </data>
   <data name="textBoxFontName" xml:space="preserve">
-    <value>打开字库</value>
+    <value>open font</value>
   </data>
   <data name="buttonReadFont" xml:space="preserve">
-    <value>读取字库</value>
+    <value>read font</value>
   </data>
   <data name="labelWidth" xml:space="preserve">
-    <value>宽</value>
+    <value>width</value>
   </data>
   <data name="labelHeight" xml:space="preserve">
-    <value>高</value>
+    <value>height</value>
   </data>
   <data name="labelIndex" xml:space="preserve">
-    <value>编号</value>
+    <value>grade</value>
   </data>
   <data name="up_button" xml:space="preserve">
-    <value>上一个</value>
+    <value>up</value>
   </data>
   <data name="down_button" xml:space="preserve">
-    <value>下一个</value>
+    <value>down</value>
   </data>
   <data name="groupBoxData" xml:space="preserve">
-    <value>数据区</value>
+    <value>data area</value>
   </data>
   <data name="buttonGetData" xml:space="preserve">
-    <value>获取数据</value>
+    <value>get data</value>
   </data>
   <data name="Save_font_button" xml:space="preserve">
-    <value>保存数据</value>
+    <value>save font</value>
   </data>
   <data name="check_data_format" xml:space="preserve">
-    <value>添加0X和，</value>
+    <value>add 0X和，</value>
   </data>
   <data name="labelFontInfo" xml:space="preserve">
-    <value>字库信息</value>
+    <value>fontmes</value>
   </data>
   <data name="labelNum" xml:space="preserve">
-    <value>字节数</value>
+    <value>byte num</value>
   </data>
+ <!-- 查看编辑区域 —— end -->
+ 
+ <!-- 制作字库区域 —— start -->
   <data name="preview_groupBox" xml:space="preserve">
-    <value>预览</value>
+    <value>preview</value>
   </data>
   <data name="font_groupBox" xml:space="preserve">
-    <value>字体</value>
+    <value>font</value>
   </data>
   <data name="message_groupBox" xml:space="preserve">
-    <value>字体信息</value>
+    <value>fontmes</value>
   </data>
   <data name="check_font_button" xml:space="preserve">
-    <value>选择字体</value>
+    <value>check font</value>
   </data>
   <data name="font_label" xml:space="preserve">
-    <value>字体大小</value>
+    <value>font size</value>
   </data>
   <data name="font_view_label" xml:space="preserve">
-    <value>预览字符</value>
+    <value>view char</value>
   </data>
   <data name="binama_groupBox" xml:space="preserve">
-    <value>编码选择</value>
+    <value>check style</value>
   </data>
   <data name="set_groupBox" xml:space="preserve">
-    <value>设置</value>
+    <value>set</value>
   </data>
   <data name="font_width_label" xml:space="preserve">
-    <value>宽度</value>
+    <value>with</value>
   </data>
   <data name="font_height_label" xml:space="preserve">
-    <value>高度</value>
+    <value>height</value>
   </data>
   <data name="level_label" xml:space="preserve">
-    <value>水平偏移</value>
+    <value>x move</value>
   </data>
   <data name="vertical_label" xml:space="preserve">
-    <value>垂直偏移</value>
+    <value>y move</value>
   </data>
   <data name="rdBtnNonStandard" xml:space="preserve">
-    <value>宽高不等</value>
+    <value>notequal</value>
   </data>
   <data name="rdBtnStandard" xml:space="preserve">
-    <value>宽高相等</value>
+    <value>equal</value>
   </data>
   <data name="make_font_button" xml:space="preserve">
-    <value>制作字库</value>
+    <value>make font</value>
   </data>
+  <!-- 制作字库区域 —— end -->
+  
+  <!-- 机内码查询区域 —— start -->
   <data name="message" xml:space="preserve">
-    <value>输入要转码的汉字</value>
+    <value>enter transcoding text</value>
   </data>
   <data name="Transfor_button" xml:space="preserve">
-    <value>解码</value>
+    <value>Transfor</value>
   </data>
   <data name="clear_button" xml:space="preserve">
-    <value>清除</value>
+    <value>clear</value>
   </data>
+  <!-- 机内码查询区域 —— end -->
+  
+  <!-- CRC16校验区域 —— start -->
   <data name="check_groupBox" xml:space="preserve">
-    <value>校验区</value>
+    <value>check area</value>
   </data>
   <data name="crc_check_button" xml:space="preserve">
-    <value>校验</value>
+    <value>check</value>
   </data>
   <data name="crc_clear_button" xml:space="preserve">
-    <value>清除</value>
+    <value>clear</value>
   </data>
+  <!-- CRC16校验区域 —— end -->
 </root>
