@@ -65,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MatrixFont.cs" />
-    <Compile Include="MatrixHelp.cs" />
     <Compile Include="readFontlib.cs">
       <SubType>Form</SubType>
     </Compile>
