@@ -766,7 +766,7 @@ namespace readFontlib
 
         #region 制作字库的代码
 
-        private MatrixFont MatCharFont;
+        private MakeFont MatCharFont;
 
         private void font_size_numericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -1061,7 +1061,7 @@ namespace readFontlib
         {
             //创建 MatrixFont 对象。
             Font matFont = new Font(this.Font.FontFamily, (float)this.font_size_numericUpDown.Value);
-            this.MatCharFont = new MatrixFont(matFont, '陈', (int)this.width_numericUpDown.Value,
+            this.MatCharFont = new MakeFont(matFont, '陈', (int)this.width_numericUpDown.Value,
                          (int)this.height_numericUpDown.Value, (int)this.level_numericUpDown.Value,
                          (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked);
 

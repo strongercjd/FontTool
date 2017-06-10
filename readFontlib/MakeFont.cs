@@ -22,7 +22,7 @@ namespace readFontlib
     /// 2、在点阵字节数据生成上，主要的实现方法为 
     ///    GetDemoCharMatrixBytes 方法，具体请参看其定义。
     /// </summary>
-    public class MatrixFont
+    public class MakeFont
     {
         #region 字段
 
@@ -80,7 +80,7 @@ namespace readFontlib
         /// <param name="offsetX">字符的水平偏移量。</param>
         /// <param name="offsetY">字符的垂直偏移量。</param>
         /// <param name="isEqualWH">点阵位图的高宽是否相等，值高宽true表示相等，false表示高宽不相等。</param>
-        public MatrixFont(Font matFont, Char demoChar, int charWidth, int charHeight, int offsetX, int offsetY, bool isEqualWH)
+        public MakeFont(Font matFont, Char demoChar, int charWidth, int charHeight, int offsetX, int offsetY, bool isEqualWH)
         {
             this.m_MatFont = matFont;
             this.m_DemoChar = demoChar.ToString();
