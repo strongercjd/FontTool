@@ -672,15 +672,8 @@ namespace readFontlib
             for (int i = 0; i < array.Length; i = i + 2)
             {
                 string jinei;
-                //string guobiao, quwei;
-                //int gb, qw;
                 jinei = Convert.ToString(array[i], 16) + Convert.ToString(array[i + 1], 16);
-                //gb = Convert.ToInt32(jinei, 16) - Convert.ToInt32("8080", 16);
-                //guobiao = Convert.ToString(gb, 16);
-                //qw = gb - Convert.ToInt32("2020", 16);
-                //quwei = Convert.ToString(qw, 16);
 
-                //yima_listBox.Items.Add(input_textBox.Text.Substring(i / 2, 1) + "的机内码是：" + jinei + ",国标码是：" + guobiao + ",区位码是：" + quwei);
                 yima_listBox.Items.Add(input_textBox.Text.Substring(i / 2, 1) + "  的机内码是：" + jinei);
                 yima_textBox.Text += array[i].ToString("X2").ToUpper() + " "+ array[i + 1].ToString("X2").ToUpper() + " ";
             }
@@ -700,36 +693,7 @@ namespace readFontlib
 
 
         #region CRC16校验的代码
-        static int crc16(byte[] data, int size)
-        {
-            int crc = 0x0;
-            byte data_t;
-            int i = 0;
-            int j = 0;
-            if (data == null)
-            {
-                return 0;
-            }
-            for (j = 0; j < size; j++)
-            {
-                data_t = data[j];
-                crc = (data_t ^ (crc));
-                for (i = 0; i < 8; i++)
-                {
-                    if ((crc & 0x1) == 1)
-                    {
-                        crc = (crc >> 1) ^ 0xA001;
-                    }
-                    else
-                    {
-                        crc >>= 1;
-                    }
-                }
-            }
-            return crc;
-        }
 
-        
         private void crc_check_button_Click(object sender, EventArgs e)
         {
             int mycrc = 0;
@@ -742,7 +706,7 @@ namespace readFontlib
                 {
                     myarray[i++] = System.Convert.ToByte(tmp, 16);
                 }
-                mycrc = crc16(myarray, i);
+                mycrc = CRC.crc16(myarray, i);
                 crc_textBox.Text = (mycrc & 0xff).ToString("X2").ToUpper() + " " + ((mycrc >> 8) & 0xff).ToString("X2").ToUpper();
 
 
@@ -752,8 +716,6 @@ namespace readFontlib
                 MessageBox.Show("请输入正确格式的数据！");
             }
         }
-
-
 
         private void crc_clear_button_Click(object sender, EventArgs e)
         {
@@ -1064,8 +1026,6 @@ namespace readFontlib
             this.MatCharFont = new MakeFont(matFont, '陈', (int)this.width_numericUpDown.Value,
                          (int)this.height_numericUpDown.Value, (int)this.level_numericUpDown.Value,
                          (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked);
-
-                
 
             //将窗体上的一些控件与 MatCharFont 对象的一些属性绑定，方便操作。
             this.UIBindingData(true);
