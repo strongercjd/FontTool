@@ -640,12 +640,9 @@ namespace readFontlib
 
         private void down_button_Click(object sender, EventArgs e)
         {
-            string A;
             if ((fontPath != null) && (File.Exists(fontPath)))
             {
-                A = comboBoxWei.ValueMember;
-                int.TryParse(A, out index);
-                comboBoxWei.Text = "C3";
+                comboBoxWei.Text = (comboBoxWei.SelectedIndex+162).ToString("X8").Remove(0, 6);
                 index = (int)numericUpDownIndex.Value;
                 index = index + 1;
                 numericUpDownIndex.Value = index;
