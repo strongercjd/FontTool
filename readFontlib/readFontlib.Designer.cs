@@ -249,6 +249,7 @@
             resources.ApplyResources(this.comboBoxWei, "comboBoxWei");
             this.comboBoxWei.Name = "comboBoxWei";
             this.toolTipReadFont.SetToolTip(this.comboBoxWei, resources.GetString("comboBoxWei.ToolTip"));
+            this.comboBoxWei.SelectedIndexChanged += new System.EventHandler(this.comboBoxWei_SelectedIndexChanged);
             // 
             // comboBoxQu
             // 
@@ -257,6 +258,7 @@
             resources.ApplyResources(this.comboBoxQu, "comboBoxQu");
             this.comboBoxQu.Name = "comboBoxQu";
             this.toolTipReadFont.SetToolTip(this.comboBoxQu, resources.GetString("comboBoxQu.ToolTip"));
+            this.comboBoxQu.SelectedIndexChanged += new System.EventHandler(this.comboBoxQu_SelectedIndexChanged);
             // 
             // labelIndex
             // 
@@ -267,10 +269,15 @@
             // 
             resources.ApplyResources(this.numericUpDownIndex, "numericUpDownIndex");
             this.numericUpDownIndex.Maximum = new decimal(new int[] {
-            256,
+            500000,
             0,
             0,
             0});
+            this.numericUpDownIndex.Minimum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            -2147483648});
             this.numericUpDownIndex.Name = "numericUpDownIndex";
             this.numericUpDownIndex.ValueChanged += new System.EventHandler(this.numericUpDownIndex_ValueChanged);
             // 
@@ -360,7 +367,7 @@
             resources.ApplyResources(this.check_data_format, "check_data_format");
             this.check_data_format.Name = "check_data_format";
             this.check_data_format.UseVisualStyleBackColor = true;
-            this.check_data_format.CheckedChanged += new System.EventHandler(this.check_data_format_CheckedChanged_1);
+            this.check_data_format.CheckedChanged += new System.EventHandler(this.check_data_format_Checked);
             // 
             // labelByteNum
             // 

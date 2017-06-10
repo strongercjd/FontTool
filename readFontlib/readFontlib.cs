@@ -29,11 +29,8 @@ namespace readFontlib
         Bitmap bmp;
         Byte[] data = new byte[2048];//!<字模数据
         string fontPath;
-        bool quWeiFlag;
         bool lockFlag;
         bool editFlag;
-        bool ASCII_Flag;
-        bool showFlag;//1：获取的字模显示0X00，  0：显示 00 
         public bool begin = false;
         string message_openfile = "请首先打开一个字库文件";
         string makefontsize = "大小：";
@@ -52,7 +49,6 @@ namespace readFontlib
             width = 16;
             height = 16;
             index = 0;
-            quWeiFlag = false;
             lockFlag = false;
             editFlag = false;//默认查看状态
             bmp = new Bitmap(1, 1, System.Drawing.Imaging.PixelFormat.Format1bppIndexed);
@@ -157,7 +153,6 @@ namespace readFontlib
             Brush blackBrush = blackPen.Brush;
             Brush whiteBrush = whitePen.Brush;
 
-            //Rectangle whitePanel = new Rectangle(startx, starty, width, height);
             Rectangle whitePanel = new Rectangle(startx, starty, uniwidth, uniheight);
             Rectangle blackPanel = new Rectangle(startx, starty, uniwidth, uniheight);
             Rectangle bluePanel  = new Rectangle(startx, starty, uniwidth, uniheight);
@@ -302,11 +297,13 @@ namespace readFontlib
                 }
                 comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
             }
+            comboBoxWei.Text = "40";
             comboBoxQu.Items.Clear();
             for (int i = 129; i < 255; i++)
             {
                 comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
             }
+            comboBoxQu.Text = "81";
         }
         private void radioButtonFontLib_CheckedChanged(object sender, EventArgs e)//选中GB2312
         {
@@ -319,11 +316,13 @@ namespace readFontlib
             {
                 comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
             }
+            comboBoxQu.Text = "A1";
             comboBoxWei.Items.Clear();
             for (int i = 161; i < 255; i++)
             {
                 comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
             }
+            comboBoxWei.Text = "A1";
 
             lockFlag = false;
         }
@@ -426,7 +425,6 @@ namespace readFontlib
 
         private void readFontlib_Load(object sender, EventArgs e)
         {
-            quWeiFlag = true;
             comboBoxQu.Enabled = true;
             comboBoxWei.Enabled = true;
             radioButtonFontLib.Checked = true;
@@ -625,14 +623,54 @@ namespace readFontlib
             writeFontData();
             MessageBox.Show("成功保存这个字模");
         }
+        private void up_button_Click(object sender, EventArgs e)
+        {
+            if ((fontPath != null) && (File.Exists(fontPath)))
+            {
+                index = (int)numericUpDownIndex.Value;
+                index = index - 1;
+                numericUpDownIndex.Value = index;
+                displayFont();
+            }
+            else
+            {
+                MessageBox.Show(message_openfile);
+            }
+        }
 
+        private void down_button_Click(object sender, EventArgs e)
+        {
+            string A;
+            if ((fontPath != null) && (File.Exists(fontPath)))
+            {
+                A = comboBoxWei.ValueMember;
+                int.TryParse(A, out index);
+                comboBoxWei.Text = "C3";
+                index = (int)numericUpDownIndex.Value;
+                index = index + 1;
+                numericUpDownIndex.Value = index;
+                displayFont();
+            }
+            else
+            {
+                MessageBox.Show(message_openfile);
+            }
+        }
 
+        private void check_data_format_Checked(object sender, EventArgs e)
+        {
+            buttonGetData_Click(this, null);
+        }
 
         private void calIndex()//区位改变时计算字模的位置
         {
             int qu, wei;
             qu = comboBoxQu.SelectedIndex;
             wei = comboBoxWei.SelectedIndex;
+            if (qu < 0)
+                qu = 0;
+            if (wei < 0)
+                wei = 0;
             if (radioButtonUnit.Checked == true)
             {
                 numericUpDownIndex.Value = wei;
@@ -951,41 +989,6 @@ namespace readFontlib
             {
                 this.height_numericUpDown.Enabled = false;
             }
-        }
-
-        private void up_button_Click(object sender, EventArgs e)
-        {
-            if ((fontPath != null) && (File.Exists(fontPath)))
-            {
-                index = (int)numericUpDownIndex.Value;
-                index = index - 1;
-                numericUpDownIndex.Value = index;
-                displayFont();
-            }
-            else
-            {
-                MessageBox.Show(message_openfile);
-            }
-        }
-
-        private void down_button_Click(object sender, EventArgs e)
-        {
-            if ((fontPath != null) && (File.Exists(fontPath)))
-            {
-                index = (int)numericUpDownIndex.Value;
-                index = index + 1;
-                numericUpDownIndex.Value = index;
-                displayFont();
-            }
-            else
-            {
-                MessageBox.Show(message_openfile);
-            }
-        }
-
-        private void check_data_format_CheckedChanged_1(object sender, EventArgs e)
-        {
-            buttonGetData_Click(this, null);
         }
 
         private void UIEnabled(bool isEnabled)
