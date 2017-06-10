@@ -26,6 +26,8 @@ namespace readFontlib
         int startx = 0;
         int starty = 0;//!<初始化矩形的起始位置
         int uniwidth, uniheight, width, height,index;
+        int up_flag = 0;
+        int down_flag = 0;
         Bitmap bmp;
         Byte[] data = new byte[2048];//!<字模数据
         string fontPath;
@@ -627,10 +629,26 @@ namespace readFontlib
         {
             if ((fontPath != null) && (File.Exists(fontPath)))
             {
-                index = (int)numericUpDownIndex.Value;
-                index = index - 1;
-                numericUpDownIndex.Value = index;
-                displayFont();
+                if (radioButtonUnit.Checked == true)
+                {
+
+                }
+                if (radioButtonFontLib.Checked == true)
+                {
+                    comboBoxWei.Text = (comboBoxWei.SelectedIndex + 160).ToString("X8").Remove(0, 6);
+                    if (up_flag == 1)
+                    {
+                        up_flag = 0;
+                        comboBoxWei.Text = "FE";
+                        comboBoxQu.Text = (comboBoxQu.SelectedIndex + 160).ToString("X8").Remove(0, 6);
+                    }
+                    if (comboBoxWei.Text == "A1")
+                        up_flag = 1;
+                }
+                if (GBK_radioButton.Checked == true)
+                {
+
+                }
             }
             else
             {
@@ -642,11 +660,26 @@ namespace readFontlib
         {
             if ((fontPath != null) && (File.Exists(fontPath)))
             {
-                comboBoxWei.Text = (comboBoxWei.SelectedIndex+162).ToString("X8").Remove(0, 6);
-                index = (int)numericUpDownIndex.Value;
-                index = index + 1;
-                numericUpDownIndex.Value = index;
-                displayFont();
+                if (radioButtonUnit.Checked == true)
+                {
+                    
+                }
+                if (radioButtonFontLib.Checked == true)
+                {
+                    comboBoxWei.Text = (comboBoxWei.SelectedIndex + 162).ToString("X8").Remove(0, 6);
+                    if (down_flag == 1)
+                    {
+                        down_flag = 0;
+                        comboBoxWei.Text = "A1";
+                        comboBoxQu.Text = (comboBoxQu.SelectedIndex + 162).ToString("X8").Remove(0, 6);
+                    }
+                    if (comboBoxWei.Text == "FE")
+                        down_flag = 1;
+                }
+                if (GBK_radioButton.Checked == true)
+                {
+                    
+                }
             }
             else
             {
