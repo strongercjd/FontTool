@@ -290,6 +290,8 @@ namespace readFontlib
         {
             comboBoxQu.Enabled = true;
             comboBoxWei.Enabled = true;
+            down_flag = 0;
+            up_flag = 0;
             comboBoxWei.Items.Clear();
             for (int i = 64; i < 255; i++)
             {
@@ -312,6 +314,8 @@ namespace readFontlib
             lockFlag = true;
             comboBoxQu.Enabled = true;
             comboBoxWei.Enabled = true;
+            down_flag = 0;
+            up_flag = 0;
 
             comboBoxQu.Items.Clear();
             for (int i = 161; i < 255; i++)
@@ -330,6 +334,8 @@ namespace readFontlib
         }
         private void radioButtonUnit_CheckedChanged(object sender, EventArgs e)//选中ASCII
         {
+            down_flag = 0;
+            up_flag = 0;
             comboBoxQu.Items.Clear();
             for (int i = 0; i < 256; i++)
             {
@@ -631,7 +637,14 @@ namespace readFontlib
             {
                 if (radioButtonUnit.Checked == true)
                 {
-
+                    if (comboBoxWei.SelectedIndex == 0)
+                    {
+                        comboBoxWei.Text = "FF";
+                    }
+                    else
+                    {
+                        comboBoxWei.Text = (comboBoxWei.SelectedIndex - 1).ToString("X8").Remove(0, 6);
+                    }
                 }
                 if (radioButtonFontLib.Checked == true)
                 {
@@ -647,6 +660,15 @@ namespace readFontlib
                 }
                 if (GBK_radioButton.Checked == true)
                 {
+                    comboBoxWei.Text = (comboBoxWei.SelectedIndex + 63).ToString("X8").Remove(0, 6);
+                    if (up_flag == 1)
+                    {
+                        up_flag = 0;
+                        comboBoxWei.Text = "FE";
+                        comboBoxQu.Text = (comboBoxQu.SelectedIndex + 128).ToString("X8").Remove(0, 6);
+                    }
+                    if (comboBoxWei.Text == "40")
+                        up_flag = 1;
 
                 }
             }
@@ -662,7 +684,14 @@ namespace readFontlib
             {
                 if (radioButtonUnit.Checked == true)
                 {
-                    
+                    if (comboBoxWei.SelectedIndex == 255)
+                    {
+                        comboBoxWei.Text = "00";
+                    }
+                    else
+                    {
+                        comboBoxWei.Text = (comboBoxWei.SelectedIndex + 1).ToString("X8").Remove(0, 6);
+                    }
                 }
                 if (radioButtonFontLib.Checked == true)
                 {
@@ -678,7 +707,15 @@ namespace readFontlib
                 }
                 if (GBK_radioButton.Checked == true)
                 {
-                    
+                    comboBoxWei.Text = (comboBoxWei.SelectedIndex + 66).ToString("X8").Remove(0, 6);
+                    if (down_flag == 1)
+                    {
+                        down_flag = 0;
+                        comboBoxWei.Text = "40";
+                        comboBoxQu.Text = (comboBoxQu.SelectedIndex + 130).ToString("X8").Remove(0, 6);
+                    }
+                    if (comboBoxWei.Text == "FE")
+                        down_flag = 1;
                 }
             }
             else
