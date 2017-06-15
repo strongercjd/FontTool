@@ -58,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3C2F8B609659497BBC4E477A9406C6F4"
+        "OwnerKey" = "8:_144093C536084A42ADD2E795F1125FE2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_144093C536084A42ADD2E795F1125FE2"
+        "OwnerKey" = "8:_3C2F8B609659497BBC4E477A9406C6F4"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -98,6 +98,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -122,6 +130,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -324,7 +340,7 @@
         {
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_5A8B648890F345678A6FBF119C5C5C60"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:D:\\BXfonttool"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -406,7 +422,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:font card tool"
         "ProductCode" = "8:{BE4830B0-B975-4ACC-AFBB-CC430CAF727A}"
-        "PackageCode" = "8:{034759E8-6C37-41C0-9F18-1039DA205159}"
+        "PackageCode" = "8:{6B603A69-D503-4EB5-9842-E4D7B1C19B5A}"
         "UpgradeCode" = "8:{64A467FE-F836-491C-A484-F066BB994E00}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -528,7 +544,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_18F450DDC85A46D4ADE3789F10A2ACB5"
             {
-            "Name" = "8:Shortcut to 字库卡工具.exe"
+            "Name" = "8:字库卡工具.exe"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
