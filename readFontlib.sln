@@ -1,7 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "readFontlib", "readFontlib\readFontlib.csproj", "{4334FBBA-2EC2-4772-9ADE-A6AB504045F5}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "font card tool", "font card tool\font card tool.vdproj", "{52A1A826-2EF7-4A27-AD48-DD2DB8B78B59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,8 @@ Global
 		{4334FBBA-2EC2-4772-9ADE-A6AB504045F5}.Debug|x86.Build.0 = Debug|x86
 		{4334FBBA-2EC2-4772-9ADE-A6AB504045F5}.Release|x86.ActiveCfg = Release|x86
 		{4334FBBA-2EC2-4772-9ADE-A6AB504045F5}.Release|x86.Build.0 = Release|x86
+		{52A1A826-2EF7-4A27-AD48-DD2DB8B78B59}.Debug|x86.ActiveCfg = Debug
+		{52A1A826-2EF7-4A27-AD48-DD2DB8B78B59}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
