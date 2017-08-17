@@ -767,6 +767,12 @@ namespace readFontlib
         #region 机内码查询的代码
         private void Transfor_button_Click(object sender, EventArgs e)
         {
+            int m = 0;
+            int n = 0;
+
+            yima_textBox.Clear();
+            yima_listBox.Items.Clear();
+
             if (input_textBox.Text == "")
             {
                 MessageBox.Show("请输入译码文字");
@@ -774,13 +780,26 @@ namespace readFontlib
             }
 
             byte[] array = System.Text.Encoding.Default.GetBytes(input_textBox.Text);
-            for (int i = 0; i < array.Length; i = i + 2)
+            for (int i = 0; i < array.Length;i=m+n )
             {
                 string jinei;
-                jinei = Convert.ToString(array[i], 16) + Convert.ToString(array[i + 1], 16);
+                if (array[i] < 0x81)
+                {
+                    jinei = Convert.ToString(array[i], 16);
 
-                yima_listBox.Items.Add(input_textBox.Text.Substring(i / 2, 1) + "  的机内码是：" + jinei);
-                yima_textBox.Text += array[i].ToString("X2").ToUpper() + " "+ array[i + 1].ToString("X2").ToUpper() + " ";
+                    yima_listBox.Items.Add(input_textBox.Text.Substring(m + n/2 , 1) + "   的机内码是：" + jinei);
+                    yima_textBox.Text += array[i].ToString("X2").ToUpper() + " ";
+
+                    m++;
+                }
+                else
+                {
+                    jinei = Convert.ToString(array[i], 16) + Convert.ToString(array[i + 1], 16);
+                    yima_listBox.Items.Add(input_textBox.Text.Substring(m + n/2, 1) + "  的机内码是：" + jinei);
+                    yima_textBox.Text += array[i].ToString("X2").ToUpper() + " " + array[i + 1].ToString("X2").ToUpper() + " ";
+
+                    n = n + 2;
+                }
             }
         }
 

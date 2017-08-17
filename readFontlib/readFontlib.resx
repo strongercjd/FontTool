@@ -1835,7 +1835,7 @@
     <value>0</value>
   </data>
   <data name="message.Text" xml:space="preserve">
-    <value>输入要转码的汉字</value>
+    <value>输入要转码的字符</value>
   </data>
   <data name="&gt;&gt;message.Name" xml:space="preserve">
     <value>message</value>
