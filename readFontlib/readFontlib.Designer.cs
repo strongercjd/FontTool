@@ -119,6 +119,9 @@
             this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.analysis = new System.Windows.Forms.TabPage();
+            this.Raw_data_textBox = new System.Windows.Forms.TextBox();
+            this.analysis_button = new System.Windows.Forms.Button();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -145,6 +148,7 @@
             this.check_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.author_qq_picture)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.analysis.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxpic
@@ -430,6 +434,7 @@
             this.tabControl.Controls.Add(this.make_fontlib);
             this.tabControl.Controls.Add(this.jineima);
             this.tabControl.Controls.Add(this.CRC16);
+            this.tabControl.Controls.Add(this.analysis);
             resources.ApplyResources(this.tabControl, "tabControl");
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -807,6 +812,26 @@
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
             // 
+            // analysis
+            // 
+            this.analysis.Controls.Add(this.analysis_button);
+            this.analysis.Controls.Add(this.Raw_data_textBox);
+            resources.ApplyResources(this.analysis, "analysis");
+            this.analysis.Name = "analysis";
+            this.analysis.UseVisualStyleBackColor = true;
+            // 
+            // Raw_data_textBox
+            // 
+            resources.ApplyResources(this.Raw_data_textBox, "Raw_data_textBox");
+            this.Raw_data_textBox.Name = "Raw_data_textBox";
+            // 
+            // analysis_button
+            // 
+            resources.ApplyResources(this.analysis_button, "analysis_button");
+            this.analysis_button.Name = "analysis_button";
+            this.analysis_button.UseVisualStyleBackColor = true;
+            this.analysis_button.Click += new System.EventHandler(this.analysis_button_Click);
+            // 
             // readFontlib
             // 
             resources.ApplyResources(this, "$this");
@@ -858,6 +883,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.author_qq_picture)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.analysis.ResumeLayout(false);
+            this.analysis.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -954,6 +981,9 @@
         private System.Windows.Forms.ToolStripMenuItem 中文繁体ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 英文ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.TabPage analysis;
+        private System.Windows.Forms.TextBox Raw_data_textBox;
+        private System.Windows.Forms.Button analysis_button;
     }
 }
 

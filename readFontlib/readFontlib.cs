@@ -1223,6 +1223,8 @@ namespace readFontlib
             UpDataMainFormUILanguage();
         }
 
+
+
         private void 英文ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
@@ -1326,6 +1328,140 @@ namespace readFontlib
         #endregion UI语言
 
 
+        #region 数据解析
+        struct PHY0_flag
+        {
+            public Int16 msg_data_flag;                                //!< 接收到数据有效标志
+            public Int16 send_data_len;
+            public Int16 Rcv_state;                                    //!< 接收状态标志
+            public Int16 RCV_data_num;                                 //!< 接收到个数位置
+            public Int16 Send_data_num;                                //!< 发送的个数位置
+            public Int16 Send_state;                                   //!< 发送状态标志
+            public Int16 send_flag;                                    //!< 发送标志
+            public Int16 comm_id;                                      //!< 说明这个帧来自那个串口
+            public Int16 addr_flag;                                    //!< 判断是否是广播地址
+        };
+
+
+        string[] data_header = {"屏地址","源地址","保留","显示模式","设备类型","协议版本号","数据域长度"};
+        string[] dynamic_cmd = {"命令分组","命令编号", "控制是否回复","保留","删除区域个数","删除区域ID","更新区域个数","区域数据长度"};
+        string[] area_data   = {"区域类型","X坐标","Y坐标","区域宽度","区域高度","动态区编号","行间距","动态区运行模式","" };
+
+
+        public static int dynamic(byte[] data, int size)
+        {
+            PHY0_flag PHY0_flag1;
+            PHY0_flag1.Rcv_state = 0;
+            PHY0_flag1.RCV_data_num = 0;
+            byte[] myarray = new byte[size];
+
+            int crc = 0x0;
+            byte data_t;
+            int i = 0;
+            int j = 0;
+            if (data == null)
+            {
+                return 0;
+            }
+            for (j = 0; j < size; j++)
+            {
+                data_t = data[j];
+                if (data_t == 0XA5) {
+                    PHY0_flag1.Rcv_state = 1;
+                }
+                else {
+                    if (PHY0_flag1.Rcv_state == 1) {
+                        switch (data_t)
+                        {
+                            case 0X5A:break;
+                            case 0XA6:
+                                PHY0_flag1.Rcv_state = 2;//进入0xA6转义字节状态
+                                break;
+                            case 0X5B:
+                                PHY0_flag1.Rcv_state = 3;//进入0x5B转义字节状态
+                                break;
+                            case 0X01:
+                                if (PHY0_flag1.Rcv_state == 2)
+                                {
+                                    myarray[PHY0_flag1.RCV_data_num] = 0XA6;
+                                    PHY0_flag1.RCV_data_num++;
+                                }
+                                else
+                                {
+                                    if (PHY0_flag1.Rcv_state == 3)
+                                    {
+                                        myarray[PHY0_flag1.RCV_data_num] = 0X5B;
+                                        PHY0_flag1.RCV_data_num++;
+                                    }
+                                    else
+                                    {
+                                        myarray[PHY0_flag1.RCV_data_num] = 0x01;
+                                        PHY0_flag1.RCV_data_num++;
+                                    }
+                                }
+                                break;
+                            case 0X02:
+                                if (PHY0_flag1.Rcv_state == 2)
+                                {
+                                    myarray[PHY0_flag1.RCV_data_num] = 0XA5;
+                                    PHY0_flag1.RCV_data_num++;
+                                }
+                                else
+                                {
+                                    if (PHY0_flag1.Rcv_state == 3)
+                                    {
+                                        myarray[PHY0_flag1.RCV_data_num] = 0X5A;
+                                        PHY0_flag1.RCV_data_num++;
+                                    }
+                                    else
+                                    {
+                                        myarray[PHY0_flag1.RCV_data_num] = 0x02;
+                                        PHY0_flag1.RCV_data_num++;
+                                    }
+                                }
+                                break;
+                            default:
+                                myarray[PHY0_flag1.RCV_data_num] = data_t;
+                                PHY0_flag1.RCV_data_num++;
+                                break;
+                        }
+
+                    }
+                }
+                
+            }
+
+            for (j = 0; j < PHY0_flag1.RCV_data_num; j++)
+            {
+
+            }
+
+                return crc;
+        }
+
+        private void analysis_button_Click(object sender, EventArgs e)
+        {
+            int mycrc = 0;
+            int i = 0;
+            try
+            {
+                string[] strCheckArray = Raw_data_textBox.Text.Split(' ');
+                byte[] myarray = new byte[strCheckArray.Length];
+                foreach (var tmp in strCheckArray)
+                {
+                    myarray[i++] = System.Convert.ToByte(tmp, 16);
+                }
+                mycrc = dynamic(myarray, i);
+                //crc_textBox.Text = (mycrc & 0xff).ToString("X2").ToUpper() + " " + ((mycrc >> 8) & 0xff).ToString("X2").ToUpper();
+
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("请输入正确格式的数据！");
+            }
+        }
+        #endregion 数据解析
 
     }
 }
