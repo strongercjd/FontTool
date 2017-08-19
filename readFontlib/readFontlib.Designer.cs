@@ -109,6 +109,13 @@
             this.crc_textBox = new System.Windows.Forms.TextBox();
             this.check_groupBox = new System.Windows.Forms.GroupBox();
             this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.analysis = new System.Windows.Forms.TabPage();
+            this.data_listView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.analysis_button = new System.Windows.Forms.Button();
+            this.Raw_data_textBox = new System.Windows.Forms.TextBox();
             this.fontDlg = new System.Windows.Forms.FontDialog();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.bgwFileBuilder = new System.ComponentModel.BackgroundWorker();
@@ -119,9 +126,6 @@
             this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.analysis = new System.Windows.Forms.TabPage();
-            this.Raw_data_textBox = new System.Windows.Forms.TextBox();
-            this.analysis_button = new System.Windows.Forms.Button();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -146,9 +150,9 @@
             this.jineima.SuspendLayout();
             this.CRC16.SuspendLayout();
             this.check_groupBox.SuspendLayout();
+            this.analysis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.author_qq_picture)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.analysis.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxpic
@@ -756,6 +760,50 @@
             resources.ApplyResources(this.crc_data_richTextBox, "crc_data_richTextBox");
             this.crc_data_richTextBox.Name = "crc_data_richTextBox";
             // 
+            // analysis
+            // 
+            this.analysis.Controls.Add(this.data_listView);
+            this.analysis.Controls.Add(this.analysis_button);
+            this.analysis.Controls.Add(this.Raw_data_textBox);
+            resources.ApplyResources(this.analysis, "analysis");
+            this.analysis.Name = "analysis";
+            this.analysis.UseVisualStyleBackColor = true;
+            // 
+            // data_listView
+            // 
+            this.data_listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            resources.ApplyResources(this.data_listView, "data_listView");
+            this.data_listView.Name = "data_listView";
+            this.data_listView.UseCompatibleStateImageBehavior = false;
+            this.data_listView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            resources.ApplyResources(this.columnHeader1, "columnHeader1");
+            // 
+            // columnHeader2
+            // 
+            resources.ApplyResources(this.columnHeader2, "columnHeader2");
+            // 
+            // columnHeader3
+            // 
+            resources.ApplyResources(this.columnHeader3, "columnHeader3");
+            // 
+            // analysis_button
+            // 
+            resources.ApplyResources(this.analysis_button, "analysis_button");
+            this.analysis_button.Name = "analysis_button";
+            this.analysis_button.UseVisualStyleBackColor = true;
+            this.analysis_button.Click += new System.EventHandler(this.analysis_button_Click);
+            // 
+            // Raw_data_textBox
+            // 
+            resources.ApplyResources(this.Raw_data_textBox, "Raw_data_textBox");
+            this.Raw_data_textBox.Name = "Raw_data_textBox";
+            // 
             // saveFileDlg
             // 
             resources.ApplyResources(this.saveFileDlg, "saveFileDlg");
@@ -812,26 +860,6 @@
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
             // 
-            // analysis
-            // 
-            this.analysis.Controls.Add(this.analysis_button);
-            this.analysis.Controls.Add(this.Raw_data_textBox);
-            resources.ApplyResources(this.analysis, "analysis");
-            this.analysis.Name = "analysis";
-            this.analysis.UseVisualStyleBackColor = true;
-            // 
-            // Raw_data_textBox
-            // 
-            resources.ApplyResources(this.Raw_data_textBox, "Raw_data_textBox");
-            this.Raw_data_textBox.Name = "Raw_data_textBox";
-            // 
-            // analysis_button
-            // 
-            resources.ApplyResources(this.analysis_button, "analysis_button");
-            this.analysis_button.Name = "analysis_button";
-            this.analysis_button.UseVisualStyleBackColor = true;
-            this.analysis_button.Click += new System.EventHandler(this.analysis_button_Click);
-            // 
             // readFontlib
             // 
             resources.ApplyResources(this, "$this");
@@ -880,11 +908,11 @@
             this.CRC16.ResumeLayout(false);
             this.CRC16.PerformLayout();
             this.check_groupBox.ResumeLayout(false);
+            this.analysis.ResumeLayout(false);
+            this.analysis.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.author_qq_picture)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.analysis.ResumeLayout(false);
-            this.analysis.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -984,6 +1012,10 @@
         private System.Windows.Forms.TabPage analysis;
         private System.Windows.Forms.TextBox Raw_data_textBox;
         private System.Windows.Forms.Button analysis_button;
+        private System.Windows.Forms.ListView data_listView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 
