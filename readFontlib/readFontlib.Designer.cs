@@ -126,6 +126,8 @@
             this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hex2str_radioButton = new System.Windows.Forms.RadioButton();
+            this.str2hex_radioButton = new System.Windows.Forms.RadioButton();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -674,6 +676,8 @@
             // 
             // jineima
             // 
+            this.jineima.Controls.Add(this.str2hex_radioButton);
+            this.jineima.Controls.Add(this.hex2str_radioButton);
             this.jineima.Controls.Add(this.yima_textBox);
             this.jineima.Controls.Add(this.clear_button);
             this.jineima.Controls.Add(this.yima_listBox);
@@ -860,6 +864,21 @@
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
             // 
+            // hex2str_radioButton
+            // 
+            resources.ApplyResources(this.hex2str_radioButton, "hex2str_radioButton");
+            this.hex2str_radioButton.Name = "hex2str_radioButton";
+            this.hex2str_radioButton.TabStop = true;
+            this.hex2str_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // str2hex_radioButton
+            // 
+            resources.ApplyResources(this.str2hex_radioButton, "str2hex_radioButton");
+            this.str2hex_radioButton.Checked = true;
+            this.str2hex_radioButton.Name = "str2hex_radioButton";
+            this.str2hex_radioButton.TabStop = true;
+            this.str2hex_radioButton.UseVisualStyleBackColor = true;
+            // 
             // readFontlib
             // 
             resources.ApplyResources(this, "$this");
@@ -1016,6 +1035,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.RadioButton str2hex_radioButton;
+        private System.Windows.Forms.RadioButton hex2str_radioButton;
     }
 }
 

@@ -765,6 +765,7 @@ namespace readFontlib
 
 
         #region 机内码查询的代码
+
         private void Transfor_button_Click(object sender, EventArgs e)
         {
             int m = 0;
@@ -779,28 +780,76 @@ namespace readFontlib
                 return;
             }
 
-            byte[] array = System.Text.Encoding.Default.GetBytes(input_textBox.Text);
-            for (int i = 0; i < array.Length;i=m+n )
+            if (str2hex_radioButton.Checked == true)
             {
-                string jinei;
-                if (array[i] < 0x81)
+                byte[] array = System.Text.Encoding.Default.GetBytes(input_textBox.Text);
+                for (int i = 0; i < array.Length; i = m + n)
                 {
-                    jinei = Convert.ToString(array[i], 16);
+                    string jinei;
+                    if (array[i] < 0x81)
+                    {
+                        jinei = Convert.ToString(array[i], 16);
 
-                    yima_listBox.Items.Add(input_textBox.Text.Substring(m + n/2 , 1) + "   的机内码是：" + jinei);
-                    yima_textBox.Text += array[i].ToString("X2").ToUpper() + " ";
+                        yima_listBox.Items.Add(input_textBox.Text.Substring(m + n / 2, 1) + "   的机内码是：" + jinei);
+                        yima_textBox.Text += array[i].ToString("X2").ToUpper() + " ";
 
-                    m++;
+                        m++;
+                    }
+                    else
+                    {
+                        jinei = Convert.ToString(array[i], 16) + Convert.ToString(array[i + 1], 16);
+                        yima_listBox.Items.Add(input_textBox.Text.Substring(m + n / 2, 1) + "  的机内码是：" + jinei);
+                        yima_textBox.Text += array[i].ToString("X2").ToUpper() + " " + array[i + 1].ToString("X2").ToUpper() + " ";
+
+                        n = n + 2;
+                    }
                 }
-                else
-                {
-                    jinei = Convert.ToString(array[i], 16) + Convert.ToString(array[i + 1], 16);
-                    yima_listBox.Items.Add(input_textBox.Text.Substring(m + n/2, 1) + "  的机内码是：" + jinei);
-                    yima_textBox.Text += array[i].ToString("X2").ToUpper() + " " + array[i + 1].ToString("X2").ToUpper() + " ";
-
-                    n = n + 2;
-                }
+                yima_textBox.Text = yima_textBox.Text.Substring(0, yima_textBox.Text.Length - 1);
             }
+            if (hex2str_radioButton.Checked == true)
+            {
+                int i = 0;
+                string st = string.Empty;
+                string result = string.Empty;
+
+                try
+                {
+                    string[] strCheckArray = input_textBox.Text.Split(' ');
+                    byte[] myarray = new byte[strCheckArray.Length];
+                    foreach (var tmp in strCheckArray)
+                    {
+                        myarray[i++] = System.Convert.ToByte(tmp, 16);
+                    }
+                    
+                    for (int j = 0; j < i;)
+                    {
+                        if (myarray[j] < 0x81)
+                        {
+                            System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
+                            byte[] byteArray = new byte[] { (byte)myarray[j++] };
+                            string strCharacter = asciiEncoding.GetString(byteArray);
+                            //yima_listBox.Items.Add(myarray[j].ToString() + "   的机内码是：" + strCharacter);
+                            st = st + strCharacter;
+                        }
+                        else
+                        {
+                            byte[] bytes = new byte[2];
+                            bytes[0] = myarray[j++];
+                            bytes[1] = myarray[j++];
+                            System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
+                            result = chs.GetString(bytes);
+                            st = st + result;
+                        }
+                    }
+
+                    yima_textBox.Text = st;
+                }
+            catch (Exception)
+            {
+                MessageBox.Show("请输入正确格式的数据！");
+            }
+        }
+
         }
 
 
@@ -1331,21 +1380,15 @@ namespace readFontlib
         #region 数据解析
         struct PHY0_flag
         {
-            public Int16 msg_data_flag;                                //!< 接收到数据有效标志
-            public Int16 send_data_len;
             public Int16 Rcv_state;                                    //!< 接收状态标志
             public Int16 RCV_data_num;                                 //!< 接收到个数位置
-            public Int16 Send_data_num;                                //!< 发送的个数位置
-            public Int16 Send_state;                                   //!< 发送状态标志
-            public Int16 send_flag;                                    //!< 发送标志
-            public Int16 comm_id;                                      //!< 说明这个帧来自那个串口
-            public Int16 addr_flag;                                    //!< 判断是否是广播地址
         };
 
 
         string[] data_header = { "屏地址", "源地址", "保留", "显示模式", "设备类型", "协议版本号", "数据域长度" };
         string[] dynamic_cmd = {"命令分组","命令编号", "控制是否回复","保留","删除区域个数","删除区域ID","更新区域个数","区域数据长度"};
         string[] area_data   = {"区域类型","X坐标","Y坐标","区域宽度","区域高度","动态区编号","行间距","动态区运行模式","动态区超时时间","是否是能语音","发音人/发音次数","音量","语速","读音数据长度","读音数据","保留字","是否单行显示","是否自动换行","显示方式","退出方式","显示速度","停留时间","数据长度" };
+        private Encoding utf8;
 
         public string turntring(string s,int i)
         {
@@ -1590,14 +1633,14 @@ namespace readFontlib
             switch (data_cache)
             {
                 case 0:
-                    data_listView.Items["folder4"].SubItems.Add("控制器必须回复");
+                    data_listView.Items["folder10"].SubItems.Add("控制器必须回复");
                     break;
                 case 1:
-                    data_listView.Items["folder4"].SubItems.Add("控制器不必回复");
+                    data_listView.Items["folder10"].SubItems.Add("控制器不必回复");
                     break;
                 default:
-                    data_listView.Items["folder4"].ForeColor = Color.Red;
-                    data_listView.Items["folder4"].SubItems.Add("数据错误");
+                    data_listView.Items["folder10"].ForeColor = Color.Red;
+                    data_listView.Items["folder10"].SubItems.Add("数据错误");
                     break;
             }
             j++;
