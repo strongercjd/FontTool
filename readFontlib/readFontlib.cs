@@ -748,7 +748,7 @@ namespace readFontlib
             }
             if (GBK_radioButton.Checked == true)
             {
-                numericUpDownIndex.Value = qu * 191 + wei;
+                numericUpDownIndex.Value = qu * 190 + wei;
             }
 
 
