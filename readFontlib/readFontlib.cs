@@ -1387,8 +1387,17 @@ namespace readFontlib
 
         string[] data_header = { "屏地址", "源地址", "保留", "显示模式", "设备类型", "协议版本号", "数据域长度" };
         string[] dynamic_cmd = {"命令分组","命令编号", "控制是否回复","保留","删除区域个数","删除区域ID","更新区域个数","区域数据长度"};
-        string[] area_data   = {"区域类型","X坐标","Y坐标","区域宽度","区域高度","动态区编号","行间距","动态区运行模式","动态区超时时间","是否是能语音","发音人/发音次数","音量","语速","读音数据长度","读音数据","保留字","是否单行显示","是否自动换行","显示方式","退出方式","显示速度","停留时间","数据长度" };
-        private Encoding utf8;
+
+        private void tabControl_Selected(object sender, TabControlEventArgs e)
+        {
+            if (e.TabPage == analysis)
+            {
+                MessageBox.Show("数据解析只适合动态区域数据，而且是正确的数据包！");
+            }
+            
+        }
+
+        string[] area_data   = {"区域类型","X坐标","Y坐标","区域宽度","区域高度","动态区编号","行间距","动态区运行模式","动态区超时时间","是否是能语音","发音人/发音次数","音量","语速","读音数据长度","读音数据","保留字","是否单行显示","是否自动换行","显示方式","退出方式","显示速度","停留时间","数据长度" ,"数据"};
 
         public string turntring(string s,int i)
         {
@@ -1411,12 +1420,13 @@ namespace readFontlib
             byte[] myarray = new byte[size];
             int cmd_group;
             int cmd;
+            UInt32 data_num;
 
-            UInt16 i;
+            UInt32 i;
             int crc = 0x0;
             byte data_t;
             byte data_cache;
-            int j = 0;
+            UInt32 j = 0;
             int num = 0;
             if (data == null)
             {
@@ -1490,10 +1500,6 @@ namespace readFontlib
                 
             }
 
-            //for (j = 0; j < PHY0_flag1.RCV_data_num; j++)
-            //{
-
-            //}
             i = 0;
             j = 0;
             this.data_listView.BeginUpdate();   //数据更新，UI暂时挂起，直到EndUpdate绘制控件，可以有效避免闪烁并大大提高加载速度
@@ -1501,7 +1507,7 @@ namespace readFontlib
 
             ListViewGroup group_data_header = new ListViewGroup();  //创建包头数据分组
             group_data_header.Header = "包头数据";  //设置组的标题。
-            //man_lvg.Name = "man";   //设置组的名称。
+            //man_lvg.Name = "group_data_header";   //设置组的名称。
             group_data_header.HeaderAlignment = HorizontalAlignment.Left;//设置组标题文本的对齐方式。（默认为Left）
             this.data_listView.Groups.Add(group_data_header);    //把包头数据分组添加到listview中
 
@@ -1519,7 +1525,6 @@ namespace readFontlib
             data_listView.Items.Add("folder2", data_header[j], 0);
             data_listView.Items["folder2"].Group = group_data_header;
             data_listView.Items["folder2"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            //data_listView.Items["folder1"].SubItems.Add("20080114");
             j++;
 
 
@@ -1529,7 +1534,6 @@ namespace readFontlib
                                                         myarray[i++].ToString("X2") +" "+ (myarray[i++].ToString("X2").ToUpper())+" "+
                                                         myarray[i++].ToString("X2")
                                                         );
-            //data_listView.Items["folder1"].SubItems.Add("20080114");
             j++;
 
 
@@ -1594,13 +1598,11 @@ namespace readFontlib
             data_listView.Items.Add("folder6", data_header[j], 0);
             data_listView.Items["folder6"].Group = group_data_header;
             data_listView.Items["folder6"].SubItems.Add(myarray[i++].ToString("X2"));
-            //data_listView.Items["folder1"].SubItems.Add("20080114");
             j++;
 
             data_listView.Items.Add("folder7", data_header[j], 0);
             data_listView.Items["folder7"].Group = group_data_header;
             data_listView.Items["folder7"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            //data_listView.Items["folder1"].SubItems.Add("20080114");
             j++;
 
 
@@ -1615,14 +1617,12 @@ namespace readFontlib
             data_listView.Items.Add("folder8", dynamic_cmd[j], 0);
             data_listView.Items["folder8"].Group = group_cmd;
             data_listView.Items["folder8"].SubItems.Add(myarray[i++].ToString("X2"));
-            //data_listView.Items["folder1"].SubItems.Add("20080114");
             j++;
 
             cmd = myarray[i];
             data_listView.Items.Add("folder9", dynamic_cmd[j], 0);
             data_listView.Items["folder9"].Group = group_cmd;
             data_listView.Items["folder9"].SubItems.Add(myarray[i++].ToString("X2"));
-            //data_listView.Items["folder1"].SubItems.Add("20080114");
             j++;
 
 
@@ -1937,7 +1937,62 @@ namespace readFontlib
                                                                     myarray[i++].ToString("X2") +
                                                                     myarray[i++].ToString("X2") +
                                                                     myarray[i++].ToString("X2").ToUpper(), 4));
+            i = i - 4;
+            
+            data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++]<< 8) + (UInt32)(myarray[i++] << 16) + (UInt32)(myarray[i++] << 24);
             j++;
+
+
+            data_listView.Items.Add("folder39", area_data[j], 0);
+            data_listView.Items["folder39"].Group = grou_area_data;
+
+
+            string st = string.Empty;
+            for (num = 0; num < data_num ; num++)
+            {
+                st = st + myarray[i++].ToString("X2");
+            }
+
+            data_listView.Items["folder39"].SubItems.Add(st);
+
+
+            i = i - data_num;
+            st = string.Empty;
+            string result = string.Empty;
+            for (num = 0; num < data_num;)
+            {
+                if (myarray[i] < 0x81)
+                {
+                    System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
+                    byte[] byteArray = new byte[] { (byte)myarray[i++] };
+                    string strCharacter = asciiEncoding.GetString(byteArray);
+                    st = st + strCharacter;
+                    num++;
+                }
+                else
+                {
+                    byte[] bytes = new byte[2];
+                    bytes[0] = myarray[i++];
+                    bytes[1] = myarray[i++];
+                    System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
+                    result = chs.GetString(bytes);
+                    st = st + result;
+                    num = num + 2;
+                }
+            }
+            data_listView.Items["folder39"].SubItems.Add(st);
+
+
+            ListViewGroup grou_CRC = new ListViewGroup();  //创建CRC校验分组
+            grou_CRC.Header = "CRC校验";  //设置组的标题。
+            grou_CRC.HeaderAlignment = HorizontalAlignment.Left;//设置组标题文本的对齐方式。（默认为Left）
+            this.data_listView.Groups.Add(grou_CRC);    //把CRC校验分组添加到listview中
+
+            data_listView.Items.Add("folder40", "CRC校验", 0);
+            data_listView.Items["folder40"].Group = grou_CRC;
+            data_listView.Items["folder40"].SubItems.Add(myarray[i++].ToString("X2")+ myarray[i++].ToString("X2"));
+
+
 
 
             this.data_listView.EndUpdate();  //结束数据处理，UI界面一次性绘制。
@@ -1948,7 +2003,6 @@ namespace readFontlib
 
         private void analysis_button_Click(object sender, EventArgs e)
         {
-            int mycrc = 0;
             int i = 0;
             try
             {
@@ -1960,10 +2014,7 @@ namespace readFontlib
                 }
                 data_listView.Items.Clear();//每次点击事件后将ListView中的数据清空，重新显示
 
-                mycrc = dynamic(myarray, i);
-                //crc_textBox.Text = (mycrc & 0xff).ToString("X2").ToUpper() + " " + ((mycrc >> 8) & 0xff).ToString("X2").ToUpper();
-
-
+                dynamic(myarray, i);
             }
             catch (Exception)
             {

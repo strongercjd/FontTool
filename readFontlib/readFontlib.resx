@@ -1249,6 +1249,87 @@
   <data name="&gt;&gt;textBoxtime.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="&gt;&gt;view_edit_fontlib.Name" xml:space="preserve">
+    <value>view_edit_fontlib</value>
+  </data>
+  <data name="&gt;&gt;view_edit_fontlib.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;view_edit_fontlib.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;view_edit_fontlib.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;make_fontlib.Name" xml:space="preserve">
+    <value>make_fontlib</value>
+  </data>
+  <data name="&gt;&gt;make_fontlib.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;make_fontlib.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;make_fontlib.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;jineima.Name" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;jineima.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;jineima.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;jineima.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;CRC16.Name" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;CRC16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CRC16.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;CRC16.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;analysis.Name" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;analysis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;analysis.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;analysis.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 36</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>774, 475</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="view_edit_fontlib.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
@@ -1376,393 +1457,6 @@
     <value>tabControl</value>
   </data>
   <data name="&gt;&gt;make_fontlib.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="str2hex_radioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="str2hex_radioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 33</value>
-  </data>
-  <data name="str2hex_radioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 16</value>
-  </data>
-  <data name="str2hex_radioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="str2hex_radioButton.Text" xml:space="preserve">
-    <value>字符转机内码</value>
-  </data>
-  <data name="&gt;&gt;str2hex_radioButton.Name" xml:space="preserve">
-    <value>str2hex_radioButton</value>
-  </data>
-  <data name="&gt;&gt;str2hex_radioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;str2hex_radioButton.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;str2hex_radioButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="hex2str_radioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="hex2str_radioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 33</value>
-  </data>
-  <data name="hex2str_radioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 16</value>
-  </data>
-  <data name="hex2str_radioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="hex2str_radioButton.Text" xml:space="preserve">
-    <value>机内码转字符</value>
-  </data>
-  <data name="&gt;&gt;hex2str_radioButton.Name" xml:space="preserve">
-    <value>hex2str_radioButton</value>
-  </data>
-  <data name="&gt;&gt;hex2str_radioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hex2str_radioButton.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;hex2str_radioButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="yima_textBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 115</value>
-  </data>
-  <data name="yima_textBox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="yima_textBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 232</value>
-  </data>
-  <data name="yima_textBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;yima_textBox.Name" xml:space="preserve">
-    <value>yima_textBox</value>
-  </data>
-  <data name="&gt;&gt;yima_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;yima_textBox.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;yima_textBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="clear_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 66</value>
-  </data>
-  <data name="clear_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 24</value>
-  </data>
-  <data name="clear_button.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="clear_button.Text" xml:space="preserve">
-    <value>清除</value>
-  </data>
-  <data name="&gt;&gt;clear_button.Name" xml:space="preserve">
-    <value>clear_button</value>
-  </data>
-  <data name="&gt;&gt;clear_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;clear_button.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;clear_button.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="yima_listBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="yima_listBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 115</value>
-  </data>
-  <data name="yima_listBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 232</value>
-  </data>
-  <data name="yima_listBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;yima_listBox.Name" xml:space="preserve">
-    <value>yima_listBox</value>
-  </data>
-  <data name="&gt;&gt;yima_listBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;yima_listBox.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;yima_listBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Transfor_button.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 9pt</value>
-  </data>
-  <data name="Transfor_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 66</value>
-  </data>
-  <data name="Transfor_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 23</value>
-  </data>
-  <data name="Transfor_button.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Transfor_button.Text" xml:space="preserve">
-    <value>译码</value>
-  </data>
-  <data name="&gt;&gt;Transfor_button.Name" xml:space="preserve">
-    <value>Transfor_button</value>
-  </data>
-  <data name="&gt;&gt;Transfor_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Transfor_button.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;Transfor_button.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="input_textBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 66</value>
-  </data>
-  <data name="input_textBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 21</value>
-  </data>
-  <data name="input_textBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="input_textBox.Text" xml:space="preserve">
-    <value>上海仰邦科技股份有限公司</value>
-  </data>
-  <data name="&gt;&gt;input_textBox.Name" xml:space="preserve">
-    <value>input_textBox</value>
-  </data>
-  <data name="&gt;&gt;input_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;input_textBox.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;input_textBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="message.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="message.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 37</value>
-  </data>
-  <data name="message.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 12</value>
-  </data>
-  <data name="message.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="message.Text" xml:space="preserve">
-    <value>输入要转码的字符</value>
-  </data>
-  <data name="&gt;&gt;message.Name" xml:space="preserve">
-    <value>message</value>
-  </data>
-  <data name="&gt;&gt;message.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;message.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;message.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="jineima.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="jineima.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="jineima.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 449</value>
-  </data>
-  <data name="jineima.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="jineima.Text" xml:space="preserve">
-    <value>机内码查询</value>
-  </data>
-  <data name="&gt;&gt;jineima.Name" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;jineima.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;jineima.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;jineima.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;crc_clear_button.Name" xml:space="preserve">
-    <value>crc_clear_button</value>
-  </data>
-  <data name="&gt;&gt;crc_clear_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;crc_clear_button.Parent" xml:space="preserve">
-    <value>CRC16</value>
-  </data>
-  <data name="&gt;&gt;crc_clear_button.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;crc_check_button.Name" xml:space="preserve">
-    <value>crc_check_button</value>
-  </data>
-  <data name="&gt;&gt;crc_check_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;crc_check_button.Parent" xml:space="preserve">
-    <value>CRC16</value>
-  </data>
-  <data name="&gt;&gt;crc_check_button.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;crc_textBox.Name" xml:space="preserve">
-    <value>crc_textBox</value>
-  </data>
-  <data name="&gt;&gt;crc_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;crc_textBox.Parent" xml:space="preserve">
-    <value>CRC16</value>
-  </data>
-  <data name="&gt;&gt;crc_textBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;check_groupBox.Name" xml:space="preserve">
-    <value>check_groupBox</value>
-  </data>
-  <data name="&gt;&gt;check_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;check_groupBox.Parent" xml:space="preserve">
-    <value>CRC16</value>
-  </data>
-  <data name="&gt;&gt;check_groupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="CRC16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="CRC16.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="CRC16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 449</value>
-  </data>
-  <data name="CRC16.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="CRC16.Text" xml:space="preserve">
-    <value>CRC16校验</value>
-  </data>
-  <data name="&gt;&gt;CRC16.Name" xml:space="preserve">
-    <value>CRC16</value>
-  </data>
-  <data name="&gt;&gt;CRC16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CRC16.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;CRC16.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;data_listView.Name" xml:space="preserve">
-    <value>data_listView</value>
-  </data>
-  <data name="&gt;&gt;data_listView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;data_listView.Parent" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;data_listView.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;analysis_button.Name" xml:space="preserve">
-    <value>analysis_button</value>
-  </data>
-  <data name="&gt;&gt;analysis_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;analysis_button.Parent" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;analysis_button.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;Raw_data_textBox.Name" xml:space="preserve">
-    <value>Raw_data_textBox</value>
-  </data>
-  <data name="&gt;&gt;Raw_data_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Raw_data_textBox.Parent" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;Raw_data_textBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="analysis.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="analysis.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 449</value>
-  </data>
-  <data name="analysis.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="analysis.Text" xml:space="preserve">
-    <value>数据解析</value>
-  </data>
-  <data name="&gt;&gt;analysis.Name" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;analysis.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;analysis.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;analysis.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 36</value>
-  </data>
-  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>774, 475</value>
-  </data>
-  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="&gt;&gt;ASCII.Name" xml:space="preserve">
@@ -2728,6 +2422,408 @@
   <data name="&gt;&gt;font_viwer_panel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;str2hex_radioButton.Name" xml:space="preserve">
+    <value>str2hex_radioButton</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.Name" xml:space="preserve">
+    <value>hex2str_radioButton</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.Name" xml:space="preserve">
+    <value>yima_textBox</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;clear_button.Name" xml:space="preserve">
+    <value>clear_button</value>
+  </data>
+  <data name="&gt;&gt;clear_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clear_button.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;clear_button.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.Name" xml:space="preserve">
+    <value>yima_listBox</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.Name" xml:space="preserve">
+    <value>Transfor_button</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.Name" xml:space="preserve">
+    <value>input_textBox</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;message.Name" xml:space="preserve">
+    <value>message</value>
+  </data>
+  <data name="&gt;&gt;message.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;message.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;message.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="jineima.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="jineima.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="jineima.Size" type="System.Drawing.Size, System.Drawing">
+    <value>766, 449</value>
+  </data>
+  <data name="jineima.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="jineima.Text" xml:space="preserve">
+    <value>机内码查询</value>
+  </data>
+  <data name="&gt;&gt;jineima.Name" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;jineima.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;jineima.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;jineima.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="str2hex_radioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="str2hex_radioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 33</value>
+  </data>
+  <data name="str2hex_radioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 16</value>
+  </data>
+  <data name="str2hex_radioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="str2hex_radioButton.Text" xml:space="preserve">
+    <value>字符转机内码</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.Name" xml:space="preserve">
+    <value>str2hex_radioButton</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="hex2str_radioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hex2str_radioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 33</value>
+  </data>
+  <data name="hex2str_radioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 16</value>
+  </data>
+  <data name="hex2str_radioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="hex2str_radioButton.Text" xml:space="preserve">
+    <value>机内码转字符</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.Name" xml:space="preserve">
+    <value>hex2str_radioButton</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="yima_textBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 115</value>
+  </data>
+  <data name="yima_textBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="yima_textBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 232</value>
+  </data>
+  <data name="yima_textBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.Name" xml:space="preserve">
+    <value>yima_textBox</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="clear_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 66</value>
+  </data>
+  <data name="clear_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="clear_button.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="clear_button.Text" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="&gt;&gt;clear_button.Name" xml:space="preserve">
+    <value>clear_button</value>
+  </data>
+  <data name="&gt;&gt;clear_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clear_button.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;clear_button.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="yima_listBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="yima_listBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 115</value>
+  </data>
+  <data name="yima_listBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 232</value>
+  </data>
+  <data name="yima_listBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.Name" xml:space="preserve">
+    <value>yima_listBox</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Transfor_button.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="Transfor_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 66</value>
+  </data>
+  <data name="Transfor_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 23</value>
+  </data>
+  <data name="Transfor_button.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Transfor_button.Text" xml:space="preserve">
+    <value>译码</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.Name" xml:space="preserve">
+    <value>Transfor_button</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="input_textBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 66</value>
+  </data>
+  <data name="input_textBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 21</value>
+  </data>
+  <data name="input_textBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="input_textBox.Text" xml:space="preserve">
+    <value>上海仰邦科技股份有限公司</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.Name" xml:space="preserve">
+    <value>input_textBox</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="message.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="message.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 37</value>
+  </data>
+  <data name="message.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 12</value>
+  </data>
+  <data name="message.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="message.Text" xml:space="preserve">
+    <value>输入要转码的字符</value>
+  </data>
+  <data name="&gt;&gt;message.Name" xml:space="preserve">
+    <value>message</value>
+  </data>
+  <data name="&gt;&gt;message.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;message.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;message.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;crc_clear_button.Name" xml:space="preserve">
+    <value>crc_clear_button</value>
+  </data>
+  <data name="&gt;&gt;crc_clear_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crc_clear_button.Parent" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;crc_clear_button.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;crc_check_button.Name" xml:space="preserve">
+    <value>crc_check_button</value>
+  </data>
+  <data name="&gt;&gt;crc_check_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crc_check_button.Parent" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;crc_check_button.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;crc_textBox.Name" xml:space="preserve">
+    <value>crc_textBox</value>
+  </data>
+  <data name="&gt;&gt;crc_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crc_textBox.Parent" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;crc_textBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;check_groupBox.Name" xml:space="preserve">
+    <value>check_groupBox</value>
+  </data>
+  <data name="&gt;&gt;check_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;check_groupBox.Parent" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;check_groupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="CRC16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="CRC16.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="CRC16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>766, 449</value>
+  </data>
+  <data name="CRC16.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CRC16.Text" xml:space="preserve">
+    <value>CRC16校验</value>
+  </data>
+  <data name="&gt;&gt;CRC16.Name" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;CRC16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CRC16.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;CRC16.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="crc_clear_button.Location" type="System.Drawing.Point, System.Drawing">
     <value>423, 328</value>
   </data>
@@ -2856,6 +2952,66 @@
   </data>
   <data name="&gt;&gt;crc_data_richTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="&gt;&gt;data_listView.Name" xml:space="preserve">
+    <value>data_listView</value>
+  </data>
+  <data name="&gt;&gt;data_listView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;data_listView.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;data_listView.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;analysis_button.Name" xml:space="preserve">
+    <value>analysis_button</value>
+  </data>
+  <data name="&gt;&gt;analysis_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;analysis_button.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;analysis_button.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Raw_data_textBox.Name" xml:space="preserve">
+    <value>Raw_data_textBox</value>
+  </data>
+  <data name="&gt;&gt;Raw_data_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Raw_data_textBox.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;Raw_data_textBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="analysis.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="analysis.Size" type="System.Drawing.Size, System.Drawing">
+    <value>766, 449</value>
+  </data>
+  <data name="analysis.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="analysis.Text" xml:space="preserve">
+    <value>数据解析</value>
+  </data>
+  <data name="&gt;&gt;analysis.Name" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;analysis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;analysis.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;analysis.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="data_listView.Location" type="System.Drawing.Point, System.Drawing">
     <value>372, 17</value>
@@ -3170,7 +3326,7 @@
     <value>800, 582</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>WindowsDefaultBounds</value>
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>字符转机内码</value>
