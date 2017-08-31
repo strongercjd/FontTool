@@ -27,12 +27,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_15E2206BE3AD4B9BB5B19D4C7C644FC7"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1D6DB7339AF5482187FBEDDDCE4322D2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -40,6 +34,12 @@
         "Entry"
         {
         "MsmKey" = "8:_3C2F8B609659497BBC4E477A9406C6F4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_69870F5269E449729C67CDB5CB7D20B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -58,7 +58,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_144093C536084A42ADD2E795F1125FE2"
+        "OwnerKey" = "8:_3C2F8B609659497BBC4E477A9406C6F4"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,7 +70,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3C2F8B609659497BBC4E477A9406C6F4"
+        "OwnerKey" = "8:_144093C536084A42ADD2E795F1125FE2"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -230,26 +230,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_15E2206BE3AD4B9BB5B19D4C7C644FC7"
-            {
-            "SourcePath" = "8:C:\\Windows\\System32\\msiexec.exe"
-            "TargetName" = "8:UnInstall.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_5A8B648890F345678A6FBF119C5C5C60"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1D6DB7339AF5482187FBEDDDCE4322D2"
             {
             "AssemblyRegister" = "3:1"
@@ -298,6 +278,26 @@
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_CD57F899A48242BC85E0E0DDDF00AD19"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_69870F5269E449729C67CDB5CB7D20B5"
+            {
+            "SourcePath" = "8:..\\readFontlib\\bin\\Debug\\msiexec.exe"
+            "TargetName" = "8:UnInstall.exe"
+            "Tag" = "8:"
+            "Folder" = "8:_5A8B648890F345678A6FBF119C5C5C60"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -422,7 +422,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:font card tool"
         "ProductCode" = "8:{BE4830B0-B975-4ACC-AFBB-CC430CAF727A}"
-        "PackageCode" = "8:{6B603A69-D503-4EB5-9842-E4D7B1C19B5A}"
+        "PackageCode" = "8:{E9BAAF1D-784D-425C-8E12-90A86D08752F}"
         "UpgradeCode" = "8:{64A467FE-F836-491C-A484-F066BB994E00}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -542,6 +542,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_04A44BF5067E475A895B0519DAE3B56C"
+            {
+            "Name" = "8:Shortcut to UnInstall.exe"
+            "Arguments" = "8:/x {BE4830B0-B975-4ACC-AFBB-CC430CAF727A}"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_69870F5269E449729C67CDB5CB7D20B5"
+            "Folder" = "8:_860E1AFCFD78423CB55BBEC232BE2849"
+            "WorkingFolder" = "8:_5A8B648890F345678A6FBF119C5C5C60"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_18F450DDC85A46D4ADE3789F10A2ACB5"
             {
             "Name" = "8:字库卡工具.exe"
@@ -554,20 +568,6 @@
             "Folder" = "8:_76F7B4749D6A49E9A77F9FBD0039F078"
             "WorkingFolder" = "8:_5A8B648890F345678A6FBF119C5C5C60"
             "Icon" = "8:_D25963F737224D89A8001A9BE1BAAAEC"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D9313A784B24495D8D9767417170320C"
-            {
-            "Name" = "8:Shortcut to UnInstall.exe"
-            "Arguments" = "8:/x {BE4830B0-B975-4ACC-AFBB-CC430CAF727A}"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_15E2206BE3AD4B9BB5B19D4C7C644FC7"
-            "Folder" = "8:_860E1AFCFD78423CB55BBEC232BE2849"
-            "WorkingFolder" = "8:_5A8B648890F345678A6FBF119C5C5C60"
-            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
