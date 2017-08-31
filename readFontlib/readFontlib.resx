@@ -2074,6 +2074,30 @@
   <data name="&gt;&gt;CRC16.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="data_after_transform_textBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 227</value>
+  </data>
+  <data name="data_after_transform_textBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="data_after_transform_textBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 209</value>
+  </data>
+  <data name="data_after_transform_textBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;data_after_transform_textBox.Name" xml:space="preserve">
+    <value>data_after_transform_textBox</value>
+  </data>
+  <data name="&gt;&gt;data_after_transform_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;data_after_transform_textBox.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;data_after_transform_textBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="out_excel_button.Location" type="System.Drawing.Point, System.Drawing">
     <value>304, 185</value>
   </data>
@@ -2096,7 +2120,7 @@
     <value>analysis</value>
   </data>
   <data name="&gt;&gt;out_excel_button.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="columnHeader1.Text" xml:space="preserve">
     <value>参数</value>
@@ -2144,7 +2168,7 @@
     <value>analysis</value>
   </data>
   <data name="&gt;&gt;data_listView.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="analysis_button.Location" type="System.Drawing.Point, System.Drawing">
     <value>304, 227</value>
@@ -2168,7 +2192,7 @@
     <value>analysis</value>
   </data>
   <data name="&gt;&gt;analysis_button.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="Raw_data_textBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>18, 17</value>
@@ -2177,7 +2201,7 @@
     <value>True</value>
   </data>
   <data name="Raw_data_textBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 419</value>
+    <value>280, 161</value>
   </data>
   <data name="Raw_data_textBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2195,7 +2219,7 @@
     <value>analysis</value>
   </data>
   <data name="&gt;&gt;Raw_data_textBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="analysis.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -2366,6 +2390,9 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>51</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 12</value>

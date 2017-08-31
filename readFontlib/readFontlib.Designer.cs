@@ -112,6 +112,7 @@
             this.check_groupBox = new System.Windows.Forms.GroupBox();
             this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
             this.analysis = new System.Windows.Forms.TabPage();
+            this.out_excel_button = new System.Windows.Forms.Button();
             this.data_listView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -128,7 +129,7 @@
             this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.out_excel_button = new System.Windows.Forms.Button();
+            this.data_after_transform_textBox = new System.Windows.Forms.TextBox();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -783,6 +784,7 @@
             // 
             // analysis
             // 
+            this.analysis.Controls.Add(this.data_after_transform_textBox);
             this.analysis.Controls.Add(this.out_excel_button);
             this.analysis.Controls.Add(this.data_listView);
             this.analysis.Controls.Add(this.analysis_button);
@@ -790,6 +792,13 @@
             resources.ApplyResources(this.analysis, "analysis");
             this.analysis.Name = "analysis";
             this.analysis.UseVisualStyleBackColor = true;
+            // 
+            // out_excel_button
+            // 
+            resources.ApplyResources(this.out_excel_button, "out_excel_button");
+            this.out_excel_button.Name = "out_excel_button";
+            this.out_excel_button.UseVisualStyleBackColor = true;
+            this.out_excel_button.Click += new System.EventHandler(this.out_excel_button_Click);
             // 
             // data_listView
             // 
@@ -882,12 +891,10 @@
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
             // 
-            // out_excel_button
+            // data_after_transform_textBox
             // 
-            resources.ApplyResources(this.out_excel_button, "out_excel_button");
-            this.out_excel_button.Name = "out_excel_button";
-            this.out_excel_button.UseVisualStyleBackColor = true;
-            this.out_excel_button.Click += new System.EventHandler(this.out_excel_button_Click);
+            resources.ApplyResources(this.data_after_transform_textBox, "data_after_transform_textBox");
+            this.data_after_transform_textBox.Name = "data_after_transform_textBox";
             // 
             // readFontlib
             // 
@@ -1048,6 +1055,7 @@
         private System.Windows.Forms.RadioButton str2hex_radioButton;
         private System.Windows.Forms.RadioButton hex2str_radioButton;
         private System.Windows.Forms.Button out_excel_button;
+        private System.Windows.Forms.TextBox data_after_transform_textBox;
     }
 }
 
