@@ -1400,6 +1400,17 @@ namespace readFontlib
         private void out_excel_button_Click(object sender, EventArgs e)
         {
             ExportToExecl();
+
+            System.Diagnostics.Process[] process = System.Diagnostics.Process.GetProcessesByName("EXCEL");
+            foreach (System.Diagnostics.Process p in process)
+            {
+                if (!p.HasExited)  // 如果程序没有关闭，结束程序
+                {
+                    p.Kill();
+                    p.WaitForExit();
+                }
+            }
+
         }
 
 
@@ -1640,9 +1651,17 @@ namespace readFontlib
                 }
                 
             }
-            //string str = System.Text.Encoding.Default.GetString(myarray);
-            //data_after_transform_textBox.Text = string.Join(" ", str);
-            data_after_transform_textBox.Text = System.Text.Encoding.Unicode.GetString(myarray);
+
+            string str,str1;
+            str = "";
+            for (i= 0;i< PHY0_flag1.RCV_data_num;i++)
+            {
+                str1 = myarray[i].ToString("x");
+                str = str + " " + (str1.Length == 1 ? "0" + str1 : str1)   ;
+            }
+            
+            data_after_transform_textBox.Text = str;
+            data_after_transform_textBox.Text = data_after_transform_textBox.Text.Substring(1, data_after_transform_textBox.Text.Length - 1);
 
             i = 0;
             j = 0;
@@ -2273,6 +2292,7 @@ namespace readFontlib
                 data_listView.Items.Clear();//每次点击事件后将ListView中的数据清空，重新显示
 
                 dynamic(myarray, i);
+                out_excel_button.Visible = true;
             }
             catch (Exception)
             {

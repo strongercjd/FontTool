@@ -112,6 +112,7 @@
             this.check_groupBox = new System.Windows.Forms.GroupBox();
             this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
             this.analysis = new System.Windows.Forms.TabPage();
+            this.data_after_transform_textBox = new System.Windows.Forms.TextBox();
             this.out_excel_button = new System.Windows.Forms.Button();
             this.data_listView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -129,7 +130,7 @@
             this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.data_after_transform_textBox = new System.Windows.Forms.TextBox();
+            this.label_mes = new System.Windows.Forms.Label();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -784,6 +785,7 @@
             // 
             // analysis
             // 
+            this.analysis.Controls.Add(this.label_mes);
             this.analysis.Controls.Add(this.data_after_transform_textBox);
             this.analysis.Controls.Add(this.out_excel_button);
             this.analysis.Controls.Add(this.data_listView);
@@ -792,6 +794,11 @@
             resources.ApplyResources(this.analysis, "analysis");
             this.analysis.Name = "analysis";
             this.analysis.UseVisualStyleBackColor = true;
+            // 
+            // data_after_transform_textBox
+            // 
+            resources.ApplyResources(this.data_after_transform_textBox, "data_after_transform_textBox");
+            this.data_after_transform_textBox.Name = "data_after_transform_textBox";
             // 
             // out_excel_button
             // 
@@ -891,10 +898,10 @@
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
             // 
-            // data_after_transform_textBox
+            // label_mes
             // 
-            resources.ApplyResources(this.data_after_transform_textBox, "data_after_transform_textBox");
-            this.data_after_transform_textBox.Name = "data_after_transform_textBox";
+            resources.ApplyResources(this.label_mes, "label_mes");
+            this.label_mes.Name = "label_mes";
             // 
             // readFontlib
             // 
@@ -1056,6 +1063,7 @@
         private System.Windows.Forms.RadioButton hex2str_radioButton;
         private System.Windows.Forms.Button out_excel_button;
         private System.Windows.Forms.TextBox data_after_transform_textBox;
+        private System.Windows.Forms.Label label_mes;
     }
 }
 
