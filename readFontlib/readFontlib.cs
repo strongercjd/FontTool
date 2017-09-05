@@ -1588,13 +1588,28 @@ namespace readFontlib
             {
                 data_t = data[j];
                 if (data_t == 0XA5) {
+                    if ((PHY0_flag1.Rcv_state == 2)|| (PHY0_flag1.Rcv_state == 3) || (PHY0_flag1.Rcv_state == 4))
+                    {
+                        MessageBox.Show("A5忘记转义，第 "+ j + " 个数据");
+                        myarray[PHY0_flag1.RCV_data_num] = data_t;
+                        PHY0_flag1.RCV_data_num++;
+                        PHY0_flag1.Rcv_state = 4;
+                    }
+                        
                     PHY0_flag1.Rcv_state = 1;
                 }
                 else {
                     if (PHY0_flag1.Rcv_state != 0) {
                         switch (data_t)
                         {
-                            case 0X5A:break;
+                            case 0X5A:
+                                if (j + 1 < size) {
+                                    MessageBox.Show("5A忘记转义，第 " + j + " 个数据");
+                                    myarray[PHY0_flag1.RCV_data_num] = data_t;
+                                    PHY0_flag1.RCV_data_num++;
+                                    PHY0_flag1.Rcv_state = 4;
+                                }
+                                break;
                             case 0XA6:
                                 PHY0_flag1.Rcv_state = 2;//进入0xA6转义字节状态
                                 break;
@@ -1620,6 +1635,7 @@ namespace readFontlib
                                     {
                                         myarray[PHY0_flag1.RCV_data_num] = 0x01;
                                         PHY0_flag1.RCV_data_num++;
+                                        PHY0_flag1.Rcv_state = 4;
                                     }
                                 }
                                 break;
@@ -1642,12 +1658,14 @@ namespace readFontlib
                                     {
                                         myarray[PHY0_flag1.RCV_data_num] = 0x02;
                                         PHY0_flag1.RCV_data_num++;
+                                        PHY0_flag1.Rcv_state = 4;
                                     }
                                 }
                                 break;
                             default:
                                 myarray[PHY0_flag1.RCV_data_num] = data_t;
                                 PHY0_flag1.RCV_data_num++;
+                                PHY0_flag1.Rcv_state = 4;
                                 break;
                         }
 
@@ -2079,7 +2097,7 @@ namespace readFontlib
 
                 if (data_cache == 2)
                 {
-                
+
                     /*读音数据长度*/
                     data_listView.Items.Add("folder29", area_data[j], 0);
                     data_listView.Items["folder29"].Group = grou_area_data;
@@ -2088,15 +2106,52 @@ namespace readFontlib
                                                                             myarray[i++].ToString("X2") +
                                                                             myarray[i++].ToString("X2").ToUpper(), 4));
                     data_listView.Items["folder29"].SubItems.Add(" ");
+                    i = i - 4;
+
+                    data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++] << 8) + (UInt32)(myarray[i++] << 16) + (UInt32)(myarray[i++] << 24);
                     j++;
+
 
 
                     /*读音数据*/
                     data_listView.Items.Add("folder30", area_data[j], 0);
                     data_listView.Items["folder30"].Group = grou_area_data;
-                    data_listView.Items["folder30"].SubItems.Add(turntring(myarray[i++].ToString("X2") + myarray[i++].ToString("X2").ToUpper(), 2));
-                    data_listView.Items["folder30"].SubItems.Add("语音数据");
 
+
+                    string data_st = string.Empty;
+                    for (num = 0; num < data_num; num++)
+                    {
+                        data_st = data_st + myarray[i++].ToString("X2");
+                    }
+
+                    data_listView.Items["folder30"].SubItems.Add(data_st);
+
+
+                    i = i - data_num;
+                    data_st = string.Empty;
+                    string data_result = string.Empty;
+                    for (num = 0; num < data_num;)
+                    {
+                        if (myarray[i] < 0x81)
+                        {
+                            System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
+                            byte[] byteArray = new byte[] { (byte)myarray[i++] };
+                            string strCharacter = asciiEncoding.GetString(byteArray);
+                            data_st = data_st + strCharacter;
+                            num++;
+                        }
+                        else
+                        {
+                            byte[] bytes = new byte[2];
+                            bytes[0] = myarray[i++];
+                            bytes[1] = myarray[i++];
+                            System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
+                            data_result = chs.GetString(bytes);
+                            data_st = data_st + data_result;
+                            num = num + 2;
+                        }
+                    }
+                    data_listView.Items["folder39"].SubItems.Add(data_st);
                     j++;
 
                 }
@@ -2287,7 +2342,20 @@ namespace readFontlib
             data_listView.Items.Add("folder40", "CRC校验", 0);
             data_listView.Items["folder40"].Group = grou_CRC;
             data_listView.Items["folder40"].SubItems.Add(myarray[i++].ToString("X2")+ myarray[i++].ToString("X2"));
-            data_listView.Items["folder40"].SubItems.Add(" ");
+
+            i = i - 2;
+            int mycrc = CRC.crc16(myarray, PHY0_flag1.RCV_data_num-2);
+            data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++] << 8);
+            if (mycrc == data_num)
+            {
+                data_listView.Items["folder40"].SubItems.Add("CRC校验值正确");
+            }
+            else
+            {
+                data_listView.Items["folder40"].ForeColor = Color.Red;
+                data_listView.Items["folder40"].SubItems.Add("CRC校验值错误");
+            }
+            
 
 
 
