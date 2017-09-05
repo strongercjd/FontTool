@@ -1591,7 +1591,7 @@ namespace readFontlib
                     PHY0_flag1.Rcv_state = 1;
                 }
                 else {
-                    if (PHY0_flag1.Rcv_state == 1) {
+                    if (PHY0_flag1.Rcv_state != 0) {
                         switch (data_t)
                         {
                             case 0X5A:break;
@@ -1606,6 +1606,7 @@ namespace readFontlib
                                 {
                                     myarray[PHY0_flag1.RCV_data_num] = 0XA6;
                                     PHY0_flag1.RCV_data_num++;
+                                    PHY0_flag1.Rcv_state = 1;
                                 }
                                 else
                                 {
@@ -1613,6 +1614,7 @@ namespace readFontlib
                                     {
                                         myarray[PHY0_flag1.RCV_data_num] = 0X5B;
                                         PHY0_flag1.RCV_data_num++;
+                                        PHY0_flag1.Rcv_state = 1;
                                     }
                                     else
                                     {
@@ -1626,6 +1628,7 @@ namespace readFontlib
                                 {
                                     myarray[PHY0_flag1.RCV_data_num] = 0XA5;
                                     PHY0_flag1.RCV_data_num++;
+                                    PHY0_flag1.Rcv_state = 1;
                                 }
                                 else
                                 {
@@ -1633,6 +1636,7 @@ namespace readFontlib
                                     {
                                         myarray[PHY0_flag1.RCV_data_num] = 0X5A;
                                         PHY0_flag1.RCV_data_num++;
+                                        PHY0_flag1.Rcv_state = 1;
                                     }
                                     else
                                     {
@@ -1656,12 +1660,27 @@ namespace readFontlib
             str = "";
             for (i= 0;i< PHY0_flag1.RCV_data_num;i++)
             {
+                if ((myarray[i] == 0X5A) || (myarray[i] == 0XA5)|| (myarray[i] == 0XA6) || (myarray[i] == 0X5B))
+                {
+                    data_after_transform_richTextBox.SelectionColor = Color.Red;
+                }
+                else
+                {
+                    data_after_transform_richTextBox.SelectionColor = Color.Black;
+                }
                 str1 = myarray[i].ToString("x");
-                str = str + " " + (str1.Length == 1 ? "0" + str1 : str1)   ;
+                str = (str1.Length == 1 ? "0" + str1 : str1);
+                if (i == 0)
+                {
+                    str = str.ToUpper();
+                }
+                else
+                {
+                    str = " " + str.ToUpper();
+
+                }
+                data_after_transform_richTextBox.AppendText(str);
             }
-            
-            data_after_transform_textBox.Text = str;
-            data_after_transform_textBox.Text = data_after_transform_textBox.Text.Substring(1, data_after_transform_textBox.Text.Length - 1);
 
             i = 0;
             j = 0;
@@ -2290,6 +2309,7 @@ namespace readFontlib
                     myarray[i++] = System.Convert.ToByte(tmp, 16);
                 }
                 data_listView.Items.Clear();//每次点击事件后将ListView中的数据清空，重新显示
+                data_after_transform_richTextBox.Clear();//每次点击事件后将data_after_transform_richTextBox中的数据清空，重新显示
 
                 dynamic(myarray, i);
                 out_excel_button.Visible = true;
