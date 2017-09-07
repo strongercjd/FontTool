@@ -1755,8 +1755,8 @@ namespace readFontlib
             /*保留字节*/
             data_listView.Items.Add("folder3", data_header[j], 0);
             data_listView.Items["folder3"].Group = group_data_header;
-            data_listView.Items["folder3"].SubItems.Add(myarray[i++].ToString("X2") +" "+ (myarray[i++].ToString("X2").ToUpper())+" "+
-                                                        myarray[i++].ToString("X2") +" "+ (myarray[i++].ToString("X2").ToUpper())+" "+
+            data_listView.Items["folder3"].SubItems.Add(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper())+
+                                                        myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper())+
                                                         myarray[i++].ToString("X2")
                                                         );
             data_listView.Items["folder3"].SubItems.Add(" ");
@@ -1900,7 +1900,7 @@ namespace readFontlib
             /*保留字节*/
             data_listView.Items.Add("folder11", dynamic_cmd[j], 0);
             data_listView.Items["folder11"].Group = group_cmd;
-            data_listView.Items["folder11"].SubItems.Add(myarray[i++].ToString("X2") + " " + myarray[i++].ToString("X2"));
+            data_listView.Items["folder11"].SubItems.Add(myarray[i++].ToString("X2") + myarray[i++].ToString("X2"));
             data_listView.Items["folder11"].SubItems.Add(" ");
             j++;
 
@@ -1911,7 +1911,7 @@ namespace readFontlib
             data_listView.Items["folder12"].Group = group_cmd;
             data_cache = myarray[i];
             data_listView.Items["folder12"].SubItems.Add(myarray[i++].ToString("X2"));
-            data_listView.Items["folder12"].SubItems.Add(" ");
+            data_listView.Items["folder12"].SubItems.Add("删除"+data_cache.ToString("X2")+"个区域");
             j++;
 
             if (data_cache == 0)
@@ -1936,8 +1936,9 @@ namespace readFontlib
             /*更新区域个数*/
             data_listView.Items.Add("folder14", dynamic_cmd[j], 0);
             data_listView.Items["folder14"].Group = group_cmd;
+            data_cache = myarray[i];
             data_listView.Items["folder14"].SubItems.Add(myarray[i++].ToString("X2"));
-            data_listView.Items["folder14"].SubItems.Add(" ");
+            data_listView.Items["folder14"].SubItems.Add("更新" + data_cache.ToString("x") + "个区域");
             j++;
 
 
