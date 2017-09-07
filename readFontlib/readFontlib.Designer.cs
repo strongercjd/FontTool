@@ -112,6 +112,7 @@
             this.check_groupBox = new System.Windows.Forms.GroupBox();
             this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
             this.analysis = new System.Windows.Forms.TabPage();
+            this.data_after_transform_richTextBox = new System.Windows.Forms.RichTextBox();
             this.label_mes = new System.Windows.Forms.Label();
             this.out_excel_button = new System.Windows.Forms.Button();
             this.data_listView = new System.Windows.Forms.ListView();
@@ -130,7 +131,6 @@
             this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.data_after_transform_richTextBox = new System.Windows.Forms.RichTextBox();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -795,6 +795,11 @@
             this.analysis.Name = "analysis";
             this.analysis.UseVisualStyleBackColor = true;
             // 
+            // data_after_transform_richTextBox
+            // 
+            resources.ApplyResources(this.data_after_transform_richTextBox, "data_after_transform_richTextBox");
+            this.data_after_transform_richTextBox.Name = "data_after_transform_richTextBox";
+            // 
             // label_mes
             // 
             resources.ApplyResources(this.label_mes, "label_mes");
@@ -897,11 +902,6 @@
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
-            // 
-            // data_after_transform_richTextBox
-            // 
-            resources.ApplyResources(this.data_after_transform_richTextBox, "data_after_transform_richTextBox");
-            this.data_after_transform_richTextBox.Name = "data_after_transform_richTextBox";
             // 
             // readFontlib
             // 

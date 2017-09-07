@@ -1570,6 +1570,7 @@ namespace readFontlib
             PHY0_flag1.Rcv_state = 0;
             PHY0_flag1.RCV_data_num = 0;
             byte[] myarray = new byte[size];
+            byte[] trsf_flg = new byte[size];
             int cmd_group;
             int cmd;
             UInt32 data_num;
@@ -1588,15 +1589,20 @@ namespace readFontlib
             {
                 data_t = data[j];
                 if (data_t == 0XA5) {
-                    if ((PHY0_flag1.Rcv_state == 2)|| (PHY0_flag1.Rcv_state == 3) || (PHY0_flag1.Rcv_state == 4))
+                    if ((PHY0_flag1.Rcv_state == 2) || (PHY0_flag1.Rcv_state == 3) || (PHY0_flag1.Rcv_state == 4))
                     {
-                        MessageBox.Show("A5忘记转义，第 "+ j + " 个数据");
+                        MessageBox.Show("A5忘记转义，第 " + j + " 个数据");
                         myarray[PHY0_flag1.RCV_data_num] = data_t;
+                        trsf_flg[PHY0_flag1.RCV_data_num] = 1;
                         PHY0_flag1.RCV_data_num++;
                         PHY0_flag1.Rcv_state = 4;
                     }
+                    else
+                    {
+                        PHY0_flag1.Rcv_state = 1;
+                    }
                         
-                    PHY0_flag1.Rcv_state = 1;
+                    
                 }
                 else {
                     if (PHY0_flag1.Rcv_state != 0) {
@@ -1606,6 +1612,7 @@ namespace readFontlib
                                 if (j + 1 < size) {
                                     MessageBox.Show("5A忘记转义，第 " + j + " 个数据");
                                     myarray[PHY0_flag1.RCV_data_num] = data_t;
+                                    trsf_flg[PHY0_flag1.RCV_data_num] = 1;
                                     PHY0_flag1.RCV_data_num++;
                                     PHY0_flag1.Rcv_state = 4;
                                 }
@@ -1620,6 +1627,7 @@ namespace readFontlib
                                 if (PHY0_flag1.Rcv_state == 2)
                                 {
                                     myarray[PHY0_flag1.RCV_data_num] = 0XA6;
+                                    trsf_flg[PHY0_flag1.RCV_data_num] = 2;
                                     PHY0_flag1.RCV_data_num++;
                                     PHY0_flag1.Rcv_state = 1;
                                 }
@@ -1628,6 +1636,7 @@ namespace readFontlib
                                     if (PHY0_flag1.Rcv_state == 3)
                                     {
                                         myarray[PHY0_flag1.RCV_data_num] = 0X5B;
+                                        trsf_flg[PHY0_flag1.RCV_data_num] = 2;
                                         PHY0_flag1.RCV_data_num++;
                                         PHY0_flag1.Rcv_state = 1;
                                     }
@@ -1643,6 +1652,7 @@ namespace readFontlib
                                 if (PHY0_flag1.Rcv_state == 2)
                                 {
                                     myarray[PHY0_flag1.RCV_data_num] = 0XA5;
+                                    trsf_flg[PHY0_flag1.RCV_data_num] = 2;
                                     PHY0_flag1.RCV_data_num++;
                                     PHY0_flag1.Rcv_state = 1;
                                 }
@@ -1651,6 +1661,7 @@ namespace readFontlib
                                     if (PHY0_flag1.Rcv_state == 3)
                                     {
                                         myarray[PHY0_flag1.RCV_data_num] = 0X5A;
+                                        trsf_flg[PHY0_flag1.RCV_data_num] = 2;
                                         PHY0_flag1.RCV_data_num++;
                                         PHY0_flag1.Rcv_state = 1;
                                     }
@@ -1680,7 +1691,15 @@ namespace readFontlib
             {
                 if ((myarray[i] == 0X5A) || (myarray[i] == 0XA5)|| (myarray[i] == 0XA6) || (myarray[i] == 0X5B))
                 {
-                    data_after_transform_richTextBox.SelectionColor = Color.Red;
+                    if (trsf_flg[i] == 1)
+                    {
+                        data_after_transform_richTextBox.SelectionColor = Color.Blue;
+                    }
+                    else
+                    {
+                        data_after_transform_richTextBox.SelectionColor = Color.Red;
+                    }
+                    
                 }
                 else
                 {
