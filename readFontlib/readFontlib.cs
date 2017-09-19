@@ -1392,7 +1392,7 @@ namespace readFontlib
         {
             if (e.TabPage == analysis)
             {
-                MessageBox.Show("数据解析只能检测出一小部分错，一旦检测出错误，还需要认真看协议！");
+                MessageBox.Show("数据解析只能检测出动态区数据一小部分错误，一旦检测出错误，还需要认真看协议！");
             }
             
         }
@@ -1431,6 +1431,7 @@ namespace readFontlib
             sfd.DefaultExt = "xls";
 
             sfd.Filter = "Excel文件(*.xls)|*.xls";
+            sfd.FileName = "动态区数据包协议解析";
 
             if (sfd.ShowDialog() == DialogResult.OK)
 
