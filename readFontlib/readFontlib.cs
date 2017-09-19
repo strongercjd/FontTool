@@ -1549,7 +1549,7 @@ namespace readFontlib
 
         }
 
-        string[] area_data   = {"区域类型","X坐标","Y坐标","区域宽度","区域高度","动态区编号","行间距","动态区运行模式","动态区超时时间","是否是能语音","发音人/发音次数","音量","语速","读音数据长度","读音数据","保留字","是否单行显示","是否自动换行","显示方式","退出方式","显示速度","停留时间","数据长度" ,"数据"};
+        string[] area_data   = {"区域类型","X坐标","Y坐标","区域宽度","区域高度","动态区编号","行间距","动态区运行模式","动态区超时时间","是否使能语音","发音人/发音次数","音量","语速","读音数据长度","读音数据","保留字","是否单行显示","是否自动换行","显示方式","退出方式","显示速度","停留时间","数据长度" ,"数据"};
 
         public string turntring(string s,int i)
         {
@@ -2091,6 +2091,7 @@ namespace readFontlib
             }
             else
             {
+                j++;
                 /*发音人/发音次数*/
                 data_listView.Items.Add("folder26", area_data[j], 0);
                 data_listView.Items["folder26"].Group = grou_area_data;
@@ -2101,7 +2102,6 @@ namespace readFontlib
                 /*音量*/
                 data_listView.Items.Add("folder27", area_data[j], 0);
                 data_listView.Items["folder27"].Group = grou_area_data;
-                data_cache = myarray[i];
                 data_listView.Items["folder27"].SubItems.Add(myarray[i++].ToString("X2"));
                 data_listView.Items["folder27"].SubItems.Add("音量" + data_cache);
                 j++;
@@ -2110,7 +2110,6 @@ namespace readFontlib
                 /*语速*/
                 data_listView.Items.Add("folder28", area_data[j], 0);
                 data_listView.Items["folder28"].Group = grou_area_data;
-                data_cache = myarray[i];
                 data_listView.Items["folder28"].SubItems.Add(myarray[i++].ToString("X2"));
                 data_listView.Items["folder28"].SubItems.Add("语速" + data_cache);
                 j++;
@@ -2171,9 +2170,13 @@ namespace readFontlib
                             num = num + 2;
                         }
                     }
-                    data_listView.Items["folder39"].SubItems.Add(data_st);
+                    data_listView.Items["folder30"].SubItems.Add(data_st);
                     j++;
 
+                }
+                else
+                {
+                    j = j + 2;
                 }
 
             }
