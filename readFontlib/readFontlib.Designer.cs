@@ -560,11 +560,21 @@
             // vertical_numericUpDown
             // 
             resources.ApplyResources(this.vertical_numericUpDown, "vertical_numericUpDown");
+            this.vertical_numericUpDown.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.vertical_numericUpDown.Name = "vertical_numericUpDown";
             // 
             // level_numericUpDown
             // 
             resources.ApplyResources(this.level_numericUpDown, "level_numericUpDown");
+            this.level_numericUpDown.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
             this.level_numericUpDown.Name = "level_numericUpDown";
             // 
             // height_numericUpDown
