@@ -131,6 +131,7 @@
             this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -877,6 +878,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.语言ToolStripMenuItem,
+            this.帮助ToolStripMenuItem,
             this.关于ToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
@@ -912,6 +914,11 @@
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
+            // 
+            // 帮助ToolStripMenuItem
+            // 
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            resources.ApplyResources(this.帮助ToolStripMenuItem, "帮助ToolStripMenuItem");
             // 
             // readFontlib
             // 
@@ -1074,6 +1081,7 @@
         private System.Windows.Forms.Button out_excel_button;
         private System.Windows.Forms.Label label_mes;
         private System.Windows.Forms.RichTextBox data_after_transform_richTextBox;
+        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
     }
 }
 

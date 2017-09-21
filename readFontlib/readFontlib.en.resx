@@ -247,6 +247,12 @@
   <data name="clear_button" xml:space="preserve">
     <value>clear</value>
   </data>
+  <data name="hex2str_radioButton" xml:space="preserve">
+    <value>string to hex</value>
+  </data>
+  <data name="str2hex_radioButton" xml:space="preserve">
+    <value>hex to string</value>
+  </data>
   <!-- 机内码查询区域 —— end -->
   
   <!-- CRC16校验区域 —— start -->
@@ -264,6 +270,21 @@
   </data>
   <!-- CRC16校验区域 —— end -->
   
+   <!-- 协议解析区域 —— start -->
+  <data name="TabPages4" xml:space="preserve">
+    <value>Protocol analysis</value>
+  </data>
+  <data name="analysis_button" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="out_excel_button" xml:space="preserve">
+    <value>out excel</value>
+  </data>
+  <data name="label_mes" xml:space="preserve">
+    <value>escape character is red,forget the escape character is blue</value>
+  </data>
+  <!-- 协议解析区域 —— end -->
+  
   <!-- 标题栏区域 —— start -->
   <data name="语言" xml:space="preserve">
     <value>language</value>
@@ -277,6 +298,9 @@
   <data name="英文" xml:space="preserve">
     <value>English</value>
   </data>
+  <data name="帮助" xml:space="preserve">
+    <value>help</value>
+  </data>
   <data name="关于" xml:space="preserve">
     <value>about</value>
   </data>
@@ -285,4 +309,9 @@
   <data name="mes_openfile" xml:space="preserve">
     <value>Please open a font file first</value>
   </data>
+  
+  <data name="analysis_mes" xml:space="preserve">
+    <value>Data analysis can only detect a small part of the dynamic area data error, once the error is detected, but also need to seriously look at the agreement!</value>
+  </data>
+  
 </root>

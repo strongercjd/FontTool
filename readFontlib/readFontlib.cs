@@ -35,6 +35,7 @@ namespace readFontlib
         bool editFlag;
         public bool begin = false;
         string message_openfile = "请首先打开一个字库文件";
+        string analysis_mes = "数据解析只能检测出动态区数据一小部分错误，一旦检测出错误，还需要认真看协议！";
         string makefontsize = "大小：";
         string makefontwidth = "宽度：";
         string makefontheight = "高度：";
@@ -1349,6 +1350,8 @@ namespace readFontlib
             message.Text = rm.GetString("message");
             Transfor_button.Text = rm.GetString("Transfor_button");
             clear_button.Text = rm.GetString("clear_button");
+            str2hex_radioButton.Text = rm.GetString("str2hex_radioButton");
+            hex2str_radioButton.Text = rm.GetString("hex2str_radioButton");
             #endregion 机内码查询区域
 
             #region CRC16校验区域
@@ -1358,7 +1361,15 @@ namespace readFontlib
             crc_clear_button.Text = rm.GetString("crc_clear_button");
             #endregion CRC16校验区域
 
+            #region 协议解析区域
+            tabControl.TabPages[4].Text = rm.GetString("TabPages4");
+            analysis_button.Text = rm.GetString("analysis_button");
+            out_excel_button.Text = rm.GetString("out_excel_button");
+            label_mes.Text = rm.GetString("label_mes");
+            #endregion 协议解析区域
+
             message_openfile = rm.GetString("mes_openfile");
+            analysis_mes = rm.GetString("analysis_mes");
 
             return;
         }
@@ -1371,6 +1382,7 @@ namespace readFontlib
             中文繁体ToolStripMenuItem.Text = rm.GetString("中文繁体");
             英文ToolStripMenuItem.Text = rm.GetString("英文");
             关于ToolStripMenuItem.Text = rm.GetString("关于");
+            帮助ToolStripMenuItem.Text = rm.GetString("帮助");
 
             return;
         }
@@ -1392,7 +1404,7 @@ namespace readFontlib
         {
             if (e.TabPage == analysis)
             {
-                MessageBox.Show("数据解析只能检测出动态区数据一小部分错误，一旦检测出错误，还需要认真看协议！");
+                MessageBox.Show(analysis_mes);
             }
             
         }

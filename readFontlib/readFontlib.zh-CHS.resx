@@ -143,13 +143,13 @@
     <value>读取字库</value>
   </data>
   <data name="labelWidth" xml:space="preserve">
-    <value>宽</value>
+    <value>宽：</value>
   </data>
   <data name="labelHeight" xml:space="preserve">
-    <value>高</value>
+    <value>高：</value>
   </data>
   <data name="labelIndex" xml:space="preserve">
-    <value>编号</value>
+    <value>编号：</value>
   </data>
   <data name="up_button" xml:space="preserve">
     <value>上一个</value>
@@ -262,7 +262,28 @@
   <data name="crc_clear_button" xml:space="preserve">
     <value>清除</value>
   </data>
+  <data name="hex2str_radioButton" xml:space="preserve">
+    <value>字符转机内码</value>
+  </data>
+  <data name="str2hex_radioButton" xml:space="preserve">
+    <value>机内码转字符</value>
+  </data>
   <!-- CRC16校验区域 —— end -->
+  
+  <!-- 协议解析区域 —— start -->
+  <data name="TabPages4" xml:space="preserve">
+    <value>数据解析</value>
+  </data>
+  <data name="analysis_button" xml:space="preserve">
+    <value>解析</value>
+  </data>
+  <data name="out_excel_button" xml:space="preserve">
+    <value>输出excel</value>
+  </data>
+  <data name="label_mes" xml:space="preserve">
+    <value>除去帧头帧尾，转义字符为红色，忘记转义字符为蓝色</value>
+  </data>
+  <!-- 协议解析区域 —— end -->
   
   <!-- 标题栏区域 —— start -->
   <data name="语言" xml:space="preserve">
@@ -277,6 +298,9 @@
   <data name="英文" xml:space="preserve">
     <value>英文</value>
   </data>
+  <data name="帮助" xml:space="preserve">
+    <value>帮助</value>
+  </data>
   <data name="关于" xml:space="preserve">
     <value>关于</value>
   </data>
@@ -285,4 +309,9 @@
   <data name="mes_openfile" xml:space="preserve">
     <value>请首先打开一个字库文件</value>
   </data>
+  
+  <data name="analysis_mes" xml:space="preserve">
+    <value>数据解析只能检测出动态区数据一小部分错误，一旦检测出错误，还需要认真看协议！</value>
+  </data>
+  
 </root>
