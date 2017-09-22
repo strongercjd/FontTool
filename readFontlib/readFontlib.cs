@@ -2440,8 +2440,8 @@ namespace readFontlib
         private void analysis_button_Click(object sender, EventArgs e)
         {
             int i = 0;
-            try
-            {
+            //try
+            //{
                 string[] strCheckArray = Raw_data_textBox.Text.Split(' ');
                 byte[] myarray = new byte[strCheckArray.Length];
                 foreach (var tmp in strCheckArray)
@@ -2453,11 +2453,11 @@ namespace readFontlib
 
                 dynamic(myarray, i);
                 out_excel_button.Visible = true;
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("请输入正确格式的数据！");
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("请输入正确格式的数据！");
+            //}
         }
         #endregion 数据解析
 
