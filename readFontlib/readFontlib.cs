@@ -2007,9 +2007,20 @@ namespace readFontlib
             data_listView.Items.Add("folder17", area_data[j], 0);
             data_listView.Items["folder17"].Group = grou_area_data;
             data_listView.Items["folder17"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            i = i - 2;
-            data_int = myarray[i++] + myarray[i++] * 256;
-            data_listView.Items["folder17"].SubItems.Add("X："+ data_int.ToString());
+            i = i - 1;
+            if (myarray[i++] >> 7 == 1)
+            {
+                i = i - 2;
+                data_int = myarray[i++] + (myarray[i++]&0X7F) * 256;
+                data_listView.Items["folder17"].SubItems.Add("X：" + data_int.ToString()+ "(pixel)");
+            }
+            else
+            {
+                i = i - 2;
+                data_int = myarray[i++] + myarray[i++] * 256;
+                data_listView.Items["folder17"].SubItems.Add("X：" + data_int.ToString() + "(byte)");
+            }
+            
             j++;
 
 
@@ -2020,7 +2031,7 @@ namespace readFontlib
             data_listView.Items["folder18"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
             i = i - 2;
             data_int = myarray[i++] + myarray[i++] * 256;
-            data_listView.Items["folder18"].SubItems.Add("Y：" + data_int.ToString());
+            data_listView.Items["folder18"].SubItems.Add("Y：" + data_int.ToString() + "(byte)");
             j++;
 
 
@@ -2030,9 +2041,19 @@ namespace readFontlib
             data_listView.Items.Add("folder19", area_data[j], 0);
             data_listView.Items["folder19"].Group = grou_area_data;
             data_listView.Items["folder19"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            i = i - 2;
-            data_int = myarray[i++] + myarray[i++] * 256;
-            data_listView.Items["folder19"].SubItems.Add("区域宽度：" + data_int.ToString());
+            i = i - 1;
+            if (myarray[i++] >> 7 == 1)
+            {
+                i = i - 2;
+                data_int = myarray[i++] + (myarray[i++] & 0X7F) * 256;
+                data_listView.Items["folder19"].SubItems.Add("区域宽度：" + data_int.ToString() + "(pixel)");
+            }
+            else
+            {
+                i = i - 2;
+                data_int = myarray[i++] + myarray[i++] * 256;
+                data_listView.Items["folder19"].SubItems.Add("区域宽度：" + data_int.ToString() + "(byte)");
+            }
             j++;
 
 
@@ -2044,7 +2065,7 @@ namespace readFontlib
             data_listView.Items["folder20"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
             i = i - 2;
             data_int = myarray[i++] + myarray[i++] * 256;
-            data_listView.Items["folder20"].SubItems.Add("区域高度：" + data_int.ToString());
+            data_listView.Items["folder20"].SubItems.Add("区域高度：" + data_int.ToString() + "(byte)");
             j++;
 
 
@@ -2424,8 +2445,14 @@ namespace readFontlib
             }
             else
             {
-                data_listView.Items["folder40"].ForeColor = Color.Red;
-                data_listView.Items["folder40"].SubItems.Add("CRC校验值错误");
+                if (data_num == 0XFFFF)
+                    data_listView.Items["folder40"].SubItems.Add("不进行CRC校验");
+                else
+                {
+                    data_listView.Items["folder40"].ForeColor = Color.Red;
+                    data_listView.Items["folder40"].SubItems.Add("CRC校验值错误");
+                }
+                
             }
             
 
