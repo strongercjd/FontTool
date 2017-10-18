@@ -978,7 +978,7 @@ namespace readFontlib
             if (this.saveFileDlg.ShowDialog() == DialogResult.OK)
             {
                 //停止UI界面上的控件对 MatCharFont(MatrixFont 类) 对象数据的操作。
-                this.UIEnabled(false);
+                //this.UIEnabled(false);
 
                 //启动点阵数据文件生成的辅助线程。
                 
@@ -1117,7 +1117,7 @@ namespace readFontlib
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //恢复窗口的UI界面。
-            this.UIEnabled(true);
+            //this.UIEnabled(true);
             this.tssLblStatus.Text = "";
             this.pgbBuilderProc.Value = 0;
             statusStripProc.Visible = false;

@@ -69,7 +69,10 @@ namespace readFontlib
 
         private int make_rotate_num;
 
-
+        private bool m_rotate0;
+        private bool m_rotate90;
+        private bool m_rotate180;
+        private bool m_rotate270;
 
         #endregion ×Ö¶Î
 
@@ -274,7 +277,7 @@ namespace readFontlib
         {
             get
             {
-                return this.m_IsEqualWH;
+                return this.m_rotate0;
             }
             set
             {
@@ -291,7 +294,7 @@ namespace readFontlib
         {
             get
             {
-                return this.m_IsEqualWH;
+                return this.m_rotate90;
             }
             set
             {
@@ -308,7 +311,7 @@ namespace readFontlib
         {
             get
             {
-                return this.m_IsEqualWH;
+                return this.m_rotate180;
             }
             set
             {
@@ -325,7 +328,7 @@ namespace readFontlib
         {
             get
             {
-                return this.m_IsEqualWH;
+                return this.m_rotate270;
             }
             set
             {
