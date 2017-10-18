@@ -66,6 +66,11 @@ namespace readFontlib
         /// </summary>
         private bool m_IsEqualWH;
 
+
+        private int make_rotate_num;
+
+
+
         #endregion 字段
 
         #region 构造函数
@@ -90,7 +95,7 @@ namespace readFontlib
             this.m_OffsetY = offsetY;
             this.m_IsEqualWH = isEqualWH;
 
-            this.DIBChanged(matFont, demoChar.ToString(), charWidth, charHeight, offsetX, offsetY);
+            this.DIBChanged(matFont, demoChar.ToString(), charWidth, charHeight, offsetX, offsetY, make_rotate_num);
         }
 
         #endregion
@@ -114,7 +119,7 @@ namespace readFontlib
                 }
                 this.m_MatFont = value;
                 this.DIBChanged(value, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY);
+                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
             }
         }
 
@@ -133,13 +138,13 @@ namespace readFontlib
                 {
                     this.m_DemoChar = value[0].ToString();
                     this.DIBChanged(this.MatFont, value[0].ToString(), this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY);
+                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
                 }
                 else
                 {
                     this.m_DemoChar = string.Empty;
                     this.DIBChanged(this.MatFont, " ", this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY);
+                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
                 }
             }
         }
@@ -160,12 +165,12 @@ namespace readFontlib
                 {
                     this.m_CharWidth = value;
                     this.DIBChanged(this.MatFont, this.DemoChar, value,
-                                value, this.OffsetX, this.OffsetY);
+                                value, this.OffsetX, this.OffsetY, make_rotate_num);
                 }
                 else
                 {
                     this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                    value, this.OffsetX, this.OffsetY);
+                                    value, this.OffsetX, this.OffsetY, make_rotate_num);
                 }
             }
         }
@@ -186,12 +191,12 @@ namespace readFontlib
                 {
                     this.m_CharHeight = value;
                     this.DIBChanged(this.MatFont, this.DemoChar, value,
-                                value, this.OffsetX, this.OffsetY);
+                                value, this.OffsetX, this.OffsetY, make_rotate_num);
                 }
                 else
                 {
                     this.DIBChanged(this.MatFont, this.DemoChar, value,
-                                    this.CharHeight, this.OffsetX, this.OffsetY);
+                                    this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
                 }
             }
         }
@@ -209,7 +214,7 @@ namespace readFontlib
             {
                 this.m_OffsetX = value;
                 this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, value, this.OffsetY);
+                                this.CharHeight, value, this.OffsetY, make_rotate_num);
             }
         }
 
@@ -226,7 +231,7 @@ namespace readFontlib
             {
                 this.m_OffsetY = value;
                 this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, value);
+                                this.CharHeight, this.OffsetX, value, make_rotate_num);
             }
         }
 
@@ -260,7 +265,75 @@ namespace readFontlib
                 else
                 {
                     this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY);
+                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
+                }
+            }
+        }
+
+        public bool rotate0
+        {
+            get
+            {
+                return this.m_IsEqualWH;
+            }
+            set
+            {
+                if (value)
+                {
+                    make_rotate_num = 0;
+                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
+                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
+                }
+            }
+        }
+
+        public bool rotate90
+        {
+            get
+            {
+                return this.m_IsEqualWH;
+            }
+            set
+            {
+                if (value)
+                {
+                    make_rotate_num = 1;
+                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
+                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
+                }
+            }
+        }
+
+        public bool rotate180
+        {
+            get
+            {
+                return this.m_IsEqualWH;
+            }
+            set
+            {
+                if (value)
+                {
+                    make_rotate_num = 2;
+                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
+                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
+                }
+            }
+        }
+
+        public bool rotate270
+        {
+            get
+            {
+                return this.m_IsEqualWH;
+            }
+            set
+            {
+                if (value)
+                {
+                    make_rotate_num = 3;
+                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
+                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
                 }
             }
         }
@@ -279,7 +352,7 @@ namespace readFontlib
         /// <param name="offsetX">字符的水平偏移量。</param>
         /// <param name="offsetY">字符的垂直偏移量。</param>
         private void DIBChanged(Font matFont, string demoChar,
-            int charWidth, int charHeight, int offsetX, int offsetY)
+            int charWidth, int charHeight, int offsetX, int offsetY, int make_rotate_num)
         {
             try
             {
@@ -306,6 +379,12 @@ namespace readFontlib
                     //释放资源。
                     g.Dispose();
                 }
+                if (make_rotate_num == 1)
+                    m_MatBitmap.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                if (make_rotate_num == 2)
+                    m_MatBitmap.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                if (make_rotate_num == 3)
+                    m_MatBitmap.RotateFlip(RotateFlipType.Rotate270FlipNone);
             }
             catch (Exception ecp)   //异常处理。
             {

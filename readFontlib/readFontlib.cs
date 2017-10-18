@@ -40,6 +40,7 @@ namespace readFontlib
         string makefontwidth = "宽度：";
         string makefontheight = "高度：";
 
+
         System.Windows.Forms.Timer time1 = new System.Windows.Forms.Timer();
 
 
@@ -1237,6 +1238,18 @@ namespace readFontlib
 
                 //“当前字符预览”下的Panel。
                 this.font_viwer_panel.DataBindings.Add("BackgroundImage", this.MatCharFont, "MatBitmap",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                this.radioButton0.DataBindings.Add("Checked", this.MatCharFont, "rotate0",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                this.radioButton90.DataBindings.Add("Checked", this.MatCharFont, "rotate90",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                this.radioButton180.DataBindings.Add("Checked", this.MatCharFont, "rotate180",
+                    true, DataSourceUpdateMode.OnPropertyChanged);
+
+                this.radioButton270.DataBindings.Add("Checked", this.MatCharFont, "rotate270",
                     true, DataSourceUpdateMode.OnPropertyChanged);
             }
             else

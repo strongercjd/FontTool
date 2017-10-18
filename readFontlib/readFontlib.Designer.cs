@@ -72,8 +72,6 @@
             this.GB2312 = new System.Windows.Forms.RadioButton();
             this.GBK = new System.Windows.Forms.RadioButton();
             this.pgbBuilderProc = new System.Windows.Forms.ProgressBar();
-            this.statusStripProc = new System.Windows.Forms.StatusStrip();
-            this.tssLblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.set_groupBox = new System.Windows.Forms.GroupBox();
             this.rdBtnNonStandard = new System.Windows.Forms.RadioButton();
             this.rdBtnStandard = new System.Windows.Forms.RadioButton();
@@ -87,6 +85,11 @@
             this.font_height_label = new System.Windows.Forms.Label();
             this.font_width_label = new System.Windows.Forms.Label();
             this.font_groupBox = new System.Windows.Forms.GroupBox();
+            this.rotate_groupBox = new System.Windows.Forms.GroupBox();
+            this.radioButton0 = new System.Windows.Forms.RadioButton();
+            this.radioButton270 = new System.Windows.Forms.RadioButton();
+            this.radioButton90 = new System.Windows.Forms.RadioButton();
+            this.radioButton180 = new System.Windows.Forms.RadioButton();
             this.font_viwer_textBox = new System.Windows.Forms.TextBox();
             this.font_view_label = new System.Windows.Forms.Label();
             this.font_size_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -96,6 +99,8 @@
             this.font_message_textBox = new System.Windows.Forms.TextBox();
             this.preview_groupBox = new System.Windows.Forms.GroupBox();
             this.font_viwer_panel = new System.Windows.Forms.Panel();
+            this.statusStripProc = new System.Windows.Forms.StatusStrip();
+            this.tssLblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.jineima = new System.Windows.Forms.TabPage();
             this.str2hex_radioButton = new System.Windows.Forms.RadioButton();
             this.hex2str_radioButton = new System.Windows.Forms.RadioButton();
@@ -130,8 +135,8 @@
             this.中文简体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
@@ -143,16 +148,17 @@
             this.view_edit_fontlib.SuspendLayout();
             this.make_fontlib.SuspendLayout();
             this.binama_groupBox.SuspendLayout();
-            this.statusStripProc.SuspendLayout();
             this.set_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).BeginInit();
             this.font_groupBox.SuspendLayout();
+            this.rotate_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.font_size_numericUpDown)).BeginInit();
             this.message_groupBox.SuspendLayout();
             this.preview_groupBox.SuspendLayout();
+            this.statusStripProc.SuspendLayout();
             this.jineima.SuspendLayout();
             this.CRC16.SuspendLayout();
             this.check_groupBox.SuspendLayout();
@@ -463,10 +469,10 @@
             // 
             this.make_fontlib.Controls.Add(this.binama_groupBox);
             this.make_fontlib.Controls.Add(this.pgbBuilderProc);
-            this.make_fontlib.Controls.Add(this.statusStripProc);
             this.make_fontlib.Controls.Add(this.set_groupBox);
             this.make_fontlib.Controls.Add(this.font_groupBox);
             this.make_fontlib.Controls.Add(this.preview_groupBox);
+            this.make_fontlib.Controls.Add(this.statusStripProc);
             resources.ApplyResources(this.make_fontlib, "make_fontlib");
             this.make_fontlib.Name = "make_fontlib";
             this.make_fontlib.UseVisualStyleBackColor = true;
@@ -505,18 +511,6 @@
             // 
             resources.ApplyResources(this.pgbBuilderProc, "pgbBuilderProc");
             this.pgbBuilderProc.Name = "pgbBuilderProc";
-            // 
-            // statusStripProc
-            // 
-            this.statusStripProc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tssLblStatus});
-            resources.ApplyResources(this.statusStripProc, "statusStripProc");
-            this.statusStripProc.Name = "statusStripProc";
-            // 
-            // tssLblStatus
-            // 
-            this.tssLblStatus.Name = "tssLblStatus";
-            resources.ApplyResources(this.tssLblStatus, "tssLblStatus");
             // 
             // set_groupBox
             // 
@@ -620,6 +614,7 @@
             // 
             // font_groupBox
             // 
+            this.font_groupBox.Controls.Add(this.rotate_groupBox);
             this.font_groupBox.Controls.Add(this.font_viwer_textBox);
             this.font_groupBox.Controls.Add(this.font_view_label);
             this.font_groupBox.Controls.Add(this.font_size_numericUpDown);
@@ -629,6 +624,43 @@
             resources.ApplyResources(this.font_groupBox, "font_groupBox");
             this.font_groupBox.Name = "font_groupBox";
             this.font_groupBox.TabStop = false;
+            // 
+            // rotate_groupBox
+            // 
+            this.rotate_groupBox.Controls.Add(this.radioButton0);
+            this.rotate_groupBox.Controls.Add(this.radioButton270);
+            this.rotate_groupBox.Controls.Add(this.radioButton90);
+            this.rotate_groupBox.Controls.Add(this.radioButton180);
+            this.rotate_groupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.rotate_groupBox, "rotate_groupBox");
+            this.rotate_groupBox.Name = "rotate_groupBox";
+            this.rotate_groupBox.TabStop = false;
+            // 
+            // radioButton0
+            // 
+            resources.ApplyResources(this.radioButton0, "radioButton0");
+            this.radioButton0.Checked = true;
+            this.radioButton0.Name = "radioButton0";
+            this.radioButton0.TabStop = true;
+            this.radioButton0.UseVisualStyleBackColor = true;
+            // 
+            // radioButton270
+            // 
+            resources.ApplyResources(this.radioButton270, "radioButton270");
+            this.radioButton270.Name = "radioButton270";
+            this.radioButton270.UseVisualStyleBackColor = true;
+            // 
+            // radioButton90
+            // 
+            resources.ApplyResources(this.radioButton90, "radioButton90");
+            this.radioButton90.Name = "radioButton90";
+            this.radioButton90.UseVisualStyleBackColor = true;
+            // 
+            // radioButton180
+            // 
+            resources.ApplyResources(this.radioButton180, "radioButton180");
+            this.radioButton180.Name = "radioButton180";
+            this.radioButton180.UseVisualStyleBackColor = true;
             // 
             // font_viwer_textBox
             // 
@@ -688,6 +720,18 @@
             this.font_viwer_panel.BackColor = System.Drawing.SystemColors.Control;
             resources.ApplyResources(this.font_viwer_panel, "font_viwer_panel");
             this.font_viwer_panel.Name = "font_viwer_panel";
+            // 
+            // statusStripProc
+            // 
+            this.statusStripProc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssLblStatus});
+            resources.ApplyResources(this.statusStripProc, "statusStripProc");
+            this.statusStripProc.Name = "statusStripProc";
+            // 
+            // tssLblStatus
+            // 
+            this.tssLblStatus.Name = "tssLblStatus";
+            resources.ApplyResources(this.tssLblStatus, "tssLblStatus");
             // 
             // jineima
             // 
@@ -910,15 +954,15 @@
             resources.ApplyResources(this.英文ToolStripMenuItem, "英文ToolStripMenuItem");
             this.英文ToolStripMenuItem.Click += new System.EventHandler(this.英文ToolStripMenuItem_Click);
             // 
-            // 关于ToolStripMenuItem
-            // 
-            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
-            // 
             // 帮助ToolStripMenuItem
             // 
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
             resources.ApplyResources(this.帮助ToolStripMenuItem, "帮助ToolStripMenuItem");
+            // 
+            // 关于ToolStripMenuItem
+            // 
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
             // 
             // readFontlib
             // 
@@ -949,8 +993,6 @@
             this.make_fontlib.PerformLayout();
             this.binama_groupBox.ResumeLayout(false);
             this.binama_groupBox.PerformLayout();
-            this.statusStripProc.ResumeLayout(false);
-            this.statusStripProc.PerformLayout();
             this.set_groupBox.ResumeLayout(false);
             this.set_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).EndInit();
@@ -959,10 +1001,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).EndInit();
             this.font_groupBox.ResumeLayout(false);
             this.font_groupBox.PerformLayout();
+            this.rotate_groupBox.ResumeLayout(false);
+            this.rotate_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.font_size_numericUpDown)).EndInit();
             this.message_groupBox.ResumeLayout(false);
             this.message_groupBox.PerformLayout();
             this.preview_groupBox.ResumeLayout(false);
+            this.statusStripProc.ResumeLayout(false);
+            this.statusStripProc.PerformLayout();
             this.jineima.ResumeLayout(false);
             this.jineima.PerformLayout();
             this.CRC16.ResumeLayout(false);
@@ -1082,6 +1128,11 @@
         private System.Windows.Forms.Label label_mes;
         private System.Windows.Forms.RichTextBox data_after_transform_richTextBox;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
+        private System.Windows.Forms.GroupBox rotate_groupBox;
+        private System.Windows.Forms.RadioButton radioButton270;
+        private System.Windows.Forms.RadioButton radioButton90;
+        private System.Windows.Forms.RadioButton radioButton180;
+        private System.Windows.Forms.RadioButton radioButton0;
     }
 }
 
