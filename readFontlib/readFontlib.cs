@@ -1119,6 +1119,7 @@ namespace readFontlib
             //恢复窗口的UI界面。
             //this.UIEnabled(true);
             this.tssLblStatus.Text = "";
+            font_viwer_textBox.Text = "";
             this.pgbBuilderProc.Value = 0;
             statusStripProc.Visible = false;
             pgbBuilderProc.Visible = false;
@@ -1352,6 +1353,9 @@ namespace readFontlib
             rdBtnNonStandard.Text = rm.GetString("rdBtnNonStandard");
             rdBtnStandard.Text = rm.GetString("rdBtnStandard");
             make_font_button.Text = rm.GetString("make_font_button");
+            rotate_groupBox.Text = rm.GetString("rotate_groupBox");
+
+
             makefontsize = rm.GetString("makefontsize");
             makefontwidth = rm.GetString("font_width_label"); 
             makefontheight = rm.GetString("font_height_label");

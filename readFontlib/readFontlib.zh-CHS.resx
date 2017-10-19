@@ -232,6 +232,9 @@
   <data name="makefontsize" xml:space="preserve">
     <value>大小</value>
   </data>
+  <data name="rotate_groupBox" xml:space="preserve">
+    <value>字体顺时针旋转</value>
+  </data>
   <!-- 制作字库区域 —— end -->
   
   <!-- 机内码查询区域 —— start -->
