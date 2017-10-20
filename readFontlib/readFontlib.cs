@@ -763,6 +763,38 @@ namespace readFontlib
         {
             calIndex();
         }
+
+
+
+        private void viwer_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+            byte[] array = System.Text.Encoding.Default.GetBytes(viwer_textBox.Text);
+            if (array.Length == 1)
+            {
+                if (radioButtonUnit.Checked != true)
+                {
+                    MessageBox.Show("现在选择是中文字库，请不要输入英文或阿拉伯数字");
+                }
+                else
+                {
+                    comboBoxWei.Text = (array[0]).ToString("X8").Remove(0, 6);
+                }
+            }
+            if (array.Length == 2)
+            {
+                if (radioButtonUnit.Checked == true)
+                {
+                    MessageBox.Show("现在选择是英文字库，请不要输入汉字");
+                }
+                else
+                {
+                    comboBoxQu.Text = (array[0]).ToString("X8").Remove(0, 6);
+                    comboBoxWei.Text = (array[1]).ToString("X8").Remove(0, 6);
+                }
+            }
+        }
+
         #endregion 字库查看修改的代码
 
 
@@ -862,6 +894,7 @@ namespace readFontlib
             input_textBox.Clear();
             yima_textBox.Clear();
         }
+
 
         #endregion 机内码查询的代码
 

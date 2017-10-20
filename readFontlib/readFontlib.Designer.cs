@@ -35,6 +35,7 @@
             this.edit_mode_Button = new System.Windows.Forms.RadioButton();
             this.pictureBoxFont = new System.Windows.Forms.PictureBox();
             this.groupBoxSet = new System.Windows.Forms.GroupBox();
+            this.viwer_textBox = new System.Windows.Forms.TextBox();
             this.down_button = new System.Windows.Forms.Button();
             this.up_button = new System.Windows.Forms.Button();
             this.GBK_radioButton = new System.Windows.Forms.RadioButton();
@@ -45,6 +46,7 @@
             this.labelIndex = new System.Windows.Forms.Label();
             this.numericUpDownIndex = new System.Windows.Forms.NumericUpDown();
             this.buttonReadFont = new System.Windows.Forms.Button();
+            this.viwer_font_label = new System.Windows.Forms.Label();
             this.labelFontName = new System.Windows.Forms.Label();
             this.textBoxFontName = new System.Windows.Forms.TextBox();
             this.numericUpDownHeight = new System.Windows.Forms.NumericUpDown();
@@ -204,6 +206,7 @@
             // 
             // groupBoxSet
             // 
+            this.groupBoxSet.Controls.Add(this.viwer_textBox);
             this.groupBoxSet.Controls.Add(this.down_button);
             this.groupBoxSet.Controls.Add(this.up_button);
             this.groupBoxSet.Controls.Add(this.GBK_radioButton);
@@ -214,6 +217,7 @@
             this.groupBoxSet.Controls.Add(this.labelIndex);
             this.groupBoxSet.Controls.Add(this.numericUpDownIndex);
             this.groupBoxSet.Controls.Add(this.buttonReadFont);
+            this.groupBoxSet.Controls.Add(this.viwer_font_label);
             this.groupBoxSet.Controls.Add(this.labelFontName);
             this.groupBoxSet.Controls.Add(this.textBoxFontName);
             this.groupBoxSet.Controls.Add(this.numericUpDownHeight);
@@ -223,6 +227,12 @@
             resources.ApplyResources(this.groupBoxSet, "groupBoxSet");
             this.groupBoxSet.Name = "groupBoxSet";
             this.groupBoxSet.TabStop = false;
+            // 
+            // viwer_textBox
+            // 
+            resources.ApplyResources(this.viwer_textBox, "viwer_textBox");
+            this.viwer_textBox.Name = "viwer_textBox";
+            this.viwer_textBox.TextChanged += new System.EventHandler(this.viwer_textBox_TextChanged);
             // 
             // down_button
             // 
@@ -307,6 +317,11 @@
             this.buttonReadFont.Name = "buttonReadFont";
             this.buttonReadFont.UseVisualStyleBackColor = true;
             this.buttonReadFont.Click += new System.EventHandler(this.buttonReadFont_Click);
+            // 
+            // viwer_font_label
+            // 
+            resources.ApplyResources(this.viwer_font_label, "viwer_font_label");
+            this.viwer_font_label.Name = "viwer_font_label";
             // 
             // labelFontName
             // 
@@ -1133,6 +1148,8 @@
         private System.Windows.Forms.RadioButton radioButton90;
         private System.Windows.Forms.RadioButton radioButton180;
         private System.Windows.Forms.RadioButton radioButton0;
+        private System.Windows.Forms.TextBox viwer_textBox;
+        private System.Windows.Forms.Label viwer_font_label;
     }
 }
 
