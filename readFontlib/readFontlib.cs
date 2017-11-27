@@ -1959,10 +1959,10 @@ namespace readFontlib
             data_listView.Items["folder10"].SubItems.Add(myarray[i++].ToString("X2"));
             switch (data_cache)
             {
-                case 0:
+                case 1:
                     data_listView.Items["folder10"].SubItems.Add("控制器必须回复");
                     break;
-                case 1:
+                case 2:
                     data_listView.Items["folder10"].SubItems.Add("控制器不必回复");
                     break;
                 default:
@@ -2020,460 +2020,464 @@ namespace readFontlib
             data_listView.Items["folder14"].SubItems.Add(myarray[i++].ToString("X2"));
             data_listView.Items["folder14"].SubItems.Add("更新" + data_cache.ToString("x") + "个区域");
             j++;
-
-
-
-            /*区域数据长度*/
-            data_listView.Items.Add("folder15", dynamic_cmd[j], 0);
-            data_listView.Items["folder15"].Group = group_cmd;
-            data_listView.Items["folder15"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            i = i - 2;
-            data_int = myarray[i++] + myarray[i++] * 256;
-            data_listView.Items["folder15"].SubItems.Add("区域数据长度："+ data_int.ToString());
-            j++;
-
-
-            j = 0;
-            ListViewGroup grou_area_data = new ListViewGroup();  //创建区域数据格式分组
-            grou_area_data.Header = "区域数据格式";  //设置组的标题。
-            grou_area_data.HeaderAlignment = HorizontalAlignment.Left;//设置组标题文本的对齐方式。（默认为Left）
-            this.data_listView.Groups.Add(grou_area_data);    //把区域数据格式分组添加到listview中
-
-
-
-
-            
-            /*区域类型*/
-            data_listView.Items.Add("folder16", area_data[j], 0);
-            data_listView.Items["folder16"].Group = grou_area_data;
-            data_listView.Items["folder16"].SubItems.Add(myarray[i++].ToString("X2"));
-            data_listView.Items["folder16"].SubItems.Add("区域类型");
-            j++;
-
-
-
-
-            /*X坐标*/
-            data_listView.Items.Add("folder17", area_data[j], 0);
-            data_listView.Items["folder17"].Group = grou_area_data;
-            data_listView.Items["folder17"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            i = i - 1;
-            if (myarray[i++] >> 7 == 1)
+            int area_num;
+            uint j_cache;
+            area_num = data_cache;
+            j_cache = j;
+            for (int n = 0; n < area_num; n++)
             {
-                i = i - 2;
-                data_int = myarray[i++] + (myarray[i++]&0X7F) * 256;
-                data_listView.Items["folder17"].SubItems.Add("X：" + data_int.ToString()+ "(pixel)");
-            }
-            else
-            {
+                j = j_cache;
+                /*区域数据长度*/
+                data_listView.Items.Add("folder" + n.ToString() + "15", dynamic_cmd[j], 0);
+                data_listView.Items["folder" + n.ToString() + "15"].Group = group_cmd;
+                data_listView.Items["folder" + n.ToString() + "15"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
                 i = i - 2;
                 data_int = myarray[i++] + myarray[i++] * 256;
-                data_listView.Items["folder17"].SubItems.Add("X：" + data_int.ToString() + "(byte)");
-            }
-            
-            j++;
-
-
-
-            /*Y坐标*/
-            data_listView.Items.Add("folder18", area_data[j], 0);
-            data_listView.Items["folder18"].Group = grou_area_data;
-            data_listView.Items["folder18"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            i = i - 2;
-            data_int = myarray[i++] + myarray[i++] * 256;
-            data_listView.Items["folder18"].SubItems.Add("Y：" + data_int.ToString() + "(byte)");
-            j++;
-
-
-
-
-            /*区域宽度*/
-            data_listView.Items.Add("folder19", area_data[j], 0);
-            data_listView.Items["folder19"].Group = grou_area_data;
-            data_listView.Items["folder19"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            i = i - 1;
-            if (myarray[i++] >> 7 == 1)
-            {
-                i = i - 2;
-                data_int = myarray[i++] + (myarray[i++] & 0X7F) * 256;
-                data_listView.Items["folder19"].SubItems.Add("区域宽度：" + data_int.ToString() + "(pixel)");
-            }
-            else
-            {
-                i = i - 2;
-                data_int = myarray[i++] + myarray[i++] * 256;
-                data_listView.Items["folder19"].SubItems.Add("区域宽度：" + data_int.ToString() + "(byte)");
-            }
-            j++;
-
-
-
-
-            /*区域高度*/
-            data_listView.Items.Add("folder20", area_data[j], 0);
-            data_listView.Items["folder20"].Group = grou_area_data;
-            data_listView.Items["folder20"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            i = i - 2;
-            data_int = myarray[i++] + myarray[i++] * 256;
-            data_listView.Items["folder20"].SubItems.Add("区域高度：" + data_int.ToString() + "(byte)");
-            j++;
-
-
-           
-            /*动态区编号*/
-            data_listView.Items.Add("folder21", area_data[j], 0);
-            data_listView.Items["folder21"].Group = grou_area_data;
-            data_listView.Items["folder21"].SubItems.Add(myarray[i++].ToString("X2"));
-            i--;
-            data_listView.Items["folder21"].SubItems.Add("编号是："+ myarray[i++].ToString());
-            j++;
-
-
-
-
-            /*行间距*/
-            data_listView.Items.Add("folder22", area_data[j], 0);
-            data_listView.Items["folder22"].Group = grou_area_data;
-            data_listView.Items["folder22"].SubItems.Add(myarray[i++].ToString("X2"));
-            i--;
-            data_listView.Items["folder22"].SubItems.Add("行间距："+ myarray[i++].ToString());
-            j++;
-
-
-
-
-            /*动态区运行模式*/
-            data_listView.Items.Add("folder23", area_data[j], 0);
-            data_listView.Items["folder23"].Group = grou_area_data;
-            data_cache = myarray[i];
-            data_listView.Items["folder23"].SubItems.Add(myarray[i++].ToString("X2"));
-            switch (data_cache)
-            {
-                case 0:
-                    data_listView.Items["folder23"].SubItems.Add("循环显示");
-                    break;
-                case 1:
-                    data_listView.Items["folder23"].SubItems.Add("显示完成停留最后一页");
-                    break;
-                case 2:
-                    data_listView.Items["folder23"].SubItems.Add("超时未更新删除");
-                    break;
-                default:
-                    data_listView.Items["folder23"].ForeColor = Color.Red;
-                    data_listView.Items["folder23"].SubItems.Add("数据错误");
-                    break;
-            }
-            j++;
-
-
-
-            /*动态区超时时间*/
-            data_listView.Items.Add("folder24", area_data[j], 0);
-            data_listView.Items["folder24"].Group = grou_area_data;
-            data_listView.Items["folder24"].SubItems.Add(turntring(myarray[i++].ToString("X2") + myarray[i++].ToString("X2").ToUpper(), 2));
-            i = i - 2;
-            data_int = myarray[i++] + myarray[i++] * 256;
-            data_listView.Items["folder24"].SubItems.Add("超时时间：" + data_int.ToString());
-            j++;
-
-
-
-            /*是否是能语音*/
-            data_listView.Items.Add("folder25", area_data[j], 0);
-            data_listView.Items["folder25"].Group = grou_area_data;
-            data_cache = myarray[i];
-            data_listView.Items["folder25"].SubItems.Add(myarray[i++].ToString("X2"));
-
-            switch (data_cache)
-            {
-                case 0:
-                    data_listView.Items["folder25"].SubItems.Add("不使能语音");
-                    break;
-                case 1:
-                    data_listView.Items["folder25"].SubItems.Add("播放data内容");
-                    break;
-                case 2:
-                    data_listView.Items["folder25"].SubItems.Add("播放sounddata内容");
-                    break;
-                default:
-                    data_listView.Items["folder25"].ForeColor = Color.Red;
-                    data_listView.Items["folder25"].SubItems.Add("数据错误");
-                    break;
-            }
-            if (data_cache == 0)
-            {
-                j = j + 6;
-            }
-            else
-            {
-                j++;
-                /*发音人/发音次数*/
-                data_listView.Items.Add("folder26", area_data[j], 0);
-                data_listView.Items["folder26"].Group = grou_area_data;
-                data_listView.Items["folder26"].SubItems.Add(myarray[i++].ToString("X2"));
-                data_listView.Items["folder26"].SubItems.Add("Bit0-Bit3发音人，Bit4-Bit7播放次数");
+                data_listView.Items["folder" + n.ToString() + "15"].SubItems.Add("区域数据长度：" + data_int.ToString());
                 j++;
 
-                /*音量*/
-                data_listView.Items.Add("folder27", area_data[j], 0);
-                data_listView.Items["folder27"].Group = grou_area_data;
-                data_listView.Items["folder27"].SubItems.Add(myarray[i++].ToString("X2"));
-                i--;
-                data_listView.Items["folder27"].SubItems.Add("音量：" + myarray[i++].ToString());
+
+                j = 0;
+                ListViewGroup grou_area_data = new ListViewGroup();  //创建区域数据格式分组
+                grou_area_data.Header = "区域"+n.ToString()+"数据格式";  //设置组的标题。
+                grou_area_data.HeaderAlignment = HorizontalAlignment.Left;//设置组标题文本的对齐方式。（默认为Left）
+                this.data_listView.Groups.Add(grou_area_data);    //把区域数据格式分组添加到listview中
+
+
+
+
+
+                /*区域类型*/
+                data_listView.Items.Add("folder" + n.ToString() + "16", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "16"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "16"].SubItems.Add(myarray[i++].ToString("X2"));
+                data_listView.Items["folder" + n.ToString() + "16"].SubItems.Add("区域类型");
                 j++;
 
-                
-                /*语速*/
-                data_listView.Items.Add("folder28", area_data[j], 0);
-                data_listView.Items["folder28"].Group = grou_area_data;
-                data_listView.Items["folder28"].SubItems.Add(myarray[i++].ToString("X2"));
-                i--;
-                data_listView.Items["folder28"].SubItems.Add("语速：" + myarray[i++].ToString());
-                j++;
 
-                if (data_cache == 2)
+
+
+                /*X坐标*/
+                data_listView.Items.Add("folder" + n.ToString() + "17", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "17"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "17"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
+                i = i - 1;
+                if (myarray[i++] >> 7 == 1)
                 {
-
-                    /*读音数据长度*/
-                    data_listView.Items.Add("folder29", area_data[j], 0);
-                    data_listView.Items["folder29"].Group = grou_area_data;
-                    data_listView.Items["folder29"].SubItems.Add(turntring(myarray[i++].ToString("X2") +
-                                                                            myarray[i++].ToString("X2") +
-                                                                            myarray[i++].ToString("X2") +
-                                                                            myarray[i++].ToString("X2").ToUpper(), 4));
-                    
-                    i = i - 4;
-
-                    data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++] << 8) + (UInt32)(myarray[i++] << 16) + (UInt32)(myarray[i++] << 24);
-                    data_listView.Items["folder29"].SubItems.Add("读音数据长度："+ data_num.ToString());
-                    j++;
-
-
-
-                    /*读音数据*/
-                    data_listView.Items.Add("folder30", area_data[j], 0);
-                    data_listView.Items["folder30"].Group = grou_area_data;
-
-
-                    string data_st = string.Empty;
-                    for (num = 0; num < data_num; num++)
-                    {
-                        data_st = data_st + myarray[i++].ToString("X2");
-                    }
-
-                    data_listView.Items["folder30"].SubItems.Add(data_st);
-
-
-                    i = i - data_num;
-                    data_st = string.Empty;
-                    string data_result = string.Empty;
-                    for (num = 0; num < data_num;)
-                    {
-                        if (myarray[i] < 0x81)
-                        {
-                            System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
-                            byte[] byteArray = new byte[] { (byte)myarray[i++] };
-                            string strCharacter = asciiEncoding.GetString(byteArray);
-                            data_st = data_st + strCharacter;
-                            num++;
-                        }
-                        else
-                        {
-                            byte[] bytes = new byte[2];
-                            bytes[0] = myarray[i++];
-                            bytes[1] = myarray[i++];
-                            System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
-                            data_result = chs.GetString(bytes);
-                            data_st = data_st + data_result;
-                            num = num + 2;
-                        }
-                    }
-                    data_listView.Items["folder30"].SubItems.Add(data_st);
-                    j++;
-
+                    i = i - 2;
+                    data_int = myarray[i++] + (myarray[i++] & 0X7F) * 256;
+                    data_listView.Items["folder" + n.ToString() + "17"].SubItems.Add("X：" + data_int.ToString() + "(pixel)");
                 }
                 else
                 {
-                    j = j + 2;
+                    i = i - 2;
+                    data_int = myarray[i++] + myarray[i++] * 256;
+                    data_listView.Items["folder" + n.ToString() + "17"].SubItems.Add("X：" + data_int.ToString() + "(byte)");
                 }
 
-            }
+                j++;
+
+
+
+                /*Y坐标*/
+                data_listView.Items.Add("folder" + n.ToString() + "18", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "18"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "18"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
+                i = i - 2;
+                data_int = myarray[i++] + myarray[i++] * 256;
+                data_listView.Items["folder" + n.ToString() + "18"].SubItems.Add("Y：" + data_int.ToString() + "(byte)");
+                j++;
 
 
 
 
-            
-            /*保留字节*/
-            data_listView.Items.Add("folder31", area_data[j], 0);
-            data_listView.Items["folder31"].Group = grou_area_data;
-            data_listView.Items["folder31"].SubItems.Add(turntring(myarray[i++].ToString("X2") + myarray[i++].ToString("X2").ToUpper(), 2));
-            data_listView.Items["folder31"].SubItems.Add("保留字节");
-            j++;
-
-
-            /*是否单行显示*/
-            data_listView.Items.Add("folder32", area_data[j], 0);
-            data_listView.Items["folder32"].Group = grou_area_data;
-            data_cache = myarray[i];
-            data_listView.Items["folder32"].SubItems.Add(myarray[i++].ToString("X2"));
-            switch (data_cache)
-            {
-                case 1:
-                    data_listView.Items["folder32"].SubItems.Add("单行显示");
-                    break;
-                case 2:
-                    data_listView.Items["folder32"].SubItems.Add("多行显示");
-                    break;
-                default:
-                    data_listView.Items["folder32"].ForeColor = Color.Red;
-                    data_listView.Items["folder32"].SubItems.Add("数据错误");
-                    break;
-            }
-            j++;
-
-
-
-            /*是否自动换行*/
-            data_listView.Items.Add("folder33", area_data[j], 0);
-            data_listView.Items["folder33"].Group = grou_area_data;
-            data_cache = myarray[i];
-            data_listView.Items["folder33"].SubItems.Add(myarray[i++].ToString("X2"));
-            switch (data_cache)
-            {
-                case 1:
-                    data_listView.Items["folder33"].SubItems.Add("不自动换行");
-                    break;
-                case 2:
-                    data_listView.Items["folder33"].SubItems.Add("自动换行");
-                    break;
-                default:
-                    data_listView.Items["folder33"].ForeColor = Color.Red;
-                    data_listView.Items["folder33"].SubItems.Add("数据错误");
-                    break;
-            }
-            j++;
-
-
-            
-            /*显示方式*/
-            data_listView.Items.Add("folder34", area_data[j], 0);
-            data_listView.Items["folder34"].Group = grou_area_data;
-            data_cache = myarray[i];
-            data_listView.Items["folder34"].SubItems.Add(myarray[i++].ToString("X2"));
-            switch (data_cache)
-            {
-                case 1:
-                    data_listView.Items["folder34"].SubItems.Add("静止显示");
-                    break;
-                case 2:
-                    data_listView.Items["folder34"].SubItems.Add("快速打出");
-                    break;
-                case 3:
-                    data_listView.Items["folder34"].SubItems.Add("向左移动");
-                    break;
-                case 4:
-                    data_listView.Items["folder34"].SubItems.Add("向右移动");
-                    break;
-                case 5:
-                    data_listView.Items["folder34"].SubItems.Add("向上移动");
-                    break;
-                case 26:
-                    data_listView.Items["folder34"].SubItems.Add("向下移动");
-                    break;
-                default:
-                    data_listView.Items["folder34"].ForeColor = Color.Red;
-                    data_listView.Items["folder34"].SubItems.Add("数据错误");
-                    break;
-            }
-            j++;
-
-
-
-
-            /*退出方式*/
-            data_listView.Items.Add("folder35", area_data[j], 0);
-            data_listView.Items["folder35"].Group = grou_area_data;
-            data_listView.Items["folder35"].SubItems.Add(myarray[i++].ToString("X2"));
-            data_listView.Items["folder35"].SubItems.Add("退出方式");
-            j++;
-
-
-
-
-            /*显示速度*/
-            data_listView.Items.Add("folder36", area_data[j], 0);
-            data_listView.Items["folder36"].Group = grou_area_data;
-            data_listView.Items["folder36"].SubItems.Add(myarray[i++].ToString("X2"));
-            i--;
-            data_listView.Items["folder36"].SubItems.Add("显示速度："+ myarray[i++].ToString("X2"));
-            j++;
-
-
-
-            /*停留时间*/
-            data_listView.Items.Add("folder37", area_data[j], 0);
-            data_listView.Items["folder37"].Group = grou_area_data;
-            data_listView.Items["folder37"].SubItems.Add(myarray[i++].ToString("X2"));
-            i--;
-            data_listView.Items["folder37"].SubItems.Add("停留时间："+ myarray[i++].ToString()+"(单位0.5S)");
-            j++;
-
-
-            /*数据长度*/
-            data_listView.Items.Add("folder38", area_data[j], 0);
-            data_listView.Items["folder38"].Group = grou_area_data;
-            data_listView.Items["folder38"].SubItems.Add(turntring(myarray[i++].ToString("X2") +
-                                                                    myarray[i++].ToString("X2") +
-                                                                    myarray[i++].ToString("X2") +
-                                                                    myarray[i++].ToString("X2").ToUpper(), 4));
-            i = i - 4;
-            
-            data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++]<< 8) + (UInt32)(myarray[i++] << 16) + (UInt32)(myarray[i++] << 24);
-            data_listView.Items["folder38"].SubItems.Add("数据长度："+data_num.ToString());
-            j++;
-
-
-
-            /*数据*/
-            data_listView.Items.Add("folder39", area_data[j], 0);
-            data_listView.Items["folder39"].Group = grou_area_data;
-
-
-            string st = string.Empty;
-            for (num = 0; num < data_num ; num++)
-            {
-                st = st + myarray[i++].ToString("X2");
-            }
-
-            data_listView.Items["folder39"].SubItems.Add(st);
-
-
-            i = i - data_num;
-            st = string.Empty;
-            string result = string.Empty;
-            for (num = 0; num < data_num;)
-            {
-                if (myarray[i] < 0x81)
+                /*区域宽度*/
+                data_listView.Items.Add("folder" + n.ToString() + "19", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "19"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "19"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
+                i = i - 1;
+                if (myarray[i++] >> 7 == 1)
                 {
-                    System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
-                    byte[] byteArray = new byte[] { (byte)myarray[i++] };
-                    string strCharacter = asciiEncoding.GetString(byteArray);
-                    st = st + strCharacter;
-                    num++;
+                    i = i - 2;
+                    data_int = myarray[i++] + (myarray[i++] & 0X7F) * 256;
+                    data_listView.Items["folder" + n.ToString() + "19"].SubItems.Add("区域宽度：" + data_int.ToString() + "(pixel)");
                 }
                 else
                 {
-                    byte[] bytes = new byte[2];
-                    bytes[0] = myarray[i++];
-                    bytes[1] = myarray[i++];
-                    System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
-                    result = chs.GetString(bytes);
-                    st = st + result;
-                    num = num + 2;
+                    i = i - 2;
+                    data_int = myarray[i++] + myarray[i++] * 256;
+                    data_listView.Items["folder" + n.ToString() + "19"].SubItems.Add("区域宽度：" + data_int.ToString() + "(byte)");
                 }
-            }
-            data_listView.Items["folder39"].SubItems.Add(st);
+                j++;
 
+
+
+
+                /*区域高度*/
+                data_listView.Items.Add("folder" + n.ToString() + "20", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "20"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "20"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
+                i = i - 2;
+                data_int = myarray[i++] + myarray[i++] * 256;
+                data_listView.Items["folder" + n.ToString() + "20"].SubItems.Add("区域高度：" + data_int.ToString() + "(byte)");
+                j++;
+
+
+
+                /*动态区编号*/
+                data_listView.Items.Add("folder" + n.ToString() + "21", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "21"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "21"].SubItems.Add(myarray[i++].ToString("X2"));
+                i--;
+                data_listView.Items["folder" + n.ToString() + "21"].SubItems.Add("编号是：" + myarray[i++].ToString());
+                j++;
+
+
+
+
+                /*行间距*/
+                data_listView.Items.Add("folder" + n.ToString() + "22", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "22"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "22"].SubItems.Add(myarray[i++].ToString("X2"));
+                i--;
+                data_listView.Items["folder" + n.ToString() + "22"].SubItems.Add("行间距：" + myarray[i++].ToString());
+                j++;
+
+
+
+
+                /*动态区运行模式*/
+                data_listView.Items.Add("folder" + n.ToString() + "23", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "23"].Group = grou_area_data;
+                data_cache = myarray[i];
+                data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add(myarray[i++].ToString("X2"));
+                switch (data_cache)
+                {
+                    case 0:
+                        data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add("循环显示");
+                        break;
+                    case 1:
+                        data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add("显示完成停留最后一页");
+                        break;
+                    case 2:
+                        data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add("超时未更新删除");
+                        break;
+                    default:
+                        data_listView.Items["folder" + n.ToString() + "23"].ForeColor = Color.Red;
+                        data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add("数据错误");
+                        break;
+                }
+                j++;
+
+
+
+                /*动态区超时时间*/
+                data_listView.Items.Add("folder" + n.ToString() + "24", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "24"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "24"].SubItems.Add(turntring(myarray[i++].ToString("X2") + myarray[i++].ToString("X2").ToUpper(), 2));
+                i = i - 2;
+                data_int = myarray[i++] + myarray[i++] * 256;
+                data_listView.Items["folder" + n.ToString() + "24"].SubItems.Add("超时时间：" + data_int.ToString());
+                j++;
+
+
+
+                /*是否是能语音*/
+                data_listView.Items.Add("folder" + n.ToString() + "25", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "25"].Group = grou_area_data;
+                data_cache = myarray[i];
+                data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add(myarray[i++].ToString("X2"));
+
+                switch (data_cache)
+                {
+                    case 0:
+                        data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add("不使能语音");
+                        break;
+                    case 1:
+                        data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add("播放data内容");
+                        break;
+                    case 2:
+                        data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add("播放sounddata内容");
+                        break;
+                    default:
+                        data_listView.Items["folder" + n.ToString() + "25"].ForeColor = Color.Red;
+                        data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add("数据错误");
+                        break;
+                }
+                if (data_cache == 0)
+                {
+                    j = j + 6;
+                }
+                else
+                {
+                    j++;
+                    /*发音人/发音次数*/
+                    data_listView.Items.Add("folder" + n.ToString() + "26", area_data[j], 0);
+                    data_listView.Items["folder" + n.ToString() + "26"].Group = grou_area_data;
+                    data_listView.Items["folder" + n.ToString() + "26"].SubItems.Add(myarray[i++].ToString("X2"));
+                    data_listView.Items["folder" + n.ToString() + "26"].SubItems.Add("Bit0-Bit3发音人，Bit4-Bit7播放次数");
+                    j++;
+
+                    /*音量*/
+                    data_listView.Items.Add("folder" + n.ToString() + "27", area_data[j], 0);
+                    data_listView.Items["folder" + n.ToString() + "27"].Group = grou_area_data;
+                    data_listView.Items["folder" + n.ToString() + "27"].SubItems.Add(myarray[i++].ToString("X2"));
+                    i--;
+                    data_listView.Items["folder" + n.ToString() + "27"].SubItems.Add("音量：" + myarray[i++].ToString());
+                    j++;
+
+
+                    /*语速*/
+                    data_listView.Items.Add("folder" + n.ToString() + "28", area_data[j], 0);
+                    data_listView.Items["folder" + n.ToString() + "28"].Group = grou_area_data;
+                    data_listView.Items["folder" + n.ToString() + "28"].SubItems.Add(myarray[i++].ToString("X2"));
+                    i--;
+                    data_listView.Items["folder" + n.ToString() + "28"].SubItems.Add("语速：" + myarray[i++].ToString());
+                    j++;
+
+                    if (data_cache == 2)
+                    {
+
+                        /*读音数据长度*/
+                        data_listView.Items.Add("folder" + n.ToString() + "29", area_data[j], 0);
+                        data_listView.Items["folder" + n.ToString() + "29"].Group = grou_area_data;
+                        data_listView.Items["folder" + n.ToString() + "29"].SubItems.Add(turntring(myarray[i++].ToString("X2") +
+                                                                                myarray[i++].ToString("X2") +
+                                                                                myarray[i++].ToString("X2") +
+                                                                                myarray[i++].ToString("X2").ToUpper(), 4));
+
+                        i = i - 4;
+
+                        data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++] << 8) + (UInt32)(myarray[i++] << 16) + (UInt32)(myarray[i++] << 24);
+                        data_listView.Items["folder" + n.ToString() + "29"].SubItems.Add("读音数据长度：" + data_num.ToString());
+                        j++;
+
+
+
+                        /*读音数据*/
+                        data_listView.Items.Add("folder" + n.ToString() + "30", area_data[j], 0);
+                        data_listView.Items["folder" + n.ToString() + "30"].Group = grou_area_data;
+
+
+                        string data_st = string.Empty;
+                        for (num = 0; num < data_num; num++)
+                        {
+                            data_st = data_st + myarray[i++].ToString("X2");
+                        }
+
+                        data_listView.Items["folder" + n.ToString() + "30"].SubItems.Add(data_st);
+
+
+                        i = i - data_num;
+                        data_st = string.Empty;
+                        string data_result = string.Empty;
+                        for (num = 0; num < data_num;)
+                        {
+                            if (myarray[i] < 0x81)
+                            {
+                                System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
+                                byte[] byteArray = new byte[] { (byte)myarray[i++] };
+                                string strCharacter = asciiEncoding.GetString(byteArray);
+                                data_st = data_st + strCharacter;
+                                num++;
+                            }
+                            else
+                            {
+                                byte[] bytes = new byte[2];
+                                bytes[0] = myarray[i++];
+                                bytes[1] = myarray[i++];
+                                System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
+                                data_result = chs.GetString(bytes);
+                                data_st = data_st + data_result;
+                                num = num + 2;
+                            }
+                        }
+                        data_listView.Items["folder" + n.ToString() + "30"].SubItems.Add(data_st);
+                        j++;
+
+                    }
+                    else
+                    {
+                        j = j + 2;
+                    }
+
+                }
+
+
+
+
+
+                /*保留字节*/
+                data_listView.Items.Add("folder" + n.ToString() + "31", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "31"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "31"].SubItems.Add(turntring(myarray[i++].ToString("X2") + myarray[i++].ToString("X2").ToUpper(), 2));
+                data_listView.Items["folder" + n.ToString() + "31"].SubItems.Add("保留字节");
+                j++;
+
+
+                /*是否单行显示*/
+                data_listView.Items.Add("folder" + n.ToString() + "32", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "32"].Group = grou_area_data;
+                data_cache = myarray[i];
+                data_listView.Items["folder" + n.ToString() + "32"].SubItems.Add(myarray[i++].ToString("X2"));
+                switch (data_cache)
+                {
+                    case 1:
+                        data_listView.Items["folder" + n.ToString() + "32"].SubItems.Add("单行显示");
+                        break;
+                    case 2:
+                        data_listView.Items["folder" + n.ToString() + "32"].SubItems.Add("多行显示");
+                        break;
+                    default:
+                        data_listView.Items["folder" + n.ToString() + "32"].ForeColor = Color.Red;
+                        data_listView.Items["folder" + n.ToString() + "32"].SubItems.Add("数据错误");
+                        break;
+                }
+                j++;
+
+
+
+                /*是否自动换行*/
+                data_listView.Items.Add("folder" + n.ToString() + "33", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "33"].Group = grou_area_data;
+                data_cache = myarray[i];
+                data_listView.Items["folder" + n.ToString() + "33"].SubItems.Add(myarray[i++].ToString("X2"));
+                switch (data_cache)
+                {
+                    case 1:
+                        data_listView.Items["folder" + n.ToString() + "33"].SubItems.Add("不自动换行");
+                        break;
+                    case 2:
+                        data_listView.Items["folder" + n.ToString() + "33"].SubItems.Add("自动换行");
+                        break;
+                    default:
+                        data_listView.Items["folder" + n.ToString() + "33"].ForeColor = Color.Red;
+                        data_listView.Items["folder" + n.ToString() + "33"].SubItems.Add("数据错误");
+                        break;
+                }
+                j++;
+
+
+
+                /*显示方式*/
+                data_listView.Items.Add("folder" + n.ToString() + "34", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "34"].Group = grou_area_data;
+                data_cache = myarray[i];
+                data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add(myarray[i++].ToString("X2"));
+                switch (data_cache)
+                {
+                    case 1:
+                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("静止显示");
+                        break;
+                    case 2:
+                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("快速打出");
+                        break;
+                    case 3:
+                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("向左移动");
+                        break;
+                    case 4:
+                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("向右移动");
+                        break;
+                    case 5:
+                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("向上移动");
+                        break;
+                    case 26:
+                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("向下移动");
+                        break;
+                    default:
+                        data_listView.Items["folder" + n.ToString() + "34"].ForeColor = Color.Red;
+                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("数据错误");
+                        break;
+                }
+                j++;
+
+
+
+
+                /*退出方式*/
+                data_listView.Items.Add("folder" + n.ToString() + "35", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "35"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "35"].SubItems.Add(myarray[i++].ToString("X2"));
+                data_listView.Items["folder" + n.ToString() + "35"].SubItems.Add("退出方式");
+                j++;
+
+
+
+
+                /*显示速度*/
+                data_listView.Items.Add("folder" + n.ToString() + "36", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "36"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "36"].SubItems.Add(myarray[i++].ToString("X2"));
+                i--;
+                data_listView.Items["folder" + n.ToString() + "36"].SubItems.Add("显示速度：" + myarray[i++].ToString("X2"));
+                j++;
+
+
+
+                /*停留时间*/
+                data_listView.Items.Add("folder" + n.ToString() + "37", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "37"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "37"].SubItems.Add(myarray[i++].ToString("X2"));
+                i--;
+                data_listView.Items["folder" + n.ToString() + "37"].SubItems.Add("停留时间：" + myarray[i++].ToString() + "(单位0.5S)");
+                j++;
+
+
+                /*数据长度*/
+                data_listView.Items.Add("folder" + n.ToString() + "38", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "38"].Group = grou_area_data;
+                data_listView.Items["folder" + n.ToString() + "38"].SubItems.Add(turntring(myarray[i++].ToString("X2") +
+                                                                        myarray[i++].ToString("X2") +
+                                                                        myarray[i++].ToString("X2") +
+                                                                        myarray[i++].ToString("X2").ToUpper(), 4));
+                i = i - 4;
+
+                data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++] << 8) + (UInt32)(myarray[i++] << 16) + (UInt32)(myarray[i++] << 24);
+                data_listView.Items["folder" + n.ToString() + "38"].SubItems.Add("数据长度：" + data_num.ToString());
+                j++;
+
+
+
+                /*数据*/
+                data_listView.Items.Add("folder" + n.ToString() + "39", area_data[j], 0);
+                data_listView.Items["folder" + n.ToString() + "39"].Group = grou_area_data;
+
+
+                string st = string.Empty;
+                for (num = 0; num < data_num; num++)
+                {
+                    st = st + myarray[i++].ToString("X2");
+                }
+
+                data_listView.Items["folder" + n.ToString() + "39"].SubItems.Add(st);
+
+
+                i = i - data_num;
+                st = string.Empty;
+                string result = string.Empty;
+                for (num = 0; num < data_num;)
+                {
+                    if (myarray[i] < 0x81)
+                    {
+                        System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
+                        byte[] byteArray = new byte[] { (byte)myarray[i++] };
+                        string strCharacter = asciiEncoding.GetString(byteArray);
+                        st = st + strCharacter;
+                        num++;
+                    }
+                    else
+                    {
+                        byte[] bytes = new byte[2];
+                        bytes[0] = myarray[i++];
+                        bytes[1] = myarray[i++];
+                        System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
+                        result = chs.GetString(bytes);
+                        st = st + result;
+                        num = num + 2;
+                    }
+                }
+                data_listView.Items["folder" + n.ToString() + "39"].SubItems.Add(st);
+            }
 
             ListViewGroup grou_CRC = new ListViewGroup();  //创建CRC校验分组
             grou_CRC.Header = "CRC校验";  //设置组的标题。
