@@ -1655,7 +1655,6 @@ namespace readFontlib
                 if (data_t == 0XA5) {
                     if ((PHY0_flag1.Rcv_state == 2) || (PHY0_flag1.Rcv_state == 3) || (PHY0_flag1.Rcv_state == 4))
                     {
-                        MessageBox.Show("A5忘记转义，第 " + j + " 个数据");
                         myarray[PHY0_flag1.RCV_data_num] = data_t;
                         trsf_flg[PHY0_flag1.RCV_data_num] = 1;
                         PHY0_flag1.RCV_data_num++;
@@ -1674,7 +1673,6 @@ namespace readFontlib
                         {
                             case 0X5A:
                                 if (j + 1 < size) {
-                                    MessageBox.Show("5A忘记转义，第 " + j + " 个数据");
                                     myarray[PHY0_flag1.RCV_data_num] = data_t;
                                     trsf_flg[PHY0_flag1.RCV_data_num] = 1;
                                     PHY0_flag1.RCV_data_num++;
@@ -1738,6 +1736,25 @@ namespace readFontlib
                                 }
                                 break;
                             default:
+                                if (PHY0_flag1.Rcv_state == 3)
+                                {
+                                    trsf_flg[PHY0_flag1.RCV_data_num] = 1;
+                                    myarray[PHY0_flag1.RCV_data_num] = 0X5B;
+                                    PHY0_flag1.RCV_data_num++;
+                                }
+                                else
+                                {
+                                    if (PHY0_flag1.Rcv_state == 2)
+                                    {
+                                        trsf_flg[PHY0_flag1.RCV_data_num] = 1;
+                                        myarray[PHY0_flag1.RCV_data_num] = 0X6A;
+                                        PHY0_flag1.RCV_data_num++;
+                                    }
+                                    else
+                                    {
+                                        trsf_flg[PHY0_flag1.RCV_data_num] = 0;
+                                    }
+                                }
                                 myarray[PHY0_flag1.RCV_data_num] = data_t;
                                 PHY0_flag1.RCV_data_num++;
                                 PHY0_flag1.Rcv_state = 4;
@@ -1753,22 +1770,24 @@ namespace readFontlib
             str = "";
             for (i= 0;i< PHY0_flag1.RCV_data_num;i++)
             {
-                if ((myarray[i] == 0X5A) || (myarray[i] == 0XA5)|| (myarray[i] == 0XA6) || (myarray[i] == 0X5B))
+                if (trsf_flg[i] == 1)
                 {
-                    if (trsf_flg[i] == 1)
+                    data_after_transform_richTextBox.SelectionColor = Color.Red;
+                    j = 1;
+                }
+                else
+                {
+                    if (trsf_flg[i] == 2)
                     {
                         data_after_transform_richTextBox.SelectionColor = Color.Blue;
                     }
                     else
                     {
-                        data_after_transform_richTextBox.SelectionColor = Color.Red;
+                        data_after_transform_richTextBox.SelectionColor = Color.Black;
                     }
-                    
+                        
                 }
-                else
-                {
-                    data_after_transform_richTextBox.SelectionColor = Color.Black;
-                }
+ 
                 str1 = myarray[i].ToString("x");
                 str = (str1.Length == 1 ? "0" + str1 : str1);
                 if (i == 0)
@@ -1783,6 +1802,12 @@ namespace readFontlib
                 data_after_transform_richTextBox.AppendText(str);
             }
 
+            if (j==1)
+            {
+                MessageBox.Show("有异常数据,异常数据已经标红色");
+                return 0;
+            }
+                
             i = 0;
             j = 0;
             this.data_listView.BeginUpdate();   //数据更新，UI暂时挂起，直到EndUpdate绘制控件，可以有效避免闪烁并大大提高加载速度
