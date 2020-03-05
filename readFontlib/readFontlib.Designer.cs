@@ -63,12 +63,19 @@
             this.buttonGetData = new System.Windows.Forms.Button();
             this.toolTipReadFont = new System.Windows.Forms.ToolTip(this.components);
             this.logo = new System.Windows.Forms.LinkLabel();
-            this.author = new System.Windows.Forms.LinkLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.textBoxtime = new System.Windows.Forms.TextBox();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.view_edit_fontlib = new System.Windows.Forms.TabPage();
             this.make_fontlib = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.K_radioButton = new System.Windows.Forms.RadioButton();
+            this.q_radioButton = new System.Windows.Forms.RadioButton();
+            this.rotate_groupBox = new System.Windows.Forms.GroupBox();
+            this.radioButton0 = new System.Windows.Forms.RadioButton();
+            this.radioButton270 = new System.Windows.Forms.RadioButton();
+            this.radioButton90 = new System.Windows.Forms.RadioButton();
+            this.radioButton180 = new System.Windows.Forms.RadioButton();
             this.binama_groupBox = new System.Windows.Forms.GroupBox();
             this.ASCII = new System.Windows.Forms.RadioButton();
             this.GB2312 = new System.Windows.Forms.RadioButton();
@@ -87,11 +94,6 @@
             this.font_height_label = new System.Windows.Forms.Label();
             this.font_width_label = new System.Windows.Forms.Label();
             this.font_groupBox = new System.Windows.Forms.GroupBox();
-            this.rotate_groupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton0 = new System.Windows.Forms.RadioButton();
-            this.radioButton270 = new System.Windows.Forms.RadioButton();
-            this.radioButton90 = new System.Windows.Forms.RadioButton();
-            this.radioButton180 = new System.Windows.Forms.RadioButton();
             this.font_viwer_textBox = new System.Windows.Forms.TextBox();
             this.font_view_label = new System.Windows.Forms.Label();
             this.font_size_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -131,7 +133,6 @@
             this.fontDlg = new System.Windows.Forms.FontDialog();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.bgwFileBuilder = new System.ComponentModel.BackgroundWorker();
-            this.author_qq_picture = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.语言ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.中文简体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -149,6 +150,8 @@
             this.tabControl.SuspendLayout();
             this.view_edit_fontlib.SuspendLayout();
             this.make_fontlib.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.rotate_groupBox.SuspendLayout();
             this.binama_groupBox.SuspendLayout();
             this.set_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).BeginInit();
@@ -156,7 +159,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).BeginInit();
             this.font_groupBox.SuspendLayout();
-            this.rotate_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.font_size_numericUpDown)).BeginInit();
             this.message_groupBox.SuspendLayout();
             this.preview_groupBox.SuspendLayout();
@@ -165,7 +167,6 @@
             this.CRC16.SuspendLayout();
             this.check_groupBox.SuspendLayout();
             this.analysis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.author_qq_picture)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -441,13 +442,6 @@
             this.logo.TabStop = true;
             this.logo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logo_LinkClicked);
             // 
-            // author
-            // 
-            resources.ApplyResources(this.author, "author");
-            this.author.Name = "author";
-            this.author.TabStop = true;
-            this.author.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.author_LinkClicked);
-            // 
             // timer
             // 
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
@@ -482,6 +476,8 @@
             // 
             // make_fontlib
             // 
+            this.make_fontlib.Controls.Add(this.groupBox1);
+            this.make_fontlib.Controls.Add(this.rotate_groupBox);
             this.make_fontlib.Controls.Add(this.binama_groupBox);
             this.make_fontlib.Controls.Add(this.pgbBuilderProc);
             this.make_fontlib.Controls.Add(this.set_groupBox);
@@ -491,6 +487,65 @@
             resources.ApplyResources(this.make_fontlib, "make_fontlib");
             this.make_fontlib.Name = "make_fontlib";
             this.make_fontlib.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.K_radioButton);
+            this.groupBox1.Controls.Add(this.q_radioButton);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // K_radioButton
+            // 
+            resources.ApplyResources(this.K_radioButton, "K_radioButton");
+            this.K_radioButton.Checked = true;
+            this.K_radioButton.Name = "K_radioButton";
+            this.K_radioButton.TabStop = true;
+            this.K_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // q_radioButton
+            // 
+            resources.ApplyResources(this.q_radioButton, "q_radioButton");
+            this.q_radioButton.Name = "q_radioButton";
+            this.q_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // rotate_groupBox
+            // 
+            this.rotate_groupBox.Controls.Add(this.radioButton0);
+            this.rotate_groupBox.Controls.Add(this.radioButton270);
+            this.rotate_groupBox.Controls.Add(this.radioButton90);
+            this.rotate_groupBox.Controls.Add(this.radioButton180);
+            this.rotate_groupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.rotate_groupBox, "rotate_groupBox");
+            this.rotate_groupBox.Name = "rotate_groupBox";
+            this.rotate_groupBox.TabStop = false;
+            // 
+            // radioButton0
+            // 
+            resources.ApplyResources(this.radioButton0, "radioButton0");
+            this.radioButton0.Checked = true;
+            this.radioButton0.Name = "radioButton0";
+            this.radioButton0.TabStop = true;
+            this.radioButton0.UseVisualStyleBackColor = true;
+            // 
+            // radioButton270
+            // 
+            resources.ApplyResources(this.radioButton270, "radioButton270");
+            this.radioButton270.Name = "radioButton270";
+            this.radioButton270.UseVisualStyleBackColor = true;
+            // 
+            // radioButton90
+            // 
+            resources.ApplyResources(this.radioButton90, "radioButton90");
+            this.radioButton90.Name = "radioButton90";
+            this.radioButton90.UseVisualStyleBackColor = true;
+            // 
+            // radioButton180
+            // 
+            resources.ApplyResources(this.radioButton180, "radioButton180");
+            this.radioButton180.Name = "radioButton180";
+            this.radioButton180.UseVisualStyleBackColor = true;
             // 
             // binama_groupBox
             // 
@@ -629,7 +684,6 @@
             // 
             // font_groupBox
             // 
-            this.font_groupBox.Controls.Add(this.rotate_groupBox);
             this.font_groupBox.Controls.Add(this.font_viwer_textBox);
             this.font_groupBox.Controls.Add(this.font_view_label);
             this.font_groupBox.Controls.Add(this.font_size_numericUpDown);
@@ -639,43 +693,6 @@
             resources.ApplyResources(this.font_groupBox, "font_groupBox");
             this.font_groupBox.Name = "font_groupBox";
             this.font_groupBox.TabStop = false;
-            // 
-            // rotate_groupBox
-            // 
-            this.rotate_groupBox.Controls.Add(this.radioButton0);
-            this.rotate_groupBox.Controls.Add(this.radioButton270);
-            this.rotate_groupBox.Controls.Add(this.radioButton90);
-            this.rotate_groupBox.Controls.Add(this.radioButton180);
-            this.rotate_groupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(this.rotate_groupBox, "rotate_groupBox");
-            this.rotate_groupBox.Name = "rotate_groupBox";
-            this.rotate_groupBox.TabStop = false;
-            // 
-            // radioButton0
-            // 
-            resources.ApplyResources(this.radioButton0, "radioButton0");
-            this.radioButton0.Checked = true;
-            this.radioButton0.Name = "radioButton0";
-            this.radioButton0.TabStop = true;
-            this.radioButton0.UseVisualStyleBackColor = true;
-            // 
-            // radioButton270
-            // 
-            resources.ApplyResources(this.radioButton270, "radioButton270");
-            this.radioButton270.Name = "radioButton270";
-            this.radioButton270.UseVisualStyleBackColor = true;
-            // 
-            // radioButton90
-            // 
-            resources.ApplyResources(this.radioButton90, "radioButton90");
-            this.radioButton90.Name = "radioButton90";
-            this.radioButton90.UseVisualStyleBackColor = true;
-            // 
-            // radioButton180
-            // 
-            resources.ApplyResources(this.radioButton180, "radioButton180");
-            this.radioButton180.Name = "radioButton180";
-            this.radioButton180.UseVisualStyleBackColor = true;
             // 
             // font_viwer_textBox
             // 
@@ -888,6 +905,7 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.data_listView.HideSelection = false;
             resources.ApplyResources(this.data_listView, "data_listView");
             this.data_listView.Name = "data_listView";
             this.data_listView.UseCompatibleStateImageBehavior = false;
@@ -925,13 +943,6 @@
             // 
             this.bgwFileBuilder.DoWork += new System.ComponentModel.DoWorkEventHandler(this.bgwFileBuilder_DoWork);
             this.bgwFileBuilder.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.bgwFileBuilder_RunWorkerCompleted);
-            // 
-            // author_qq_picture
-            // 
-            resources.ApplyResources(this.author_qq_picture, "author_qq_picture");
-            this.author_qq_picture.Name = "author_qq_picture";
-            this.author_qq_picture.TabStop = false;
-            this.author_qq_picture.Click += new System.EventHandler(this.author_qq_picture_Click);
             // 
             // menuStrip1
             // 
@@ -983,10 +994,8 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.author_qq_picture);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.textBoxtime);
-            this.Controls.Add(this.author);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -1006,6 +1015,10 @@
             this.view_edit_fontlib.ResumeLayout(false);
             this.make_fontlib.ResumeLayout(false);
             this.make_fontlib.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.rotate_groupBox.ResumeLayout(false);
+            this.rotate_groupBox.PerformLayout();
             this.binama_groupBox.ResumeLayout(false);
             this.binama_groupBox.PerformLayout();
             this.set_groupBox.ResumeLayout(false);
@@ -1016,8 +1029,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).EndInit();
             this.font_groupBox.ResumeLayout(false);
             this.font_groupBox.PerformLayout();
-            this.rotate_groupBox.ResumeLayout(false);
-            this.rotate_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.font_size_numericUpDown)).EndInit();
             this.message_groupBox.ResumeLayout(false);
             this.message_groupBox.PerformLayout();
@@ -1031,7 +1042,6 @@
             this.check_groupBox.ResumeLayout(false);
             this.analysis.ResumeLayout(false);
             this.analysis.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.author_qq_picture)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -1069,7 +1079,6 @@
         private System.Windows.Forms.RadioButton View_mode_Button;
         private System.Windows.Forms.CheckBox check_data_format;
         private System.Windows.Forms.LinkLabel logo;
-        private System.Windows.Forms.LinkLabel author;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TextBox textBoxtime;
         private System.Windows.Forms.TabControl tabControl;
@@ -1123,7 +1132,6 @@
         private System.Windows.Forms.RadioButton GBK;
         private System.Windows.Forms.RadioButton GB2312;
         private System.Windows.Forms.GroupBox binama_groupBox;
-        private System.Windows.Forms.PictureBox author_qq_picture;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 语言ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 中文简体ToolStripMenuItem;
@@ -1150,6 +1158,9 @@
         private System.Windows.Forms.RadioButton radioButton0;
         private System.Windows.Forms.TextBox viwer_textBox;
         private System.Windows.Forms.Label viwer_font_label;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton K_radioButton;
+        private System.Windows.Forms.RadioButton q_radioButton;
     }
 }
 

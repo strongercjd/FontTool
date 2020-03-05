@@ -444,6 +444,7 @@ namespace readFontlib
             this.time1.Start();
             textBoxtime.Text = DateTime.Now.ToString();
             this.makefont_DataInFormLoad();
+            this.tabControl.TabPages[4].Parent = null;//设置父容器为null，隐藏解析的TabPage
         }
 
         private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)//字模显示区鼠标左键按下事件
@@ -1007,7 +1008,26 @@ namespace readFontlib
                 }
             }
 
-            
+            if (q_radioButton.Checked == true)//6Q3的字库
+            {
+                Random rd = new Random();
+                int i = rd.Next();
+                if (ASCII.Checked == true)
+                {
+                    this.saveFileDlg.FileName = "E" + (i/100%10).ToString() + (i / 10 % 10).ToString() + (i % 10).ToString();
+                }
+                else
+                {
+                    this.saveFileDlg.FileName = "O" + (i / 100 % 10).ToString() + (i / 10 % 10).ToString() + (i % 10).ToString();
+                }
+                saveFileDlg.Filter = null;
+
+                MessageBox.Show("6Q3字库中文字库名字首字母是O，英文是E。后面3个数字随意。比如系统生成8*16英文字库名字随机生成E025，生成完毕你也可以将其修改为E000，下载进入6Q3控制器中，调用\\FE000，代表调用的是英文8*16的字库。如果你不修改名字，就把E025下载进入控制器，那么调用\\FE000，代表调用的是英文8*16的字库", "系统提示",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
+
             if (this.saveFileDlg.ShowDialog() == DialogResult.OK)
             {
                 //停止UI界面上的控件对 MatCharFont(MatrixFont 类) 对象数据的操作。
@@ -1022,13 +1042,86 @@ namespace readFontlib
         private void bgwFileBuilder_DoWork(object sender, DoWorkEventArgs e)
         {
             string path = (string)e.Argument;
-            
+
+            uint filecheck = 0;
+
+            byte[] filecheck_byte = new byte[4];
+
+
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
             {
                 ////将点阵字体的字符宽度和高度写入文件的头部。
-                //fs.WriteByte((byte)Math.Min(this.MatCharFont.CharWidth, 100));
-                //fs.WriteByte((byte)Math.Min(this.MatCharFont.CharHeight, 100));
-                if(GB2312.Checked == true)
+                if (q_radioButton.Checked == true)//6Q3的字库
+                {
+                    fs.WriteByte((byte)0x01);
+                    filecheck = filecheck + 0x01;
+
+                    fs.WriteByte((byte)0x80);
+                    filecheck = filecheck + 0x80;
+
+                    fs.WriteByte((byte)0x10);
+                    filecheck = filecheck + 0x01;
+
+                    for (int i = 0; i < 61; i++)
+                    {
+                        fs.WriteByte((byte)0x00);
+                        filecheck = filecheck + 0x00;
+                    }
+
+                    fs.WriteByte((byte)0x00);//标准字库
+                    filecheck = filecheck + 0x00;
+
+                    if (GB2312.Checked == true)
+                    {
+                        fs.WriteByte((byte)0x01);
+                        filecheck = filecheck + 0x01;
+
+                        fs.WriteByte((byte)0x01);
+                        filecheck = filecheck + 0x01;
+                    }
+                    if (GBK.Checked == true)
+                    {
+                        fs.WriteByte((byte)0x02);
+                        filecheck = filecheck + 0x02;
+
+                        fs.WriteByte((byte)0x02);
+                        filecheck = filecheck + 0x02;
+                    }
+                    if (ASCII.Checked == true)
+                    {
+                        fs.WriteByte((byte)0x00);
+                        filecheck = filecheck + 0x00;
+
+                        fs.WriteByte((byte)0x00);
+                        filecheck = filecheck + 0x00;
+                    }
+                    for (int i = 0; i < 5; i++)
+                    {
+                        fs.WriteByte((byte)0x00);
+                        filecheck = filecheck + 0x00;
+                    }
+                    /*字库宽度*/
+                    fs.WriteByte((byte)width_numericUpDown.Value);
+                    filecheck = filecheck + (uint)width_numericUpDown.Value;
+
+                    fs.WriteByte((byte)0x00);
+                    filecheck = filecheck + 0x00;
+                    /*字库高度*/
+                    fs.WriteByte((byte)height_numericUpDown.Value);
+                    filecheck = filecheck + (uint)height_numericUpDown.Value;
+
+                    fs.WriteByte((byte)0x00);
+                    filecheck = filecheck + 0x00;
+
+                    for (int i = 0; i < (6+32+16); i++)
+                    {
+                        fs.WriteByte((byte)0x00);
+                        filecheck = filecheck + 0x00;
+                    }
+
+                }
+                
+                if (GB2312.Checked == true)
                 {
                     //在GB2312编码的汉字字库中，共有 8178 个字符；
                     //遍历每一个字符，生成它们的点阵数据文件。
@@ -1049,6 +1142,7 @@ namespace readFontlib
                         foreach (Byte ba in byteArray)
                         {
                             fs.WriteByte(ba);
+                            filecheck = filecheck + (uint)ba;
                         }
 
                         //报告文件生成进度。
@@ -1094,6 +1188,7 @@ namespace readFontlib
                         foreach (Byte ba in byteArray)
                         {
                             fs.WriteByte(ba);
+                            filecheck = filecheck + (uint)ba;
                         }
 
                         //报告文件生成进度。
@@ -1123,6 +1218,7 @@ namespace readFontlib
                         foreach (Byte ba in byteArray)
                         {
                             fs.WriteByte(ba);
+                            filecheck = filecheck + (uint)ba;
                         }
 
                         //报告文件生成进度。
@@ -1134,6 +1230,18 @@ namespace readFontlib
                             this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
                         }
                     }
+                }
+                if (q_radioButton.Checked == true)//6Q3的字库
+                {
+                    filecheck_byte[0] = (byte)(filecheck >> (8 * 0) & 0xff);
+                    filecheck_byte[1] = (byte)(filecheck >> (8 * 1) & 0xff);
+                    filecheck_byte[2] = (byte)(filecheck >> (8 * 2) & 0xff);
+                    filecheck_byte[3] = (byte)(filecheck >> (8 * 3) & 0xff);
+
+                    fs.WriteByte(filecheck_byte[0]);
+                    fs.WriteByte(filecheck_byte[1]);
+                    fs.WriteByte(filecheck_byte[2]);
+                    fs.WriteByte(filecheck_byte[3]);
                 }
 
 
@@ -1611,6 +1719,7 @@ namespace readFontlib
             }
 
         }
+
 
         string[] area_data   = {"区域类型","X坐标","Y坐标","区域宽度","区域高度","动态区编号","行间距","动态区运行模式","动态区超时时间","是否使能语音","发音人/发音次数","音量","语速","读音数据长度","读音数据","保留字","是否单行显示","是否自动换行","显示方式","退出方式","显示速度","停留时间","数据长度" ,"数据"};
 
