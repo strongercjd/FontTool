@@ -622,7 +622,7 @@
             resources.ApplyResources(this.font_size_numericUpDown, "font_size_numericUpDown");
             this.font_size_numericUpDown.Name = "font_size_numericUpDown";
             this.font_size_numericUpDown.Value = new decimal(new int[] {
-            12,
+            11,
             0,
             0,
             0});
@@ -731,6 +731,9 @@
             resources.ApplyResources(this.pictureBoxFont, "pictureBoxFont");
             this.pictureBoxFont.Name = "pictureBoxFont";
             this.pictureBoxFont.TabStop = false;
+            this.pictureBoxFont.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseDown);
+            this.pictureBoxFont.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseMove);
+            this.pictureBoxFont.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseUp);
             // 
             // groupBoxSet
             // 

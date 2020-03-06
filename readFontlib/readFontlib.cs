@@ -939,6 +939,56 @@ namespace readFontlib
 
         private MakeFont MatCharFont;
 
+
+        public byte[] BitmapToBytes(Bitmap Bitmap)
+        {
+            //Bitmap = new Bitmap("test.bmp ");
+
+            Color srcColor;
+            int datalen = 0;
+            int num = 0;
+            int num1 = 0;
+            if (Bitmap.Width % 8 == 0) {
+                datalen = (Bitmap.Width / 8) * Bitmap.Height;
+            }
+            else {
+                datalen = (Bitmap.Width / 8 + 1) * Bitmap.Height;
+            }
+            byte[] data1 = new byte[datalen];
+            int temp = 0;
+            for (int y = 0; y < Bitmap.Height; y++)
+            {
+                num1 = 0;
+                for (int x = 0; x < Bitmap.Width; x++)
+                {
+                    //获取像素的ＲＧＢ颜色值
+                    srcColor = Bitmap.GetPixel(x, y);
+
+                    if ((srcColor.R == 0xff) && (srcColor.G == 0xff) && (srcColor.B == 0xff))
+                    {
+                        temp = temp << 1;
+                        temp = temp | 0x01;
+                    }
+                    else
+                    {
+                        temp = temp << 1;
+                    }
+                    num1++;
+                    if ((num1 == 8) || ((x + 1) == Bitmap.Width))
+                    {
+                        //temp = temp ^ 0xFF;
+                        data[num++] = (byte)temp;
+                        num1 = 0;
+                    }
+
+                }
+            }
+                
+
+            return data1;
+        }
+
+
         private void font_size_numericUpDown_ValueChanged(object sender, EventArgs e)
         {
             //重新设置选用的字体。
@@ -948,6 +998,9 @@ namespace readFontlib
                          this.MatCharFont.MatFont.Style);
             //更新字符预览。
             this.font_viwer_panel.BackgroundImage = this.MatCharFont.MatBitmap;
+
+            BitmapToBytes(this.MatCharFont.MatBitmap);
+            paintFont();
 
             //更新当前字体信息。
             this.font_message_textBox.Clear();
@@ -1335,6 +1388,9 @@ namespace readFontlib
                              this.fontDlg.Font.Style, this.fontDlg.Font.Unit);
                 //更新字符预览。
                 this.font_viwer_panel.BackgroundImage = this.MatCharFont.MatBitmap;
+
+                BitmapToBytes(this.MatCharFont.MatBitmap);
+                paintFont();
 
                 //更新当前字体信息。
                 this.font_message_textBox.Clear();
