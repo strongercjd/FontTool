@@ -135,8 +135,6 @@
             this.richTextBoxData = new System.Windows.Forms.RichTextBox();
             this.labelFontInfo = new System.Windows.Forms.Label();
             this.buttonGetData = new System.Windows.Forms.Button();
-            this.font_viwer_panel = new System.Windows.Forms.Panel();
-            this.preview_groupBox = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabControl.SuspendLayout();
@@ -163,7 +161,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
             this.groupBoxData.SuspendLayout();
-            this.preview_groupBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -947,19 +944,6 @@
             this.buttonGetData.UseVisualStyleBackColor = true;
             this.buttonGetData.Click += new System.EventHandler(this.buttonGetData_Click);
             // 
-            // font_viwer_panel
-            // 
-            this.font_viwer_panel.BackColor = System.Drawing.SystemColors.Control;
-            resources.ApplyResources(this.font_viwer_panel, "font_viwer_panel");
-            this.font_viwer_panel.Name = "font_viwer_panel";
-            // 
-            // preview_groupBox
-            // 
-            this.preview_groupBox.Controls.Add(this.font_viwer_panel);
-            resources.ApplyResources(this.preview_groupBox, "preview_groupBox");
-            this.preview_groupBox.Name = "preview_groupBox";
-            this.preview_groupBox.TabStop = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.groupBoxSet);
@@ -990,7 +974,6 @@
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.textBoxtime);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.preview_groupBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "readFontlib";
@@ -1032,7 +1015,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).EndInit();
             this.groupBoxData.ResumeLayout(false);
             this.groupBoxData.PerformLayout();
-            this.preview_groupBox.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -1146,8 +1128,6 @@
         private System.Windows.Forms.RichTextBox richTextBoxData;
         private System.Windows.Forms.Label labelFontInfo;
         private System.Windows.Forms.Button buttonGetData;
-        private System.Windows.Forms.GroupBox preview_groupBox;
-        private System.Windows.Forms.Panel font_viwer_panel;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
     }

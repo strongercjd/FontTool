@@ -997,8 +997,6 @@ namespace readFontlib
                          (float)this.font_size_numericUpDown.Value,
                          this.MatCharFont.MatFont.Style);
             //更新字符预览。
-            this.font_viwer_panel.BackgroundImage = this.MatCharFont.MatBitmap;
-
             BitmapToBytes(this.MatCharFont.MatBitmap);
             paintFont();
 
@@ -1329,8 +1327,6 @@ namespace readFontlib
             this.font_viwer_textBox.Enabled = isEnabled;        //“当前字符：”文本框。
             this.font_size_numericUpDown.Enabled = isEnabled;       //“字体大小：”数字框。
 
-            this.font_viwer_panel.Enabled = isEnabled;         //“当前字符预览”下的Panel。
-
             this.rdBtnStandard.Enabled = isEnabled;     //“高宽相等”单选按钮。
             this.rdBtnNonStandard.Enabled = isEnabled;  //“高宽不相等”单选按钮。
 
@@ -1387,8 +1383,6 @@ namespace readFontlib
                     new Font(this.fontDlg.Font.FontFamily, (float)fontSize,
                              this.fontDlg.Font.Style, this.fontDlg.Font.Unit);
                 //更新字符预览。
-                this.font_viwer_panel.BackgroundImage = this.MatCharFont.MatBitmap;
-
                 BitmapToBytes(this.MatCharFont.MatBitmap);
                 paintFont();
 
@@ -1434,10 +1428,6 @@ namespace readFontlib
                 this.vertical_numericUpDown.DataBindings.Add("Value", this.MatCharFont, "OffsetY",
                     true, DataSourceUpdateMode.OnPropertyChanged);
 
-                //“当前字符预览”下的Panel。
-                this.font_viwer_panel.DataBindings.Add("BackgroundImage", this.MatCharFont, "MatBitmap",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
-
                 this.radioButton0.DataBindings.Add("Checked", this.MatCharFont, "rotate0",
                     true, DataSourceUpdateMode.OnPropertyChanged);
 
@@ -1458,8 +1448,6 @@ namespace readFontlib
                 this.height_numericUpDown.DataBindings.Clear();        //字体“高度：”数字框。
                 this.level_numericUpDown.DataBindings.Clear();       //字体“水平偏移：”数字框。
                 this.vertical_numericUpDown.DataBindings.Clear();       //字体“垂直偏移：”数字框。
-                this.font_viwer_panel.DataBindings.Clear();          //“当前字符预览”下的Panel。
-                this.font_viwer_panel.BackgroundImage = null;        //清除“当前字符预览”下的Panel的背景图片。
             }
         }
         #endregion 制作字库的代码
@@ -1533,7 +1521,6 @@ namespace readFontlib
 
             #region 制作字库区域
             tabControl.TabPages[1].Text = rm.GetString("TabPages1");
-            preview_groupBox.Text = rm.GetString("preview_groupBox");
             font_groupBox.Text = rm.GetString("font_groupBox");
             message_groupBox.Text = rm.GetString("message_groupBox");
             check_font_button.Text = rm.GetString("check_font_button");
