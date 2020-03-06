@@ -256,7 +256,7 @@ namespace readFontlib
             a = strArray[strArray.Length - 1];
             return a;
         }
-        private void buttonReadFont_Click (object sender, EventArgs e)//读取字库名按钮单击事件
+        private void buttonReadFont_Click(object sender, EventArgs e)//读取字库名按钮单击事件
         {
             FontStyle style = FontStyle.Regular;
             Font tmpFont = new Font("宋体", 9, style);
@@ -444,7 +444,7 @@ namespace readFontlib
             this.time1.Start();
             textBoxtime.Text = DateTime.Now.ToString();
             this.makefont_DataInFormLoad();
-            this.tabControl.TabPages[4].Parent = null;//设置父容器为null，隐藏解析的TabPage
+            //this.tabControl.TabPages[4].Parent = null;//设置父容器为null，隐藏解析的TabPage
         }
 
         private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)//字模显示区鼠标左键按下事件
@@ -977,7 +977,7 @@ namespace readFontlib
         private void make_font_button_Click(object sender, EventArgs e)
         {
             pgbBuilderProc.Visible = true;
-            statusStripProc.Visible = true;
+            //statusStripProc.Visible = true;
             if (ASCII.Checked == true)
             {
                 this.saveFileDlg.FileName = "En" + "_" + this.MatCharFont.MatFont.SizeInPoints.ToString("##") + "_"
@@ -1151,7 +1151,7 @@ namespace readFontlib
                         {
                             int procPercent = (int)((double)i / 8177 * 100);
                             this.pgbBuilderProc.Value = procPercent;
-                            this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
+                            //this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
                         }
                     }
                 }
@@ -1197,7 +1197,7 @@ namespace readFontlib
                         {
                             int procPercent = (int)((double)i / 26208 * 100);
                             this.pgbBuilderProc.Value = procPercent;
-                            this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
+                            //this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
                         }
                     }
                 }
@@ -1227,7 +1227,7 @@ namespace readFontlib
                         {
                             int procPercent = (int)((double)i / 256 * 100);
                             this.pgbBuilderProc.Value = procPercent;
-                            this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
+                            //this.tssLblStatus.Text = String.Format("正在执行文件生成过程({0}%)", procPercent);
                         }
                     }
                 }
@@ -1259,10 +1259,10 @@ namespace readFontlib
 
             //恢复窗口的UI界面。
             //this.UIEnabled(true);
-            this.tssLblStatus.Text = "";
+            //this.tssLblStatus.Text = "";
             font_viwer_textBox.Text = "";
             this.pgbBuilderProc.Value = 0;
-            statusStripProc.Visible = false;
+            //statusStripProc.Visible = false;
             pgbBuilderProc.Visible = false;
             if (this.MatCharFont.IsEqualWH)
             {
@@ -1720,6 +1720,53 @@ namespace readFontlib
 
         }
 
+        private void width_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (!lockFlag)
+            {
+                if (radioButtonFontLib.Checked)
+                {
+                    width = (int)width_numericUpDown.Value;
+                }
+                else if (radioButtonUnit.Checked)
+                {
+                    /* uni */
+                    width = (int)width_numericUpDown.Value;
+                }
+                if ((fontPath != null) && (File.Exists(fontPath)))
+                {
+                    displayFont();
+                }
+                else
+                {
+                    paintFont();
+                }
+            }
+        }
+
+        private void height_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (!lockFlag)
+            {
+                if (radioButtonFontLib.Checked)
+                {
+                    height = (int)height_numericUpDown.Value;
+                }
+                else if (radioButtonUnit.Checked)
+                {
+                    /* uni */
+                    height = (int)height_numericUpDown.Value;
+                }
+                if ((fontPath != null) && (File.Exists(fontPath)))
+                {
+                    displayFont();
+                }
+                else
+                {
+                    paintFont();
+                }
+            }
+        }
 
         string[] area_data   = {"区域类型","X坐标","Y坐标","区域宽度","区域高度","动态区编号","行间距","动态区运行模式","动态区超时时间","是否使能语音","发音人/发音次数","音量","语速","读音数据长度","读音数据","保留字","是否单行显示","是否自动换行","显示方式","退出方式","显示速度","停留时间","数据长度" ,"数据"};
 

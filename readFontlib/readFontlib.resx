@@ -117,101 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;View_mode_Button.Name" xml:space="preserve">
-    <value>View_mode_Button</value>
-  </data>
-  <data name="&gt;&gt;View_mode_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;View_mode_Button.Parent" xml:space="preserve">
-    <value>groupBoxpic</value>
-  </data>
-  <data name="&gt;&gt;View_mode_Button.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;edit_mode_Button.Name" xml:space="preserve">
-    <value>edit_mode_Button</value>
-  </data>
-  <data name="&gt;&gt;edit_mode_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;edit_mode_Button.Parent" xml:space="preserve">
-    <value>groupBoxpic</value>
-  </data>
-  <data name="&gt;&gt;edit_mode_Button.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxFont.Name" xml:space="preserve">
-    <value>pictureBoxFont</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxFont.Parent" xml:space="preserve">
-    <value>groupBoxpic</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxFont.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="groupBoxpic.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 14</value>
-  </data>
-  <data name="groupBoxpic.Size" type="System.Drawing.Size, System.Drawing">
-    <value>400, 410</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBoxpic.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupBoxpic.Text" xml:space="preserve">
-    <value>字模区</value>
-  </data>
-  <data name="&gt;&gt;groupBoxpic.Name" xml:space="preserve">
-    <value>groupBoxpic</value>
-  </data>
-  <data name="&gt;&gt;groupBoxpic.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxpic.Parent" xml:space="preserve">
-    <value>view_edit_fontlib</value>
-  </data>
-  <data name="&gt;&gt;groupBoxpic.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="View_mode_Button.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="View_mode_Button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 11</value>
-  </data>
-  <data name="View_mode_Button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 16</value>
-  </data>
-  <data name="View_mode_Button.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="View_mode_Button.Text" xml:space="preserve">
-    <value>查看模式</value>
-  </data>
-  <data name="&gt;&gt;View_mode_Button.Name" xml:space="preserve">
-    <value>View_mode_Button</value>
-  </data>
-  <data name="&gt;&gt;View_mode_Button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;View_mode_Button.Parent" xml:space="preserve">
-    <value>groupBoxpic</value>
-  </data>
-  <data name="&gt;&gt;View_mode_Button.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="toolTipReadFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="edit_mode_Button.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="edit_mode_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="edit_mode_Button.Location" type="System.Drawing.Point, System.Drawing">
     <value>215, 11</value>
   </data>
@@ -238,432 +155,6 @@
   </data>
   <data name="&gt;&gt;edit_mode_Button.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="pictureBoxFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 33</value>
-  </data>
-  <data name="pictureBoxFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>386, 386</value>
-  </data>
-  <data name="pictureBoxFont.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxFont.Name" xml:space="preserve">
-    <value>pictureBoxFont</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxFont.Parent" xml:space="preserve">
-    <value>groupBoxpic</value>
-  </data>
-  <data name="&gt;&gt;pictureBoxFont.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;viwer_textBox.Name" xml:space="preserve">
-    <value>viwer_textBox</value>
-  </data>
-  <data name="&gt;&gt;viwer_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;viwer_textBox.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;viwer_textBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;down_button.Name" xml:space="preserve">
-    <value>down_button</value>
-  </data>
-  <data name="&gt;&gt;down_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;down_button.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;down_button.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;up_button.Name" xml:space="preserve">
-    <value>up_button</value>
-  </data>
-  <data name="&gt;&gt;up_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;up_button.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;up_button.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GBK_radioButton.Name" xml:space="preserve">
-    <value>GBK_radioButton</value>
-  </data>
-  <data name="&gt;&gt;GBK_radioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GBK_radioButton.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;GBK_radioButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;radioButtonUnit.Name" xml:space="preserve">
-    <value>radioButtonUnit</value>
-  </data>
-  <data name="&gt;&gt;radioButtonUnit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonUnit.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;radioButtonUnit.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;radioButtonFontLib.Name" xml:space="preserve">
-    <value>radioButtonFontLib</value>
-  </data>
-  <data name="&gt;&gt;radioButtonFontLib.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonFontLib.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;radioButtonFontLib.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;comboBoxWei.Name" xml:space="preserve">
-    <value>comboBoxWei</value>
-  </data>
-  <data name="&gt;&gt;comboBoxWei.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxWei.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;comboBoxWei.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;comboBoxQu.Name" xml:space="preserve">
-    <value>comboBoxQu</value>
-  </data>
-  <data name="&gt;&gt;comboBoxQu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxQu.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;comboBoxQu.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.Name" xml:space="preserve">
-    <value>labelIndex</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.Name" xml:space="preserve">
-    <value>numericUpDownIndex</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.Name" xml:space="preserve">
-    <value>buttonReadFont</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;viwer_font_label.Name" xml:space="preserve">
-    <value>viwer_font_label</value>
-  </data>
-  <data name="&gt;&gt;viwer_font_label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;viwer_font_label.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;viwer_font_label.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.Name" xml:space="preserve">
-    <value>labelFontName</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.Name" xml:space="preserve">
-    <value>textBoxFontName</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownHeight.Name" xml:space="preserve">
-    <value>numericUpDownHeight</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownHeight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownHeight.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownHeight.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownWidth.Name" xml:space="preserve">
-    <value>numericUpDownWidth</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownWidth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownWidth.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownWidth.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;labelHeight.Name" xml:space="preserve">
-    <value>labelHeight</value>
-  </data>
-  <data name="&gt;&gt;labelHeight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelHeight.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;labelHeight.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;labelWidth.Name" xml:space="preserve">
-    <value>labelWidth</value>
-  </data>
-  <data name="&gt;&gt;labelWidth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelWidth.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;labelWidth.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="groupBoxSet.Location" type="System.Drawing.Point, System.Drawing">
-    <value>434, 14</value>
-  </data>
-  <data name="groupBoxSet.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 163</value>
-  </data>
-  <data name="groupBoxSet.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="groupBoxSet.Text" xml:space="preserve">
-    <value>设置</value>
-  </data>
-  <data name="&gt;&gt;groupBoxSet.Name" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;groupBoxSet.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxSet.Parent" xml:space="preserve">
-    <value>view_edit_fontlib</value>
-  </data>
-  <data name="&gt;&gt;groupBoxSet.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="viwer_textBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 134</value>
-  </data>
-  <data name="viwer_textBox.MaxLength" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="viwer_textBox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="viwer_textBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="viwer_textBox.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;viwer_textBox.Name" xml:space="preserve">
-    <value>viwer_textBox</value>
-  </data>
-  <data name="&gt;&gt;viwer_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;viwer_textBox.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;viwer_textBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="down_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 134</value>
-  </data>
-  <data name="down_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 26</value>
-  </data>
-  <data name="down_button.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="down_button.Text" xml:space="preserve">
-    <value>下一个</value>
-  </data>
-  <data name="&gt;&gt;down_button.Name" xml:space="preserve">
-    <value>down_button</value>
-  </data>
-  <data name="&gt;&gt;down_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;down_button.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;down_button.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="up_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 102</value>
-  </data>
-  <data name="up_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 26</value>
-  </data>
-  <data name="up_button.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="up_button.Text" xml:space="preserve">
-    <value>上一个</value>
-  </data>
-  <data name="&gt;&gt;up_button.Name" xml:space="preserve">
-    <value>up_button</value>
-  </data>
-  <data name="&gt;&gt;up_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;up_button.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;up_button.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="GBK_radioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="GBK_radioButton.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <data name="GBK_radioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 87</value>
-  </data>
-  <data name="GBK_radioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 20</value>
-  </data>
-  <data name="GBK_radioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="GBK_radioButton.Text" xml:space="preserve">
-    <value>GBK</value>
-  </data>
-  <data name="&gt;&gt;GBK_radioButton.Name" xml:space="preserve">
-    <value>GBK_radioButton</value>
-  </data>
-  <data name="&gt;&gt;GBK_radioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GBK_radioButton.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;GBK_radioButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="radioButtonUnit.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButtonUnit.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <data name="radioButtonUnit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 131</value>
-  </data>
-  <data name="radioButtonUnit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 20</value>
-  </data>
-  <data name="radioButtonUnit.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="radioButtonUnit.Text" xml:space="preserve">
-    <value>ASCII</value>
-  </data>
-  <data name="&gt;&gt;radioButtonUnit.Name" xml:space="preserve">
-    <value>radioButtonUnit</value>
-  </data>
-  <data name="&gt;&gt;radioButtonUnit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonUnit.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;radioButtonUnit.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="radioButtonFontLib.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButtonFontLib.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <data name="radioButtonFontLib.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 42</value>
-  </data>
-  <data name="radioButtonFontLib.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 22</value>
-  </data>
-  <data name="radioButtonFontLib.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="radioButtonFontLib.Text" xml:space="preserve">
-    <value>GB2312</value>
-  </data>
-  <data name="&gt;&gt;radioButtonFontLib.Name" xml:space="preserve">
-    <value>radioButtonFontLib</value>
-  </data>
-  <data name="&gt;&gt;radioButtonFontLib.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonFontLib.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;radioButtonFontLib.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="comboBoxWei.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 75</value>
@@ -713,571 +204,11 @@
   <data name="&gt;&gt;comboBoxQu.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="labelIndex.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelIndex.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <data name="labelIndex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 47</value>
-  </data>
-  <data name="labelIndex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 16</value>
-  </data>
-  <data name="labelIndex.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="labelIndex.Text" xml:space="preserve">
-    <value>编号：</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.Name" xml:space="preserve">
-    <value>labelIndex</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="numericUpDownIndex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 47</value>
-  </data>
-  <data name="numericUpDownIndex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 21</value>
-  </data>
-  <data name="numericUpDownIndex.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.Name" xml:space="preserve">
-    <value>numericUpDownIndex</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="buttonReadFont.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 13</value>
-  </data>
-  <data name="buttonReadFont.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 23</value>
-  </data>
-  <data name="buttonReadFont.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="buttonReadFont.Text" xml:space="preserve">
-    <value>读取</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.Name" xml:space="preserve">
-    <value>buttonReadFont</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="viwer_font_label.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="viwer_font_label.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="viwer_font_label.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="viwer_font_label.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 109</value>
-  </data>
-  <data name="viwer_font_label.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 16</value>
-  </data>
-  <data name="viwer_font_label.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="viwer_font_label.Text" xml:space="preserve">
-    <value>预览字符：</value>
-  </data>
-  <data name="&gt;&gt;viwer_font_label.Name" xml:space="preserve">
-    <value>viwer_font_label</value>
-  </data>
-  <data name="&gt;&gt;viwer_font_label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;viwer_font_label.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;viwer_font_label.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="labelFontName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelFontName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 10.5pt</value>
-  </data>
-  <data name="labelFontName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 17</value>
-  </data>
-  <data name="labelFontName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 14</value>
-  </data>
-  <data name="labelFontName.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="labelFontName.Text" xml:space="preserve">
-    <value>字库名：</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.Name" xml:space="preserve">
-    <value>labelFontName</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="textBoxFontName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 9pt</value>
-  </data>
-  <data name="textBoxFontName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>84, 13</value>
-  </data>
-  <data name="textBoxFontName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 21</value>
-  </data>
-  <data name="textBoxFontName.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="textBoxFontName.Text" xml:space="preserve">
-    <value>打开字库</value>
-  </data>
-  <data name="textBoxFontName.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.Name" xml:space="preserve">
-    <value>textBoxFontName</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="numericUpDownHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 71</value>
-  </data>
-  <data name="numericUpDownHeight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 21</value>
-  </data>
-  <data name="numericUpDownHeight.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownHeight.Name" xml:space="preserve">
-    <value>numericUpDownHeight</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownHeight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownHeight.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownHeight.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="numericUpDownWidth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 40</value>
-  </data>
-  <data name="numericUpDownWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 21</value>
-  </data>
-  <data name="numericUpDownWidth.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownWidth.Name" xml:space="preserve">
-    <value>numericUpDownWidth</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownWidth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownWidth.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownWidth.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="labelHeight.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelHeight.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <data name="labelHeight.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 74</value>
-  </data>
-  <data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 16</value>
-  </data>
-  <data name="labelHeight.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="labelHeight.Text" xml:space="preserve">
-    <value>高：</value>
-  </data>
-  <data name="&gt;&gt;labelHeight.Name" xml:space="preserve">
-    <value>labelHeight</value>
-  </data>
-  <data name="&gt;&gt;labelHeight.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelHeight.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;labelHeight.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="labelWidth.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelWidth.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt</value>
-  </data>
-  <data name="labelWidth.Location" type="System.Drawing.Point, System.Drawing">
-    <value>86, 42</value>
-  </data>
-  <data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 16</value>
-  </data>
-  <data name="labelWidth.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="labelWidth.Text" xml:space="preserve">
-    <value>宽：</value>
-  </data>
-  <data name="&gt;&gt;labelWidth.Name" xml:space="preserve">
-    <value>labelWidth</value>
-  </data>
-  <data name="&gt;&gt;labelWidth.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelWidth.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
-  </data>
-  <data name="&gt;&gt;labelWidth.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="Save_font_button.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 9pt</value>
-  </data>
-  <data name="Save_font_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>65, 20</value>
-  </data>
-  <data name="Save_font_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 40</value>
-  </data>
-  <data name="Save_font_button.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="Save_font_button.Text" xml:space="preserve">
-    <value>保存字模</value>
-  </data>
-  <data name="&gt;&gt;Save_font_button.Name" xml:space="preserve">
-    <value>Save_font_button</value>
-  </data>
-  <data name="&gt;&gt;Save_font_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Save_font_button.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;Save_font_button.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;check_data_format.Name" xml:space="preserve">
-    <value>check_data_format</value>
-  </data>
-  <data name="&gt;&gt;check_data_format.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;check_data_format.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;check_data_format.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelByteNum.Name" xml:space="preserve">
-    <value>labelByteNum</value>
-  </data>
-  <data name="&gt;&gt;labelByteNum.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelByteNum.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;labelByteNum.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;labelNum.Name" xml:space="preserve">
-    <value>labelNum</value>
-  </data>
-  <data name="&gt;&gt;labelNum.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelNum.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;labelNum.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxData.Name" xml:space="preserve">
-    <value>richTextBoxData</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxData.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxData.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;labelFontInfo.Name" xml:space="preserve">
-    <value>labelFontInfo</value>
-  </data>
-  <data name="&gt;&gt;labelFontInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelFontInfo.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;labelFontInfo.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;buttonGetData.Name" xml:space="preserve">
-    <value>buttonGetData</value>
-  </data>
-  <data name="&gt;&gt;buttonGetData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonGetData.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;buttonGetData.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="groupBoxData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>434, 183</value>
-  </data>
-  <data name="groupBoxData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 250</value>
-  </data>
-  <data name="groupBoxData.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="groupBoxData.Text" xml:space="preserve">
-    <value>数据区</value>
-  </data>
-  <data name="&gt;&gt;groupBoxData.Name" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;groupBoxData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxData.Parent" xml:space="preserve">
-    <value>view_edit_fontlib</value>
-  </data>
-  <data name="&gt;&gt;groupBoxData.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="check_data_format.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="check_data_format.Location" type="System.Drawing.Point, System.Drawing">
-    <value>146, 20</value>
-  </data>
-  <data name="check_data_format.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 16</value>
-  </data>
-  <data name="check_data_format.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="check_data_format.Text" xml:space="preserve">
-    <value>添加0x和,</value>
-  </data>
-  <data name="&gt;&gt;check_data_format.Name" xml:space="preserve">
-    <value>check_data_format</value>
-  </data>
-  <data name="&gt;&gt;check_data_format.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;check_data_format.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;check_data_format.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelByteNum.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelByteNum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 51</value>
-  </data>
-  <data name="labelByteNum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>11, 12</value>
-  </data>
-  <data name="labelByteNum.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="labelByteNum.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;labelByteNum.Name" xml:space="preserve">
-    <value>labelByteNum</value>
-  </data>
-  <data name="&gt;&gt;labelByteNum.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelByteNum.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;labelByteNum.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelNum.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelNum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 51</value>
-  </data>
-  <data name="labelNum.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 12</value>
-  </data>
-  <data name="labelNum.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="labelNum.Text" xml:space="preserve">
-    <value>字节数：</value>
-  </data>
-  <data name="&gt;&gt;labelNum.Name" xml:space="preserve">
-    <value>labelNum</value>
-  </data>
-  <data name="&gt;&gt;labelNum.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelNum.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;labelNum.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="richTextBoxData.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 12pt, style=Bold</value>
-  </data>
-  <data name="richTextBoxData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 66</value>
-  </data>
-  <data name="richTextBoxData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 197</value>
-  </data>
-  <data name="richTextBoxData.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="richTextBoxData.Text" xml:space="preserve">
-    <value>
-
-
-
-字库卡工具版权所有（C）2017</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxData.Name" xml:space="preserve">
-    <value>richTextBoxData</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxData.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;richTextBoxData.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="labelFontInfo.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelFontInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 51</value>
-  </data>
-  <data name="labelFontInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 12</value>
-  </data>
-  <data name="labelFontInfo.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="labelFontInfo.Text" xml:space="preserve">
-    <value>字库信息：</value>
-  </data>
-  <data name="&gt;&gt;labelFontInfo.Name" xml:space="preserve">
-    <value>labelFontInfo</value>
-  </data>
-  <data name="&gt;&gt;labelFontInfo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelFontInfo.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;labelFontInfo.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="buttonGetData.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 20</value>
-  </data>
-  <data name="buttonGetData.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 40</value>
-  </data>
-  <data name="buttonGetData.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="buttonGetData.Text" xml:space="preserve">
-    <value>获取数据</value>
-  </data>
-  <data name="&gt;&gt;buttonGetData.Name" xml:space="preserve">
-    <value>buttonGetData</value>
-  </data>
-  <data name="&gt;&gt;buttonGetData.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonGetData.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
-  </data>
-  <data name="&gt;&gt;buttonGetData.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="toolTipReadFont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="logo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="logo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 522</value>
+    <value>514, 497</value>
   </data>
   <data name="logo.Size" type="System.Drawing.Size, System.Drawing">
     <value>149, 12</value>
@@ -1298,13 +229,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;logo.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>167, 17</value>
   </metadata>
   <data name="textBoxtime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>659, 490</value>
+    <value>621, 541</value>
   </data>
   <data name="textBoxtime.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1325,7 +256,76 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;textBoxtime.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;view_edit_fontlib.Name" xml:space="preserve">
+    <value>view_edit_fontlib</value>
+  </data>
+  <data name="&gt;&gt;view_edit_fontlib.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;view_edit_fontlib.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;view_edit_fontlib.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;jineima.Name" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;jineima.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;jineima.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;jineima.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;CRC16.Name" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;CRC16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CRC16.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;CRC16.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;analysis.Name" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;analysis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;analysis.Parent" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;analysis.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 503</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>439, 90</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="view_edit_fontlib.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -1334,7 +334,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="view_edit_fontlib.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 449</value>
+    <value>431, 64</value>
   </data>
   <data name="view_edit_fontlib.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1353,570 +353,6 @@
   </data>
   <data name="&gt;&gt;view_edit_fontlib.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;K_radioButton.Name" xml:space="preserve">
-    <value>K_radioButton</value>
-  </data>
-  <data name="&gt;&gt;K_radioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;K_radioButton.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;K_radioButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;q_radioButton.Name" xml:space="preserve">
-    <value>q_radioButton</value>
-  </data>
-  <data name="&gt;&gt;q_radioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;q_radioButton.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;q_radioButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 155</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 45</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>字库类型</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>make_fontlib</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radioButton0.Name" xml:space="preserve">
-    <value>radioButton0</value>
-  </data>
-  <data name="&gt;&gt;radioButton0.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton0.Parent" xml:space="preserve">
-    <value>rotate_groupBox</value>
-  </data>
-  <data name="&gt;&gt;radioButton0.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;radioButton270.Name" xml:space="preserve">
-    <value>radioButton270</value>
-  </data>
-  <data name="&gt;&gt;radioButton270.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton270.Parent" xml:space="preserve">
-    <value>rotate_groupBox</value>
-  </data>
-  <data name="&gt;&gt;radioButton270.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;radioButton90.Name" xml:space="preserve">
-    <value>radioButton90</value>
-  </data>
-  <data name="&gt;&gt;radioButton90.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton90.Parent" xml:space="preserve">
-    <value>rotate_groupBox</value>
-  </data>
-  <data name="&gt;&gt;radioButton90.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;radioButton180.Name" xml:space="preserve">
-    <value>radioButton180</value>
-  </data>
-  <data name="&gt;&gt;radioButton180.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButton180.Parent" xml:space="preserve">
-    <value>rotate_groupBox</value>
-  </data>
-  <data name="&gt;&gt;radioButton180.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="rotate_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 206</value>
-  </data>
-  <data name="rotate_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 38</value>
-  </data>
-  <data name="rotate_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="rotate_groupBox.Text" xml:space="preserve">
-    <value>字体顺时针旋转</value>
-  </data>
-  <data name="&gt;&gt;rotate_groupBox.Name" xml:space="preserve">
-    <value>rotate_groupBox</value>
-  </data>
-  <data name="&gt;&gt;rotate_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rotate_groupBox.Parent" xml:space="preserve">
-    <value>make_fontlib</value>
-  </data>
-  <data name="&gt;&gt;rotate_groupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ASCII.Name" xml:space="preserve">
-    <value>ASCII</value>
-  </data>
-  <data name="&gt;&gt;ASCII.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ASCII.Parent" xml:space="preserve">
-    <value>binama_groupBox</value>
-  </data>
-  <data name="&gt;&gt;ASCII.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;GB2312.Name" xml:space="preserve">
-    <value>GB2312</value>
-  </data>
-  <data name="&gt;&gt;GB2312.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GB2312.Parent" xml:space="preserve">
-    <value>binama_groupBox</value>
-  </data>
-  <data name="&gt;&gt;GB2312.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GBK.Name" xml:space="preserve">
-    <value>GBK</value>
-  </data>
-  <data name="&gt;&gt;GBK.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GBK.Parent" xml:space="preserve">
-    <value>binama_groupBox</value>
-  </data>
-  <data name="&gt;&gt;GBK.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="binama_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 250</value>
-  </data>
-  <data name="binama_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 46</value>
-  </data>
-  <data name="binama_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="binama_groupBox.Text" xml:space="preserve">
-    <value>编码选择</value>
-  </data>
-  <data name="&gt;&gt;binama_groupBox.Name" xml:space="preserve">
-    <value>binama_groupBox</value>
-  </data>
-  <data name="&gt;&gt;binama_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;binama_groupBox.Parent" xml:space="preserve">
-    <value>make_fontlib</value>
-  </data>
-  <data name="&gt;&gt;binama_groupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pgbBuilderProc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>284, 423</value>
-  </data>
-  <data name="pgbBuilderProc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>449, 23</value>
-  </data>
-  <data name="pgbBuilderProc.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="pgbBuilderProc.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;pgbBuilderProc.Name" xml:space="preserve">
-    <value>pgbBuilderProc</value>
-  </data>
-  <data name="&gt;&gt;pgbBuilderProc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pgbBuilderProc.Parent" xml:space="preserve">
-    <value>make_fontlib</value>
-  </data>
-  <data name="&gt;&gt;pgbBuilderProc.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;rdBtnNonStandard.Name" xml:space="preserve">
-    <value>rdBtnNonStandard</value>
-  </data>
-  <data name="&gt;&gt;rdBtnNonStandard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdBtnNonStandard.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;rdBtnNonStandard.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rdBtnStandard.Name" xml:space="preserve">
-    <value>rdBtnStandard</value>
-  </data>
-  <data name="&gt;&gt;rdBtnStandard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdBtnStandard.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;rdBtnStandard.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;make_font_button.Name" xml:space="preserve">
-    <value>make_font_button</value>
-  </data>
-  <data name="&gt;&gt;make_font_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;make_font_button.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;make_font_button.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;vertical_numericUpDown.Name" xml:space="preserve">
-    <value>vertical_numericUpDown</value>
-  </data>
-  <data name="&gt;&gt;vertical_numericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;vertical_numericUpDown.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;vertical_numericUpDown.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;level_numericUpDown.Name" xml:space="preserve">
-    <value>level_numericUpDown</value>
-  </data>
-  <data name="&gt;&gt;level_numericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;level_numericUpDown.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;level_numericUpDown.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;height_numericUpDown.Name" xml:space="preserve">
-    <value>height_numericUpDown</value>
-  </data>
-  <data name="&gt;&gt;height_numericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;height_numericUpDown.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;height_numericUpDown.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;width_numericUpDown.Name" xml:space="preserve">
-    <value>width_numericUpDown</value>
-  </data>
-  <data name="&gt;&gt;width_numericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;width_numericUpDown.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;width_numericUpDown.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;vertical_label.Name" xml:space="preserve">
-    <value>vertical_label</value>
-  </data>
-  <data name="&gt;&gt;vertical_label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;vertical_label.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;vertical_label.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;level_label.Name" xml:space="preserve">
-    <value>level_label</value>
-  </data>
-  <data name="&gt;&gt;level_label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;level_label.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;level_label.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;font_height_label.Name" xml:space="preserve">
-    <value>font_height_label</value>
-  </data>
-  <data name="&gt;&gt;font_height_label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;font_height_label.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;font_height_label.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;font_width_label.Name" xml:space="preserve">
-    <value>font_width_label</value>
-  </data>
-  <data name="&gt;&gt;font_width_label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;font_width_label.Parent" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;font_width_label.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="set_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 302</value>
-  </data>
-  <data name="set_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 115</value>
-  </data>
-  <data name="set_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="set_groupBox.Text" xml:space="preserve">
-    <value>设置</value>
-  </data>
-  <data name="&gt;&gt;set_groupBox.Name" xml:space="preserve">
-    <value>set_groupBox</value>
-  </data>
-  <data name="&gt;&gt;set_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;set_groupBox.Parent" xml:space="preserve">
-    <value>make_fontlib</value>
-  </data>
-  <data name="&gt;&gt;set_groupBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;font_viwer_textBox.Name" xml:space="preserve">
-    <value>font_viwer_textBox</value>
-  </data>
-  <data name="&gt;&gt;font_viwer_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;font_viwer_textBox.Parent" xml:space="preserve">
-    <value>font_groupBox</value>
-  </data>
-  <data name="&gt;&gt;font_viwer_textBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;font_view_label.Name" xml:space="preserve">
-    <value>font_view_label</value>
-  </data>
-  <data name="&gt;&gt;font_view_label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;font_view_label.Parent" xml:space="preserve">
-    <value>font_groupBox</value>
-  </data>
-  <data name="&gt;&gt;font_view_label.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;font_size_numericUpDown.Name" xml:space="preserve">
-    <value>font_size_numericUpDown</value>
-  </data>
-  <data name="&gt;&gt;font_size_numericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;font_size_numericUpDown.Parent" xml:space="preserve">
-    <value>font_groupBox</value>
-  </data>
-  <data name="&gt;&gt;font_size_numericUpDown.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;font_label.Name" xml:space="preserve">
-    <value>font_label</value>
-  </data>
-  <data name="&gt;&gt;font_label.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;font_label.Parent" xml:space="preserve">
-    <value>font_groupBox</value>
-  </data>
-  <data name="&gt;&gt;font_label.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;check_font_button.Name" xml:space="preserve">
-    <value>check_font_button</value>
-  </data>
-  <data name="&gt;&gt;check_font_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;check_font_button.Parent" xml:space="preserve">
-    <value>font_groupBox</value>
-  </data>
-  <data name="&gt;&gt;check_font_button.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;message_groupBox.Name" xml:space="preserve">
-    <value>message_groupBox</value>
-  </data>
-  <data name="&gt;&gt;message_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;message_groupBox.Parent" xml:space="preserve">
-    <value>font_groupBox</value>
-  </data>
-  <data name="&gt;&gt;message_groupBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="font_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>406, 6</value>
-  </data>
-  <data name="font_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>343, 143</value>
-  </data>
-  <data name="font_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="font_groupBox.Text" xml:space="preserve">
-    <value>字体</value>
-  </data>
-  <data name="&gt;&gt;font_groupBox.Name" xml:space="preserve">
-    <value>font_groupBox</value>
-  </data>
-  <data name="&gt;&gt;font_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;font_groupBox.Parent" xml:space="preserve">
-    <value>make_fontlib</value>
-  </data>
-  <data name="&gt;&gt;font_groupBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="font_viwer_panel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="font_viwer_panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="font_viwer_panel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 17</value>
-  </data>
-  <data name="font_viwer_panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>366, 395</value>
-  </data>
-  <data name="font_viwer_panel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;font_viwer_panel.Name" xml:space="preserve">
-    <value>font_viwer_panel</value>
-  </data>
-  <data name="&gt;&gt;font_viwer_panel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;font_viwer_panel.Parent" xml:space="preserve">
-    <value>preview_groupBox</value>
-  </data>
-  <data name="&gt;&gt;font_viwer_panel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="preview_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="preview_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 415</value>
-  </data>
-  <data name="preview_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="preview_groupBox.Text" xml:space="preserve">
-    <value>预览</value>
-  </data>
-  <data name="&gt;&gt;preview_groupBox.Name" xml:space="preserve">
-    <value>preview_groupBox</value>
-  </data>
-  <data name="&gt;&gt;preview_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;preview_groupBox.Parent" xml:space="preserve">
-    <value>make_fontlib</value>
-  </data>
-  <data name="&gt;&gt;preview_groupBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="statusStripProc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>603, 17</value>
-  </metadata>
-  <data name="statusStripProc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 424</value>
-  </data>
-  <data name="statusStripProc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>760, 22</value>
-  </data>
-  <data name="statusStripProc.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="statusStripProc.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="statusStripProc.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;statusStripProc.Name" xml:space="preserve">
-    <value>statusStripProc</value>
-  </data>
-  <data name="&gt;&gt;statusStripProc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;statusStripProc.Parent" xml:space="preserve">
-    <value>make_fontlib</value>
-  </data>
-  <data name="&gt;&gt;statusStripProc.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="make_fontlib.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="make_fontlib.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="make_fontlib.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 449</value>
-  </data>
-  <data name="make_fontlib.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="make_fontlib.Text" xml:space="preserve">
-    <value>制作字库</value>
-  </data>
-  <data name="&gt;&gt;make_fontlib.Name" xml:space="preserve">
-    <value>make_fontlib</value>
-  </data>
-  <data name="&gt;&gt;make_fontlib.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;make_fontlib.Parent" xml:space="preserve">
-    <value>tabControl</value>
-  </data>
-  <data name="&gt;&gt;make_fontlib.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;str2hex_radioButton.Name" xml:space="preserve">
     <value>str2hex_radioButton</value>
@@ -2021,7 +457,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="jineima.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 449</value>
+    <value>431, 64</value>
   </data>
   <data name="jineima.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -2039,7 +475,211 @@
     <value>tabControl</value>
   </data>
   <data name="&gt;&gt;jineima.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="str2hex_radioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="str2hex_radioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>214, 33</value>
+  </data>
+  <data name="str2hex_radioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 16</value>
+  </data>
+  <data name="str2hex_radioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="str2hex_radioButton.Text" xml:space="preserve">
+    <value>字符转机内码</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.Name" xml:space="preserve">
+    <value>str2hex_radioButton</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;str2hex_radioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="hex2str_radioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="hex2str_radioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>335, 33</value>
+  </data>
+  <data name="hex2str_radioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 16</value>
+  </data>
+  <data name="hex2str_radioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="hex2str_radioButton.Text" xml:space="preserve">
+    <value>机内码转字符</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.Name" xml:space="preserve">
+    <value>hex2str_radioButton</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;hex2str_radioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="yima_textBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 115</value>
+  </data>
+  <data name="yima_textBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="yima_textBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 232</value>
+  </data>
+  <data name="yima_textBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.Name" xml:space="preserve">
+    <value>yima_textBox</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;yima_textBox.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="clear_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 66</value>
+  </data>
+  <data name="clear_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="clear_button.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="clear_button.Text" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="&gt;&gt;clear_button.Name" xml:space="preserve">
+    <value>clear_button</value>
+  </data>
+  <data name="&gt;&gt;clear_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clear_button.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;clear_button.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="yima_listBox.ItemHeight" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="yima_listBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 115</value>
+  </data>
+  <data name="yima_listBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 232</value>
+  </data>
+  <data name="yima_listBox.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.Name" xml:space="preserve">
+    <value>yima_listBox</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;yima_listBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Transfor_button.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="Transfor_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>422, 66</value>
+  </data>
+  <data name="Transfor_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 23</value>
+  </data>
+  <data name="Transfor_button.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Transfor_button.Text" xml:space="preserve">
+    <value>译码</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.Name" xml:space="preserve">
+    <value>Transfor_button</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;Transfor_button.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="input_textBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 66</value>
+  </data>
+  <data name="input_textBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>361, 21</value>
+  </data>
+  <data name="input_textBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="input_textBox.Text" xml:space="preserve">
+    <value>上海仰邦科技股份有限公司</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.Name" xml:space="preserve">
+    <value>input_textBox</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;input_textBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="message.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="message.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 37</value>
+  </data>
+  <data name="message.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 12</value>
+  </data>
+  <data name="message.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="message.Text" xml:space="preserve">
+    <value>输入要转码的字符</value>
+  </data>
+  <data name="&gt;&gt;message.Name" xml:space="preserve">
+    <value>message</value>
+  </data>
+  <data name="&gt;&gt;message.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;message.Parent" xml:space="preserve">
+    <value>jineima</value>
+  </data>
+  <data name="&gt;&gt;message.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;crc_clear_button.Name" xml:space="preserve">
     <value>crc_clear_button</value>
@@ -2096,7 +736,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="CRC16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 449</value>
+    <value>431, 64</value>
   </data>
   <data name="CRC16.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -2114,7 +754,136 @@
     <value>tabControl</value>
   </data>
   <data name="&gt;&gt;CRC16.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="crc_clear_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>423, 328</value>
+  </data>
+  <data name="crc_clear_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 23</value>
+  </data>
+  <data name="crc_clear_button.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
+  </data>
+  <data name="crc_clear_button.Text" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="&gt;&gt;crc_clear_button.Name" xml:space="preserve">
+    <value>crc_clear_button</value>
+  </data>
+  <data name="&gt;&gt;crc_clear_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crc_clear_button.Parent" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;crc_clear_button.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="crc_check_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 328</value>
+  </data>
+  <data name="crc_check_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 23</value>
+  </data>
+  <data name="crc_check_button.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="crc_check_button.Text" xml:space="preserve">
+    <value>校验</value>
+  </data>
+  <data name="&gt;&gt;crc_check_button.Name" xml:space="preserve">
+    <value>crc_check_button</value>
+  </data>
+  <data name="&gt;&gt;crc_check_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crc_check_button.Parent" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;crc_check_button.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="crc_textBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>327, 330</value>
+  </data>
+  <data name="crc_textBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 21</value>
+  </data>
+  <data name="crc_textBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;crc_textBox.Name" xml:space="preserve">
+    <value>crc_textBox</value>
+  </data>
+  <data name="&gt;&gt;crc_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crc_textBox.Parent" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;crc_textBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;crc_data_richTextBox.Name" xml:space="preserve">
+    <value>crc_data_richTextBox</value>
+  </data>
+  <data name="&gt;&gt;crc_data_richTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crc_data_richTextBox.Parent" xml:space="preserve">
+    <value>check_groupBox</value>
+  </data>
+  <data name="&gt;&gt;crc_data_richTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="check_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 30</value>
+  </data>
+  <data name="check_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 276</value>
+  </data>
+  <data name="check_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="check_groupBox.Text" xml:space="preserve">
+    <value>校验区</value>
+  </data>
+  <data name="&gt;&gt;check_groupBox.Name" xml:space="preserve">
+    <value>check_groupBox</value>
+  </data>
+  <data name="&gt;&gt;check_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;check_groupBox.Parent" xml:space="preserve">
+    <value>CRC16</value>
+  </data>
+  <data name="&gt;&gt;check_groupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="crc_data_richTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 20</value>
+  </data>
+  <data name="crc_data_richTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>324, 249</value>
+  </data>
+  <data name="crc_data_richTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="crc_data_richTextBox.Text" xml:space="preserve">
+    <value>01 00 00 80 00 00 00 00 00 00 FE 02 28 00 A3 06 01 23 00 00 01 1F 00 00 00 00 00 00 04 00 10 00 00 00 00 02 00 00 00 00 02 02 01 00 00 0A 04 00 00 00 D1 F6 B0 EE</value>
+  </data>
+  <data name="&gt;&gt;crc_data_richTextBox.Name" xml:space="preserve">
+    <value>crc_data_richTextBox</value>
+  </data>
+  <data name="&gt;&gt;crc_data_richTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;crc_data_richTextBox.Parent" xml:space="preserve">
+    <value>check_groupBox</value>
+  </data>
+  <data name="&gt;&gt;crc_data_richTextBox.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;data_after_transform_richTextBox.Name" xml:space="preserve">
     <value>data_after_transform_richTextBox</value>
@@ -2192,7 +961,7 @@
     <value>4, 22</value>
   </data>
   <data name="analysis.Size" type="System.Drawing.Size, System.Drawing">
-    <value>766, 449</value>
+    <value>431, 64</value>
   </data>
   <data name="analysis.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -2210,28 +979,235 @@
     <value>tabControl</value>
   </data>
   <data name="&gt;&gt;analysis.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
-  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 36</value>
+  <data name="data_after_transform_richTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 231</value>
   </data>
-  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>774, 475</value>
+  <data name="data_after_transform_richTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 195</value>
   </data>
-  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="data_after_transform_richTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
-    <value>tabControl</value>
+  <data name="data_after_transform_richTextBox.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;data_after_transform_richTextBox.Name" xml:space="preserve">
+    <value>data_after_transform_richTextBox</value>
   </data>
-  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;data_after_transform_richTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;data_after_transform_richTextBox.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;data_after_transform_richTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="label_mes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label_mes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 207</value>
+  </data>
+  <data name="label_mes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 12</value>
+  </data>
+  <data name="label_mes.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="label_mes.Text" xml:space="preserve">
+    <value>除去帧头帧尾，转义后的数据</value>
+  </data>
+  <data name="&gt;&gt;label_mes.Name" xml:space="preserve">
+    <value>label_mes</value>
+  </data>
+  <data name="&gt;&gt;label_mes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label_mes.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;label_mes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="out_excel_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 222</value>
+  </data>
+  <data name="out_excel_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 37</value>
+  </data>
+  <data name="out_excel_button.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="out_excel_button.Text" xml:space="preserve">
+    <value>输出Excel</value>
+  </data>
+  <data name="out_excel_button.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;out_excel_button.Name" xml:space="preserve">
+    <value>out_excel_button</value>
+  </data>
+  <data name="&gt;&gt;out_excel_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;out_excel_button.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;out_excel_button.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="data_listView.Location" type="System.Drawing.Point, System.Drawing">
+    <value>372, 17</value>
+  </data>
+  <data name="data_listView.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 419</value>
+  </data>
+  <data name="data_listView.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;data_listView.Name" xml:space="preserve">
+    <value>data_listView</value>
+  </data>
+  <data name="&gt;&gt;data_listView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;data_listView.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;data_listView.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>参数</value>
+  </data>
+  <data name="columnHeader1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>数据</value>
+  </data>
+  <data name="columnHeader2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="columnHeader3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+    <value>190</value>
+  </data>
+  <data name="analysis_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 155</value>
+  </data>
+  <data name="analysis_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 39</value>
+  </data>
+  <data name="analysis_button.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="analysis_button.Text" xml:space="preserve">
+    <value>解析</value>
+  </data>
+  <data name="&gt;&gt;analysis_button.Name" xml:space="preserve">
+    <value>analysis_button</value>
+  </data>
+  <data name="&gt;&gt;analysis_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;analysis_button.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;analysis_button.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Raw_data_textBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 17</value>
+  </data>
+  <data name="Raw_data_textBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Raw_data_textBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Both</value>
+  </data>
+  <data name="Raw_data_textBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 177</value>
+  </data>
+  <data name="Raw_data_textBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Raw_data_textBox.Text" xml:space="preserve">
+    <value>A5 A5 A5 A5 A5 A5 A5 A5 01 00 00 80 00 00 00 00 00 00 FE 02 32 00 A3 06 01 2D 00 00 01 29 00 00 00 00 00 00 18 00 20 00 00 00 00 02 00 00 00 00 02 02 03 00 04 05 0E 00 00 00 30 31 32 33 34 35 51 52 53 54 54 56 27 42 A8 7D 5A</value>
+  </data>
+  <data name="&gt;&gt;Raw_data_textBox.Name" xml:space="preserve">
+    <value>Raw_data_textBox</value>
+  </data>
+  <data name="&gt;&gt;Raw_data_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Raw_data_textBox.Parent" xml:space="preserve">
+    <value>analysis</value>
+  </data>
+  <data name="&gt;&gt;Raw_data_textBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;K_radioButton.Name" xml:space="preserve">
+    <value>K_radioButton</value>
+  </data>
+  <data name="&gt;&gt;K_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;K_radioButton.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;K_radioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;q_radioButton.Name" xml:space="preserve">
+    <value>q_radioButton</value>
+  </data>
+  <data name="&gt;&gt;q_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;q_radioButton.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;q_radioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 169</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 45</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>字库类型</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="K_radioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2289,6 +1265,78 @@
   </data>
   <data name="&gt;&gt;q_radioButton.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;radioButton0.Name" xml:space="preserve">
+    <value>radioButton0</value>
+  </data>
+  <data name="&gt;&gt;radioButton0.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton0.Parent" xml:space="preserve">
+    <value>rotate_groupBox</value>
+  </data>
+  <data name="&gt;&gt;radioButton0.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;radioButton270.Name" xml:space="preserve">
+    <value>radioButton270</value>
+  </data>
+  <data name="&gt;&gt;radioButton270.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton270.Parent" xml:space="preserve">
+    <value>rotate_groupBox</value>
+  </data>
+  <data name="&gt;&gt;radioButton270.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;radioButton90.Name" xml:space="preserve">
+    <value>radioButton90</value>
+  </data>
+  <data name="&gt;&gt;radioButton90.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton90.Parent" xml:space="preserve">
+    <value>rotate_groupBox</value>
+  </data>
+  <data name="&gt;&gt;radioButton90.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;radioButton180.Name" xml:space="preserve">
+    <value>radioButton180</value>
+  </data>
+  <data name="&gt;&gt;radioButton180.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton180.Parent" xml:space="preserve">
+    <value>rotate_groupBox</value>
+  </data>
+  <data name="&gt;&gt;radioButton180.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="rotate_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 220</value>
+  </data>
+  <data name="rotate_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 38</value>
+  </data>
+  <data name="rotate_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="rotate_groupBox.Text" xml:space="preserve">
+    <value>字体顺时针旋转</value>
+  </data>
+  <data name="&gt;&gt;rotate_groupBox.Name" xml:space="preserve">
+    <value>rotate_groupBox</value>
+  </data>
+  <data name="&gt;&gt;rotate_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rotate_groupBox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;rotate_groupBox.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="radioButton0.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2407,6 +1455,66 @@
   <data name="&gt;&gt;radioButton180.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;ASCII.Name" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="&gt;&gt;ASCII.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ASCII.Parent" xml:space="preserve">
+    <value>binama_groupBox</value>
+  </data>
+  <data name="&gt;&gt;ASCII.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;GB2312.Name" xml:space="preserve">
+    <value>GB2312</value>
+  </data>
+  <data name="&gt;&gt;GB2312.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GB2312.Parent" xml:space="preserve">
+    <value>binama_groupBox</value>
+  </data>
+  <data name="&gt;&gt;GB2312.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GBK.Name" xml:space="preserve">
+    <value>GBK</value>
+  </data>
+  <data name="&gt;&gt;GBK.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBK.Parent" xml:space="preserve">
+    <value>binama_groupBox</value>
+  </data>
+  <data name="&gt;&gt;GBK.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="binama_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 264</value>
+  </data>
+  <data name="binama_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 46</value>
+  </data>
+  <data name="binama_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="binama_groupBox.Text" xml:space="preserve">
+    <value>编码选择</value>
+  </data>
+  <data name="&gt;&gt;binama_groupBox.Name" xml:space="preserve">
+    <value>binama_groupBox</value>
+  </data>
+  <data name="&gt;&gt;binama_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;binama_groupBox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;binama_groupBox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
   <data name="ASCII.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2487,6 +1595,30 @@
   </data>
   <data name="&gt;&gt;GBK.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="pgbBuilderProc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 469</value>
+  </data>
+  <data name="pgbBuilderProc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>383, 23</value>
+  </data>
+  <data name="pgbBuilderProc.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="pgbBuilderProc.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pgbBuilderProc.Name" xml:space="preserve">
+    <value>pgbBuilderProc</value>
+  </data>
+  <data name="&gt;&gt;pgbBuilderProc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pgbBuilderProc.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;pgbBuilderProc.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="rdBtnNonStandard.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2758,6 +1890,126 @@
   <data name="&gt;&gt;font_width_label.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="set_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 316</value>
+  </data>
+  <data name="set_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 115</value>
+  </data>
+  <data name="set_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="set_groupBox.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="&gt;&gt;set_groupBox.Name" xml:space="preserve">
+    <value>set_groupBox</value>
+  </data>
+  <data name="&gt;&gt;set_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;set_groupBox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;set_groupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;font_viwer_textBox.Name" xml:space="preserve">
+    <value>font_viwer_textBox</value>
+  </data>
+  <data name="&gt;&gt;font_viwer_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;font_viwer_textBox.Parent" xml:space="preserve">
+    <value>font_groupBox</value>
+  </data>
+  <data name="&gt;&gt;font_viwer_textBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;font_view_label.Name" xml:space="preserve">
+    <value>font_view_label</value>
+  </data>
+  <data name="&gt;&gt;font_view_label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;font_view_label.Parent" xml:space="preserve">
+    <value>font_groupBox</value>
+  </data>
+  <data name="&gt;&gt;font_view_label.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;font_size_numericUpDown.Name" xml:space="preserve">
+    <value>font_size_numericUpDown</value>
+  </data>
+  <data name="&gt;&gt;font_size_numericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;font_size_numericUpDown.Parent" xml:space="preserve">
+    <value>font_groupBox</value>
+  </data>
+  <data name="&gt;&gt;font_size_numericUpDown.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;font_label.Name" xml:space="preserve">
+    <value>font_label</value>
+  </data>
+  <data name="&gt;&gt;font_label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;font_label.Parent" xml:space="preserve">
+    <value>font_groupBox</value>
+  </data>
+  <data name="&gt;&gt;font_label.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;check_font_button.Name" xml:space="preserve">
+    <value>check_font_button</value>
+  </data>
+  <data name="&gt;&gt;check_font_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;check_font_button.Parent" xml:space="preserve">
+    <value>font_groupBox</value>
+  </data>
+  <data name="&gt;&gt;check_font_button.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;message_groupBox.Name" xml:space="preserve">
+    <value>message_groupBox</value>
+  </data>
+  <data name="&gt;&gt;message_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;message_groupBox.Parent" xml:space="preserve">
+    <value>font_groupBox</value>
+  </data>
+  <data name="&gt;&gt;message_groupBox.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="font_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 20</value>
+  </data>
+  <data name="font_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>343, 143</value>
+  </data>
+  <data name="font_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="font_groupBox.Text" xml:space="preserve">
+    <value>字体</value>
+  </data>
+  <data name="&gt;&gt;font_groupBox.Name" xml:space="preserve">
+    <value>font_groupBox</value>
+  </data>
+  <data name="&gt;&gt;font_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;font_groupBox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;font_groupBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="font_viwer_textBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>229, 101</value>
   </data>
@@ -2938,522 +2190,6 @@
   <data name="&gt;&gt;font_message_textBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tssLblStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 17</value>
-  </data>
-  <data name="str2hex_radioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="str2hex_radioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>214, 33</value>
-  </data>
-  <data name="str2hex_radioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 16</value>
-  </data>
-  <data name="str2hex_radioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="str2hex_radioButton.Text" xml:space="preserve">
-    <value>字符转机内码</value>
-  </data>
-  <data name="&gt;&gt;str2hex_radioButton.Name" xml:space="preserve">
-    <value>str2hex_radioButton</value>
-  </data>
-  <data name="&gt;&gt;str2hex_radioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;str2hex_radioButton.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;str2hex_radioButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="hex2str_radioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="hex2str_radioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>335, 33</value>
-  </data>
-  <data name="hex2str_radioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 16</value>
-  </data>
-  <data name="hex2str_radioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="hex2str_radioButton.Text" xml:space="preserve">
-    <value>机内码转字符</value>
-  </data>
-  <data name="&gt;&gt;hex2str_radioButton.Name" xml:space="preserve">
-    <value>hex2str_radioButton</value>
-  </data>
-  <data name="&gt;&gt;hex2str_radioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;hex2str_radioButton.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;hex2str_radioButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="yima_textBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>316, 115</value>
-  </data>
-  <data name="yima_textBox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="yima_textBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>247, 232</value>
-  </data>
-  <data name="yima_textBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;yima_textBox.Name" xml:space="preserve">
-    <value>yima_textBox</value>
-  </data>
-  <data name="&gt;&gt;yima_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;yima_textBox.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;yima_textBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="clear_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>484, 66</value>
-  </data>
-  <data name="clear_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 24</value>
-  </data>
-  <data name="clear_button.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="clear_button.Text" xml:space="preserve">
-    <value>清除</value>
-  </data>
-  <data name="&gt;&gt;clear_button.Name" xml:space="preserve">
-    <value>clear_button</value>
-  </data>
-  <data name="&gt;&gt;clear_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;clear_button.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;clear_button.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="yima_listBox.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="yima_listBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 115</value>
-  </data>
-  <data name="yima_listBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 232</value>
-  </data>
-  <data name="yima_listBox.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;yima_listBox.Name" xml:space="preserve">
-    <value>yima_listBox</value>
-  </data>
-  <data name="&gt;&gt;yima_listBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;yima_listBox.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;yima_listBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Transfor_button.Font" type="System.Drawing.Font, System.Drawing">
-    <value>宋体, 9pt</value>
-  </data>
-  <data name="Transfor_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>422, 66</value>
-  </data>
-  <data name="Transfor_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 23</value>
-  </data>
-  <data name="Transfor_button.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="Transfor_button.Text" xml:space="preserve">
-    <value>译码</value>
-  </data>
-  <data name="&gt;&gt;Transfor_button.Name" xml:space="preserve">
-    <value>Transfor_button</value>
-  </data>
-  <data name="&gt;&gt;Transfor_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Transfor_button.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;Transfor_button.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="input_textBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 66</value>
-  </data>
-  <data name="input_textBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>361, 21</value>
-  </data>
-  <data name="input_textBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="input_textBox.Text" xml:space="preserve">
-    <value>上海仰邦科技股份有限公司</value>
-  </data>
-  <data name="&gt;&gt;input_textBox.Name" xml:space="preserve">
-    <value>input_textBox</value>
-  </data>
-  <data name="&gt;&gt;input_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;input_textBox.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;input_textBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="message.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="message.Location" type="System.Drawing.Point, System.Drawing">
-    <value>53, 37</value>
-  </data>
-  <data name="message.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 12</value>
-  </data>
-  <data name="message.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="message.Text" xml:space="preserve">
-    <value>输入要转码的字符</value>
-  </data>
-  <data name="&gt;&gt;message.Name" xml:space="preserve">
-    <value>message</value>
-  </data>
-  <data name="&gt;&gt;message.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;message.Parent" xml:space="preserve">
-    <value>jineima</value>
-  </data>
-  <data name="&gt;&gt;message.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="crc_clear_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>423, 328</value>
-  </data>
-  <data name="crc_clear_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>50, 23</value>
-  </data>
-  <data name="crc_clear_button.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="crc_clear_button.Text" xml:space="preserve">
-    <value>清除</value>
-  </data>
-  <data name="&gt;&gt;crc_clear_button.Name" xml:space="preserve">
-    <value>crc_clear_button</value>
-  </data>
-  <data name="&gt;&gt;crc_clear_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;crc_clear_button.Parent" xml:space="preserve">
-    <value>CRC16</value>
-  </data>
-  <data name="&gt;&gt;crc_clear_button.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="crc_check_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>258, 328</value>
-  </data>
-  <data name="crc_check_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>63, 23</value>
-  </data>
-  <data name="crc_check_button.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="crc_check_button.Text" xml:space="preserve">
-    <value>校验</value>
-  </data>
-  <data name="&gt;&gt;crc_check_button.Name" xml:space="preserve">
-    <value>crc_check_button</value>
-  </data>
-  <data name="&gt;&gt;crc_check_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;crc_check_button.Parent" xml:space="preserve">
-    <value>CRC16</value>
-  </data>
-  <data name="&gt;&gt;crc_check_button.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="crc_textBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 330</value>
-  </data>
-  <data name="crc_textBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 21</value>
-  </data>
-  <data name="crc_textBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;crc_textBox.Name" xml:space="preserve">
-    <value>crc_textBox</value>
-  </data>
-  <data name="&gt;&gt;crc_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;crc_textBox.Parent" xml:space="preserve">
-    <value>CRC16</value>
-  </data>
-  <data name="&gt;&gt;crc_textBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;crc_data_richTextBox.Name" xml:space="preserve">
-    <value>crc_data_richTextBox</value>
-  </data>
-  <data name="&gt;&gt;crc_data_richTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;crc_data_richTextBox.Parent" xml:space="preserve">
-    <value>check_groupBox</value>
-  </data>
-  <data name="&gt;&gt;crc_data_richTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="check_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 30</value>
-  </data>
-  <data name="check_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 276</value>
-  </data>
-  <data name="check_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="check_groupBox.Text" xml:space="preserve">
-    <value>校验区</value>
-  </data>
-  <data name="&gt;&gt;check_groupBox.Name" xml:space="preserve">
-    <value>check_groupBox</value>
-  </data>
-  <data name="&gt;&gt;check_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;check_groupBox.Parent" xml:space="preserve">
-    <value>CRC16</value>
-  </data>
-  <data name="&gt;&gt;check_groupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="crc_data_richTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 20</value>
-  </data>
-  <data name="crc_data_richTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>324, 249</value>
-  </data>
-  <data name="crc_data_richTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="crc_data_richTextBox.Text" xml:space="preserve">
-    <value>01 00 00 80 00 00 00 00 00 00 FE 02 28 00 A3 06 01 23 00 00 01 1F 00 00 00 00 00 00 04 00 10 00 00 00 00 02 00 00 00 00 02 02 01 00 00 0A 04 00 00 00 D1 F6 B0 EE</value>
-  </data>
-  <data name="&gt;&gt;crc_data_richTextBox.Name" xml:space="preserve">
-    <value>crc_data_richTextBox</value>
-  </data>
-  <data name="&gt;&gt;crc_data_richTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;crc_data_richTextBox.Parent" xml:space="preserve">
-    <value>check_groupBox</value>
-  </data>
-  <data name="&gt;&gt;crc_data_richTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="data_after_transform_richTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 231</value>
-  </data>
-  <data name="data_after_transform_richTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 195</value>
-  </data>
-  <data name="data_after_transform_richTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="data_after_transform_richTextBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;data_after_transform_richTextBox.Name" xml:space="preserve">
-    <value>data_after_transform_richTextBox</value>
-  </data>
-  <data name="&gt;&gt;data_after_transform_richTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;data_after_transform_richTextBox.Parent" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;data_after_transform_richTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label_mes.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label_mes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 207</value>
-  </data>
-  <data name="label_mes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 12</value>
-  </data>
-  <data name="label_mes.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="label_mes.Text" xml:space="preserve">
-    <value>除去帧头帧尾，转义后的数据</value>
-  </data>
-  <data name="&gt;&gt;label_mes.Name" xml:space="preserve">
-    <value>label_mes</value>
-  </data>
-  <data name="&gt;&gt;label_mes.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label_mes.Parent" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;label_mes.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="out_excel_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 222</value>
-  </data>
-  <data name="out_excel_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 37</value>
-  </data>
-  <data name="out_excel_button.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="out_excel_button.Text" xml:space="preserve">
-    <value>输出Excel</value>
-  </data>
-  <data name="out_excel_button.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;out_excel_button.Name" xml:space="preserve">
-    <value>out_excel_button</value>
-  </data>
-  <data name="&gt;&gt;out_excel_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;out_excel_button.Parent" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;out_excel_button.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="data_listView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>372, 17</value>
-  </data>
-  <data name="data_listView.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 419</value>
-  </data>
-  <data name="data_listView.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;data_listView.Name" xml:space="preserve">
-    <value>data_listView</value>
-  </data>
-  <data name="&gt;&gt;data_listView.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;data_listView.Parent" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;data_listView.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value>参数</value>
-  </data>
-  <data name="columnHeader1.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
-    <value>86</value>
-  </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value>数据</value>
-  </data>
-  <data name="columnHeader2.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
-    <value>105</value>
-  </data>
-  <data name="columnHeader3.Text" xml:space="preserve">
-    <value>描述</value>
-  </data>
-  <data name="columnHeader3.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
-    <value>190</value>
-  </data>
-  <data name="analysis_button.Location" type="System.Drawing.Point, System.Drawing">
-    <value>304, 155</value>
-  </data>
-  <data name="analysis_button.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 39</value>
-  </data>
-  <data name="analysis_button.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="analysis_button.Text" xml:space="preserve">
-    <value>解析</value>
-  </data>
-  <data name="&gt;&gt;analysis_button.Name" xml:space="preserve">
-    <value>analysis_button</value>
-  </data>
-  <data name="&gt;&gt;analysis_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;analysis_button.Parent" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;analysis_button.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="Raw_data_textBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 17</value>
-  </data>
-  <data name="Raw_data_textBox.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Raw_data_textBox.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>Both</value>
-  </data>
-  <data name="Raw_data_textBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 177</value>
-  </data>
-  <data name="Raw_data_textBox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="Raw_data_textBox.Text" xml:space="preserve">
-    <value>A5 A5 A5 A5 A5 A5 A5 A5 01 00 00 80 00 00 00 00 00 00 FE 02 32 00 A3 06 01 2D 00 00 01 29 00 00 00 00 00 00 18 00 20 00 00 00 00 02 00 00 00 00 02 02 03 00 04 05 0E 00 00 00 30 31 32 33 34 35 51 52 53 54 54 56 27 42 A8 7D 5A</value>
-  </data>
-  <data name="&gt;&gt;Raw_data_textBox.Name" xml:space="preserve">
-    <value>Raw_data_textBox</value>
-  </data>
-  <data name="&gt;&gt;Raw_data_textBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Raw_data_textBox.Parent" xml:space="preserve">
-    <value>analysis</value>
-  </data>
-  <data name="&gt;&gt;Raw_data_textBox.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <metadata name="fontDlg.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>250, 17</value>
   </metadata>
@@ -3467,13 +2203,13 @@
     <value>464, 17</value>
   </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>744, 17</value>
+    <value>607, 18</value>
   </metadata>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>784, 25</value>
+    <value>1630, 25</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -3491,7 +2227,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="语言ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 21</value>
@@ -3529,6 +2265,1204 @@
   <data name="关于ToolStripMenuItem.Text" xml:space="preserve">
     <value>关于</value>
   </data>
+  <data name="&gt;&gt;View_mode_Button.Name" xml:space="preserve">
+    <value>View_mode_Button</value>
+  </data>
+  <data name="&gt;&gt;View_mode_Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;View_mode_Button.Parent" xml:space="preserve">
+    <value>groupBoxpic</value>
+  </data>
+  <data name="&gt;&gt;View_mode_Button.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxFont.Name" xml:space="preserve">
+    <value>pictureBoxFont</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxFont.Parent" xml:space="preserve">
+    <value>groupBoxpic</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxFont.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxpic.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 41</value>
+  </data>
+  <data name="groupBoxpic.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 410</value>
+  </data>
+  <data name="groupBoxpic.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBoxpic.Text" xml:space="preserve">
+    <value>字模区</value>
+  </data>
+  <data name="&gt;&gt;groupBoxpic.Name" xml:space="preserve">
+    <value>groupBoxpic</value>
+  </data>
+  <data name="&gt;&gt;groupBoxpic.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxpic.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBoxpic.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="View_mode_Button.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="View_mode_Button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="View_mode_Button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 11</value>
+  </data>
+  <data name="View_mode_Button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 16</value>
+  </data>
+  <data name="View_mode_Button.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="View_mode_Button.Text" xml:space="preserve">
+    <value>查看模式</value>
+  </data>
+  <data name="&gt;&gt;View_mode_Button.Name" xml:space="preserve">
+    <value>View_mode_Button</value>
+  </data>
+  <data name="&gt;&gt;View_mode_Button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;View_mode_Button.Parent" xml:space="preserve">
+    <value>groupBoxpic</value>
+  </data>
+  <data name="&gt;&gt;View_mode_Button.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBoxFont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBoxFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 33</value>
+  </data>
+  <data name="pictureBoxFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>386, 386</value>
+  </data>
+  <data name="pictureBoxFont.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxFont.Name" xml:space="preserve">
+    <value>pictureBoxFont</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxFont.Parent" xml:space="preserve">
+    <value>groupBoxpic</value>
+  </data>
+  <data name="&gt;&gt;pictureBoxFont.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;viwer_textBox.Name" xml:space="preserve">
+    <value>viwer_textBox</value>
+  </data>
+  <data name="&gt;&gt;viwer_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viwer_textBox.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;viwer_textBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;down_button.Name" xml:space="preserve">
+    <value>down_button</value>
+  </data>
+  <data name="&gt;&gt;down_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;down_button.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;down_button.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;up_button.Name" xml:space="preserve">
+    <value>up_button</value>
+  </data>
+  <data name="&gt;&gt;up_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;up_button.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;up_button.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GBK_radioButton.Name" xml:space="preserve">
+    <value>GBK_radioButton</value>
+  </data>
+  <data name="&gt;&gt;GBK_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBK_radioButton.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;GBK_radioButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;radioButtonUnit.Name" xml:space="preserve">
+    <value>radioButtonUnit</value>
+  </data>
+  <data name="&gt;&gt;radioButtonUnit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonUnit.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;radioButtonUnit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;radioButtonFontLib.Name" xml:space="preserve">
+    <value>radioButtonFontLib</value>
+  </data>
+  <data name="&gt;&gt;radioButtonFontLib.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonFontLib.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;radioButtonFontLib.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.Name" xml:space="preserve">
+    <value>labelIndex</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.Name" xml:space="preserve">
+    <value>numericUpDownIndex</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.Name" xml:space="preserve">
+    <value>buttonReadFont</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;viwer_font_label.Name" xml:space="preserve">
+    <value>viwer_font_label</value>
+  </data>
+  <data name="&gt;&gt;viwer_font_label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viwer_font_label.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;viwer_font_label.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.Name" xml:space="preserve">
+    <value>labelFontName</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.Name" xml:space="preserve">
+    <value>textBoxFontName</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownHeight.Name" xml:space="preserve">
+    <value>numericUpDownHeight</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownHeight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownHeight.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownHeight.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownWidth.Name" xml:space="preserve">
+    <value>numericUpDownWidth</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownWidth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownWidth.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownWidth.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;labelHeight.Name" xml:space="preserve">
+    <value>labelHeight</value>
+  </data>
+  <data name="&gt;&gt;labelHeight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHeight.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;labelHeight.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;labelWidth.Name" xml:space="preserve">
+    <value>labelWidth</value>
+  </data>
+  <data name="&gt;&gt;labelWidth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelWidth.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;labelWidth.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="groupBoxSet.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 20</value>
+  </data>
+  <data name="groupBoxSet.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 163</value>
+  </data>
+  <data name="groupBoxSet.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="groupBoxSet.Text" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSet.Name" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSet.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSet.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxSet.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="viwer_textBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>196, 134</value>
+  </data>
+  <data name="viwer_textBox.MaxLength" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="viwer_textBox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="viwer_textBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="viwer_textBox.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;viwer_textBox.Name" xml:space="preserve">
+    <value>viwer_textBox</value>
+  </data>
+  <data name="&gt;&gt;viwer_textBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viwer_textBox.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;viwer_textBox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="down_button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="down_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 134</value>
+  </data>
+  <data name="down_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 26</value>
+  </data>
+  <data name="down_button.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="down_button.Text" xml:space="preserve">
+    <value>下一个</value>
+  </data>
+  <data name="&gt;&gt;down_button.Name" xml:space="preserve">
+    <value>down_button</value>
+  </data>
+  <data name="&gt;&gt;down_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;down_button.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;down_button.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="up_button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="up_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 102</value>
+  </data>
+  <data name="up_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 26</value>
+  </data>
+  <data name="up_button.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="up_button.Text" xml:space="preserve">
+    <value>上一个</value>
+  </data>
+  <data name="&gt;&gt;up_button.Name" xml:space="preserve">
+    <value>up_button</value>
+  </data>
+  <data name="&gt;&gt;up_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;up_button.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;up_button.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GBK_radioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="GBK_radioButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="GBK_radioButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="GBK_radioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 87</value>
+  </data>
+  <data name="GBK_radioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 20</value>
+  </data>
+  <data name="GBK_radioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="GBK_radioButton.Text" xml:space="preserve">
+    <value>GBK</value>
+  </data>
+  <data name="&gt;&gt;GBK_radioButton.Name" xml:space="preserve">
+    <value>GBK_radioButton</value>
+  </data>
+  <data name="&gt;&gt;GBK_radioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GBK_radioButton.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;GBK_radioButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="radioButtonUnit.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonUnit.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="radioButtonUnit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButtonUnit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 131</value>
+  </data>
+  <data name="radioButtonUnit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 20</value>
+  </data>
+  <data name="radioButtonUnit.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radioButtonUnit.Text" xml:space="preserve">
+    <value>ASCII</value>
+  </data>
+  <data name="&gt;&gt;radioButtonUnit.Name" xml:space="preserve">
+    <value>radioButtonUnit</value>
+  </data>
+  <data name="&gt;&gt;radioButtonUnit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonUnit.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;radioButtonUnit.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="radioButtonFontLib.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radioButtonFontLib.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="radioButtonFontLib.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radioButtonFontLib.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 42</value>
+  </data>
+  <data name="radioButtonFontLib.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 22</value>
+  </data>
+  <data name="radioButtonFontLib.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radioButtonFontLib.Text" xml:space="preserve">
+    <value>GB2312</value>
+  </data>
+  <data name="&gt;&gt;radioButtonFontLib.Name" xml:space="preserve">
+    <value>radioButtonFontLib</value>
+  </data>
+  <data name="&gt;&gt;radioButtonFontLib.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButtonFontLib.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;radioButtonFontLib.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelIndex.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelIndex.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="labelIndex.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelIndex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 47</value>
+  </data>
+  <data name="labelIndex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 16</value>
+  </data>
+  <data name="labelIndex.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="labelIndex.Text" xml:space="preserve">
+    <value>编号：</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.Name" xml:space="preserve">
+    <value>labelIndex</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="numericUpDownIndex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 47</value>
+  </data>
+  <data name="numericUpDownIndex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 21</value>
+  </data>
+  <data name="numericUpDownIndex.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.Name" xml:space="preserve">
+    <value>numericUpDownIndex</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="buttonReadFont.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonReadFont.Location" type="System.Drawing.Point, System.Drawing">
+    <value>260, 13</value>
+  </data>
+  <data name="buttonReadFont.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 23</value>
+  </data>
+  <data name="buttonReadFont.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="buttonReadFont.Text" xml:space="preserve">
+    <value>读取</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.Name" xml:space="preserve">
+    <value>buttonReadFont</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="viwer_font_label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="viwer_font_label.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="viwer_font_label.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="viwer_font_label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>194, 109</value>
+  </data>
+  <data name="viwer_font_label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 16</value>
+  </data>
+  <data name="viwer_font_label.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="viwer_font_label.Text" xml:space="preserve">
+    <value>预览字符：</value>
+  </data>
+  <data name="&gt;&gt;viwer_font_label.Name" xml:space="preserve">
+    <value>viwer_font_label</value>
+  </data>
+  <data name="&gt;&gt;viwer_font_label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viwer_font_label.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;viwer_font_label.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="labelFontName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFontName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 10.5pt</value>
+  </data>
+  <data name="labelFontName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelFontName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 17</value>
+  </data>
+  <data name="labelFontName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 14</value>
+  </data>
+  <data name="labelFontName.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="labelFontName.Text" xml:space="preserve">
+    <value>字库名：</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.Name" xml:space="preserve">
+    <value>labelFontName</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="textBoxFontName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="textBoxFontName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>84, 13</value>
+  </data>
+  <data name="textBoxFontName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 21</value>
+  </data>
+  <data name="textBoxFontName.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="textBoxFontName.Text" xml:space="preserve">
+    <value>打开字库</value>
+  </data>
+  <data name="textBoxFontName.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.Name" xml:space="preserve">
+    <value>textBoxFontName</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="numericUpDownHeight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 71</value>
+  </data>
+  <data name="numericUpDownHeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 21</value>
+  </data>
+  <data name="numericUpDownHeight.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownHeight.Name" xml:space="preserve">
+    <value>numericUpDownHeight</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownHeight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownHeight.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownHeight.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="numericUpDownWidth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 40</value>
+  </data>
+  <data name="numericUpDownWidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 21</value>
+  </data>
+  <data name="numericUpDownWidth.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownWidth.Name" xml:space="preserve">
+    <value>numericUpDownWidth</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownWidth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownWidth.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownWidth.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="labelHeight.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelHeight.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="labelHeight.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelHeight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 74</value>
+  </data>
+  <data name="labelHeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 16</value>
+  </data>
+  <data name="labelHeight.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelHeight.Text" xml:space="preserve">
+    <value>高：</value>
+  </data>
+  <data name="&gt;&gt;labelHeight.Name" xml:space="preserve">
+    <value>labelHeight</value>
+  </data>
+  <data name="&gt;&gt;labelHeight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHeight.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;labelHeight.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="labelWidth.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelWidth.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt</value>
+  </data>
+  <data name="labelWidth.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelWidth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>86, 42</value>
+  </data>
+  <data name="labelWidth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 16</value>
+  </data>
+  <data name="labelWidth.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelWidth.Text" xml:space="preserve">
+    <value>宽：</value>
+  </data>
+  <data name="&gt;&gt;labelWidth.Name" xml:space="preserve">
+    <value>labelWidth</value>
+  </data>
+  <data name="&gt;&gt;labelWidth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelWidth.Parent" xml:space="preserve">
+    <value>groupBoxSet</value>
+  </data>
+  <data name="&gt;&gt;labelWidth.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;check_data_format.Name" xml:space="preserve">
+    <value>check_data_format</value>
+  </data>
+  <data name="&gt;&gt;check_data_format.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;check_data_format.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;check_data_format.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelByteNum.Name" xml:space="preserve">
+    <value>labelByteNum</value>
+  </data>
+  <data name="&gt;&gt;labelByteNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelByteNum.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;labelByteNum.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelNum.Name" xml:space="preserve">
+    <value>labelNum</value>
+  </data>
+  <data name="&gt;&gt;labelNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelNum.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;labelNum.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Save_font_button.Name" xml:space="preserve">
+    <value>Save_font_button</value>
+  </data>
+  <data name="&gt;&gt;Save_font_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Save_font_button.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;Save_font_button.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxData.Name" xml:space="preserve">
+    <value>richTextBoxData</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxData.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxData.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;labelFontInfo.Name" xml:space="preserve">
+    <value>labelFontInfo</value>
+  </data>
+  <data name="&gt;&gt;labelFontInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFontInfo.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;labelFontInfo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;buttonGetData.Name" xml:space="preserve">
+    <value>buttonGetData</value>
+  </data>
+  <data name="&gt;&gt;buttonGetData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonGetData.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;buttonGetData.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="groupBoxData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 186</value>
+  </data>
+  <data name="groupBoxData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 250</value>
+  </data>
+  <data name="groupBoxData.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="groupBoxData.Text" xml:space="preserve">
+    <value>数据区</value>
+  </data>
+  <data name="&gt;&gt;groupBoxData.Name" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;groupBoxData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxData.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBoxData.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="check_data_format.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="check_data_format.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="check_data_format.Location" type="System.Drawing.Point, System.Drawing">
+    <value>146, 20</value>
+  </data>
+  <data name="check_data_format.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 16</value>
+  </data>
+  <data name="check_data_format.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="check_data_format.Text" xml:space="preserve">
+    <value>添加0x和,</value>
+  </data>
+  <data name="&gt;&gt;check_data_format.Name" xml:space="preserve">
+    <value>check_data_format</value>
+  </data>
+  <data name="&gt;&gt;check_data_format.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;check_data_format.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;check_data_format.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelByteNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelByteNum.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelByteNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>299, 51</value>
+  </data>
+  <data name="labelByteNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>11, 12</value>
+  </data>
+  <data name="labelByteNum.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelByteNum.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelByteNum.Name" xml:space="preserve">
+    <value>labelByteNum</value>
+  </data>
+  <data name="&gt;&gt;labelByteNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelByteNum.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;labelByteNum.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelNum.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelNum.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelNum.Location" type="System.Drawing.Point, System.Drawing">
+    <value>240, 51</value>
+  </data>
+  <data name="labelNum.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 12</value>
+  </data>
+  <data name="labelNum.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelNum.Text" xml:space="preserve">
+    <value>字节数：</value>
+  </data>
+  <data name="&gt;&gt;labelNum.Name" xml:space="preserve">
+    <value>labelNum</value>
+  </data>
+  <data name="&gt;&gt;labelNum.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelNum.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;labelNum.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Save_font_button.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 9pt</value>
+  </data>
+  <data name="Save_font_button.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Save_font_button.Location" type="System.Drawing.Point, System.Drawing">
+    <value>65, 20</value>
+  </data>
+  <data name="Save_font_button.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 40</value>
+  </data>
+  <data name="Save_font_button.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Save_font_button.Text" xml:space="preserve">
+    <value>保存字模</value>
+  </data>
+  <data name="&gt;&gt;Save_font_button.Name" xml:space="preserve">
+    <value>Save_font_button</value>
+  </data>
+  <data name="&gt;&gt;Save_font_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Save_font_button.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;Save_font_button.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="richTextBoxData.Font" type="System.Drawing.Font, System.Drawing">
+    <value>宋体, 12pt, style=Bold</value>
+  </data>
+  <data name="richTextBoxData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 66</value>
+  </data>
+  <data name="richTextBoxData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 197</value>
+  </data>
+  <data name="richTextBoxData.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="richTextBoxData.Text" xml:space="preserve">
+    <value>
+
+
+
+字库卡工具版权所有（C）2017</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxData.Name" xml:space="preserve">
+    <value>richTextBoxData</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxData.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;richTextBoxData.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelFontInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelFontInfo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelFontInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>139, 51</value>
+  </data>
+  <data name="labelFontInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 12</value>
+  </data>
+  <data name="labelFontInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelFontInfo.Text" xml:space="preserve">
+    <value>字库信息：</value>
+  </data>
+  <data name="&gt;&gt;labelFontInfo.Name" xml:space="preserve">
+    <value>labelFontInfo</value>
+  </data>
+  <data name="&gt;&gt;labelFontInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFontInfo.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;labelFontInfo.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonGetData.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonGetData.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 20</value>
+  </data>
+  <data name="buttonGetData.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 40</value>
+  </data>
+  <data name="buttonGetData.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonGetData.Text" xml:space="preserve">
+    <value>获取数据</value>
+  </data>
+  <data name="&gt;&gt;buttonGetData.Name" xml:space="preserve">
+    <value>buttonGetData</value>
+  </data>
+  <data name="&gt;&gt;buttonGetData.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonGetData.Parent" xml:space="preserve">
+    <value>groupBoxData</value>
+  </data>
+  <data name="&gt;&gt;buttonGetData.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="font_viwer_panel.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="font_viwer_panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="font_viwer_panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 17</value>
+  </data>
+  <data name="font_viwer_panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>366, 395</value>
+  </data>
+  <data name="font_viwer_panel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;font_viwer_panel.Name" xml:space="preserve">
+    <value>font_viwer_panel</value>
+  </data>
+  <data name="&gt;&gt;font_viwer_panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;font_viwer_panel.Parent" xml:space="preserve">
+    <value>preview_groupBox</value>
+  </data>
+  <data name="&gt;&gt;font_viwer_panel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="preview_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>428, 52</value>
+  </data>
+  <data name="preview_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 415</value>
+  </data>
+  <data name="preview_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="preview_groupBox.Text" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="&gt;&gt;preview_groupBox.Name" xml:space="preserve">
+    <value>preview_groupBox</value>
+  </data>
+  <data name="&gt;&gt;preview_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;preview_groupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;preview_groupBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>821, 28</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 442</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>查看编辑</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1187, 28</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>411, 512</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>制作字库</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -3539,7 +3473,7 @@
     <value>6, 12</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>784, 543</value>
+    <value>1630, 618</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3618,7 +3552,7 @@
 </value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 582</value>
+    <value>4096, 4096</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>800, 582</value>
@@ -3640,12 +3574,6 @@
   </data>
   <data name="&gt;&gt;timer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tssLblStatus.Name" xml:space="preserve">
-    <value>tssLblStatus</value>
-  </data>
-  <data name="&gt;&gt;tssLblStatus.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
     <value>columnHeader1</value>
