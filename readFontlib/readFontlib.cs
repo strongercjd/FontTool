@@ -799,141 +799,7 @@ namespace readFontlib
         #endregion 字库查看修改的代码
 
 
-        #region 机内码查询的代码
-
-        private void Transfor_button_Click(object sender, EventArgs e)
-        {
-            int m = 0;
-            int n = 0;
-
-            yima_textBox.Clear();
-            yima_listBox.Items.Clear();
-
-            if (input_textBox.Text == "")
-            {
-                MessageBox.Show("请输入译码文字");
-                return;
-            }
-
-            if (str2hex_radioButton.Checked == true)
-            {
-                byte[] array = System.Text.Encoding.Default.GetBytes(input_textBox.Text);
-                for (int i = 0; i < array.Length; i = m + n)
-                {
-                    string jinei;
-                    if (array[i] < 0x81)
-                    {
-                        jinei = Convert.ToString(array[i], 16);
-
-                        yima_listBox.Items.Add(input_textBox.Text.Substring(m + n / 2, 1) + "   的机内码是：" + jinei);
-                        yima_textBox.Text += array[i].ToString("X2").ToUpper() + " ";
-
-                        m++;
-                    }
-                    else
-                    {
-                        jinei = Convert.ToString(array[i], 16) + Convert.ToString(array[i + 1], 16);
-                        yima_listBox.Items.Add(input_textBox.Text.Substring(m + n / 2, 1) + "  的机内码是：" + jinei);
-                        yima_textBox.Text += array[i].ToString("X2").ToUpper() + " " + array[i + 1].ToString("X2").ToUpper() + " ";
-
-                        n = n + 2;
-                    }
-                }
-                yima_textBox.Text = yima_textBox.Text.Substring(0, yima_textBox.Text.Length - 1);
-            }
-            if (hex2str_radioButton.Checked == true)
-            {
-                int i = 0;
-                string st = string.Empty;
-                string result = string.Empty;
-
-                try
-                {
-                    string[] strCheckArray = input_textBox.Text.Split(' ');
-                    byte[] myarray = new byte[strCheckArray.Length];
-                    foreach (var tmp in strCheckArray)
-                    {
-                        myarray[i++] = System.Convert.ToByte(tmp, 16);
-                    }
-                    
-                    for (int j = 0; j < i;)
-                    {
-                        if (myarray[j] < 0x81)
-                        {
-                            System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
-                            byte[] byteArray = new byte[] { (byte)myarray[j++] };
-                            string strCharacter = asciiEncoding.GetString(byteArray);
-                            //yima_listBox.Items.Add(myarray[j].ToString() + "   的机内码是：" + strCharacter);
-                            st = st + strCharacter;
-                        }
-                        else
-                        {
-                            byte[] bytes = new byte[2];
-                            bytes[0] = myarray[j++];
-                            bytes[1] = myarray[j++];
-                            System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
-                            result = chs.GetString(bytes);
-                            st = st + result;
-                        }
-                    }
-
-                    yima_textBox.Text = st;
-                }
-            catch (Exception)
-            {
-                MessageBox.Show("请输入正确格式的数据！");
-            }
-        }
-
-        }
-
-
-
-        private void clear_button_Click(object sender, EventArgs e)
-        {
-            yima_listBox.Items.Clear();
-            input_textBox.Clear();
-            yima_textBox.Clear();
-        }
-
-
-        #endregion 机内码查询的代码
-
-
-
-        #region CRC16校验的代码
-
-        private void crc_check_button_Click(object sender, EventArgs e)
-        {
-            int mycrc = 0;
-            int i = 0;
-            try
-            {
-                string[] strCheckArray = crc_data_richTextBox.Text.Split(' ');
-                byte[] myarray = new byte[strCheckArray.Length];
-                foreach (var tmp in strCheckArray)
-                {
-                    myarray[i++] = System.Convert.ToByte(tmp, 16);
-                }
-                mycrc = CRC.crc16(myarray, i);
-                crc_textBox.Text = (mycrc & 0xff).ToString("X2").ToUpper() + " " + ((mycrc >> 8) & 0xff).ToString("X2").ToUpper();
-
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("请输入正确格式的数据！");
-            }
-        }
-
-        private void crc_clear_button_Click(object sender, EventArgs e)
-        {
-            crc_data_richTextBox.Clear();
-            crc_textBox.Clear();
-        }
-
-        #endregion CRC16校验的代码
-
+       
 
         #region 制作字库的代码
 
@@ -942,8 +808,6 @@ namespace readFontlib
 
         public byte[] BitmapToBytes(Bitmap Bitmap)
         {
-            //Bitmap = new Bitmap("test.bmp ");
-
             Color srcColor;
             int datalen = 0;
             int num = 0;
@@ -963,7 +827,6 @@ namespace readFontlib
                 {
                     //获取像素的ＲＧＢ颜色值
                     srcColor = Bitmap.GetPixel(x, y);
-
                     if ((srcColor.R == 0xff) && (srcColor.G == 0xff) && (srcColor.B == 0xff))
                     {
                         temp = temp << 1;
@@ -976,9 +839,9 @@ namespace readFontlib
                     num1++;
                     if ((num1 == 8) || ((x + 1) == Bitmap.Width))
                     {
-                        //temp = temp ^ 0xFF;
                         data[num++] = (byte)temp;
                         num1 = 0;
+                        temp = 0;
                     }
 
                 }
@@ -989,7 +852,23 @@ namespace readFontlib
         }
 
 
-        private void font_size_numericUpDown_ValueChanged(object sender, EventArgs e)
+        //private void font_size_numericUpDown_ValueChanged(object sender, EventArgs e)
+        //{
+        //    //重新设置选用的字体。
+        //    this.MatCharFont.MatFont =
+        //        new Font(this.MatCharFont.MatFont.FontFamily,
+        //                 (float)this.font_size_numericUpDown.Value,
+        //                 this.MatCharFont.MatFont.Style);
+        //    //更新字符预览。
+        //    BitmapToBytes(this.MatCharFont.MatBitmap);
+        //    paintFont();
+
+        //    //更新当前字体信息。
+        //    this.font_message_textBox.Clear();
+        //    this.font_message_textBox.Text = this.MatCharFont.GetMatFontInfo();
+        //}
+        /*更新字库预览*/
+        private void updata_font_prewiew(object sender, EventArgs e)
         {
             //重新设置选用的字体。
             this.MatCharFont.MatFont =
@@ -1450,318 +1329,6 @@ namespace readFontlib
                 this.vertical_numericUpDown.DataBindings.Clear();       //字体“垂直偏移：”数字框。
             }
         }
-        #endregion 制作字库的代码
-
-        #region UI语言
-        private void author_qq_picture_Click(object sender, EventArgs e)
-        {
-            //string url = "http://wpa.qq.com/msgrd?v=3&uin=" + 1601438030 + "&site=qq&menu=yes";
-            string url = "http://wpa.qq.com/msgrd?v=3&uin=1601438030&site=qq&menu=yes";
-            System.Diagnostics.Process.Start(url);
-        }
-
-        private void 中文繁体ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CHT");
-            UpDataMainFormUILanguage();
-        }
-
-        private void 中文简体ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CHS");
-            UpDataMainFormUILanguage();
-        }
-
-
-
-        private void 英文ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
-            UpDataMainFormUILanguage();
-        }
-
-        //根据当前的语言区域,更新主窗口的语言信息
-        private void UpDataMainFormUILanguage()
-        {
-            ResourceManager rm = new ResourceManager(typeof(readFontlib));
-            UpDataMainFormMenuLanguage(rm);
-            UpDataMainFormToolBarLanguage(rm);
-        }
-
-        //根据当前的语言区域,更新主窗口菜单的语言
-        private void UpDataMainFormMenuLanguage(ResourceManager rm)
-        {
-            #region 查看编辑区域
-            tabControl.TabPages[0].Text = rm.GetString("TabPages0"); 
-            groupBoxpic.Text = rm.GetString("groupBoxpic");
-            View_mode_Button.Text = rm.GetString("View_mode_Button");
-            edit_mode_Button.Text = rm.GetString("edit_mode_Button");
-            groupBoxSet.Text = rm.GetString("groupBoxSet");
-            labelFontName.Text = rm.GetString("labelFontName");
-            textBoxFontName.Text = rm.GetString("textBoxFontName");
-
-            buttonReadFont.Text = rm.GetString("buttonReadFont");
-            labelWidth.Text = rm.GetString("labelWidth");
-            labelHeight.Text = rm.GetString("labelHeight");
-            labelIndex.Text = rm.GetString("labelIndex");
-            up_button.Text = rm.GetString("up_button");
-            down_button.Text = rm.GetString("down_button");
-
-            groupBoxData.Text = rm.GetString("groupBoxData");
-            buttonGetData.Text = rm.GetString("buttonGetData");
-            Save_font_button.Text = rm.GetString("Save_font_button");
-            check_data_format.Text = rm.GetString("check_data_format");
-            labelFontInfo.Text = rm.GetString("labelFontInfo");
-            labelNum.Text = rm.GetString("labelNum");
-            richTextBoxData.Text = "";
-            richTextBoxData.AppendText ("\n" + "\n" + "\n" + "\n" + rm.GetString("copyright"));
-
-            #endregion 查看编辑区域
-
-
-            #region 制作字库区域
-            tabControl.TabPages[1].Text = rm.GetString("TabPages1");
-            font_groupBox.Text = rm.GetString("font_groupBox");
-            message_groupBox.Text = rm.GetString("message_groupBox");
-            check_font_button.Text = rm.GetString("check_font_button");
-            font_label.Text = rm.GetString("font_label");
-            font_view_label.Text = rm.GetString("font_view_label");
-
-            binama_groupBox.Text = rm.GetString("binama_groupBox");
-            set_groupBox.Text = rm.GetString("set_groupBox");
-            font_width_label.Text = rm.GetString("font_width_label");
-            font_height_label.Text = rm.GetString("font_height_label");
-            level_label.Text = rm.GetString("level_label");
-            vertical_label.Text = rm.GetString("vertical_label");
-
-            rdBtnNonStandard.Text = rm.GetString("rdBtnNonStandard");
-            rdBtnStandard.Text = rm.GetString("rdBtnStandard");
-            make_font_button.Text = rm.GetString("make_font_button");
-            rotate_groupBox.Text = rm.GetString("rotate_groupBox");
-
-
-            makefontsize = rm.GetString("makefontsize");
-            makefontwidth = rm.GetString("font_width_label"); 
-            makefontheight = rm.GetString("font_height_label");
-            #endregion 制作字库区域
-
-
-            #region 机内码查询区域
-            tabControl.TabPages[2].Text = rm.GetString("TabPages2");
-            message.Text = rm.GetString("message");
-            Transfor_button.Text = rm.GetString("Transfor_button");
-            clear_button.Text = rm.GetString("clear_button");
-            str2hex_radioButton.Text = rm.GetString("str2hex_radioButton");
-            hex2str_radioButton.Text = rm.GetString("hex2str_radioButton");
-            #endregion 机内码查询区域
-
-            #region CRC16校验区域
-            tabControl.TabPages[3].Text = rm.GetString("TabPages3");
-            check_groupBox.Text = rm.GetString("check_groupBox");
-            crc_check_button.Text = rm.GetString("crc_check_button");
-            crc_clear_button.Text = rm.GetString("crc_clear_button");
-            #endregion CRC16校验区域
-
-            #region 协议解析区域
-            tabControl.TabPages[4].Text = rm.GetString("TabPages4");
-            analysis_button.Text = rm.GetString("analysis_button");
-            out_excel_button.Text = rm.GetString("out_excel_button");
-            label_mes.Text = rm.GetString("label_mes");
-            #endregion 协议解析区域
-
-            message_openfile = rm.GetString("mes_openfile");
-            analysis_mes = rm.GetString("analysis_mes");
-
-            return;
-        }
-
-        //根据当前的语言区域,更新主窗口工具栏的语言
-        private void UpDataMainFormToolBarLanguage(ResourceManager rm)
-        {
-            语言ToolStripMenuItem.Text = rm.GetString("语言");
-            中文简体ToolStripMenuItem.Text = rm.GetString("中文简体");
-            中文繁体ToolStripMenuItem.Text = rm.GetString("中文繁体");
-            英文ToolStripMenuItem.Text = rm.GetString("英文");
-            关于ToolStripMenuItem.Text = rm.GetString("关于");
-            帮助ToolStripMenuItem.Text = rm.GetString("帮助");
-
-            return;
-        }
-        #endregion UI语言
-
-
-        #region 数据解析
-        struct PHY0_flag
-        {
-            public Int16 Rcv_state;                                    //!< 接收状态标志
-            public Int16 RCV_data_num;                                 //!< 接收到个数位置
-        };
-
-
-        string[] data_header = { "屏地址", "源地址", "保留字节", "显示模式", "设备类型", "协议版本号", "数据域长度" };
-        string[] dynamic_cmd = {"命令分组","命令编号", "控制是否回复", "保留字节", "删除区域个数","删除区域ID","更新区域个数","区域数据长度"};
-
-        private void tabControl_Selected(object sender, TabControlEventArgs e)
-        {
-            if (e.TabPage == analysis)
-            {
-                MessageBox.Show(analysis_mes);
-            }
-            
-        }
-
-        private void out_excel_button_Click(object sender, EventArgs e)
-        {
-            ExportToExecl();
-
-            System.Diagnostics.Process[] process = System.Diagnostics.Process.GetProcessesByName("EXCEL");
-            foreach (System.Diagnostics.Process p in process)
-            {
-                if (!p.HasExited)  // 如果程序没有关闭，结束程序
-                {
-                    p.Kill();
-                    p.WaitForExit();
-                }
-            }
-
-        }
-
-
-
-
-        /// <summary>
-
-        /// 执行导出数据
-
-        /// </summary>
-
-        public void ExportToExecl()
-
-        {
-
-            System.Windows.Forms.SaveFileDialog sfd = new SaveFileDialog();
-
-            sfd.DefaultExt = "xls";
-
-            sfd.Filter = "Excel文件(*.xls)|*.xls";
-            sfd.FileName = "动态区数据包协议解析";
-
-            if (sfd.ShowDialog() == DialogResult.OK)
-
-            {
-
-                DoExport(this.data_listView, sfd.FileName);
-
-            }
-
-        }
-
-        /// <summary>
-
-        /// 具体导出的方法
-
-        /// </summary>
-
-        /// <param name="listView">ListView</param>
-
-        /// <param name="strFileName">导出到的文件名</param>
-
-        private void DoExport(ListView listView, string strFileName)
-
-        {
-
-            int rowNum = listView.Items.Count;
-
-            int columnNum = listView.Items[0].SubItems.Count;
-
-            int rowIndex = 1;
-
-            int columnIndex = 0;
-
-
-            if (rowNum == 0 || string.IsNullOrEmpty(strFileName))
-
-            {
-
-                return;
-
-            }
-
-            if (rowNum > 0)
-
-            {
-
-
-
-                Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.ApplicationClass();
-
-                if (xlApp == null)
-
-                {
-
-                    MessageBox.Show("无法创建excel对象，可能您的系统没有安装excel");
-
-                    return;
-
-                }
-
-                xlApp.DefaultFilePath = "";
-
-                xlApp.DisplayAlerts = true;
-
-                xlApp.SheetsInNewWorkbook = 1;
-
-                Microsoft.Office.Interop.Excel.Workbook xlBook = xlApp.Workbooks.Add(true);
-
-                //将ListView的列名导入Excel表第一行
-
-                foreach (ColumnHeader dc in listView.Columns)
-
-                {
-
-                    columnIndex++;
-
-                    xlApp.Cells[rowIndex, columnIndex] = dc.Text;
-
-                }
-
-                //将ListView中的数据导入Excel中
-
-                for (int i = 0; i < rowNum; i++)
-
-                {
-
-                    rowIndex++;
-
-                    columnIndex = 0;
-
-                    for (int j = 0; j < columnNum; j++)
-
-                    {
-
-                        columnIndex++;
-
-                        //注意这个在导出的时候加了“\t” 的目的就是避免导出的数据显示为科学计数法。可以放在每行的首尾。
-
-                        xlApp.Cells[rowIndex, columnIndex] = Convert.ToString(listView.Items[i].SubItems[j].Text) + "\t";
-
-                    }
-
-                }
-
-                //例外需要说明的是用strFileName,Excel.XlFileFormat.xlExcel9795保存方式时 当你的Excel版本不是95、97 而是2003、2007 时导出的时候会报一个错误：异常来自 HRESULT:0x800A03EC。 解决办法就是换成strFileName, Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal。
-
-                xlBook.SaveAs(strFileName, Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
-
-                xlApp = null;
-
-                xlBook = null;
-
-                MessageBox.Show("OK");
-
-            }
-
-        }
 
         private void width_numericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -1811,960 +1378,119 @@ namespace readFontlib
             }
         }
 
-        string[] area_data   = {"区域类型","X坐标","Y坐标","区域宽度","区域高度","动态区编号","行间距","动态区运行模式","动态区超时时间","是否使能语音","发音人/发音次数","音量","语速","读音数据长度","读音数据","保留字","是否单行显示","是否自动换行","显示方式","退出方式","显示速度","停留时间","数据长度" ,"数据"};
+        #endregion 制作字库的代码
 
-        public string turntring(string s,int i)
+        #region UI语言
+        private void author_qq_picture_Click(object sender, EventArgs e)
         {
-            switch (i)
-            {
-                case 2:
-                    s = s.Substring(2, 2) + s.Substring(0, 2);
-                    break;
-                case 4:
-                    s = s.Substring(6, 2) + s.Substring(4, 2)+s.Substring(2, 2) + s.Substring(0, 2);
-                    break;
-            }
-            return s;
-        }
-        public  int dynamic(byte[] data, int size)
-        {
-            PHY0_flag PHY0_flag1;
-            PHY0_flag1.Rcv_state = 0;
-            PHY0_flag1.RCV_data_num = 0;
-            byte[] myarray = new byte[size];
-            byte[] trsf_flg = new byte[size];
-            int cmd_group;
-            int cmd;
-            UInt32 data_num;
-
-            UInt32 i;
-            int crc = 0x0;
-            byte data_t;
-            byte data_cache;
-            int data_int;
-            UInt32 j = 0;
-            int num = 0;
-            if (data == null)
-            {
-                return 0;
-            }
-            for (j = 0; j < size; j++)
-            {
-                data_t = data[j];
-                if (data_t == 0XA5) {
-                    if ((PHY0_flag1.Rcv_state == 2) || (PHY0_flag1.Rcv_state == 3) || (PHY0_flag1.Rcv_state == 4))
-                    {
-                        myarray[PHY0_flag1.RCV_data_num] = data_t;
-                        trsf_flg[PHY0_flag1.RCV_data_num] = 1;
-                        PHY0_flag1.RCV_data_num++;
-                        PHY0_flag1.Rcv_state = 4;
-                    }
-                    else
-                    {
-                        PHY0_flag1.Rcv_state = 1;
-                    }
-                        
-                    
-                }
-                else {
-                    if (PHY0_flag1.Rcv_state != 0) {
-                        switch (data_t)
-                        {
-                            case 0X5A:
-                                if (j + 1 < size) {
-                                    myarray[PHY0_flag1.RCV_data_num] = data_t;
-                                    trsf_flg[PHY0_flag1.RCV_data_num] = 1;
-                                    PHY0_flag1.RCV_data_num++;
-                                    PHY0_flag1.Rcv_state = 4;
-                                }
-                                break;
-                            case 0XA6:
-                                PHY0_flag1.Rcv_state = 2;//进入0xA6转义字节状态
-                                break;
-                            case 0X5B:
-                                PHY0_flag1.Rcv_state = 3;//进入0x5B转义字节状态
-                                break;
-                            case 0X01:
-                                if (PHY0_flag1.Rcv_state == 2)
-                                {
-                                    myarray[PHY0_flag1.RCV_data_num] = 0XA6;
-                                    trsf_flg[PHY0_flag1.RCV_data_num] = 2;
-                                    PHY0_flag1.RCV_data_num++;
-                                    PHY0_flag1.Rcv_state = 1;
-                                }
-                                else
-                                {
-                                    if (PHY0_flag1.Rcv_state == 3)
-                                    {
-                                        myarray[PHY0_flag1.RCV_data_num] = 0X5B;
-                                        trsf_flg[PHY0_flag1.RCV_data_num] = 2;
-                                        PHY0_flag1.RCV_data_num++;
-                                        PHY0_flag1.Rcv_state = 1;
-                                    }
-                                    else
-                                    {
-                                        myarray[PHY0_flag1.RCV_data_num] = 0x01;
-                                        PHY0_flag1.RCV_data_num++;
-                                        PHY0_flag1.Rcv_state = 4;
-                                    }
-                                }
-                                break;
-                            case 0X02:
-                                if (PHY0_flag1.Rcv_state == 2)
-                                {
-                                    myarray[PHY0_flag1.RCV_data_num] = 0XA5;
-                                    trsf_flg[PHY0_flag1.RCV_data_num] = 2;
-                                    PHY0_flag1.RCV_data_num++;
-                                    PHY0_flag1.Rcv_state = 1;
-                                }
-                                else
-                                {
-                                    if (PHY0_flag1.Rcv_state == 3)
-                                    {
-                                        myarray[PHY0_flag1.RCV_data_num] = 0X5A;
-                                        trsf_flg[PHY0_flag1.RCV_data_num] = 2;
-                                        PHY0_flag1.RCV_data_num++;
-                                        PHY0_flag1.Rcv_state = 1;
-                                    }
-                                    else
-                                    {
-                                        myarray[PHY0_flag1.RCV_data_num] = 0x02;
-                                        PHY0_flag1.RCV_data_num++;
-                                        PHY0_flag1.Rcv_state = 4;
-                                    }
-                                }
-                                break;
-                            default:
-                                if (PHY0_flag1.Rcv_state == 3)
-                                {
-                                    trsf_flg[PHY0_flag1.RCV_data_num] = 1;
-                                    myarray[PHY0_flag1.RCV_data_num] = 0X5B;
-                                    PHY0_flag1.RCV_data_num++;
-                                }
-                                else
-                                {
-                                    if (PHY0_flag1.Rcv_state == 2)
-                                    {
-                                        trsf_flg[PHY0_flag1.RCV_data_num] = 1;
-                                        myarray[PHY0_flag1.RCV_data_num] = 0X6A;
-                                        PHY0_flag1.RCV_data_num++;
-                                    }
-                                    else
-                                    {
-                                        trsf_flg[PHY0_flag1.RCV_data_num] = 0;
-                                    }
-                                }
-                                myarray[PHY0_flag1.RCV_data_num] = data_t;
-                                PHY0_flag1.RCV_data_num++;
-                                PHY0_flag1.Rcv_state = 4;
-                                break;
-                        }
-
-                    }
-                }
-                
-            }
-
-            string str,str1;
-            str = "";
-            for (i= 0;i< PHY0_flag1.RCV_data_num;i++)
-            {
-                if (trsf_flg[i] == 1)
-                {
-                    data_after_transform_richTextBox.SelectionColor = Color.Red;
-                    j = 1;
-                }
-                else
-                {
-                    if (trsf_flg[i] == 2)
-                    {
-                        data_after_transform_richTextBox.SelectionColor = Color.Blue;
-                    }
-                    else
-                    {
-                        data_after_transform_richTextBox.SelectionColor = Color.Black;
-                    }
-                        
-                }
- 
-                str1 = myarray[i].ToString("x");
-                str = (str1.Length == 1 ? "0" + str1 : str1);
-                if (i == 0)
-                {
-                    str = str.ToUpper();
-                }
-                else
-                {
-                    str = " " + str.ToUpper();
-
-                }
-                data_after_transform_richTextBox.AppendText(str);
-            }
-
-            if (j==1)
-            {
-                MessageBox.Show("有异常数据,异常数据已经标红色");
-                return 0;
-            }
-                
-            i = 0;
-            j = 0;
-            this.data_listView.BeginUpdate();   //数据更新，UI暂时挂起，直到EndUpdate绘制控件，可以有效避免闪烁并大大提高加载速度
-
-
-            ListViewGroup group_data_header = new ListViewGroup();  //创建包头数据分组
-            group_data_header.Header = "包头数据";  //设置组的标题。
-            //man_lvg.Name = "group_data_header";   //设置组的名称。
-            group_data_header.HeaderAlignment = HorizontalAlignment.Left;//设置组标题文本的对齐方式。（默认为Left）
-            this.data_listView.Groups.Add(group_data_header);    //把包头数据分组添加到listview中
-
-
-            /*屏地址*/
-            //1、增加第一個Item，在View.Details模式下，有點像第一列中一個值
-            data_listView.Items.Add("folder1", data_header[j], 0);
-            data_listView.Items["folder1"].Group = group_data_header;
-            //2、增加第一個Item的第一個SubItem，在View.Details模式下，有點像第一列中一個值
-            data_listView.Items["folder1"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()),2));
-            //3、增加第一個Item的第二個SubItem，在View.Details模式下，有點像第一列中一個值
-            data_listView.Items["folder1"].SubItems.Add("也是屏号");
-            j++;
-
-
-
-
-            /*源地址*/
-            data_listView.Items.Add("folder2", data_header[j], 0);
-            data_listView.Items["folder2"].Group = group_data_header;
-            data_listView.Items["folder2"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            data_listView.Items["folder2"].SubItems.Add("源地址");
-            j++;
-
-            
-            /*保留字节*/
-            data_listView.Items.Add("folder3", data_header[j], 0);
-            data_listView.Items["folder3"].Group = group_data_header;
-            data_listView.Items["folder3"].SubItems.Add(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper())+
-                                                        myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper())+
-                                                        myarray[i++].ToString("X2")
-                                                        );
-            data_listView.Items["folder3"].SubItems.Add("保留字节");
-            j++;
-
-            /*显示模式*/
-            data_listView.Items.Add("folder4", data_header[j], 0);
-            data_listView.Items["folder4"].Group = group_data_header;
-            data_cache = myarray[i];
-            data_listView.Items["folder4"].SubItems.Add(myarray[i++].ToString("X2"));
-
-
-            switch (data_cache)
-            {
-                case 0:
-                    data_listView.Items["folder4"].SubItems.Add("普通模式");
-                    break;
-                case 1:
-                    data_listView.Items["folder4"].SubItems.Add("动态模式");
-                    break;
-                default:
-                    data_listView.Items["folder4"].ForeColor = Color.Red;
-                    data_listView.Items["folder4"].SubItems.Add("数据错误");
-                    break;
-            }
-            j++;
-
-
-
-
-            /*设备类型*/
-            data_listView.Items.Add("folder5", data_header[j], 0);
-            data_listView.Items["folder5"].Group = group_data_header;
-            data_cache = myarray[i];
-            data_listView.Items["folder5"].SubItems.Add(myarray[i++].ToString("X2"));
-
-            switch (data_cache)
-            {
-                case 0X51:
-                    data_listView.Items["folder5"].SubItems.Add("BX-5K1");
-                    break;
-                case 0X58:
-                    data_listView.Items["folder5"].SubItems.Add("BX-5K2");
-                    break;
-                case 0X53:
-                    data_listView.Items["folder5"].SubItems.Add("BX-5MK2");
-                    break;
-                case 0X54:
-                    data_listView.Items["folder5"].SubItems.Add("BX-5MK1");
-                    break;
-                case 0X5C:
-                    data_listView.Items["folder5"].SubItems.Add("BX-5K1Q-YY");
-                    break;
-                case 0X5D:
-                    data_listView.Items["folder5"].SubItems.Add("BX-5KX");
-                    break;
-                case 0XFE:
-                    data_listView.Items["folder5"].SubItems.Add("通配符");
-                    break;
-                default:
-                    data_listView.Items["folder5"].ForeColor = Color.Red;
-                    data_listView.Items["folder5"].SubItems.Add("数据错误");
-                    break;
-            }
-            j++;
-
-
-
-            /*协议版本号*/
-            data_listView.Items.Add("folder6", data_header[j], 0);
-            data_listView.Items["folder6"].Group = group_data_header;
-            data_listView.Items["folder6"].SubItems.Add(myarray[i++].ToString("X2"));
-            data_listView.Items["folder6"].SubItems.Add("用于区分控制卡协议");
-            j++;
-
-
-
-
-            /*数据域长度*/
-            data_listView.Items.Add("folder7", data_header[j], 0);
-            data_listView.Items["folder7"].Group = group_data_header;
-            data_listView.Items["folder7"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-            i = i - 2;
-            data_int = myarray[i++] + myarray[i++]*256;
-            data_listView.Items["folder7"].SubItems.Add("数据域长度："+data_int.ToString());
-            j++;
-
-
-            j = 0;
-            ListViewGroup group_cmd = new ListViewGroup();  //创建命令分组
-            group_cmd.Header = "命令";  //设置组的标题。
-            group_cmd.HeaderAlignment = HorizontalAlignment.Left;//设置组标题文本的对齐方式。（默认为Left）
-            this.data_listView.Groups.Add(group_cmd);    //把命令分组添加到listview中
-
-
-
-
-            
-            /*命令分组*/
-            cmd_group = myarray[i];
-            data_listView.Items.Add("folder8", dynamic_cmd[j], 0);
-            data_listView.Items["folder8"].Group = group_cmd;
-            data_cache = myarray[i];
-            data_listView.Items["folder8"].SubItems.Add(myarray[i++].ToString("X2"));
-            i--;
-            data_listView.Items["folder8"].SubItems.Add(myarray[i++].ToString("X2"));
-            j++;
-
-
-
-            /*命令编号*/
-            cmd = myarray[i];
-            data_listView.Items.Add("folder9", dynamic_cmd[j], 0);
-            data_listView.Items["folder9"].Group = group_cmd;
-            data_listView.Items["folder9"].SubItems.Add(myarray[i++].ToString("X2"));
-            i--;
-            if ((data_cache == 0XA3) && (myarray[i] == 0X06))
-            {
-                i++;
-                data_listView.Items["folder9"].SubItems.Add("A3 06命令是动态区命令");
-            }
-            else
-            {
-                data_listView.Items["folder9"].SubItems.Add(myarray[i++].ToString("X2"));
-            }
-            
-            j++;
-
-
-
-
-            /*控制是否回复*/
-            data_listView.Items.Add("folder10", dynamic_cmd[j], 0);
-            data_listView.Items["folder10"].Group = group_cmd;
-            data_cache = myarray[i];
-            data_listView.Items["folder10"].SubItems.Add(myarray[i++].ToString("X2"));
-            switch (data_cache)
-            {
-                case 1:
-                    data_listView.Items["folder10"].SubItems.Add("控制器必须回复");
-                    break;
-                case 2:
-                    data_listView.Items["folder10"].SubItems.Add("控制器不必回复");
-                    break;
-                default:
-                    data_listView.Items["folder10"].ForeColor = Color.Red;
-                    data_listView.Items["folder10"].SubItems.Add("数据错误");
-                    break;
-            }
-            j++;
-
-
-
-
-            /*保留字节*/
-            data_listView.Items.Add("folder11", dynamic_cmd[j], 0);
-            data_listView.Items["folder11"].Group = group_cmd;
-            data_listView.Items["folder11"].SubItems.Add(myarray[i++].ToString("X2") + myarray[i++].ToString("X2"));
-            data_listView.Items["folder11"].SubItems.Add("保留字节");
-            j++;
-
-
-
-            /*删除区域个数*/
-            data_listView.Items.Add("folder12", dynamic_cmd[j], 0);
-            data_listView.Items["folder12"].Group = group_cmd;
-            data_cache = myarray[i];
-            data_listView.Items["folder12"].SubItems.Add(myarray[i++].ToString("X2"));
-            i = i - 2;
-            data_int = myarray[i++] + myarray[i++] * 256;
-            data_listView.Items["folder12"].SubItems.Add("删除"+ data_int.ToString()+"个区域");
-            j++;
-
-            if (data_cache == 0)
-            {
-                j++;
-            }
-            else
-            {
-                for (num = 1; num < data_cache+1; num++)
-                {
-                    /*删除区域ID*/
-                    data_listView.Items.Add("folder13"+num, dynamic_cmd[j], 0);
-                    data_listView.Items["folder13" + num].Group = group_cmd;
-                    data_listView.Items["folder13" + num].SubItems.Add(myarray[i++].ToString("X2"));
-                    data_listView.Items["folder13" + num].SubItems.Add("删除的第"+num+"个区域");
-                }
-                j++;
-            }
-
-
-
-            /*更新区域个数*/
-            data_listView.Items.Add("folder14", dynamic_cmd[j], 0);
-            data_listView.Items["folder14"].Group = group_cmd;
-            data_cache = myarray[i];
-            data_listView.Items["folder14"].SubItems.Add(myarray[i++].ToString("X2"));
-            data_listView.Items["folder14"].SubItems.Add("更新" + data_cache.ToString("x") + "个区域");
-            j++;
-            int area_num;
-            uint j_cache;
-            area_num = data_cache;
-            j_cache = j;
-            for (int n = 0; n < area_num; n++)
-            {
-                j = j_cache;
-                /*区域数据长度*/
-                data_listView.Items.Add("folder" + n.ToString() + "15", dynamic_cmd[j], 0);
-                data_listView.Items["folder" + n.ToString() + "15"].Group = group_cmd;
-                data_listView.Items["folder" + n.ToString() + "15"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-                i = i - 2;
-                data_int = myarray[i++] + myarray[i++] * 256;
-                data_listView.Items["folder" + n.ToString() + "15"].SubItems.Add("区域数据长度：" + data_int.ToString());
-                j++;
-
-
-                j = 0;
-                ListViewGroup grou_area_data = new ListViewGroup();  //创建区域数据格式分组
-                grou_area_data.Header = "区域"+n.ToString()+"数据格式";  //设置组的标题。
-                grou_area_data.HeaderAlignment = HorizontalAlignment.Left;//设置组标题文本的对齐方式。（默认为Left）
-                this.data_listView.Groups.Add(grou_area_data);    //把区域数据格式分组添加到listview中
-
-
-
-
-
-                /*区域类型*/
-                data_listView.Items.Add("folder" + n.ToString() + "16", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "16"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "16"].SubItems.Add(myarray[i++].ToString("X2"));
-                data_listView.Items["folder" + n.ToString() + "16"].SubItems.Add("区域类型");
-                j++;
-
-
-
-
-                /*X坐标*/
-                data_listView.Items.Add("folder" + n.ToString() + "17", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "17"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "17"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-                i = i - 1;
-                if (myarray[i++] >> 7 == 1)
-                {
-                    i = i - 2;
-                    data_int = myarray[i++] + (myarray[i++] & 0X7F) * 256;
-                    data_listView.Items["folder" + n.ToString() + "17"].SubItems.Add("X：" + data_int.ToString() + "(pixel)");
-                }
-                else
-                {
-                    i = i - 2;
-                    data_int = myarray[i++] + myarray[i++] * 256;
-                    data_listView.Items["folder" + n.ToString() + "17"].SubItems.Add("X：" + data_int.ToString() + "(byte)");
-                }
-
-                j++;
-
-
-
-                /*Y坐标*/
-                data_listView.Items.Add("folder" + n.ToString() + "18", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "18"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "18"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-                i = i - 2;
-                data_int = myarray[i++] + myarray[i++] * 256;
-                data_listView.Items["folder" + n.ToString() + "18"].SubItems.Add("Y：" + data_int.ToString() + "(byte)");
-                j++;
-
-
-
-
-                /*区域宽度*/
-                data_listView.Items.Add("folder" + n.ToString() + "19", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "19"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "19"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-                i = i - 1;
-                if (myarray[i++] >> 7 == 1)
-                {
-                    i = i - 2;
-                    data_int = myarray[i++] + (myarray[i++] & 0X7F) * 256;
-                    data_listView.Items["folder" + n.ToString() + "19"].SubItems.Add("区域宽度：" + data_int.ToString() + "(pixel)");
-                }
-                else
-                {
-                    i = i - 2;
-                    data_int = myarray[i++] + myarray[i++] * 256;
-                    data_listView.Items["folder" + n.ToString() + "19"].SubItems.Add("区域宽度：" + data_int.ToString() + "(byte)");
-                }
-                j++;
-
-
-
-
-                /*区域高度*/
-                data_listView.Items.Add("folder" + n.ToString() + "20", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "20"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "20"].SubItems.Add(turntring(myarray[i++].ToString("X2") + (myarray[i++].ToString("X2").ToUpper()), 2));
-                i = i - 2;
-                data_int = myarray[i++] + myarray[i++] * 256;
-                data_listView.Items["folder" + n.ToString() + "20"].SubItems.Add("区域高度：" + data_int.ToString() + "(byte)");
-                j++;
-
-
-
-                /*动态区编号*/
-                data_listView.Items.Add("folder" + n.ToString() + "21", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "21"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "21"].SubItems.Add(myarray[i++].ToString("X2"));
-                i--;
-                data_listView.Items["folder" + n.ToString() + "21"].SubItems.Add("编号是：" + myarray[i++].ToString());
-                j++;
-
-
-
-
-                /*行间距*/
-                data_listView.Items.Add("folder" + n.ToString() + "22", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "22"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "22"].SubItems.Add(myarray[i++].ToString("X2"));
-                i--;
-                data_listView.Items["folder" + n.ToString() + "22"].SubItems.Add("行间距：" + myarray[i++].ToString());
-                j++;
-
-
-
-
-                /*动态区运行模式*/
-                data_listView.Items.Add("folder" + n.ToString() + "23", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "23"].Group = grou_area_data;
-                data_cache = myarray[i];
-                data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add(myarray[i++].ToString("X2"));
-                switch (data_cache)
-                {
-                    case 0:
-                        data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add("循环显示");
-                        break;
-                    case 1:
-                        data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add("显示完成停留最后一页");
-                        break;
-                    case 2:
-                        data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add("超时未更新删除");
-                        break;
-                    default:
-                        data_listView.Items["folder" + n.ToString() + "23"].ForeColor = Color.Red;
-                        data_listView.Items["folder" + n.ToString() + "23"].SubItems.Add("数据错误");
-                        break;
-                }
-                j++;
-
-
-
-                /*动态区超时时间*/
-                data_listView.Items.Add("folder" + n.ToString() + "24", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "24"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "24"].SubItems.Add(turntring(myarray[i++].ToString("X2") + myarray[i++].ToString("X2").ToUpper(), 2));
-                i = i - 2;
-                data_int = myarray[i++] + myarray[i++] * 256;
-                data_listView.Items["folder" + n.ToString() + "24"].SubItems.Add("超时时间：" + data_int.ToString());
-                j++;
-
-
-
-                /*是否是能语音*/
-                data_listView.Items.Add("folder" + n.ToString() + "25", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "25"].Group = grou_area_data;
-                data_cache = myarray[i];
-                data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add(myarray[i++].ToString("X2"));
-
-                switch (data_cache)
-                {
-                    case 0:
-                        data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add("不使能语音");
-                        break;
-                    case 1:
-                        data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add("播放data内容");
-                        break;
-                    case 2:
-                        data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add("播放sounddata内容");
-                        break;
-                    default:
-                        data_listView.Items["folder" + n.ToString() + "25"].ForeColor = Color.Red;
-                        data_listView.Items["folder" + n.ToString() + "25"].SubItems.Add("数据错误");
-                        break;
-                }
-                if (data_cache == 0)
-                {
-                    j = j + 6;
-                }
-                else
-                {
-                    j++;
-                    /*发音人/发音次数*/
-                    data_listView.Items.Add("folder" + n.ToString() + "26", area_data[j], 0);
-                    data_listView.Items["folder" + n.ToString() + "26"].Group = grou_area_data;
-                    data_listView.Items["folder" + n.ToString() + "26"].SubItems.Add(myarray[i++].ToString("X2"));
-                    data_listView.Items["folder" + n.ToString() + "26"].SubItems.Add("Bit0-Bit3发音人，Bit4-Bit7播放次数");
-                    j++;
-
-                    /*音量*/
-                    data_listView.Items.Add("folder" + n.ToString() + "27", area_data[j], 0);
-                    data_listView.Items["folder" + n.ToString() + "27"].Group = grou_area_data;
-                    data_listView.Items["folder" + n.ToString() + "27"].SubItems.Add(myarray[i++].ToString("X2"));
-                    i--;
-                    data_listView.Items["folder" + n.ToString() + "27"].SubItems.Add("音量：" + myarray[i++].ToString());
-                    j++;
-
-
-                    /*语速*/
-                    data_listView.Items.Add("folder" + n.ToString() + "28", area_data[j], 0);
-                    data_listView.Items["folder" + n.ToString() + "28"].Group = grou_area_data;
-                    data_listView.Items["folder" + n.ToString() + "28"].SubItems.Add(myarray[i++].ToString("X2"));
-                    i--;
-                    data_listView.Items["folder" + n.ToString() + "28"].SubItems.Add("语速：" + myarray[i++].ToString());
-                    j++;
-
-                    if (data_cache == 2)
-                    {
-
-                        /*读音数据长度*/
-                        data_listView.Items.Add("folder" + n.ToString() + "29", area_data[j], 0);
-                        data_listView.Items["folder" + n.ToString() + "29"].Group = grou_area_data;
-                        data_listView.Items["folder" + n.ToString() + "29"].SubItems.Add(turntring(myarray[i++].ToString("X2") +
-                                                                                myarray[i++].ToString("X2") +
-                                                                                myarray[i++].ToString("X2") +
-                                                                                myarray[i++].ToString("X2").ToUpper(), 4));
-
-                        i = i - 4;
-
-                        data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++] << 8) + (UInt32)(myarray[i++] << 16) + (UInt32)(myarray[i++] << 24);
-                        data_listView.Items["folder" + n.ToString() + "29"].SubItems.Add("读音数据长度：" + data_num.ToString());
-                        j++;
-
-
-
-                        /*读音数据*/
-                        data_listView.Items.Add("folder" + n.ToString() + "30", area_data[j], 0);
-                        data_listView.Items["folder" + n.ToString() + "30"].Group = grou_area_data;
-
-
-                        string data_st = string.Empty;
-                        for (num = 0; num < data_num; num++)
-                        {
-                            data_st = data_st + myarray[i++].ToString("X2");
-                        }
-
-                        data_listView.Items["folder" + n.ToString() + "30"].SubItems.Add(data_st);
-
-
-                        i = i - data_num;
-                        data_st = string.Empty;
-                        string data_result = string.Empty;
-                        for (num = 0; num < data_num;)
-                        {
-                            if (myarray[i] < 0x81)
-                            {
-                                System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
-                                byte[] byteArray = new byte[] { (byte)myarray[i++] };
-                                string strCharacter = asciiEncoding.GetString(byteArray);
-                                data_st = data_st + strCharacter;
-                                num++;
-                            }
-                            else
-                            {
-                                byte[] bytes = new byte[2];
-                                bytes[0] = myarray[i++];
-                                bytes[1] = myarray[i++];
-                                System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
-                                data_result = chs.GetString(bytes);
-                                data_st = data_st + data_result;
-                                num = num + 2;
-                            }
-                        }
-                        data_listView.Items["folder" + n.ToString() + "30"].SubItems.Add(data_st);
-                        j++;
-
-                    }
-                    else
-                    {
-                        j = j + 2;
-                    }
-
-                }
-
-
-
-
-
-                /*保留字节*/
-                data_listView.Items.Add("folder" + n.ToString() + "31", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "31"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "31"].SubItems.Add(turntring(myarray[i++].ToString("X2") + myarray[i++].ToString("X2").ToUpper(), 2));
-                data_listView.Items["folder" + n.ToString() + "31"].SubItems.Add("保留字节");
-                j++;
-
-
-                /*是否单行显示*/
-                data_listView.Items.Add("folder" + n.ToString() + "32", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "32"].Group = grou_area_data;
-                data_cache = myarray[i];
-                data_listView.Items["folder" + n.ToString() + "32"].SubItems.Add(myarray[i++].ToString("X2"));
-                switch (data_cache)
-                {
-                    case 1:
-                        data_listView.Items["folder" + n.ToString() + "32"].SubItems.Add("单行显示");
-                        break;
-                    case 2:
-                        data_listView.Items["folder" + n.ToString() + "32"].SubItems.Add("多行显示");
-                        break;
-                    default:
-                        data_listView.Items["folder" + n.ToString() + "32"].ForeColor = Color.Red;
-                        data_listView.Items["folder" + n.ToString() + "32"].SubItems.Add("数据错误");
-                        break;
-                }
-                j++;
-
-
-
-                /*是否自动换行*/
-                data_listView.Items.Add("folder" + n.ToString() + "33", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "33"].Group = grou_area_data;
-                data_cache = myarray[i];
-                data_listView.Items["folder" + n.ToString() + "33"].SubItems.Add(myarray[i++].ToString("X2"));
-                switch (data_cache)
-                {
-                    case 1:
-                        data_listView.Items["folder" + n.ToString() + "33"].SubItems.Add("不自动换行");
-                        break;
-                    case 2:
-                        data_listView.Items["folder" + n.ToString() + "33"].SubItems.Add("自动换行");
-                        break;
-                    default:
-                        data_listView.Items["folder" + n.ToString() + "33"].ForeColor = Color.Red;
-                        data_listView.Items["folder" + n.ToString() + "33"].SubItems.Add("数据错误");
-                        break;
-                }
-                j++;
-
-
-
-                /*显示方式*/
-                data_listView.Items.Add("folder" + n.ToString() + "34", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "34"].Group = grou_area_data;
-                data_cache = myarray[i];
-                data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add(myarray[i++].ToString("X2"));
-                switch (data_cache)
-                {
-                    case 1:
-                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("静止显示");
-                        break;
-                    case 2:
-                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("快速打出");
-                        break;
-                    case 3:
-                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("向左移动");
-                        break;
-                    case 4:
-                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("向右移动");
-                        break;
-                    case 5:
-                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("向上移动");
-                        break;
-                    case 26:
-                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("向下移动");
-                        break;
-                    default:
-                        data_listView.Items["folder" + n.ToString() + "34"].ForeColor = Color.Red;
-                        data_listView.Items["folder" + n.ToString() + "34"].SubItems.Add("数据错误");
-                        break;
-                }
-                j++;
-
-
-
-
-                /*退出方式*/
-                data_listView.Items.Add("folder" + n.ToString() + "35", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "35"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "35"].SubItems.Add(myarray[i++].ToString("X2"));
-                data_listView.Items["folder" + n.ToString() + "35"].SubItems.Add("退出方式");
-                j++;
-
-
-
-
-                /*显示速度*/
-                data_listView.Items.Add("folder" + n.ToString() + "36", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "36"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "36"].SubItems.Add(myarray[i++].ToString("X2"));
-                i--;
-                data_listView.Items["folder" + n.ToString() + "36"].SubItems.Add("显示速度：" + myarray[i++].ToString("X2"));
-                j++;
-
-
-
-                /*停留时间*/
-                data_listView.Items.Add("folder" + n.ToString() + "37", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "37"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "37"].SubItems.Add(myarray[i++].ToString("X2"));
-                i--;
-                data_listView.Items["folder" + n.ToString() + "37"].SubItems.Add("停留时间：" + myarray[i++].ToString() + "(单位0.5S)");
-                j++;
-
-
-                /*数据长度*/
-                data_listView.Items.Add("folder" + n.ToString() + "38", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "38"].Group = grou_area_data;
-                data_listView.Items["folder" + n.ToString() + "38"].SubItems.Add(turntring(myarray[i++].ToString("X2") +
-                                                                        myarray[i++].ToString("X2") +
-                                                                        myarray[i++].ToString("X2") +
-                                                                        myarray[i++].ToString("X2").ToUpper(), 4));
-                i = i - 4;
-
-                data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++] << 8) + (UInt32)(myarray[i++] << 16) + (UInt32)(myarray[i++] << 24);
-                data_listView.Items["folder" + n.ToString() + "38"].SubItems.Add("数据长度：" + data_num.ToString());
-                j++;
-
-
-
-                /*数据*/
-                data_listView.Items.Add("folder" + n.ToString() + "39", area_data[j], 0);
-                data_listView.Items["folder" + n.ToString() + "39"].Group = grou_area_data;
-
-
-                string st = string.Empty;
-                for (num = 0; num < data_num; num++)
-                {
-                    st = st + myarray[i++].ToString("X2");
-                }
-
-                data_listView.Items["folder" + n.ToString() + "39"].SubItems.Add(st);
-
-
-                i = i - data_num;
-                st = string.Empty;
-                string result = string.Empty;
-                for (num = 0; num < data_num;)
-                {
-                    if (myarray[i] < 0x81)
-                    {
-                        System.Text.ASCIIEncoding asciiEncoding = new System.Text.ASCIIEncoding();
-                        byte[] byteArray = new byte[] { (byte)myarray[i++] };
-                        string strCharacter = asciiEncoding.GetString(byteArray);
-                        st = st + strCharacter;
-                        num++;
-                    }
-                    else
-                    {
-                        byte[] bytes = new byte[2];
-                        bytes[0] = myarray[i++];
-                        bytes[1] = myarray[i++];
-                        System.Text.Encoding chs = System.Text.Encoding.GetEncoding("gb2312");
-                        result = chs.GetString(bytes);
-                        st = st + result;
-                        num = num + 2;
-                    }
-                }
-                data_listView.Items["folder" + n.ToString() + "39"].SubItems.Add(st);
-            }
-
-            ListViewGroup grou_CRC = new ListViewGroup();  //创建CRC校验分组
-            grou_CRC.Header = "CRC校验";  //设置组的标题。
-            grou_CRC.HeaderAlignment = HorizontalAlignment.Left;//设置组标题文本的对齐方式。（默认为Left）
-            this.data_listView.Groups.Add(grou_CRC);    //把CRC校验分组添加到listview中
-
-
-            /*CRC校验*/
-            data_listView.Items.Add("folder40", "CRC校验", 0);
-            data_listView.Items["folder40"].Group = grou_CRC;
-            data_listView.Items["folder40"].SubItems.Add(myarray[i++].ToString("X2")+ myarray[i++].ToString("X2"));
-
-            i = i - 2;
-            int mycrc = CRC.crc16(myarray, PHY0_flag1.RCV_data_num-2);
-            data_num = (UInt32)(myarray[i++]) + (UInt32)(myarray[i++] << 8);
-            if (mycrc == data_num)
-            {
-                data_listView.Items["folder40"].SubItems.Add("CRC校验值正确");
-            }
-            else
-            {
-                if (data_num == 0XFFFF)
-                    data_listView.Items["folder40"].SubItems.Add("不进行CRC校验");
-                else
-                {
-                    data_listView.Items["folder40"].ForeColor = Color.Red;
-                    data_listView.Items["folder40"].SubItems.Add("CRC校验值错误");
-                }
-                
-            }
-            
-
-
-
-            this.data_listView.EndUpdate();  //结束数据处理，UI界面一次性绘制。
-
-
-            return crc;
+            //string url = "http://wpa.qq.com/msgrd?v=3&uin=" + 1601438030 + "&site=qq&menu=yes";
+            string url = "http://wpa.qq.com/msgrd?v=3&uin=1601438030&site=qq&menu=yes";
+            System.Diagnostics.Process.Start(url);
         }
 
-        private void analysis_button_Click(object sender, EventArgs e)
+        private void 中文繁体ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            int i = 0;
-            //try
-            //{
-                string[] strCheckArray = Raw_data_textBox.Text.Split(' ');
-                byte[] myarray = new byte[strCheckArray.Length];
-                foreach (var tmp in strCheckArray)
-                {
-                    myarray[i++] = System.Convert.ToByte(tmp, 16);
-                }
-                data_listView.Items.Clear();//每次点击事件后将ListView中的数据清空，重新显示
-                data_after_transform_richTextBox.Clear();//每次点击事件后将data_after_transform_richTextBox中的数据清空，重新显示
-
-                dynamic(myarray, i);
-                out_excel_button.Visible = true;
-            //}
-            //catch (Exception)
-            //{
-            //    MessageBox.Show("请输入正确格式的数据！");
-            //}
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CHT");
+            UpDataMainFormUILanguage();
         }
-        #endregion 数据解析
+
+        private void 中文简体ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CHS");
+            UpDataMainFormUILanguage();
+        }
+
+
+
+        private void 英文ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
+            UpDataMainFormUILanguage();
+        }
+
+        //根据当前的语言区域,更新主窗口的语言信息
+        private void UpDataMainFormUILanguage()
+        {
+            ResourceManager rm = new ResourceManager(typeof(readFontlib));
+            UpDataMainFormMenuLanguage(rm);
+            UpDataMainFormToolBarLanguage(rm);
+        }
+
+        //根据当前的语言区域,更新主窗口菜单的语言
+        private void UpDataMainFormMenuLanguage(ResourceManager rm)
+        {
+            #region 查看编辑区域
+            groupBoxpic.Text = rm.GetString("groupBoxpic");
+            View_mode_Button.Text = rm.GetString("View_mode_Button");
+            edit_mode_Button.Text = rm.GetString("edit_mode_Button");
+            groupBoxSet.Text = rm.GetString("groupBoxSet");
+            labelFontName.Text = rm.GetString("labelFontName");
+            textBoxFontName.Text = rm.GetString("textBoxFontName");
+
+            buttonReadFont.Text = rm.GetString("buttonReadFont");
+            labelWidth.Text = rm.GetString("labelWidth");
+            labelHeight.Text = rm.GetString("labelHeight");
+            labelIndex.Text = rm.GetString("labelIndex");
+            up_button.Text = rm.GetString("up_button");
+            down_button.Text = rm.GetString("down_button");
+
+            groupBoxData.Text = rm.GetString("groupBoxData");
+            buttonGetData.Text = rm.GetString("buttonGetData");
+            Save_font_button.Text = rm.GetString("Save_font_button");
+            check_data_format.Text = rm.GetString("check_data_format");
+            labelFontInfo.Text = rm.GetString("labelFontInfo");
+            labelNum.Text = rm.GetString("labelNum");
+            richTextBoxData.Text = "";
+            richTextBoxData.AppendText ("\n" + "\n" + "\n" + "\n" + rm.GetString("copyright"));
+
+            #endregion 查看编辑区域
+
+
+            #region 制作字库区域
+            font_groupBox.Text = rm.GetString("font_groupBox");
+            message_groupBox.Text = rm.GetString("message_groupBox");
+            check_font_button.Text = rm.GetString("check_font_button");
+            font_label.Text = rm.GetString("font_label");
+            font_view_label.Text = rm.GetString("font_view_label");
+
+            binama_groupBox.Text = rm.GetString("binama_groupBox");
+            set_groupBox.Text = rm.GetString("set_groupBox");
+            font_width_label.Text = rm.GetString("font_width_label");
+            font_height_label.Text = rm.GetString("font_height_label");
+            level_label.Text = rm.GetString("level_label");
+            vertical_label.Text = rm.GetString("vertical_label");
+
+            rdBtnNonStandard.Text = rm.GetString("rdBtnNonStandard");
+            rdBtnStandard.Text = rm.GetString("rdBtnStandard");
+            make_font_button.Text = rm.GetString("make_font_button");
+
+
+            makefontsize = rm.GetString("makefontsize");
+            makefontwidth = rm.GetString("font_width_label"); 
+            makefontheight = rm.GetString("font_height_label");
+            #endregion 制作字库区域
+
+
+            message_openfile = rm.GetString("mes_openfile");
+            analysis_mes = rm.GetString("analysis_mes");
+
+            return;
+        }
+
+        //根据当前的语言区域,更新主窗口工具栏的语言
+        private void UpDataMainFormToolBarLanguage(ResourceManager rm)
+        {
+            语言ToolStripMenuItem.Text = rm.GetString("语言");
+            中文简体ToolStripMenuItem.Text = rm.GetString("中文简体");
+            中文繁体ToolStripMenuItem.Text = rm.GetString("中文繁体");
+            英文ToolStripMenuItem.Text = rm.GetString("英文");
+            关于ToolStripMenuItem.Text = rm.GetString("关于");
+            帮助ToolStripMenuItem.Text = rm.GetString("帮助");
+
+            return;
+        }
+        #endregion UI语言
+
 
     }
 }

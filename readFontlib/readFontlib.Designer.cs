@@ -37,41 +37,9 @@
             this.logo = new System.Windows.Forms.LinkLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.textBoxtime = new System.Windows.Forms.TextBox();
-            this.tabControl = new System.Windows.Forms.TabControl();
-            this.view_edit_fontlib = new System.Windows.Forms.TabPage();
-            this.jineima = new System.Windows.Forms.TabPage();
-            this.str2hex_radioButton = new System.Windows.Forms.RadioButton();
-            this.hex2str_radioButton = new System.Windows.Forms.RadioButton();
-            this.yima_textBox = new System.Windows.Forms.TextBox();
-            this.clear_button = new System.Windows.Forms.Button();
-            this.yima_listBox = new System.Windows.Forms.ListBox();
-            this.Transfor_button = new System.Windows.Forms.Button();
-            this.input_textBox = new System.Windows.Forms.TextBox();
-            this.message = new System.Windows.Forms.Label();
-            this.CRC16 = new System.Windows.Forms.TabPage();
-            this.crc_clear_button = new System.Windows.Forms.Button();
-            this.crc_check_button = new System.Windows.Forms.Button();
-            this.crc_textBox = new System.Windows.Forms.TextBox();
-            this.check_groupBox = new System.Windows.Forms.GroupBox();
-            this.crc_data_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.analysis = new System.Windows.Forms.TabPage();
-            this.data_after_transform_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.label_mes = new System.Windows.Forms.Label();
-            this.out_excel_button = new System.Windows.Forms.Button();
-            this.data_listView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.analysis_button = new System.Windows.Forms.Button();
-            this.Raw_data_textBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.K_radioButton = new System.Windows.Forms.RadioButton();
             this.q_radioButton = new System.Windows.Forms.RadioButton();
-            this.rotate_groupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton0 = new System.Windows.Forms.RadioButton();
-            this.radioButton270 = new System.Windows.Forms.RadioButton();
-            this.radioButton90 = new System.Windows.Forms.RadioButton();
-            this.radioButton180 = new System.Windows.Forms.RadioButton();
             this.binama_groupBox = new System.Windows.Forms.GroupBox();
             this.ASCII = new System.Windows.Forms.RadioButton();
             this.GB2312 = new System.Windows.Forms.RadioButton();
@@ -137,13 +105,12 @@
             this.buttonGetData = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.tabControl.SuspendLayout();
-            this.jineima.SuspendLayout();
-            this.CRC16.SuspendLayout();
-            this.check_groupBox.SuspendLayout();
-            this.analysis.SuspendLayout();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.radioButton0 = new System.Windows.Forms.RadioButton();
+            this.radioButton90 = new System.Windows.Forms.RadioButton();
+            this.radioButton180 = new System.Windows.Forms.RadioButton();
+            this.radioButton270 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
-            this.rotate_groupBox.SuspendLayout();
             this.binama_groupBox.SuspendLayout();
             this.set_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).BeginInit();
@@ -163,6 +130,7 @@
             this.groupBoxData.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // edit_mode_Button
@@ -209,193 +177,6 @@
             this.textBoxtime.Name = "textBoxtime";
             this.textBoxtime.ReadOnly = true;
             // 
-            // tabControl
-            // 
-            this.tabControl.Controls.Add(this.view_edit_fontlib);
-            this.tabControl.Controls.Add(this.jineima);
-            this.tabControl.Controls.Add(this.CRC16);
-            this.tabControl.Controls.Add(this.analysis);
-            resources.ApplyResources(this.tabControl, "tabControl");
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_Selected);
-            // 
-            // view_edit_fontlib
-            // 
-            resources.ApplyResources(this.view_edit_fontlib, "view_edit_fontlib");
-            this.view_edit_fontlib.Name = "view_edit_fontlib";
-            this.view_edit_fontlib.UseVisualStyleBackColor = true;
-            // 
-            // jineima
-            // 
-            this.jineima.Controls.Add(this.str2hex_radioButton);
-            this.jineima.Controls.Add(this.hex2str_radioButton);
-            this.jineima.Controls.Add(this.yima_textBox);
-            this.jineima.Controls.Add(this.clear_button);
-            this.jineima.Controls.Add(this.yima_listBox);
-            this.jineima.Controls.Add(this.Transfor_button);
-            this.jineima.Controls.Add(this.input_textBox);
-            this.jineima.Controls.Add(this.message);
-            resources.ApplyResources(this.jineima, "jineima");
-            this.jineima.Name = "jineima";
-            this.jineima.UseVisualStyleBackColor = true;
-            // 
-            // str2hex_radioButton
-            // 
-            resources.ApplyResources(this.str2hex_radioButton, "str2hex_radioButton");
-            this.str2hex_radioButton.Checked = true;
-            this.str2hex_radioButton.Name = "str2hex_radioButton";
-            this.str2hex_radioButton.TabStop = true;
-            this.str2hex_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // hex2str_radioButton
-            // 
-            resources.ApplyResources(this.hex2str_radioButton, "hex2str_radioButton");
-            this.hex2str_radioButton.Name = "hex2str_radioButton";
-            this.hex2str_radioButton.TabStop = true;
-            this.hex2str_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // yima_textBox
-            // 
-            resources.ApplyResources(this.yima_textBox, "yima_textBox");
-            this.yima_textBox.Name = "yima_textBox";
-            // 
-            // clear_button
-            // 
-            resources.ApplyResources(this.clear_button, "clear_button");
-            this.clear_button.Name = "clear_button";
-            this.clear_button.UseVisualStyleBackColor = true;
-            this.clear_button.Click += new System.EventHandler(this.clear_button_Click);
-            // 
-            // yima_listBox
-            // 
-            this.yima_listBox.FormattingEnabled = true;
-            resources.ApplyResources(this.yima_listBox, "yima_listBox");
-            this.yima_listBox.Name = "yima_listBox";
-            // 
-            // Transfor_button
-            // 
-            resources.ApplyResources(this.Transfor_button, "Transfor_button");
-            this.Transfor_button.Name = "Transfor_button";
-            this.Transfor_button.UseVisualStyleBackColor = true;
-            this.Transfor_button.Click += new System.EventHandler(this.Transfor_button_Click);
-            // 
-            // input_textBox
-            // 
-            resources.ApplyResources(this.input_textBox, "input_textBox");
-            this.input_textBox.Name = "input_textBox";
-            // 
-            // message
-            // 
-            resources.ApplyResources(this.message, "message");
-            this.message.Name = "message";
-            // 
-            // CRC16
-            // 
-            this.CRC16.Controls.Add(this.crc_clear_button);
-            this.CRC16.Controls.Add(this.crc_check_button);
-            this.CRC16.Controls.Add(this.crc_textBox);
-            this.CRC16.Controls.Add(this.check_groupBox);
-            resources.ApplyResources(this.CRC16, "CRC16");
-            this.CRC16.Name = "CRC16";
-            this.CRC16.UseVisualStyleBackColor = true;
-            // 
-            // crc_clear_button
-            // 
-            resources.ApplyResources(this.crc_clear_button, "crc_clear_button");
-            this.crc_clear_button.Name = "crc_clear_button";
-            this.crc_clear_button.UseVisualStyleBackColor = true;
-            this.crc_clear_button.Click += new System.EventHandler(this.crc_clear_button_Click);
-            // 
-            // crc_check_button
-            // 
-            resources.ApplyResources(this.crc_check_button, "crc_check_button");
-            this.crc_check_button.Name = "crc_check_button";
-            this.crc_check_button.UseVisualStyleBackColor = true;
-            this.crc_check_button.Click += new System.EventHandler(this.crc_check_button_Click);
-            // 
-            // crc_textBox
-            // 
-            resources.ApplyResources(this.crc_textBox, "crc_textBox");
-            this.crc_textBox.Name = "crc_textBox";
-            // 
-            // check_groupBox
-            // 
-            this.check_groupBox.Controls.Add(this.crc_data_richTextBox);
-            resources.ApplyResources(this.check_groupBox, "check_groupBox");
-            this.check_groupBox.Name = "check_groupBox";
-            this.check_groupBox.TabStop = false;
-            // 
-            // crc_data_richTextBox
-            // 
-            resources.ApplyResources(this.crc_data_richTextBox, "crc_data_richTextBox");
-            this.crc_data_richTextBox.Name = "crc_data_richTextBox";
-            // 
-            // analysis
-            // 
-            this.analysis.Controls.Add(this.data_after_transform_richTextBox);
-            this.analysis.Controls.Add(this.label_mes);
-            this.analysis.Controls.Add(this.out_excel_button);
-            this.analysis.Controls.Add(this.data_listView);
-            this.analysis.Controls.Add(this.analysis_button);
-            this.analysis.Controls.Add(this.Raw_data_textBox);
-            resources.ApplyResources(this.analysis, "analysis");
-            this.analysis.Name = "analysis";
-            this.analysis.UseVisualStyleBackColor = true;
-            // 
-            // data_after_transform_richTextBox
-            // 
-            resources.ApplyResources(this.data_after_transform_richTextBox, "data_after_transform_richTextBox");
-            this.data_after_transform_richTextBox.Name = "data_after_transform_richTextBox";
-            // 
-            // label_mes
-            // 
-            resources.ApplyResources(this.label_mes, "label_mes");
-            this.label_mes.Name = "label_mes";
-            // 
-            // out_excel_button
-            // 
-            resources.ApplyResources(this.out_excel_button, "out_excel_button");
-            this.out_excel_button.Name = "out_excel_button";
-            this.out_excel_button.UseVisualStyleBackColor = true;
-            this.out_excel_button.Click += new System.EventHandler(this.out_excel_button_Click);
-            // 
-            // data_listView
-            // 
-            this.data_listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.data_listView.HideSelection = false;
-            resources.ApplyResources(this.data_listView, "data_listView");
-            this.data_listView.Name = "data_listView";
-            this.data_listView.UseCompatibleStateImageBehavior = false;
-            this.data_listView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            resources.ApplyResources(this.columnHeader1, "columnHeader1");
-            // 
-            // columnHeader2
-            // 
-            resources.ApplyResources(this.columnHeader2, "columnHeader2");
-            // 
-            // columnHeader3
-            // 
-            resources.ApplyResources(this.columnHeader3, "columnHeader3");
-            // 
-            // analysis_button
-            // 
-            resources.ApplyResources(this.analysis_button, "analysis_button");
-            this.analysis_button.Name = "analysis_button";
-            this.analysis_button.UseVisualStyleBackColor = true;
-            this.analysis_button.Click += new System.EventHandler(this.analysis_button_Click);
-            // 
-            // Raw_data_textBox
-            // 
-            resources.ApplyResources(this.Raw_data_textBox, "Raw_data_textBox");
-            this.Raw_data_textBox.Name = "Raw_data_textBox";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.K_radioButton);
@@ -417,43 +198,6 @@
             resources.ApplyResources(this.q_radioButton, "q_radioButton");
             this.q_radioButton.Name = "q_radioButton";
             this.q_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // rotate_groupBox
-            // 
-            this.rotate_groupBox.Controls.Add(this.radioButton0);
-            this.rotate_groupBox.Controls.Add(this.radioButton270);
-            this.rotate_groupBox.Controls.Add(this.radioButton90);
-            this.rotate_groupBox.Controls.Add(this.radioButton180);
-            this.rotate_groupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            resources.ApplyResources(this.rotate_groupBox, "rotate_groupBox");
-            this.rotate_groupBox.Name = "rotate_groupBox";
-            this.rotate_groupBox.TabStop = false;
-            // 
-            // radioButton0
-            // 
-            resources.ApplyResources(this.radioButton0, "radioButton0");
-            this.radioButton0.Checked = true;
-            this.radioButton0.Name = "radioButton0";
-            this.radioButton0.TabStop = true;
-            this.radioButton0.UseVisualStyleBackColor = true;
-            // 
-            // radioButton270
-            // 
-            resources.ApplyResources(this.radioButton270, "radioButton270");
-            this.radioButton270.Name = "radioButton270";
-            this.radioButton270.UseVisualStyleBackColor = true;
-            // 
-            // radioButton90
-            // 
-            resources.ApplyResources(this.radioButton90, "radioButton90");
-            this.radioButton90.Name = "radioButton90";
-            this.radioButton90.UseVisualStyleBackColor = true;
-            // 
-            // radioButton180
-            // 
-            resources.ApplyResources(this.radioButton180, "radioButton180");
-            this.radioButton180.Name = "radioButton180";
-            this.radioButton180.UseVisualStyleBackColor = true;
             // 
             // binama_groupBox
             // 
@@ -623,7 +367,7 @@
             0,
             0,
             0});
-            this.font_size_numericUpDown.ValueChanged += new System.EventHandler(this.font_size_numericUpDown_ValueChanged);
+            this.font_size_numericUpDown.ValueChanged += new System.EventHandler(this.updata_font_prewiew);
             // 
             // font_label
             // 
@@ -954,15 +698,53 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.font_groupBox);
             this.groupBox3.Controls.Add(this.set_groupBox);
             this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.pgbBuilderProc);
             this.groupBox3.Controls.Add(this.binama_groupBox);
-            this.groupBox3.Controls.Add(this.rotate_groupBox);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.radioButton270);
+            this.groupBox4.Controls.Add(this.radioButton180);
+            this.groupBox4.Controls.Add(this.radioButton90);
+            this.groupBox4.Controls.Add(this.radioButton0);
+            resources.ApplyResources(this.groupBox4, "groupBox4");
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.TabStop = false;
+            // 
+            // radioButton0
+            // 
+            resources.ApplyResources(this.radioButton0, "radioButton0");
+            this.radioButton0.Checked = true;
+            this.radioButton0.Name = "radioButton0";
+            this.radioButton0.TabStop = true;
+            this.radioButton0.UseVisualStyleBackColor = true;
+            // 
+            // radioButton90
+            // 
+            resources.ApplyResources(this.radioButton90, "radioButton90");
+            this.radioButton90.Name = "radioButton90";
+            this.radioButton90.UseVisualStyleBackColor = true;
+            // 
+            // radioButton180
+            // 
+            resources.ApplyResources(this.radioButton180, "radioButton180");
+            this.radioButton180.Name = "radioButton180";
+            this.radioButton180.TabStop = true;
+            this.radioButton180.UseVisualStyleBackColor = true;
+            // 
+            // radioButton270
+            // 
+            resources.ApplyResources(this.radioButton270, "radioButton270");
+            this.radioButton270.Name = "radioButton270";
+            this.radioButton270.TabStop = true;
+            this.radioButton270.UseVisualStyleBackColor = true;
             // 
             // readFontlib
             // 
@@ -971,25 +753,14 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxpic);
-            this.Controls.Add(this.tabControl);
             this.Controls.Add(this.textBoxtime);
             this.Controls.Add(this.logo);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "readFontlib";
             this.Load += new System.EventHandler(this.readFontlib_Load);
-            this.tabControl.ResumeLayout(false);
-            this.jineima.ResumeLayout(false);
-            this.jineima.PerformLayout();
-            this.CRC16.ResumeLayout(false);
-            this.CRC16.PerformLayout();
-            this.check_groupBox.ResumeLayout(false);
-            this.analysis.ResumeLayout(false);
-            this.analysis.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.rotate_groupBox.ResumeLayout(false);
-            this.rotate_groupBox.PerformLayout();
             this.binama_groupBox.ResumeLayout(false);
             this.binama_groupBox.PerformLayout();
             this.set_groupBox.ResumeLayout(false);
@@ -1017,6 +788,8 @@
             this.groupBoxData.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1027,20 +800,6 @@
         private System.Windows.Forms.LinkLabel logo;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TextBox textBoxtime;
-        private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage jineima;
-        private System.Windows.Forms.Button Transfor_button;
-        private System.Windows.Forms.TextBox input_textBox;
-        private System.Windows.Forms.Label message;
-        private System.Windows.Forms.Button clear_button;
-        private System.Windows.Forms.ListBox yima_listBox;
-        private System.Windows.Forms.TextBox yima_textBox;
-        private System.Windows.Forms.TabPage CRC16;
-        private System.Windows.Forms.Button crc_clear_button;
-        private System.Windows.Forms.Button crc_check_button;
-        private System.Windows.Forms.TextBox crc_textBox;
-        private System.Windows.Forms.GroupBox check_groupBox;
-        private System.Windows.Forms.RichTextBox crc_data_richTextBox;
         private System.Windows.Forms.GroupBox set_groupBox;
         private System.Windows.Forms.Button make_font_button;
         private System.Windows.Forms.NumericUpDown vertical_numericUpDown;
@@ -1075,28 +834,10 @@
         private System.Windows.Forms.ToolStripMenuItem 中文繁体ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 英文ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
-        private System.Windows.Forms.TabPage analysis;
-        private System.Windows.Forms.TextBox Raw_data_textBox;
-        private System.Windows.Forms.Button analysis_button;
-        private System.Windows.Forms.ListView data_listView;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.RadioButton str2hex_radioButton;
-        private System.Windows.Forms.RadioButton hex2str_radioButton;
-        private System.Windows.Forms.Button out_excel_button;
-        private System.Windows.Forms.Label label_mes;
-        private System.Windows.Forms.RichTextBox data_after_transform_richTextBox;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
-        private System.Windows.Forms.GroupBox rotate_groupBox;
-        private System.Windows.Forms.RadioButton radioButton270;
-        private System.Windows.Forms.RadioButton radioButton90;
-        private System.Windows.Forms.RadioButton radioButton180;
-        private System.Windows.Forms.RadioButton radioButton0;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton K_radioButton;
         private System.Windows.Forms.RadioButton q_radioButton;
-        private System.Windows.Forms.TabPage view_edit_fontlib;
         private System.Windows.Forms.GroupBox groupBoxpic;
         private System.Windows.Forms.RadioButton View_mode_Button;
         private System.Windows.Forms.RadioButton edit_mode_Button;
@@ -1130,6 +871,11 @@
         private System.Windows.Forms.Button buttonGetData;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.RadioButton radioButton90;
+        private System.Windows.Forms.RadioButton radioButton0;
+        private System.Windows.Forms.RadioButton radioButton270;
+        private System.Windows.Forms.RadioButton radioButton180;
     }
 }
 
