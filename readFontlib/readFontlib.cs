@@ -40,6 +40,8 @@ namespace readFontlib
         string makefontwidth = "宽度：";
         string makefontheight = "高度：";
 
+        int fontstype = 0;//0是字库卡字库，1是6Q3字库
+
 
         System.Windows.Forms.Timer time1 = new System.Windows.Forms.Timer();
 
@@ -102,6 +104,10 @@ namespace readFontlib
                 BinaryWriter br = new BinaryWriter(fs_write);
                 writeLenth = height * (width / 8 + (((width % 8) != 0) ? 1 : 0));
                 startPosition = writeLenth * index;
+                if (fontstype == 1)
+                {
+                    startPosition = startPosition + 0x82;
+                }
                 br.BaseStream.Seek(startPosition, SeekOrigin.Begin);
                 for (i = 0; i < writeLenth; i++)
                 {
@@ -125,6 +131,10 @@ namespace readFontlib
                 BinaryReader br = new BinaryReader(fs_read);
                 readLenth = height * (width / 8 + (((width % 8) != 0) ? 1 : 0));
                 startPosition = readLenth * index;
+                if (fontstype == 1)
+                {
+                    startPosition = startPosition + 0x82;
+                }
                 br.BaseStream.Seek(startPosition, SeekOrigin.Begin);
                 for (i = 0; i < readLenth; i++)
                 {
@@ -222,7 +232,7 @@ namespace readFontlib
                 }
             }
             pictureBoxFont.Image = p;
-            p.Save("D:\\pictrue.bmp");
+            //p.Save("D:\\pictrue.bmp");
         }
         private void displayFont()
         {
@@ -279,8 +289,86 @@ namespace readFontlib
                 textBoxFontName.Font = tmpFont;
                 textBoxFontName.Text = getFontName(fontFile.FileName);//获取字库的名字
                 numericUpDownIndex.Value = 0;
+
+
+                Byte[] datatemp = new byte[4];
+                uint filecheck = 0;
+
+                FileStream fs_read = new FileStream(fontPath, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fs_read);
+
+                br.BaseStream.Seek(0, SeekOrigin.Begin);
+
+                datatemp[0] = br.ReadByte();
+                datatemp[1] = br.ReadByte();
+                if ((datatemp[0] == 0x01) && (datatemp[1] == 0x80))
+                {
+                    br.BaseStream.Seek(0, SeekOrigin.Begin);
+                    for (int i = 0; i < (fs_read.Length - 4); i++)
+                    {
+                        filecheck = filecheck + br.ReadByte();
+                    }
+                    datatemp[0] = br.ReadByte();
+                    datatemp[1] = br.ReadByte();
+                    datatemp[2] = br.ReadByte();
+                    datatemp[3] = br.ReadByte();
+
+                    if ((datatemp[0] == (byte)(filecheck >> (8 * 0) & 0xff)) &&
+                    (datatemp[1] == (byte)(filecheck >> (8 * 1) & 0xff)) &&
+                    (datatemp[2] == (byte)(filecheck >> (8 * 2) & 0xff)) &&
+                    (datatemp[3] == (byte)(filecheck >> (8 * 3) & 0xff)))
+                    {
+                        fontstype = 1;//6Q3字库
+
+                        br.BaseStream.Seek(0x42, SeekOrigin.Begin);
+                        datatemp[0] = br.ReadByte();
+                        if (datatemp[0] == 0)
+                        {
+                            GB2312.Checked = false;
+                            GBK.Checked = false;
+                            ASCII.Checked = true;
+                        }
+                        if (datatemp[0] == 1)
+                        {
+                            GB2312.Checked = true;
+                            GBK.Checked = false;
+                            ASCII.Checked = false;
+                        }
+                        if (datatemp[0] == 2)
+                        {
+                            GB2312.Checked = false;
+                            GBK.Checked = true;
+                            ASCII.Checked = false;
+                        }
+
+                        K_radioButton.Checked = false;
+                        q_radioButton.Checked = true;
+
+                        br.BaseStream.Seek(0x48, SeekOrigin.Begin);
+                        datatemp[0] = br.ReadByte();
+                        datatemp[1] = br.ReadByte();
+                        datatemp[2] = br.ReadByte();
+                        datatemp[3] = br.ReadByte();
+                        width_numericUpDown.Value = (int)((datatemp[1] << 8) + datatemp[0]);
+                        height_numericUpDown.Value = (int)((datatemp[3] << 8) + datatemp[2]);
+                    }
+                    else
+                    {
+                        fontstype = 0;//字库卡字库
+                    }
+                }
+                else
+                {
+                    fontstype = 0;//字库卡字库
+                }
+                br.Close();
+                fs_read.Close();
+
+
                 displayFont();
             }
+
+            
         }
 
         private void numericUpDownIndex_ValueChanged(object sender, EventArgs e)//编号改变事件
@@ -909,7 +997,7 @@ namespace readFontlib
                     filecheck = filecheck + 0x80;
 
                     fs.WriteByte((byte)0x10);
-                    filecheck = filecheck + 0x01;
+                    filecheck = filecheck + 0x10;
 
                     for (int i = 0; i < 61; i++)
                     {
@@ -1082,10 +1170,10 @@ namespace readFontlib
                 }
                 if (q_radioButton.Checked == true)//6Q3的字库
                 {
-                    filecheck_byte[0] = (byte)(filecheck >> (8 * 0) & 0xff);
-                    filecheck_byte[1] = (byte)(filecheck >> (8 * 1) & 0xff);
-                    filecheck_byte[2] = (byte)(filecheck >> (8 * 2) & 0xff);
-                    filecheck_byte[3] = (byte)(filecheck >> (8 * 3) & 0xff);
+                    filecheck_byte[0] = (byte)((filecheck >> (8 * 0)) & 0xff);
+                    filecheck_byte[1] = (byte)((filecheck >> (8 * 1)) & 0xff);
+                    filecheck_byte[2] = (byte)((filecheck >> (8 * 2)) & 0xff);
+                    filecheck_byte[3] = (byte)((filecheck >> (8 * 3)) & 0xff);
 
                     fs.WriteByte(filecheck_byte[0]);
                     fs.WriteByte(filecheck_byte[1]);
