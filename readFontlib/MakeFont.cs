@@ -61,18 +61,14 @@ namespace readFontlib
         /// </summary>
         private Bitmap m_MatBitmap;
 
+
         /// <summary>
-        /// 点阵位图的高宽是否相等。
+        /// 点阵位图顺时针旋转角度。
         /// </summary>
-        private bool m_IsEqualWH;
+        private int m_rotate_num;
 
 
-        private int make_rotate_num;
 
-        private bool m_rotate0;
-        private bool m_rotate90;
-        private bool m_rotate180;
-        private bool m_rotate270;
 
         #endregion 字段
 
@@ -87,8 +83,8 @@ namespace readFontlib
         /// <param name="charWidth">字符的宽度。</param>
         /// <param name="offsetX">字符的水平偏移量。</param>
         /// <param name="offsetY">字符的垂直偏移量。</param>
-        /// <param name="isEqualWH">点阵位图的高宽是否相等，值高宽true表示相等，false表示高宽不相等。</param>
-        public MakeFont(Font matFont, Char demoChar, int charWidth, int charHeight, int offsetX, int offsetY, bool isEqualWH, int make_rotate_num)
+        /// <param name="make_rotate_num">点阵位图顺时针旋转角度。</param>
+        public MakeFont(Font matFont, Char demoChar, int charWidth, int charHeight, int offsetX, int offsetY, int make_rotate_num)
         {
             this.m_MatFont = matFont;
             this.m_DemoChar = demoChar.ToString();
@@ -96,7 +92,7 @@ namespace readFontlib
             this.m_CharHeight = charHeight;
             this.m_OffsetX = offsetX;
             this.m_OffsetY = offsetY;
-            this.m_IsEqualWH = isEqualWH;
+            this.m_rotate_num = make_rotate_num;
 
             this.DIBChanged(matFont, demoChar.ToString(), charWidth, charHeight, offsetX, offsetY, make_rotate_num);
         }
@@ -121,14 +117,14 @@ namespace readFontlib
                     this.m_MatFont.Dispose();
                 }
                 this.m_MatFont = value;
-                this.DIBChanged(value, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
+                this.DIBChanged(value, this.DemoChar, this.m_CharWidth,
+                                this.m_CharHeight, this.m_OffsetX, this.m_OffsetY, m_rotate_num);
             }
         }
 
-        /// <summary>
-        /// 获取或设置示例所使用的字符。
-        /// </summary>
+        ///// <summary>
+        ///// 获取或设置示例所使用的字符。
+        ///// </summary>
         public string DemoChar
         {
             get
@@ -140,101 +136,15 @@ namespace readFontlib
                 if (value.Length > 0)
                 {
                     this.m_DemoChar = value[0].ToString();
-                    this.DIBChanged(this.MatFont, value[0].ToString(), this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
+                    this.DIBChanged(this.MatFont, value[0].ToString(), this.m_CharWidth,
+                                this.m_CharHeight, this.m_OffsetX, this.m_OffsetY, m_rotate_num);
                 }
                 else
                 {
                     this.m_DemoChar = string.Empty;
-                    this.DIBChanged(this.MatFont, " ", this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
+                    this.DIBChanged(this.MatFont, " ", this.m_CharWidth,
+                                this.m_CharHeight, this.m_OffsetX, this.m_OffsetY, m_rotate_num);
                 }
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置点阵字体的高度（点的数目）。
-        /// </summary>
-        public int CharHeight
-        {
-            get
-            {
-                return this.m_CharHeight;
-            }
-            set
-            {
-                this.m_CharHeight = value;
-                if (this.IsEqualWH)
-                {
-                    this.m_CharWidth = value;
-                    this.DIBChanged(this.MatFont, this.DemoChar, value,
-                                value, this.OffsetX, this.OffsetY, make_rotate_num);
-                }
-                else
-                {
-                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                    value, this.OffsetX, this.OffsetY, make_rotate_num);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置点阵字体的宽度（点的数目）。
-        /// </summary>
-        public int CharWidth
-        {
-            get
-            {
-                return this.m_CharWidth;
-            }
-            set
-            {
-                this.m_CharWidth = value;
-                if (this.IsEqualWH)
-                {
-                    this.m_CharHeight = value;
-                    this.DIBChanged(this.MatFont, this.DemoChar, value,
-                                value, this.OffsetX, this.OffsetY, make_rotate_num);
-                }
-                else
-                {
-                    this.DIBChanged(this.MatFont, this.DemoChar, value,
-                                    this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
-                }
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置点阵字体的水平偏移量。
-        /// </summary>
-        public int OffsetX
-        {
-            get
-            {
-                return this.m_OffsetX;
-            }
-            set
-            {
-                this.m_OffsetX = value;
-                this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, value, this.OffsetY, make_rotate_num);
-            }
-        }
-
-        /// <summary>
-        /// 获取或设置点阵字体的垂直偏移量。
-        /// </summary>
-        public int OffsetY
-        {
-            get
-            {
-                return this.m_OffsetY;
-            }
-            set
-            {
-                this.m_OffsetY = value;
-                this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, value, make_rotate_num);
             }
         }
 
@@ -248,31 +158,6 @@ namespace readFontlib
                 return this.m_MatBitmap;
             }
         }
-
-        /// <summary>
-        /// 获取或设置点阵位图高宽是否相等，值高宽true表示相等，false表示高宽不相等。
-        /// </summary>
-        public bool IsEqualWH
-        {
-            get
-            {
-                return this.m_IsEqualWH;
-            }
-            set
-            {
-                this.m_IsEqualWH = value;
-                if (value)
-                {
-                    this.CharHeight = this.CharWidth;
-                }
-                else
-                {
-                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
-                }
-            }
-        }
-        
         #endregion 属性
 
         #region 方法

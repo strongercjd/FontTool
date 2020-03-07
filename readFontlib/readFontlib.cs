@@ -805,7 +805,7 @@ namespace readFontlib
 
             this.MatCharFont = new MakeFont(matFont, viwerChar, (int)this.width_numericUpDown.Value,
              (int)this.height_numericUpDown.Value, (int)this.level_numericUpDown.Value,
-             (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked, make_rotate_num);
+             (int)this.vertical_numericUpDown.Value, make_rotate_num);
             //更新字符预览。
             BitmapToBytes(this.MatCharFont.MatBitmap);
             paintFont();
@@ -815,25 +815,7 @@ namespace readFontlib
             this.font_message_textBox.Text = this.MatCharFont.GetMatFontInfo();
         }
 
-        private void rdBtnStandard_CheckedChanged(object sender, EventArgs e)
-        {
-            if (this.rdBtnStandard.Checked)
-            {
-                this.font_width_label.Text = makefontsize;
-                this.font_height_label.Text = "  ";
-                this.height_numericUpDown.Enabled = false;
-            }
-        }
 
-        private void rdBtnNonStandard_CheckedChanged(object sender, EventArgs e)
-        {
-            if (this.rdBtnNonStandard.Checked)
-            {
-                this.font_width_label.Text = makefontwidth;
-                this.font_height_label.Text = makefontheight;
-                this.height_numericUpDown.Enabled = true;
-            }
-        }
 
         private void make_font_button_Click(object sender, EventArgs e)
         {
@@ -1128,10 +1110,10 @@ namespace readFontlib
             this.pgbBuilderProc.Value = 0;
             //statusStripProc.Visible = false;
             pgbBuilderProc.Visible = false;
-            if (this.MatCharFont.IsEqualWH)
-            {
-                this.height_numericUpDown.Enabled = false;
-            }
+            //if (this.MatCharFont.IsEqualWH)
+            //{
+            //    this.height_numericUpDown.Enabled = false;
+            //}
         }
 
         private void UIEnabled(bool isEnabled)
@@ -1139,8 +1121,6 @@ namespace readFontlib
             this.check_font_button.Enabled = isEnabled;           //“选择字体”按钮。
             this.font_size_numericUpDown.Enabled = isEnabled;       //“字体大小：”数字框。
 
-            this.rdBtnStandard.Enabled = isEnabled;     //“高宽相等”单选按钮。
-            this.rdBtnNonStandard.Enabled = isEnabled;  //“高宽不相等”单选按钮。
 
             this.width_numericUpDown.Enabled = isEnabled;          //字体“宽度：”数字框。
             this.height_numericUpDown.Enabled = isEnabled;         //字体“高度：”数字框。
@@ -1150,11 +1130,6 @@ namespace readFontlib
             //this.btnBuilderChar.Enabled = isEnabled;        //“生成当前字符点阵数据”按钮。
             this.make_font_button.Enabled = isEnabled;  //“生成字库的点阵数据文件”按钮。
 
-            ////文件生成过程时使用的进度条（确定其是否可见）。
-            //this.pgbBuilderProc.Visible = !isEnabled;
-
-            //设置UI控件是否与数据对象(MatrixFont类对象)进行绑定操作。
-            this.UIBindingData(isEnabled);
         }
 
 
@@ -1185,13 +1160,9 @@ namespace readFontlib
             Font matFont = new Font(this.Font.FontFamily, (float)this.font_size_numericUpDown.Value);
             this.MatCharFont = new MakeFont(matFont, '陈', (int)this.width_numericUpDown.Value,
                          (int)this.height_numericUpDown.Value, (int)this.level_numericUpDown.Value,
-                         (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked, make_rotate_num);
+                         (int)this.vertical_numericUpDown.Value, make_rotate_num);
 
-            //将窗体上的一些控件与 MatCharFont 对象的一些属性绑定，方便操作。
-            this.UIBindingData(true);
-
-            //监视 MatCharFont 对象的数据操作是否有误。
-            //this.errorProvider.DataSource = this.MatCharFont;
+            updata_font_prewiew(null,null);
 
             //初始化窗体的一些控件属性。
             this.font_width_label.Text = "宽度：";
@@ -1222,32 +1193,6 @@ namespace readFontlib
 
         }
 
-
-        /// <summary>
-        /// 设置窗体UI界面的一些控件是否要绑定到数据对象(MatrixFont类对象)进行交互操作。
-        /// </summary>
-        /// <param name="isBinding">
-        /// UI控件是否要绑定到数据对象(MatrixFont类对象)，值true表示绑定，false表示不绑定。
-        /// </param>
-        private void UIBindingData(bool isBinding)
-        {
-            if (isBinding)
-            {
-
-                //“高宽相等”单选按钮。
-                //this.rdBtnStandard.DataBindings.Add("Checked", this.MatCharFont, "IsEqualWH",
-                //    true, DataSourceUpdateMode.OnPropertyChanged);
-            }
-            else
-            {
-                this.viwer_textBox.DataBindings.Clear();       //“当前字符：”文本框。
-                this.rdBtnStandard.DataBindings.Clear();            //“高宽相等”单选按钮。
-                this.width_numericUpDown.DataBindings.Clear();         //字体“宽度：”数字框。
-                this.height_numericUpDown.DataBindings.Clear();        //字体“高度：”数字框。
-                this.level_numericUpDown.DataBindings.Clear();       //字体“水平偏移：”数字框。
-                this.vertical_numericUpDown.DataBindings.Clear();       //字体“垂直偏移：”数字框。
-            }
-        }
 
         private void width_numericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -1462,8 +1407,6 @@ namespace readFontlib
             level_label.Text = rm.GetString("level_label");
             vertical_label.Text = rm.GetString("vertical_label");
 
-            rdBtnNonStandard.Text = rm.GetString("rdBtnNonStandard");
-            rdBtnStandard.Text = rm.GetString("rdBtnStandard");
             make_font_button.Text = rm.GetString("make_font_button");
 
 

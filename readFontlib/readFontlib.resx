@@ -528,66 +528,6 @@
   <data name="&gt;&gt;pgbBuilderProc.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="rdBtnNonStandard.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rdBtnNonStandard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 20</value>
-  </data>
-  <data name="rdBtnNonStandard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 16</value>
-  </data>
-  <data name="rdBtnNonStandard.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="rdBtnNonStandard.Text" xml:space="preserve">
-    <value>宽高不等</value>
-  </data>
-  <data name="rdBtnNonStandard.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;rdBtnNonStandard.Name" xml:space="preserve">
-    <value>rdBtnNonStandard</value>
-  </data>
-  <data name="&gt;&gt;rdBtnNonStandard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdBtnNonStandard.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;rdBtnNonStandard.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="rdBtnStandard.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rdBtnStandard.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 59</value>
-  </data>
-  <data name="rdBtnStandard.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 16</value>
-  </data>
-  <data name="rdBtnStandard.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="rdBtnStandard.Text" xml:space="preserve">
-    <value>高宽相等</value>
-  </data>
-  <data name="rdBtnStandard.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;rdBtnStandard.Name" xml:space="preserve">
-    <value>rdBtnStandard</value>
-  </data>
-  <data name="&gt;&gt;rdBtnStandard.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdBtnStandard.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;rdBtnStandard.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="make_font_button.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 200</value>
   </data>
@@ -631,7 +571,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;vertical_numericUpDown.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="level_numericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>240, 20</value>
@@ -652,7 +592,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;level_numericUpDown.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="height_numericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>58, 53</value>
@@ -673,7 +613,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;height_numericUpDown.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="width_numericUpDown.Location" type="System.Drawing.Point, System.Drawing">
     <value>56, 20</value>
@@ -694,7 +634,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;width_numericUpDown.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="vertical_label.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -721,7 +661,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;vertical_label.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="level_label.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -748,7 +688,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;level_label.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="font_height_label.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -775,7 +715,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;font_height_label.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="font_width_label.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -802,7 +742,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;font_width_label.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;font_message_textBox.Name" xml:space="preserve">
     <value>font_message_textBox</value>
@@ -1516,7 +1456,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;viwer_textBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="viwer_font_label.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1549,7 +1489,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;viwer_font_label.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;check_data_format.Name" xml:space="preserve">
     <value>check_data_format</value>

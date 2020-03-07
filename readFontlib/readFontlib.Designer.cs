@@ -45,8 +45,6 @@
             this.GB2312 = new System.Windows.Forms.RadioButton();
             this.GBK = new System.Windows.Forms.RadioButton();
             this.pgbBuilderProc = new System.Windows.Forms.ProgressBar();
-            this.rdBtnNonStandard = new System.Windows.Forms.RadioButton();
-            this.rdBtnStandard = new System.Windows.Forms.RadioButton();
             this.make_font_button = new System.Windows.Forms.Button();
             this.vertical_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.level_numericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -227,22 +225,6 @@
             // 
             resources.ApplyResources(this.pgbBuilderProc, "pgbBuilderProc");
             this.pgbBuilderProc.Name = "pgbBuilderProc";
-            // 
-            // rdBtnNonStandard
-            // 
-            resources.ApplyResources(this.rdBtnNonStandard, "rdBtnNonStandard");
-            this.rdBtnNonStandard.Checked = true;
-            this.rdBtnNonStandard.Name = "rdBtnNonStandard";
-            this.rdBtnNonStandard.TabStop = true;
-            this.rdBtnNonStandard.UseVisualStyleBackColor = true;
-            this.rdBtnNonStandard.CheckedChanged += new System.EventHandler(this.rdBtnNonStandard_CheckedChanged);
-            // 
-            // rdBtnStandard
-            // 
-            resources.ApplyResources(this.rdBtnStandard, "rdBtnStandard");
-            this.rdBtnStandard.Name = "rdBtnStandard";
-            this.rdBtnStandard.UseVisualStyleBackColor = true;
-            this.rdBtnStandard.CheckedChanged += new System.EventHandler(this.rdBtnStandard_CheckedChanged);
             // 
             // make_font_button
             // 
@@ -642,8 +624,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.rdBtnStandard);
-            this.groupBox2.Controls.Add(this.rdBtnNonStandard);
             this.groupBox2.Controls.Add(this.font_width_label);
             this.groupBox2.Controls.Add(this.viwer_textBox);
             this.groupBox2.Controls.Add(this.font_height_label);
@@ -752,8 +732,6 @@
         private System.Windows.Forms.Button check_font_button;
         private System.Windows.Forms.TextBox font_message_textBox;
         private System.Windows.Forms.FontDialog fontDlg;
-        private System.Windows.Forms.RadioButton rdBtnStandard;
-        private System.Windows.Forms.RadioButton rdBtnNonStandard;
         private System.Windows.Forms.SaveFileDialog saveFileDlg;
         private System.ComponentModel.BackgroundWorker bgwFileBuilder;
         private System.Windows.Forms.ProgressBar pgbBuilderProc;
