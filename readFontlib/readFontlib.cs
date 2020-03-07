@@ -56,8 +56,8 @@ namespace readFontlib
             lockFlag = false;
             editFlag = false;//默认查看状态
             bmp = new Bitmap(1, 1, System.Drawing.Imaging.PixelFormat.Format1bppIndexed);
-            numericUpDownWidth.Value = 16;
-            numericUpDownHeight.Value = 16;
+            width_numericUpDown.Value = 16;
+            height_numericUpDown.Value = 16;
             for (i = 0; i < 2048; i++) {
                 data[i] = 0;
             }
@@ -146,7 +146,14 @@ namespace readFontlib
             int num_x, num_y;
             string str;
             int num2;
-
+            if (pictureBoxFont.Width >= pictureBoxFont.Height)
+            {
+                picSize = pictureBoxFont.Height;
+            }
+            else
+            {
+                picSize = pictureBoxFont.Width;
+            }
             Bitmap p = new Bitmap(picSize, picSize);
             Graphics g = Graphics.FromImage(p); //!<创建一个图形类
 
@@ -198,7 +205,7 @@ namespace readFontlib
                 {
                     num1 = (width / 8) + ((width % 8 != 0) ? 1 : 0);
                     num = ((x + 1) / 8) + (((x + 1) % 8 != 0) ? 1 : 0);
-                    num = num1 * y + num -1;
+                    num = num1 * y + num - 1;
                     if (((data[num] >> (7 - x % 8)) & 0x01) == 0)
                     {
                         bluePanel.X = x * (uniwidth + spaceSize) + picSx;
@@ -210,12 +217,12 @@ namespace readFontlib
                         blackPanel.X = x * (uniwidth + spaceSize) + picSx;
                         blackPanel.Y = y * (uniheight + spaceSize) + picSy;
                         g.DrawRectangle(blackPen, blackPanel);
-                        g.FillRectangle(blackBrush, blackPanel); 
+                        g.FillRectangle(blackBrush, blackPanel);
                     }
                 }
             }
             pictureBoxFont.Image = p;
-            //p.Save("D:\\pictrue.bmp");
+            p.Save("D:\\pictrue.bmp");
         }
         private void displayFont()
         {
@@ -288,113 +295,53 @@ namespace readFontlib
                 MessageBox.Show(message_openfile);
             }
         }
-        private void GBK_radioButton_CheckedChanged(object sender, EventArgs e)//选中GBK
-        {
-            comboBoxQu.Enabled = true;
-            comboBoxWei.Enabled = true;
-            down_flag = 0;
-            up_flag = 0;
-            comboBoxWei.Items.Clear();
-            for (int i = 64; i < 255; i++)
-            {
-                if (i == 127)
-                {
-                    i++;
-                }
-                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
-            }
-            comboBoxWei.Text = "40";
-            comboBoxQu.Items.Clear();
-            for (int i = 129; i < 255; i++)
-            {
-                comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
-            }
-            comboBoxQu.Text = "81";
-        }
-        private void radioButtonFontLib_CheckedChanged(object sender, EventArgs e)//选中GB2312
-        {
-            lockFlag = true;
-            comboBoxQu.Enabled = true;
-            comboBoxWei.Enabled = true;
-            down_flag = 0;
-            up_flag = 0;
+        
+       
 
-            comboBoxQu.Items.Clear();
-            for (int i = 161; i < 255; i++)
-            {
-                comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
-            }
-            comboBoxQu.Text = "A1";
-            comboBoxWei.Items.Clear();
-            for (int i = 161; i < 255; i++)
-            {
-                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
-            }
-            comboBoxWei.Text = "A1";
-
-            lockFlag = false;
-        }
-        private void radioButtonUnit_CheckedChanged(object sender, EventArgs e)//选中ASCII
-        {
-            down_flag = 0;
-            up_flag = 0;
-            comboBoxQu.Items.Clear();
-            for (int i = 0; i < 256; i++)
-            {
-                comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
-            }
-            comboBoxWei.Items.Clear();
-            for (int i = 0; i < 256; i++)
-            {
-                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
-            }
-            comboBoxQu.Enabled = false;
-            comboBoxWei.SelectedIndex = 0;
-        }
 
         private void numericUpDownWidth_ValueChanged(object sender, EventArgs e)//字模宽度改变事件
         {
-            if (!lockFlag)
-            {
-                if (radioButtonFontLib.Checked)
-                {
-                    width = (int)numericUpDownWidth.Value;
-                }
-                else if (radioButtonUnit.Checked)
-                {
-                    /* uni */width = (int)numericUpDownWidth.Value;
-                }
-                if ((fontPath != null) && (File.Exists(fontPath)))
-                {
-                    displayFont();
-                }
-                else
-                {
-                    paintFont();
-                }
-            }
+            //if (!lockFlag)
+            //{
+            //    if (GB2312.Checked)
+            //    {
+            //        width = (int)numericUpDownWidth.Value;
+            //    }
+            //    else if (ASCII.Checked)
+            //    {
+            //        /* uni */width = (int)numericUpDownWidth.Value;
+            //    }
+            //    if ((fontPath != null) && (File.Exists(fontPath)))
+            //    {
+            //        displayFont();
+            //    }
+            //    else
+            //    {
+            //        paintFont();
+            //    }
+            //}
         }
         private void numericUpDownHeight_ValueChanged(object sender, EventArgs e)//字模高度改变事件
         {
-            if (!lockFlag)
-            {
-                if (radioButtonFontLib.Checked)
-                {
-                    height = (int)numericUpDownHeight.Value;
-                }
-                else if (radioButtonUnit.Checked)
-                {
-                    /* uni */height = (int)numericUpDownHeight.Value;
-                }
-                if ((fontPath != null) && (File.Exists(fontPath)))
-                {
-                    displayFont();
-                }
-                else
-                {
-                    paintFont();
-                }
-            }
+            //if (!lockFlag)
+            //{
+            //    if (GB2312.Checked)
+            //    {
+            //        height = (int)numericUpDownHeight.Value;
+            //    }
+            //    else if (ASCII.Checked)
+            //    {
+            //        /* uni */height = (int)numericUpDownHeight.Value;
+            //    }
+            //    if ((fontPath != null) && (File.Exists(fontPath)))
+            //    {
+            //        displayFont();
+            //    }
+            //    else
+            //    {
+            //        paintFont();
+            //    }
+            //}
         }
 
         private void buttonGetData_Click(object sender, EventArgs e)//读取字模数据按钮单击事件
@@ -437,7 +384,7 @@ namespace readFontlib
         {
             comboBoxQu.Enabled = true;
             comboBoxWei.Enabled = true;
-            radioButtonFontLib.Checked = true;
+            GB2312.Checked = true;
 
             this.time1.Interval = 1000;
             this.time1.Tick += new System.EventHandler(this.timer_Tick);
@@ -638,7 +585,7 @@ namespace readFontlib
         {
             if ((fontPath != null) && (File.Exists(fontPath)))
             {
-                if (radioButtonUnit.Checked == true)
+                if (ASCII.Checked == true)
                 {
                     if (comboBoxWei.SelectedIndex == 0)
                     {
@@ -649,7 +596,7 @@ namespace readFontlib
                         comboBoxWei.Text = (comboBoxWei.SelectedIndex - 1).ToString("X8").Remove(0, 6);
                     }
                 }
-                if (radioButtonFontLib.Checked == true)
+                if (GB2312.Checked == true)
                 {
                     comboBoxWei.Text = (comboBoxWei.SelectedIndex + 160).ToString("X8").Remove(0, 6);
                     if (up_flag == 1)
@@ -661,7 +608,7 @@ namespace readFontlib
                     if (comboBoxWei.Text == "A1")
                         up_flag = 1;
                 }
-                if (GBK_radioButton.Checked == true)
+                if (GBK.Checked == true)
                 {
                     comboBoxWei.Text = (comboBoxWei.SelectedIndex + 63).ToString("X8").Remove(0, 6);
                     if (up_flag == 1)
@@ -685,7 +632,7 @@ namespace readFontlib
         {
             if ((fontPath != null) && (File.Exists(fontPath)))
             {
-                if (radioButtonUnit.Checked == true)
+                if (ASCII.Checked == true)
                 {
                     if (comboBoxWei.SelectedIndex == 255)
                     {
@@ -696,7 +643,7 @@ namespace readFontlib
                         comboBoxWei.Text = (comboBoxWei.SelectedIndex + 1).ToString("X8").Remove(0, 6);
                     }
                 }
-                if (radioButtonFontLib.Checked == true)
+                if (GB2312.Checked == true)
                 {
                     comboBoxWei.Text = (comboBoxWei.SelectedIndex + 162).ToString("X8").Remove(0, 6);
                     if (down_flag == 1)
@@ -708,7 +655,7 @@ namespace readFontlib
                     if (comboBoxWei.Text == "FE")
                         down_flag = 1;
                 }
-                if (GBK_radioButton.Checked == true)
+                if (GBK.Checked == true)
                 {
                     comboBoxWei.Text = (comboBoxWei.SelectedIndex + 66).ToString("X8").Remove(0, 6);
                     if (down_flag == 1)
@@ -741,15 +688,15 @@ namespace readFontlib
                 qu = 0;
             if (wei < 0)
                 wei = 0;
-            if (radioButtonUnit.Checked == true)
+            if (ASCII.Checked == true)
             {
                 numericUpDownIndex.Value = wei;
             }
-            if (radioButtonFontLib.Checked == true)
+            if (GB2312.Checked == true)
             {
                 numericUpDownIndex.Value = qu * 94 + wei;
             }
-            if (GBK_radioButton.Checked == true)
+            if (GBK.Checked == true)
             {
                 numericUpDownIndex.Value = qu * 190 + wei;
             }
@@ -773,7 +720,7 @@ namespace readFontlib
             byte[] array = System.Text.Encoding.Default.GetBytes(viwer_textBox.Text);
             if (array.Length == 1)
             {
-                if (radioButtonUnit.Checked != true)
+                if (ASCII.Checked != true)
                 {
                     MessageBox.Show("现在选择是中文字库，请不要输入英文或阿拉伯数字");
                 }
@@ -784,7 +731,7 @@ namespace readFontlib
             }
             if (array.Length == 2)
             {
-                if (radioButtonUnit.Checked == true)
+                if (ASCII.Checked == true)
                 {
                     MessageBox.Show("现在选择是英文字库，请不要输入汉字");
                 }
@@ -952,7 +899,7 @@ namespace readFontlib
                 }
                 saveFileDlg.Filter = null;
 
-                MessageBox.Show("6Q3字库中文字库名字首字母是O，英文是E。后面3个数字随意。比如系统生成8*16英文字库名字随机生成E025，生成完毕你也可以将其修改为E000，下载进入6Q3控制器中，调用\\FE000，代表调用的是英文8*16的字库。如果你不修改名字，就把E025下载进入控制器，那么调用\\FE000，代表调用的是英文8*16的字库", "系统提示",
+                MessageBox.Show("6Q3字库中文字库名字首字母是O，英文是E。后面3个数字随意。比如系统生成8*16英文字库名字随机生成E025，生成字库完毕你也在windows下重命名为E000，下载进入6Q3控制器中，调用\\FE000，代表调用的是英文8*16的字库。如果你不修改名字，就把E025下载进入控制器，那么调用\\FE025，代表调用的是英文8*16的字库", "系统提示",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -976,6 +923,8 @@ namespace readFontlib
             uint filecheck = 0;
 
             byte[] filecheck_byte = new byte[4];
+
+            make_font_button.Visible = false;
 
 
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
@@ -1187,10 +1136,11 @@ namespace readFontlib
             MessageBox.Show("点阵字库文件生成过程结束！", "系统提示",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            make_font_button.Visible = true;
+
             //恢复窗口的UI界面。
             //this.UIEnabled(true);
             //this.tssLblStatus.Text = "";
-            font_viwer_textBox.Text = "";
             this.pgbBuilderProc.Value = 0;
             //statusStripProc.Visible = false;
             pgbBuilderProc.Visible = false;
@@ -1203,7 +1153,6 @@ namespace readFontlib
         private void UIEnabled(bool isEnabled)
         {
             this.check_font_button.Enabled = isEnabled;           //“选择字体”按钮。
-            this.font_viwer_textBox.Enabled = isEnabled;        //“当前字符：”文本框。
             this.font_size_numericUpDown.Enabled = isEnabled;       //“字体大小：”数字框。
 
             this.rdBtnStandard.Enabled = isEnabled;     //“高宽相等”单选按钮。
@@ -1284,7 +1233,7 @@ namespace readFontlib
             if (isBinding)
             {
                 //“当前字符：”文本框。
-                this.font_viwer_textBox.DataBindings.Add("Text", this.MatCharFont, "DemoChar",
+                this.viwer_textBox.DataBindings.Add("Text", this.MatCharFont, "DemoChar",
                     true, DataSourceUpdateMode.OnPropertyChanged);
 
                 //“高宽相等”单选按钮。
@@ -1321,7 +1270,7 @@ namespace readFontlib
             }
             else
             {
-                this.font_viwer_textBox.DataBindings.Clear();       //“当前字符：”文本框。
+                this.viwer_textBox.DataBindings.Clear();       //“当前字符：”文本框。
                 this.rdBtnStandard.DataBindings.Clear();            //“高宽相等”单选按钮。
                 this.width_numericUpDown.DataBindings.Clear();         //字体“宽度：”数字框。
                 this.height_numericUpDown.DataBindings.Clear();        //字体“高度：”数字框。
@@ -1334,11 +1283,11 @@ namespace readFontlib
         {
             if (!lockFlag)
             {
-                if (radioButtonFontLib.Checked)
+                if (GB2312.Checked)
                 {
                     width = (int)width_numericUpDown.Value;
                 }
-                else if (radioButtonUnit.Checked)
+                else if (ASCII.Checked)
                 {
                     /* uni */
                     width = (int)width_numericUpDown.Value;
@@ -1358,11 +1307,11 @@ namespace readFontlib
         {
             if (!lockFlag)
             {
-                if (radioButtonFontLib.Checked)
+                if (GB2312.Checked)
                 {
                     height = (int)height_numericUpDown.Value;
                 }
-                else if (radioButtonUnit.Checked)
+                else if (ASCII.Checked)
                 {
                     /* uni */
                     height = (int)height_numericUpDown.Value;
@@ -1400,7 +1349,71 @@ namespace readFontlib
             UpDataMainFormUILanguage();
         }
 
+        private void GB2312_CheckedChanged(object sender, EventArgs e)
+        {
+            lockFlag = true;
+            comboBoxQu.Enabled = true;
+            comboBoxWei.Enabled = true;
+            down_flag = 0;
+            up_flag = 0;
 
+            comboBoxQu.Items.Clear();
+            for (int i = 161; i < 255; i++)
+            {
+                comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
+            }
+            comboBoxQu.Text = "A1";
+            comboBoxWei.Items.Clear();
+            for (int i = 161; i < 255; i++)
+            {
+                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
+            }
+            comboBoxWei.Text = "A1";
+
+            lockFlag = false;
+        }
+
+        private void GBK_CheckedChanged(object sender, EventArgs e)
+        {
+            comboBoxQu.Enabled = true;
+            comboBoxWei.Enabled = true;
+            down_flag = 0;
+            up_flag = 0;
+            comboBoxWei.Items.Clear();
+            for (int i = 64; i < 255; i++)
+            {
+                if (i == 127)
+                {
+                    i++;
+                }
+                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
+            }
+            comboBoxWei.Text = "40";
+            comboBoxQu.Items.Clear();
+            for (int i = 129; i < 255; i++)
+            {
+                comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
+            }
+            comboBoxQu.Text = "81";
+        }
+
+        private void ASCII_CheckedChanged(object sender, EventArgs e)
+        {
+            down_flag = 0;
+            up_flag = 0;
+            comboBoxQu.Items.Clear();
+            for (int i = 0; i < 256; i++)
+            {
+                comboBoxQu.Items.Add(i.ToString("X2").ToUpper());
+            }
+            comboBoxWei.Items.Clear();
+            for (int i = 0; i < 256; i++)
+            {
+                comboBoxWei.Items.Add(i.ToString("X2").ToUpper());
+            }
+            comboBoxQu.Enabled = false;
+            comboBoxWei.SelectedIndex = 0;
+        }
 
         private void 英文ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -1428,8 +1441,6 @@ namespace readFontlib
             textBoxFontName.Text = rm.GetString("textBoxFontName");
 
             buttonReadFont.Text = rm.GetString("buttonReadFont");
-            labelWidth.Text = rm.GetString("labelWidth");
-            labelHeight.Text = rm.GetString("labelHeight");
             labelIndex.Text = rm.GetString("labelIndex");
             up_button.Text = rm.GetString("up_button");
             down_button.Text = rm.GetString("down_button");
@@ -1448,13 +1459,10 @@ namespace readFontlib
 
             #region 制作字库区域
             font_groupBox.Text = rm.GetString("font_groupBox");
-            message_groupBox.Text = rm.GetString("message_groupBox");
             check_font_button.Text = rm.GetString("check_font_button");
             font_label.Text = rm.GetString("font_label");
-            font_view_label.Text = rm.GetString("font_view_label");
 
             binama_groupBox.Text = rm.GetString("binama_groupBox");
-            set_groupBox.Text = rm.GetString("set_groupBox");
             font_width_label.Text = rm.GetString("font_width_label");
             font_height_label.Text = rm.GetString("font_height_label");
             level_label.Text = rm.GetString("level_label");

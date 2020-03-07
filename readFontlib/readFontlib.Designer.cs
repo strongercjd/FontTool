@@ -45,7 +45,6 @@
             this.GB2312 = new System.Windows.Forms.RadioButton();
             this.GBK = new System.Windows.Forms.RadioButton();
             this.pgbBuilderProc = new System.Windows.Forms.ProgressBar();
-            this.set_groupBox = new System.Windows.Forms.GroupBox();
             this.rdBtnNonStandard = new System.Windows.Forms.RadioButton();
             this.rdBtnStandard = new System.Windows.Forms.RadioButton();
             this.make_font_button = new System.Windows.Forms.Button();
@@ -58,13 +57,10 @@
             this.font_height_label = new System.Windows.Forms.Label();
             this.font_width_label = new System.Windows.Forms.Label();
             this.font_groupBox = new System.Windows.Forms.GroupBox();
-            this.font_viwer_textBox = new System.Windows.Forms.TextBox();
-            this.font_view_label = new System.Windows.Forms.Label();
+            this.font_message_textBox = new System.Windows.Forms.TextBox();
             this.font_size_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.font_label = new System.Windows.Forms.Label();
             this.check_font_button = new System.Windows.Forms.Button();
-            this.message_groupBox = new System.Windows.Forms.GroupBox();
-            this.font_message_textBox = new System.Windows.Forms.TextBox();
             this.fontDlg = new System.Windows.Forms.FontDialog();
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.bgwFileBuilder = new System.ComponentModel.BackgroundWorker();
@@ -76,25 +72,19 @@
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxpic = new System.Windows.Forms.GroupBox();
-            this.View_mode_Button = new System.Windows.Forms.RadioButton();
             this.pictureBoxFont = new System.Windows.Forms.PictureBox();
+            this.View_mode_Button = new System.Windows.Forms.RadioButton();
             this.groupBoxSet = new System.Windows.Forms.GroupBox();
-            this.viwer_textBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.down_button = new System.Windows.Forms.Button();
             this.up_button = new System.Windows.Forms.Button();
-            this.GBK_radioButton = new System.Windows.Forms.RadioButton();
-            this.radioButtonUnit = new System.Windows.Forms.RadioButton();
-            this.radioButtonFontLib = new System.Windows.Forms.RadioButton();
             this.labelIndex = new System.Windows.Forms.Label();
             this.numericUpDownIndex = new System.Windows.Forms.NumericUpDown();
             this.buttonReadFont = new System.Windows.Forms.Button();
-            this.viwer_font_label = new System.Windows.Forms.Label();
             this.labelFontName = new System.Windows.Forms.Label();
             this.textBoxFontName = new System.Windows.Forms.TextBox();
-            this.numericUpDownHeight = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownWidth = new System.Windows.Forms.NumericUpDown();
-            this.labelHeight = new System.Windows.Forms.Label();
-            this.labelWidth = new System.Windows.Forms.Label();
+            this.viwer_textBox = new System.Windows.Forms.TextBox();
+            this.viwer_font_label = new System.Windows.Forms.Label();
             this.groupBoxData = new System.Windows.Forms.GroupBox();
             this.check_data_format = new System.Windows.Forms.CheckBox();
             this.labelByteNum = new System.Windows.Forms.Label();
@@ -103,34 +93,35 @@
             this.richTextBoxData = new System.Windows.Forms.RichTextBox();
             this.labelFontInfo = new System.Windows.Forms.Label();
             this.buttonGetData = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.radioButton0 = new System.Windows.Forms.RadioButton();
-            this.radioButton90 = new System.Windows.Forms.RadioButton();
-            this.radioButton180 = new System.Windows.Forms.RadioButton();
             this.radioButton270 = new System.Windows.Forms.RadioButton();
+            this.radioButton180 = new System.Windows.Forms.RadioButton();
+            this.radioButton90 = new System.Windows.Forms.RadioButton();
+            this.radioButton0 = new System.Windows.Forms.RadioButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.makefont_Button = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.binama_groupBox.SuspendLayout();
-            this.set_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.width_numericUpDown)).BeginInit();
             this.font_groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.font_size_numericUpDown)).BeginInit();
-            this.message_groupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBoxpic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).BeginInit();
             this.groupBoxSet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIndex)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
             this.groupBoxData.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // edit_mode_Button
@@ -214,6 +205,7 @@
             resources.ApplyResources(this.ASCII, "ASCII");
             this.ASCII.Name = "ASCII";
             this.ASCII.UseVisualStyleBackColor = true;
+            this.ASCII.CheckedChanged += new System.EventHandler(this.ASCII_CheckedChanged);
             // 
             // GB2312
             // 
@@ -222,34 +214,19 @@
             this.GB2312.Name = "GB2312";
             this.GB2312.TabStop = true;
             this.GB2312.UseVisualStyleBackColor = true;
+            this.GB2312.CheckedChanged += new System.EventHandler(this.GB2312_CheckedChanged);
             // 
             // GBK
             // 
             resources.ApplyResources(this.GBK, "GBK");
             this.GBK.Name = "GBK";
             this.GBK.UseVisualStyleBackColor = true;
+            this.GBK.CheckedChanged += new System.EventHandler(this.GBK_CheckedChanged);
             // 
             // pgbBuilderProc
             // 
             resources.ApplyResources(this.pgbBuilderProc, "pgbBuilderProc");
             this.pgbBuilderProc.Name = "pgbBuilderProc";
-            // 
-            // set_groupBox
-            // 
-            this.set_groupBox.Controls.Add(this.rdBtnNonStandard);
-            this.set_groupBox.Controls.Add(this.rdBtnStandard);
-            this.set_groupBox.Controls.Add(this.make_font_button);
-            this.set_groupBox.Controls.Add(this.vertical_numericUpDown);
-            this.set_groupBox.Controls.Add(this.level_numericUpDown);
-            this.set_groupBox.Controls.Add(this.height_numericUpDown);
-            this.set_groupBox.Controls.Add(this.width_numericUpDown);
-            this.set_groupBox.Controls.Add(this.vertical_label);
-            this.set_groupBox.Controls.Add(this.level_label);
-            this.set_groupBox.Controls.Add(this.font_height_label);
-            this.set_groupBox.Controls.Add(this.font_width_label);
-            resources.ApplyResources(this.set_groupBox, "set_groupBox");
-            this.set_groupBox.Name = "set_groupBox";
-            this.set_groupBox.TabStop = false;
             // 
             // rdBtnNonStandard
             // 
@@ -297,6 +274,11 @@
             // height_numericUpDown
             // 
             resources.ApplyResources(this.height_numericUpDown, "height_numericUpDown");
+            this.height_numericUpDown.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             this.height_numericUpDown.Name = "height_numericUpDown";
             this.height_numericUpDown.Value = new decimal(new int[] {
             16,
@@ -308,6 +290,11 @@
             // width_numericUpDown
             // 
             resources.ApplyResources(this.width_numericUpDown, "width_numericUpDown");
+            this.width_numericUpDown.Maximum = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             this.width_numericUpDown.Name = "width_numericUpDown";
             this.width_numericUpDown.Value = new decimal(new int[] {
             16,
@@ -338,25 +325,19 @@
             // 
             // font_groupBox
             // 
-            this.font_groupBox.Controls.Add(this.font_viwer_textBox);
-            this.font_groupBox.Controls.Add(this.font_view_label);
+            this.font_groupBox.Controls.Add(this.font_message_textBox);
             this.font_groupBox.Controls.Add(this.font_size_numericUpDown);
             this.font_groupBox.Controls.Add(this.font_label);
             this.font_groupBox.Controls.Add(this.check_font_button);
-            this.font_groupBox.Controls.Add(this.message_groupBox);
             resources.ApplyResources(this.font_groupBox, "font_groupBox");
             this.font_groupBox.Name = "font_groupBox";
             this.font_groupBox.TabStop = false;
             // 
-            // font_viwer_textBox
+            // font_message_textBox
             // 
-            resources.ApplyResources(this.font_viwer_textBox, "font_viwer_textBox");
-            this.font_viwer_textBox.Name = "font_viwer_textBox";
-            // 
-            // font_view_label
-            // 
-            resources.ApplyResources(this.font_view_label, "font_view_label");
-            this.font_view_label.Name = "font_view_label";
+            this.font_message_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            resources.ApplyResources(this.font_message_textBox, "font_message_textBox");
+            this.font_message_textBox.Name = "font_message_textBox";
             // 
             // font_size_numericUpDown
             // 
@@ -380,19 +361,6 @@
             this.check_font_button.Name = "check_font_button";
             this.check_font_button.UseVisualStyleBackColor = true;
             this.check_font_button.Click += new System.EventHandler(this.check_font_button_Click);
-            // 
-            // message_groupBox
-            // 
-            this.message_groupBox.Controls.Add(this.font_message_textBox);
-            resources.ApplyResources(this.message_groupBox, "message_groupBox");
-            this.message_groupBox.Name = "message_groupBox";
-            this.message_groupBox.TabStop = false;
-            // 
-            // font_message_textBox
-            // 
-            this.font_message_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            resources.ApplyResources(this.font_message_textBox, "font_message_textBox");
-            this.font_message_textBox.Name = "font_message_textBox";
             // 
             // saveFileDlg
             // 
@@ -451,21 +419,10 @@
             // 
             // groupBoxpic
             // 
-            this.groupBoxpic.Controls.Add(this.View_mode_Button);
-            this.groupBoxpic.Controls.Add(this.edit_mode_Button);
             this.groupBoxpic.Controls.Add(this.pictureBoxFont);
             resources.ApplyResources(this.groupBoxpic, "groupBoxpic");
             this.groupBoxpic.Name = "groupBoxpic";
             this.groupBoxpic.TabStop = false;
-            // 
-            // View_mode_Button
-            // 
-            resources.ApplyResources(this.View_mode_Button, "View_mode_Button");
-            this.View_mode_Button.Checked = true;
-            this.View_mode_Button.Name = "View_mode_Button";
-            this.View_mode_Button.TabStop = true;
-            this.View_mode_Button.UseVisualStyleBackColor = true;
-            this.View_mode_Button.CheckedChanged += new System.EventHandler(this.View_mode_Button_CheckedChanged);
             // 
             // pictureBoxFont
             // 
@@ -476,35 +433,35 @@
             this.pictureBoxFont.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseMove);
             this.pictureBoxFont.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxFont_MouseUp);
             // 
+            // View_mode_Button
+            // 
+            resources.ApplyResources(this.View_mode_Button, "View_mode_Button");
+            this.View_mode_Button.Checked = true;
+            this.View_mode_Button.Name = "View_mode_Button";
+            this.View_mode_Button.TabStop = true;
+            this.View_mode_Button.UseVisualStyleBackColor = true;
+            this.View_mode_Button.CheckedChanged += new System.EventHandler(this.View_mode_Button_CheckedChanged);
+            // 
             // groupBoxSet
             // 
-            this.groupBoxSet.Controls.Add(this.viwer_textBox);
+            this.groupBoxSet.Controls.Add(this.label1);
             this.groupBoxSet.Controls.Add(this.down_button);
             this.groupBoxSet.Controls.Add(this.up_button);
-            this.groupBoxSet.Controls.Add(this.GBK_radioButton);
-            this.groupBoxSet.Controls.Add(this.radioButtonUnit);
-            this.groupBoxSet.Controls.Add(this.radioButtonFontLib);
             this.groupBoxSet.Controls.Add(this.comboBoxWei);
             this.groupBoxSet.Controls.Add(this.comboBoxQu);
             this.groupBoxSet.Controls.Add(this.labelIndex);
             this.groupBoxSet.Controls.Add(this.numericUpDownIndex);
             this.groupBoxSet.Controls.Add(this.buttonReadFont);
-            this.groupBoxSet.Controls.Add(this.viwer_font_label);
             this.groupBoxSet.Controls.Add(this.labelFontName);
             this.groupBoxSet.Controls.Add(this.textBoxFontName);
-            this.groupBoxSet.Controls.Add(this.numericUpDownHeight);
-            this.groupBoxSet.Controls.Add(this.numericUpDownWidth);
-            this.groupBoxSet.Controls.Add(this.labelHeight);
-            this.groupBoxSet.Controls.Add(this.labelWidth);
             resources.ApplyResources(this.groupBoxSet, "groupBoxSet");
             this.groupBoxSet.Name = "groupBoxSet";
             this.groupBoxSet.TabStop = false;
             // 
-            // viwer_textBox
+            // label1
             // 
-            resources.ApplyResources(this.viwer_textBox, "viwer_textBox");
-            this.viwer_textBox.Name = "viwer_textBox";
-            this.viwer_textBox.TextChanged += new System.EventHandler(this.viwer_textBox_TextChanged);
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // down_button
             // 
@@ -519,30 +476,6 @@
             this.up_button.Name = "up_button";
             this.up_button.UseVisualStyleBackColor = true;
             this.up_button.Click += new System.EventHandler(this.up_button_Click);
-            // 
-            // GBK_radioButton
-            // 
-            resources.ApplyResources(this.GBK_radioButton, "GBK_radioButton");
-            this.GBK_radioButton.Name = "GBK_radioButton";
-            this.GBK_radioButton.UseVisualStyleBackColor = true;
-            this.GBK_radioButton.CheckedChanged += new System.EventHandler(this.GBK_radioButton_CheckedChanged);
-            // 
-            // radioButtonUnit
-            // 
-            resources.ApplyResources(this.radioButtonUnit, "radioButtonUnit");
-            this.radioButtonUnit.Name = "radioButtonUnit";
-            this.radioButtonUnit.UseVisualStyleBackColor = true;
-            this.radioButtonUnit.CheckedChanged += new System.EventHandler(this.radioButtonUnit_CheckedChanged);
-            // 
-            // radioButtonFontLib
-            // 
-            resources.ApplyResources(this.radioButtonFontLib, "radioButtonFontLib");
-            this.radioButtonFontLib.Checked = true;
-            this.radioButtonFontLib.Name = "radioButtonFontLib";
-            this.radioButtonFontLib.TabStop = true;
-            this.radioButtonFontLib.UseCompatibleTextRendering = true;
-            this.radioButtonFontLib.UseVisualStyleBackColor = true;
-            this.radioButtonFontLib.CheckedChanged += new System.EventHandler(this.radioButtonFontLib_CheckedChanged);
             // 
             // labelIndex
             // 
@@ -572,11 +505,6 @@
             this.buttonReadFont.UseVisualStyleBackColor = true;
             this.buttonReadFont.Click += new System.EventHandler(this.buttonReadFont_Click);
             // 
-            // viwer_font_label
-            // 
-            resources.ApplyResources(this.viwer_font_label, "viwer_font_label");
-            this.viwer_font_label.Name = "viwer_font_label";
-            // 
             // labelFontName
             // 
             resources.ApplyResources(this.labelFontName, "labelFontName");
@@ -589,47 +517,16 @@
             this.textBoxFontName.Name = "textBoxFontName";
             this.textBoxFontName.ReadOnly = true;
             // 
-            // numericUpDownHeight
+            // viwer_textBox
             // 
-            resources.ApplyResources(this.numericUpDownHeight, "numericUpDownHeight");
-            this.numericUpDownHeight.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownHeight.Name = "numericUpDownHeight";
-            this.numericUpDownHeight.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownHeight.ValueChanged += new System.EventHandler(this.numericUpDownHeight_ValueChanged);
+            resources.ApplyResources(this.viwer_textBox, "viwer_textBox");
+            this.viwer_textBox.Name = "viwer_textBox";
+            this.viwer_textBox.TextChanged += new System.EventHandler(this.viwer_textBox_TextChanged);
             // 
-            // numericUpDownWidth
+            // viwer_font_label
             // 
-            resources.ApplyResources(this.numericUpDownWidth, "numericUpDownWidth");
-            this.numericUpDownWidth.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownWidth.Name = "numericUpDownWidth";
-            this.numericUpDownWidth.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDownWidth.ValueChanged += new System.EventHandler(this.numericUpDownWidth_ValueChanged);
-            // 
-            // labelHeight
-            // 
-            resources.ApplyResources(this.labelHeight, "labelHeight");
-            this.labelHeight.Name = "labelHeight";
-            // 
-            // labelWidth
-            // 
-            resources.ApplyResources(this.labelWidth, "labelWidth");
-            this.labelWidth.Name = "labelWidth";
+            resources.ApplyResources(this.viwer_font_label, "viwer_font_label");
+            this.viwer_font_label.Name = "viwer_font_label";
             // 
             // groupBoxData
             // 
@@ -688,22 +585,12 @@
             this.buttonGetData.UseVisualStyleBackColor = true;
             this.buttonGetData.Click += new System.EventHandler(this.buttonGetData_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBoxSet);
-            this.groupBox2.Controls.Add(this.groupBoxData);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.make_font_button);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.font_groupBox);
-            this.groupBox3.Controls.Add(this.set_groupBox);
-            this.groupBox3.Controls.Add(this.groupBox1);
             this.groupBox3.Controls.Add(this.pgbBuilderProc);
-            this.groupBox3.Controls.Add(this.binama_groupBox);
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
@@ -718,19 +605,12 @@
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.TabStop = false;
             // 
-            // radioButton0
+            // radioButton270
             // 
-            resources.ApplyResources(this.radioButton0, "radioButton0");
-            this.radioButton0.Checked = true;
-            this.radioButton0.Name = "radioButton0";
-            this.radioButton0.TabStop = true;
-            this.radioButton0.UseVisualStyleBackColor = true;
-            // 
-            // radioButton90
-            // 
-            resources.ApplyResources(this.radioButton90, "radioButton90");
-            this.radioButton90.Name = "radioButton90";
-            this.radioButton90.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.radioButton270, "radioButton270");
+            this.radioButton270.Name = "radioButton270";
+            this.radioButton270.TabStop = true;
+            this.radioButton270.UseVisualStyleBackColor = true;
             // 
             // radioButton180
             // 
@@ -739,19 +619,71 @@
             this.radioButton180.TabStop = true;
             this.radioButton180.UseVisualStyleBackColor = true;
             // 
-            // radioButton270
+            // radioButton90
             // 
-            resources.ApplyResources(this.radioButton270, "radioButton270");
-            this.radioButton270.Name = "radioButton270";
-            this.radioButton270.TabStop = true;
-            this.radioButton270.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.radioButton90, "radioButton90");
+            this.radioButton90.Name = "radioButton90";
+            this.radioButton90.UseVisualStyleBackColor = true;
+            // 
+            // radioButton0
+            // 
+            resources.ApplyResources(this.radioButton0, "radioButton0");
+            this.radioButton0.Checked = true;
+            this.radioButton0.Name = "radioButton0";
+            this.radioButton0.TabStop = true;
+            this.radioButton0.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdBtnStandard);
+            this.groupBox2.Controls.Add(this.rdBtnNonStandard);
+            this.groupBox2.Controls.Add(this.font_width_label);
+            this.groupBox2.Controls.Add(this.viwer_textBox);
+            this.groupBox2.Controls.Add(this.font_height_label);
+            this.groupBox2.Controls.Add(this.level_label);
+            this.groupBox2.Controls.Add(this.viwer_font_label);
+            this.groupBox2.Controls.Add(this.vertical_numericUpDown);
+            this.groupBox2.Controls.Add(this.vertical_label);
+            this.groupBox2.Controls.Add(this.level_numericUpDown);
+            this.groupBox2.Controls.Add(this.width_numericUpDown);
+            this.groupBox2.Controls.Add(this.height_numericUpDown);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.binama_groupBox);
+            this.groupBox5.Controls.Add(this.groupBox1);
+            resources.ApplyResources(this.groupBox5, "groupBox5");
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.TabStop = false;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.makefont_Button);
+            this.groupBox6.Controls.Add(this.View_mode_Button);
+            this.groupBox6.Controls.Add(this.edit_mode_Button);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.TabStop = false;
+            // 
+            // makefont_Button
+            // 
+            resources.ApplyResources(this.makefont_Button, "makefont_Button");
+            this.makefont_Button.Name = "makefont_Button";
+            this.makefont_Button.UseVisualStyleBackColor = true;
             // 
             // readFontlib
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox6);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBoxSet);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBoxData);
             this.Controls.Add(this.groupBoxpic);
             this.Controls.Add(this.textBoxtime);
             this.Controls.Add(this.logo);
@@ -763,8 +695,6 @@
             this.groupBox1.PerformLayout();
             this.binama_groupBox.ResumeLayout(false);
             this.binama_groupBox.PerformLayout();
-            this.set_groupBox.ResumeLayout(false);
-            this.set_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vertical_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.level_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.height_numericUpDown)).EndInit();
@@ -772,24 +702,23 @@
             this.font_groupBox.ResumeLayout(false);
             this.font_groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.font_size_numericUpDown)).EndInit();
-            this.message_groupBox.ResumeLayout(false);
-            this.message_groupBox.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBoxpic.ResumeLayout(false);
-            this.groupBoxpic.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFont)).EndInit();
             this.groupBoxSet.ResumeLayout(false);
             this.groupBoxSet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownIndex)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).EndInit();
             this.groupBoxData.ResumeLayout(false);
             this.groupBoxData.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -800,7 +729,6 @@
         private System.Windows.Forms.LinkLabel logo;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.TextBox textBoxtime;
-        private System.Windows.Forms.GroupBox set_groupBox;
         private System.Windows.Forms.Button make_font_button;
         private System.Windows.Forms.NumericUpDown vertical_numericUpDown;
         private System.Windows.Forms.NumericUpDown level_numericUpDown;
@@ -811,12 +739,9 @@
         private System.Windows.Forms.Label font_height_label;
         private System.Windows.Forms.Label font_width_label;
         private System.Windows.Forms.GroupBox font_groupBox;
-        private System.Windows.Forms.TextBox font_viwer_textBox;
-        private System.Windows.Forms.Label font_view_label;
         private System.Windows.Forms.NumericUpDown font_size_numericUpDown;
         private System.Windows.Forms.Label font_label;
         private System.Windows.Forms.Button check_font_button;
-        private System.Windows.Forms.GroupBox message_groupBox;
         private System.Windows.Forms.TextBox font_message_textBox;
         private System.Windows.Forms.FontDialog fontDlg;
         private System.Windows.Forms.RadioButton rdBtnStandard;
@@ -846,9 +771,6 @@
         private System.Windows.Forms.TextBox viwer_textBox;
         private System.Windows.Forms.Button down_button;
         private System.Windows.Forms.Button up_button;
-        private System.Windows.Forms.RadioButton GBK_radioButton;
-        private System.Windows.Forms.RadioButton radioButtonUnit;
-        private System.Windows.Forms.RadioButton radioButtonFontLib;
         private System.Windows.Forms.ComboBox comboBoxWei;
         private System.Windows.Forms.ComboBox comboBoxQu;
         private System.Windows.Forms.Label labelIndex;
@@ -857,10 +779,6 @@
         private System.Windows.Forms.Label viwer_font_label;
         private System.Windows.Forms.Label labelFontName;
         private System.Windows.Forms.TextBox textBoxFontName;
-        private System.Windows.Forms.NumericUpDown numericUpDownHeight;
-        private System.Windows.Forms.NumericUpDown numericUpDownWidth;
-        private System.Windows.Forms.Label labelHeight;
-        private System.Windows.Forms.Label labelWidth;
         private System.Windows.Forms.GroupBox groupBoxData;
         private System.Windows.Forms.CheckBox check_data_format;
         private System.Windows.Forms.Label labelByteNum;
@@ -869,13 +787,17 @@
         private System.Windows.Forms.RichTextBox richTextBoxData;
         private System.Windows.Forms.Label labelFontInfo;
         private System.Windows.Forms.Button buttonGetData;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.RadioButton radioButton90;
         private System.Windows.Forms.RadioButton radioButton0;
         private System.Windows.Forms.RadioButton radioButton270;
         private System.Windows.Forms.RadioButton radioButton180;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.RadioButton makefont_Button;
     }
 }
 
