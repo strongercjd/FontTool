@@ -475,11 +475,6 @@
             0,
             0,
             0});
-            this.numericUpDownIndex.Minimum = new decimal(new int[] {
-            5000,
-            0,
-            0,
-            -2147483648});
             this.numericUpDownIndex.Name = "numericUpDownIndex";
             this.numericUpDownIndex.ValueChanged += new System.EventHandler(this.numericUpDownIndex_ValueChanged);
             // 

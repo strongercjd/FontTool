@@ -20,7 +20,7 @@ namespace readFontlib
 {
     public partial class readFontlib : Form
     {
-        int picSize = 383;//!<画布大小，宽383高383
+        int picSize = 0;//!<画布大小，
         int spaceSize = 2;//!<间隔2点
         int brushSize = 1;//!<画笔粗细为1
         int startx = 0;
@@ -361,8 +361,8 @@ namespace readFontlib
                     int Y = contextMenuPoint.Y;
                     int X = contextMenuPoint.X;
 
-                    int X_start = (386 - width * 12) / 2;
-                    int Y_start = (386 - height * 12) / 2;
+                    int X_start = (picSize - width * 12) / 2;
+                    int Y_start = (picSize - height * 12) / 2;
                     if ((X > X_start) && (Y > Y_start))
                     {
                         int x_pain = (X - X_start) / 12;
@@ -443,8 +443,8 @@ namespace readFontlib
                         int Y = contextMenuPoint.Y;
                         int X = contextMenuPoint.X;
 
-                        int X_start = (386 - width * 12) / 2;
-                        int Y_start = (386 - height * 12) / 2;
+                        int X_start = (picSize - width * 12) / 2;
+                        int Y_start = (picSize - height * 12) / 2;
                         if ((X > X_start) && (Y > Y_start))
                         {
                             int x_pain = (X - X_start) / 12;
@@ -759,6 +759,10 @@ namespace readFontlib
                     num1++;
                     if ((num1 == 8) || ((x + 1) == Bitmap.Width))
                     {
+                        if ((x + 1) == Bitmap.Width)
+                        {
+                            temp = temp << (8- num1);
+                        }
                         data[num++] = (byte)temp;
                         num1 = 0;
                         temp = 0;
@@ -1173,6 +1177,7 @@ namespace readFontlib
 
         private void check_font_button_Click(object sender, EventArgs e)
         {
+            this.fontDlg.Font = new Font(this.fontDlg.Font.FontFamily, (float)font_size_numericUpDown.Value);
             if (this.fontDlg.ShowDialog() == DialogResult.OK)
             {
                 int fontSize = int.Parse(this.fontDlg.Font.SizeInPoints.ToString("##"));
