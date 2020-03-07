@@ -175,7 +175,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxWei.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;comboBoxWei.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -199,7 +199,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxQu.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;comboBoxQu.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -523,7 +523,7 @@
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;pgbBuilderProc.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>makefont_groupBox</value>
   </data>
   <data name="&gt;&gt;pgbBuilderProc.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -607,7 +607,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;make_font_button.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>makefont_groupBox</value>
   </data>
   <data name="&gt;&gt;make_font_button.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -871,7 +871,7 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;font_groupBox.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>makefont_groupBox</value>
   </data>
   <data name="&gt;&gt;font_groupBox.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1144,7 +1144,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1156,7 +1156,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;down_button.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;down_button.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1168,7 +1168,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;up_button.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;up_button.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1180,7 +1180,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelIndex.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;labelIndex.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1192,7 +1192,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDownIndex.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;numericUpDownIndex.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -1204,7 +1204,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonReadFont.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;buttonReadFont.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -1216,7 +1216,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelFontName.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;labelFontName.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -1228,33 +1228,33 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxFontName.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="groupBoxSet.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="viwer_groupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>679, 234</value>
   </data>
-  <data name="groupBoxSet.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="viwer_groupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>268, 185</value>
   </data>
-  <data name="groupBoxSet.TabIndex" type="System.Int32, mscorlib">
+  <data name="viwer_groupBox.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="groupBoxSet.Text" xml:space="preserve">
+  <data name="viwer_groupBox.Text" xml:space="preserve">
     <value>查看模式</value>
   </data>
-  <data name="&gt;&gt;groupBoxSet.Name" xml:space="preserve">
-    <value>groupBoxSet</value>
+  <data name="&gt;&gt;viwer_groupBox.Name" xml:space="preserve">
+    <value>viwer_groupBox</value>
   </data>
-  <data name="&gt;&gt;groupBoxSet.Type" xml:space="preserve">
+  <data name="&gt;&gt;viwer_groupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBoxSet.Parent" xml:space="preserve">
+  <data name="&gt;&gt;viwer_groupBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBoxSet.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;viwer_groupBox.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
@@ -1285,7 +1285,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1312,7 +1312,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;down_button.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;down_button.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1339,7 +1339,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;up_button.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;up_button.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1372,7 +1372,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelIndex.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;labelIndex.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1393,7 +1393,7 @@
     <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;numericUpDownIndex.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;numericUpDownIndex.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -1420,7 +1420,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonReadFont.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;buttonReadFont.ZOrder" xml:space="preserve">
     <value>7</value>
@@ -1453,7 +1453,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelFontName.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;labelFontName.ZOrder" xml:space="preserve">
     <value>8</value>
@@ -1483,7 +1483,7 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;textBoxFontName.Parent" xml:space="preserve">
-    <value>groupBoxSet</value>
+    <value>viwer_groupBox</value>
   </data>
   <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -1502,6 +1502,9 @@
   </data>
   <data name="viwer_textBox.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
+  </data>
+  <data name="viwer_textBox.Text" xml:space="preserve">
+    <value>陈</value>
   </data>
   <data name="&gt;&gt;viwer_textBox.Name" xml:space="preserve">
     <value>viwer_textBox</value>
@@ -1555,7 +1558,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;check_data_format.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;check_data_format.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1567,7 +1570,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelByteNum.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;labelByteNum.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1579,7 +1582,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelNum.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;labelNum.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1591,7 +1594,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Save_font_button.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;Save_font_button.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1603,7 +1606,7 @@
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;richTextBoxData.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;richTextBoxData.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1615,7 +1618,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelFontInfo.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;labelFontInfo.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1627,33 +1630,33 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonGetData.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;buttonGetData.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="groupBoxData.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="edit_groupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>953, 234</value>
   </data>
-  <data name="groupBoxData.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="edit_groupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>275, 185</value>
   </data>
-  <data name="groupBoxData.TabIndex" type="System.Int32, mscorlib">
+  <data name="edit_groupBox.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="groupBoxData.Text" xml:space="preserve">
+  <data name="edit_groupBox.Text" xml:space="preserve">
     <value>编辑模式</value>
   </data>
-  <data name="&gt;&gt;groupBoxData.Name" xml:space="preserve">
-    <value>groupBoxData</value>
+  <data name="&gt;&gt;edit_groupBox.Name" xml:space="preserve">
+    <value>edit_groupBox</value>
   </data>
-  <data name="&gt;&gt;groupBoxData.Type" xml:space="preserve">
+  <data name="&gt;&gt;edit_groupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBoxData.Parent" xml:space="preserve">
+  <data name="&gt;&gt;edit_groupBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBoxData.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;edit_groupBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="check_data_format.AutoSize" type="System.Boolean, mscorlib">
@@ -1681,7 +1684,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;check_data_format.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;check_data_format.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1711,7 +1714,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelByteNum.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;labelByteNum.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1741,7 +1744,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelNum.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;labelNum.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1771,7 +1774,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Save_font_button.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;Save_font_button.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1798,7 +1801,7 @@
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;richTextBoxData.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;richTextBoxData.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1828,7 +1831,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelFontInfo.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;labelFontInfo.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1855,7 +1858,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonGetData.Parent" xml:space="preserve">
-    <value>groupBoxData</value>
+    <value>edit_groupBox</value>
   </data>
   <data name="&gt;&gt;buttonGetData.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -1867,33 +1870,33 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>makefont_groupBox</value>
   </data>
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="makefont_groupBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>679, 425</value>
   </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="makefont_groupBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>549, 266</value>
   </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+  <data name="makefont_groupBox.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="groupBox3.Text" xml:space="preserve">
+  <data name="makefont_groupBox.Text" xml:space="preserve">
     <value>制作字库</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="&gt;&gt;makefont_groupBox.Name" xml:space="preserve">
+    <value>makefont_groupBox</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+  <data name="&gt;&gt;makefont_groupBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;makefont_groupBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;makefont_groupBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
   <data name="&gt;&gt;radioButton270.Name" xml:space="preserve">
@@ -1963,7 +1966,7 @@
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;groupBox4.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+    <value>makefont_groupBox</value>
   </data>
   <data name="&gt;&gt;groupBox4.ZOrder" xml:space="preserve">
     <value>1</value>

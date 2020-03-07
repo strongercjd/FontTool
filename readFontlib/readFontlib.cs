@@ -290,58 +290,6 @@ namespace readFontlib
                 index = (int)numericUpDownIndex.Value;
                 displayFont();
             }
-            else
-            {
-                MessageBox.Show(message_openfile);
-            }
-        }
-        
-       
-
-
-        private void numericUpDownWidth_ValueChanged(object sender, EventArgs e)//字模宽度改变事件
-        {
-            //if (!lockFlag)
-            //{
-            //    if (GB2312.Checked)
-            //    {
-            //        width = (int)numericUpDownWidth.Value;
-            //    }
-            //    else if (ASCII.Checked)
-            //    {
-            //        /* uni */width = (int)numericUpDownWidth.Value;
-            //    }
-            //    if ((fontPath != null) && (File.Exists(fontPath)))
-            //    {
-            //        displayFont();
-            //    }
-            //    else
-            //    {
-            //        paintFont();
-            //    }
-            //}
-        }
-        private void numericUpDownHeight_ValueChanged(object sender, EventArgs e)//字模高度改变事件
-        {
-            //if (!lockFlag)
-            //{
-            //    if (GB2312.Checked)
-            //    {
-            //        height = (int)numericUpDownHeight.Value;
-            //    }
-            //    else if (ASCII.Checked)
-            //    {
-            //        /* uni */height = (int)numericUpDownHeight.Value;
-            //    }
-            //    if ((fontPath != null) && (File.Exists(fontPath)))
-            //    {
-            //        displayFont();
-            //    }
-            //    else
-            //    {
-            //        paintFont();
-            //    }
-            //}
         }
 
         private void buttonGetData_Click(object sender, EventArgs e)//读取字模数据按钮单击事件
@@ -391,7 +339,13 @@ namespace readFontlib
             this.time1.Start();
             textBoxtime.Text = DateTime.Now.ToString();
             this.makefont_DataInFormLoad();
-            //this.tabControl.TabPages[4].Parent = null;//设置父容器为null，隐藏解析的TabPage
+
+            editFlag = false;
+            viwer_groupBox.Enabled = true;
+            edit_groupBox.Enabled = false;
+            makefont_groupBox.Enabled = false;
+            level_numericUpDown.Enabled = false;
+            vertical_numericUpDown.Enabled = false;
         }
 
         private void pictureBoxFont_MouseDown(object sender, MouseEventArgs e)//字模显示区鼠标左键按下事件
@@ -561,13 +515,31 @@ namespace readFontlib
         private void View_mode_Button_CheckedChanged(object sender, EventArgs e)//选中查看模式
         {
             editFlag = false;
-            Save_font_button.Enabled = false;
+            viwer_groupBox.Enabled = true;
+            edit_groupBox.Enabled = false;
+            makefont_groupBox.Enabled = false;
+            level_numericUpDown.Enabled = false;
+            vertical_numericUpDown.Enabled = false;
         }
 
         private void edit_mode_Button_CheckedChanged(object sender, EventArgs e)//选中编辑模式
         {
             editFlag = true;
-            Save_font_button.Enabled = true;
+            viwer_groupBox.Enabled = true;
+            edit_groupBox.Enabled = true;
+            makefont_groupBox.Enabled = false;
+            level_numericUpDown.Enabled = false;
+            vertical_numericUpDown.Enabled = false;
+        }
+
+        private void makefont_Button_CheckedChanged(object sender, EventArgs e)//选中制作字库模式
+        {
+            editFlag = false;
+            viwer_groupBox.Enabled = false;
+            edit_groupBox.Enabled = false;
+            makefont_groupBox.Enabled = true;
+            level_numericUpDown.Enabled = true;
+            vertical_numericUpDown.Enabled = true;
         }
 
         private void check_data_format_CheckedChanged(object sender, EventArgs e)//是否添加0x
@@ -716,7 +688,6 @@ namespace readFontlib
 
         private void viwer_textBox_TextChanged(object sender, EventArgs e)
         {
-
             byte[] array = System.Text.Encoding.Default.GetBytes(viwer_textBox.Text);
             if (array.Length == 1)
             {
@@ -726,6 +697,7 @@ namespace readFontlib
                 }
                 else
                 {
+                    updata_font_prewiew(sender, e);
                     comboBoxWei.Text = (array[0]).ToString("X8").Remove(0, 6);
                 }
             }
@@ -737,6 +709,7 @@ namespace readFontlib
                 }
                 else
                 {
+                    updata_font_prewiew(sender, e);
                     comboBoxQu.Text = (array[0]).ToString("X8").Remove(0, 6);
                     comboBoxWei.Text = (array[1]).ToString("X8").Remove(0, 6);
                 }
@@ -798,30 +771,41 @@ namespace readFontlib
             return data1;
         }
 
-
-        //private void font_size_numericUpDown_ValueChanged(object sender, EventArgs e)
-        //{
-        //    //重新设置选用的字体。
-        //    this.MatCharFont.MatFont =
-        //        new Font(this.MatCharFont.MatFont.FontFamily,
-        //                 (float)this.font_size_numericUpDown.Value,
-        //                 this.MatCharFont.MatFont.Style);
-        //    //更新字符预览。
-        //    BitmapToBytes(this.MatCharFont.MatBitmap);
-        //    paintFont();
-
-        //    //更新当前字体信息。
-        //    this.font_message_textBox.Clear();
-        //    this.font_message_textBox.Text = this.MatCharFont.GetMatFontInfo();
-        //}
         /*更新字库预览*/
         private void updata_font_prewiew(object sender, EventArgs e)
         {
+            int make_rotate_num=0;
+            Char viwerChar = '陈';
+            if (radioButton0.Checked == true)
+            {
+                make_rotate_num = 0;
+            }
+            if (radioButton90.Checked == true)
+            {
+                make_rotate_num = 1;
+            }
+            if (radioButton180.Checked == true)
+            {
+                make_rotate_num = 2;
+            }
+            if (radioButton270.Checked == true)
+            {
+                make_rotate_num = 3;
+            }
             //重新设置选用的字体。
-            this.MatCharFont.MatFont =
+            Font matFont =
                 new Font(this.MatCharFont.MatFont.FontFamily,
                          (float)this.font_size_numericUpDown.Value,
                          this.MatCharFont.MatFont.Style);
+            foreach (char ch in viwer_textBox.Text)
+            {
+                viwerChar = ch;
+                break;
+            }
+
+            this.MatCharFont = new MakeFont(matFont, viwerChar, (int)this.width_numericUpDown.Value,
+             (int)this.height_numericUpDown.Value, (int)this.level_numericUpDown.Value,
+             (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked, make_rotate_num);
             //更新字符预览。
             BitmapToBytes(this.MatCharFont.MatBitmap);
             paintFont();
@@ -1181,10 +1165,27 @@ namespace readFontlib
         private void makefont_DataInFormLoad()
         {
             //创建 MatrixFont 对象。
+            int make_rotate_num = 0;
+            if (radioButton0.Checked == true)
+            {
+                make_rotate_num = 0;
+            }
+            if (radioButton90.Checked == true)
+            {
+                make_rotate_num = 1;
+            }
+            if (radioButton180.Checked == true)
+            {
+                make_rotate_num = 2;
+            }
+            if (radioButton270.Checked == true)
+            {
+                make_rotate_num = 3;
+            }
             Font matFont = new Font(this.Font.FontFamily, (float)this.font_size_numericUpDown.Value);
             this.MatCharFont = new MakeFont(matFont, '陈', (int)this.width_numericUpDown.Value,
                          (int)this.height_numericUpDown.Value, (int)this.level_numericUpDown.Value,
-                         (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked);
+                         (int)this.vertical_numericUpDown.Value, this.rdBtnStandard.Checked, make_rotate_num);
 
             //将窗体上的一些控件与 MatCharFont 对象的一些属性绑定，方便操作。
             this.UIBindingData(true);
@@ -1232,41 +1233,10 @@ namespace readFontlib
         {
             if (isBinding)
             {
-                //“当前字符：”文本框。
-                this.viwer_textBox.DataBindings.Add("Text", this.MatCharFont, "DemoChar",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
 
                 //“高宽相等”单选按钮。
-                this.rdBtnStandard.DataBindings.Add("Checked", this.MatCharFont, "IsEqualWH",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
-
-                //字体“宽度：”数字框。
-                this.width_numericUpDown.DataBindings.Add("Value", this.MatCharFont, "CharWidth",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
-
-                //字体“高度：”数字框。
-                this.height_numericUpDown.DataBindings.Add("Value", this.MatCharFont, "CharHeight",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
-
-                //字体“水平偏移：”数字框。
-                this.level_numericUpDown.DataBindings.Add("Value", this.MatCharFont, "OffsetX",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
-
-                //字体“垂直偏移：”数字框。
-                this.vertical_numericUpDown.DataBindings.Add("Value", this.MatCharFont, "OffsetY",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
-
-                this.radioButton0.DataBindings.Add("Checked", this.MatCharFont, "rotate0",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
-
-                this.radioButton90.DataBindings.Add("Checked", this.MatCharFont, "rotate90",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
-
-                this.radioButton180.DataBindings.Add("Checked", this.MatCharFont, "rotate180",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
-
-                this.radioButton270.DataBindings.Add("Checked", this.MatCharFont, "rotate270",
-                    true, DataSourceUpdateMode.OnPropertyChanged);
+                //this.rdBtnStandard.DataBindings.Add("Checked", this.MatCharFont, "IsEqualWH",
+                //    true, DataSourceUpdateMode.OnPropertyChanged);
             }
             else
             {
@@ -1301,6 +1271,10 @@ namespace readFontlib
                     paintFont();
                 }
             }
+            if (makefont_Button.Checked == true)
+            {
+                updata_font_prewiew(sender, e);
+            } 
         }
 
         private void height_numericUpDown_ValueChanged(object sender, EventArgs e)
@@ -1324,6 +1298,10 @@ namespace readFontlib
                 {
                     paintFont();
                 }
+            }
+            if (makefont_Button.Checked == true)
+            {
+                updata_font_prewiew(sender, e);
             }
         }
 
@@ -1415,6 +1393,22 @@ namespace readFontlib
             comboBoxWei.SelectedIndex = 0;
         }
 
+        private void level_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (makefont_Button.Checked == true)
+            {
+                updata_font_prewiew(sender, e);
+            }
+        }
+
+        private void vertical_numericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (makefont_Button.Checked == true)
+            {
+                updata_font_prewiew(sender, e);
+            }
+        }
+
         private void 英文ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
@@ -1436,7 +1430,7 @@ namespace readFontlib
             groupBoxpic.Text = rm.GetString("groupBoxpic");
             View_mode_Button.Text = rm.GetString("View_mode_Button");
             edit_mode_Button.Text = rm.GetString("edit_mode_Button");
-            groupBoxSet.Text = rm.GetString("groupBoxSet");
+            viwer_groupBox.Text = rm.GetString("groupBoxSet");
             labelFontName.Text = rm.GetString("labelFontName");
             textBoxFontName.Text = rm.GetString("textBoxFontName");
 
@@ -1445,7 +1439,7 @@ namespace readFontlib
             up_button.Text = rm.GetString("up_button");
             down_button.Text = rm.GetString("down_button");
 
-            groupBoxData.Text = rm.GetString("groupBoxData");
+            edit_groupBox.Text = rm.GetString("groupBoxData");
             buttonGetData.Text = rm.GetString("buttonGetData");
             Save_font_button.Text = rm.GetString("Save_font_button");
             check_data_format.Text = rm.GetString("check_data_format");

@@ -88,7 +88,7 @@ namespace readFontlib
         /// <param name="offsetX">字符的水平偏移量。</param>
         /// <param name="offsetY">字符的垂直偏移量。</param>
         /// <param name="isEqualWH">点阵位图的高宽是否相等，值高宽true表示相等，false表示高宽不相等。</param>
-        public MakeFont(Font matFont, Char demoChar, int charWidth, int charHeight, int offsetX, int offsetY, bool isEqualWH)
+        public MakeFont(Font matFont, Char demoChar, int charWidth, int charHeight, int offsetX, int offsetY, bool isEqualWH, int make_rotate_num)
         {
             this.m_MatFont = matFont;
             this.m_DemoChar = demoChar.ToString();
@@ -272,75 +272,7 @@ namespace readFontlib
                 }
             }
         }
-
-        public bool rotate0
-        {
-            get
-            {
-                return this.m_rotate0;
-            }
-            set
-            {
-                if (value)
-                {
-                    make_rotate_num = 0;
-                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
-                }
-            }
-        }
-
-        public bool rotate90
-        {
-            get
-            {
-                return this.m_rotate90;
-            }
-            set
-            {
-                if (value)
-                {
-                    make_rotate_num = 1;
-                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
-                }
-            }
-        }
-
-        public bool rotate180
-        {
-            get
-            {
-                return this.m_rotate180;
-            }
-            set
-            {
-                if (value)
-                {
-                    make_rotate_num = 2;
-                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
-                }
-            }
-        }
-
-        public bool rotate270
-        {
-            get
-            {
-                return this.m_rotate270;
-            }
-            set
-            {
-                if (value)
-                {
-                    make_rotate_num = 3;
-                    this.DIBChanged(this.MatFont, this.DemoChar, this.CharWidth,
-                                this.CharHeight, this.OffsetX, this.OffsetY, make_rotate_num);
-                }
-            }
-        }
-
+        
         #endregion 属性
 
         #region 方法
