@@ -106,7 +106,7 @@ namespace readFontlib
                 startPosition = writeLenth * index;
                 if (fontstype == 1)
                 {
-                    startPosition = startPosition + 0x82;
+                    startPosition = startPosition + 0x80;
                 }
                 br.BaseStream.Seek(startPosition, SeekOrigin.Begin);
                 for (i = 0; i < writeLenth; i++)
@@ -133,7 +133,7 @@ namespace readFontlib
                 startPosition = readLenth * index;
                 if (fontstype == 1)
                 {
-                    startPosition = startPosition + 0x82;
+                    startPosition = startPosition + 0x80;
                 }
                 br.BaseStream.Seek(startPosition, SeekOrigin.Begin);
                 for (i = 0; i < readLenth; i++)
@@ -327,18 +327,21 @@ namespace readFontlib
                             GB2312.Checked = false;
                             GBK.Checked = false;
                             ASCII.Checked = true;
+                            numericUpDownIndex.Value = 56;//8
                         }
                         if (datatemp[0] == 1)
                         {
                             GB2312.Checked = true;
                             GBK.Checked = false;
                             ASCII.Checked = false;
+                            numericUpDownIndex.Value = 1725;//陈
                         }
                         if (datatemp[0] == 2)
                         {
                             GB2312.Checked = false;
                             GBK.Checked = true;
                             ASCII.Checked = false;
+                            numericUpDownIndex.Value = 1725;//陈
                         }
 
                         K_radioButton.Checked = false;
@@ -1050,7 +1053,7 @@ namespace readFontlib
                     fs.WriteByte((byte)0x00);
                     filecheck = filecheck + 0x00;
 
-                    for (int i = 0; i < (6+32+16); i++)
+                    for (int i = 0; i < (6+32+14); i++)
                     {
                         fs.WriteByte((byte)0x00);
                         filecheck = filecheck + 0x00;
