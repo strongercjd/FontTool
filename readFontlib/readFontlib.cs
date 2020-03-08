@@ -1356,13 +1356,13 @@ namespace readFontlib
             System.Diagnostics.Process.Start(url);
         }
 
-        private void 中文繁体ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Traditional_Chinese_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CHT");
             UpDataMainFormUILanguage();
         }
 
-        private void 中文简体ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Simplified_Chinese_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("zh-CHS");
             UpDataMainFormUILanguage();
@@ -1450,7 +1450,24 @@ namespace readFontlib
             }
         }
 
-        private void 英文ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void help_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/strongercjd/FontTool/blob/master/README.md");
+        }
+
+        private void CRC_Click(object sender, EventArgs e)
+        {
+            crc16 nf = new crc16();
+            nf.Show();
+        }
+
+        private void jineima_Click(object sender, EventArgs e)
+        {
+            EncodingQuery nf = new EncodingQuery();
+            nf.Show();
+        }
+
+        private void English_Click(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("en");
             UpDataMainFormUILanguage();
@@ -1521,12 +1538,12 @@ namespace readFontlib
         //根据当前的语言区域,更新主窗口工具栏的语言
         private void UpDataMainFormToolBarLanguage(ResourceManager rm)
         {
-            语言ToolStripMenuItem.Text = rm.GetString("语言");
-            中文简体ToolStripMenuItem.Text = rm.GetString("中文简体");
-            中文繁体ToolStripMenuItem.Text = rm.GetString("中文繁体");
-            英文ToolStripMenuItem.Text = rm.GetString("英文");
-            关于ToolStripMenuItem.Text = rm.GetString("关于");
-            帮助ToolStripMenuItem.Text = rm.GetString("帮助");
+            language.Text = rm.GetString("语言");
+            Simplified_Chinese.Text = rm.GetString("中文简体");
+            Traditional_Chinese.Text = rm.GetString("中文繁体");
+            English.Text = rm.GetString("英文");
+            about.Text = rm.GetString("关于");
+            help.Text = rm.GetString("帮助");
 
             return;
         }

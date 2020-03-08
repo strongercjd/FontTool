@@ -79,6 +79,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CRC.cs" />
+    <Compile Include="crc16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="crc16.Designer.cs">
+      <DependentUpon>crc16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncodingQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncodingQuery.Designer.cs">
+      <DependentUpon>EncodingQuery.cs</DependentUpon>
+    </Compile>
     <Compile Include="MakeFont.cs" />
     <Compile Include="readFontlib.cs">
       <SubType>Form</SubType>
@@ -88,6 +100,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="crc16.resx">
+      <DependentUpon>crc16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncodingQuery.resx">
+      <DependentUpon>EncodingQuery.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="readFontlib.en.resx">
       <DependentUpon>readFontlib.cs</DependentUpon>
     </EmbeddedResource>

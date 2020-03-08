@@ -63,12 +63,14 @@
             this.saveFileDlg = new System.Windows.Forms.SaveFileDialog();
             this.bgwFileBuilder = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.语言ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.中文简体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.中文繁体ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.英文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.jineima = new System.Windows.Forms.ToolStripMenuItem();
+            this.CRC = new System.Windows.Forms.ToolStripMenuItem();
+            this.language = new System.Windows.Forms.ToolStripMenuItem();
+            this.Simplified_Chinese = new System.Windows.Forms.ToolStripMenuItem();
+            this.Traditional_Chinese = new System.Windows.Forms.ToolStripMenuItem();
+            this.English = new System.Windows.Forms.ToolStripMenuItem();
+            this.help = new System.Windows.Forms.ToolStripMenuItem();
+            this.about = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxpic = new System.Windows.Forms.GroupBox();
             this.pictureBoxFont = new System.Windows.Forms.PictureBox();
             this.View_mode_Button = new System.Windows.Forms.RadioButton();
@@ -358,48 +360,63 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.语言ToolStripMenuItem,
-            this.帮助ToolStripMenuItem,
-            this.关于ToolStripMenuItem});
+            this.jineima,
+            this.CRC,
+            this.language,
+            this.help,
+            this.about});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
-            // 语言ToolStripMenuItem
+            // jineima
             // 
-            this.语言ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.中文简体ToolStripMenuItem,
-            this.中文繁体ToolStripMenuItem,
-            this.英文ToolStripMenuItem});
-            this.语言ToolStripMenuItem.Name = "语言ToolStripMenuItem";
-            resources.ApplyResources(this.语言ToolStripMenuItem, "语言ToolStripMenuItem");
+            this.jineima.Name = "jineima";
+            resources.ApplyResources(this.jineima, "jineima");
+            this.jineima.Click += new System.EventHandler(this.jineima_Click);
             // 
-            // 中文简体ToolStripMenuItem
+            // CRC
             // 
-            this.中文简体ToolStripMenuItem.Name = "中文简体ToolStripMenuItem";
-            resources.ApplyResources(this.中文简体ToolStripMenuItem, "中文简体ToolStripMenuItem");
-            this.中文简体ToolStripMenuItem.Click += new System.EventHandler(this.中文简体ToolStripMenuItem_Click);
+            this.CRC.Name = "CRC";
+            resources.ApplyResources(this.CRC, "CRC");
+            this.CRC.Click += new System.EventHandler(this.CRC_Click);
             // 
-            // 中文繁体ToolStripMenuItem
+            // language
             // 
-            this.中文繁体ToolStripMenuItem.Name = "中文繁体ToolStripMenuItem";
-            resources.ApplyResources(this.中文繁体ToolStripMenuItem, "中文繁体ToolStripMenuItem");
-            this.中文繁体ToolStripMenuItem.Click += new System.EventHandler(this.中文繁体ToolStripMenuItem_Click);
+            this.language.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Simplified_Chinese,
+            this.Traditional_Chinese,
+            this.English});
+            this.language.Name = "language";
+            resources.ApplyResources(this.language, "language");
             // 
-            // 英文ToolStripMenuItem
+            // Simplified_Chinese
             // 
-            this.英文ToolStripMenuItem.Name = "英文ToolStripMenuItem";
-            resources.ApplyResources(this.英文ToolStripMenuItem, "英文ToolStripMenuItem");
-            this.英文ToolStripMenuItem.Click += new System.EventHandler(this.英文ToolStripMenuItem_Click);
+            this.Simplified_Chinese.Name = "Simplified_Chinese";
+            resources.ApplyResources(this.Simplified_Chinese, "Simplified_Chinese");
+            this.Simplified_Chinese.Click += new System.EventHandler(this.Simplified_Chinese_Click);
             // 
-            // 帮助ToolStripMenuItem
+            // Traditional_Chinese
             // 
-            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            resources.ApplyResources(this.帮助ToolStripMenuItem, "帮助ToolStripMenuItem");
+            this.Traditional_Chinese.Name = "Traditional_Chinese";
+            resources.ApplyResources(this.Traditional_Chinese, "Traditional_Chinese");
+            this.Traditional_Chinese.Click += new System.EventHandler(this.Traditional_Chinese_Click);
             // 
-            // 关于ToolStripMenuItem
+            // English
             // 
-            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            resources.ApplyResources(this.关于ToolStripMenuItem, "关于ToolStripMenuItem");
+            this.English.Name = "English";
+            resources.ApplyResources(this.English, "English");
+            this.English.Click += new System.EventHandler(this.English_Click);
+            // 
+            // help
+            // 
+            this.help.Name = "help";
+            resources.ApplyResources(this.help, "help");
+            this.help.Click += new System.EventHandler(this.help_Click);
+            // 
+            // about
+            // 
+            this.about.Name = "about";
+            resources.ApplyResources(this.about, "about");
             // 
             // groupBoxpic
             // 
@@ -735,12 +752,12 @@
         private System.Windows.Forms.RadioButton GB2312;
         private System.Windows.Forms.GroupBox binama_groupBox;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 语言ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 中文简体ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 中文繁体ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 英文ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem language;
+        private System.Windows.Forms.ToolStripMenuItem Simplified_Chinese;
+        private System.Windows.Forms.ToolStripMenuItem Traditional_Chinese;
+        private System.Windows.Forms.ToolStripMenuItem English;
+        private System.Windows.Forms.ToolStripMenuItem about;
+        private System.Windows.Forms.ToolStripMenuItem help;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton K_radioButton;
         private System.Windows.Forms.RadioButton q_radioButton;
@@ -779,6 +796,8 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.RadioButton makefont_Button;
+        private System.Windows.Forms.ToolStripMenuItem jineima;
+        private System.Windows.Forms.ToolStripMenuItem CRC;
     }
 }
 

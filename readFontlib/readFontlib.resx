@@ -927,6 +927,36 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>607, 18</value>
   </metadata>
+  <data name="jineima.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 21</value>
+  </data>
+  <data name="jineima.Text" xml:space="preserve">
+    <value>机内码查询</value>
+  </data>
+  <data name="CRC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 21</value>
+  </data>
+  <data name="CRC.Text" xml:space="preserve">
+    <value>CRC校验</value>
+  </data>
+  <data name="language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 21</value>
+  </data>
+  <data name="language.Text" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="help.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 21</value>
+  </data>
+  <data name="help.Text" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="about.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 21</value>
+  </data>
+  <data name="about.Text" xml:space="preserve">
+    <value>关于</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -951,41 +981,23 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
-  <data name="语言ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
+  <data name="Simplified_Chinese.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
-  <data name="语言ToolStripMenuItem.Text" xml:space="preserve">
-    <value>语言</value>
-  </data>
-  <data name="中文简体ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
-  </data>
-  <data name="中文简体ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="Simplified_Chinese.Text" xml:space="preserve">
     <value>中文简体</value>
   </data>
-  <data name="中文繁体ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
+  <data name="Traditional_Chinese.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
-  <data name="中文繁体ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="Traditional_Chinese.Text" xml:space="preserve">
     <value>中文繁体</value>
   </data>
-  <data name="英文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 22</value>
+  <data name="English.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
-  <data name="英文ToolStripMenuItem.Text" xml:space="preserve">
-    <value>英文</value>
-  </data>
-  <data name="帮助ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
-  </data>
-  <data name="帮助ToolStripMenuItem.Text" xml:space="preserve">
-    <value>帮助</value>
-  </data>
-  <data name="关于ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
-  </data>
-  <data name="关于ToolStripMenuItem.Text" xml:space="preserve">
-    <value>关于</value>
+  <data name="English.Text" xml:space="preserve">
+    <value>英语</value>
   </data>
   <data name="&gt;&gt;pictureBoxFont.Name" xml:space="preserve">
     <value>pictureBoxFont</value>
@@ -1076,6 +1088,126 @@
   </data>
   <data name="&gt;&gt;View_mode_Button.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;down_button.Name" xml:space="preserve">
+    <value>down_button</value>
+  </data>
+  <data name="&gt;&gt;down_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;down_button.Parent" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;down_button.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;up_button.Name" xml:space="preserve">
+    <value>up_button</value>
+  </data>
+  <data name="&gt;&gt;up_button.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;up_button.Parent" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;up_button.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.Name" xml:space="preserve">
+    <value>labelIndex</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.Parent" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;labelIndex.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.Name" xml:space="preserve">
+    <value>numericUpDownIndex</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.Parent" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownIndex.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.Name" xml:space="preserve">
+    <value>buttonReadFont</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.Parent" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;buttonReadFont.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.Name" xml:space="preserve">
+    <value>labelFontName</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.Parent" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;labelFontName.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.Name" xml:space="preserve">
+    <value>textBoxFontName</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.Parent" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="viwer_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>679, 234</value>
+  </data>
+  <data name="viwer_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 185</value>
+  </data>
+  <data name="viwer_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="viwer_groupBox.Text" xml:space="preserve">
+    <value>查看模式</value>
+  </data>
+  <data name="&gt;&gt;viwer_groupBox.Name" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;viwer_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viwer_groupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;viwer_groupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1307,30 +1439,6 @@
   </data>
   <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
     <value>9</value>
-  </data>
-  <data name="viwer_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>679, 234</value>
-  </data>
-  <data name="viwer_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 185</value>
-  </data>
-  <data name="viwer_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="viwer_groupBox.Text" xml:space="preserve">
-    <value>查看模式</value>
-  </data>
-  <data name="&gt;&gt;viwer_groupBox.Name" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;viwer_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;viwer_groupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;viwer_groupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="viwer_textBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>341, 52</value>
@@ -2167,40 +2275,52 @@
   <data name="&gt;&gt;bgwFileBuilder.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;语言ToolStripMenuItem.Name" xml:space="preserve">
-    <value>语言ToolStripMenuItem</value>
+  <data name="&gt;&gt;jineima.Name" xml:space="preserve">
+    <value>jineima</value>
   </data>
-  <data name="&gt;&gt;语言ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;jineima.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;中文简体ToolStripMenuItem.Name" xml:space="preserve">
-    <value>中文简体ToolStripMenuItem</value>
+  <data name="&gt;&gt;CRC.Name" xml:space="preserve">
+    <value>CRC</value>
   </data>
-  <data name="&gt;&gt;中文简体ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;CRC.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;中文繁体ToolStripMenuItem.Name" xml:space="preserve">
-    <value>中文繁体ToolStripMenuItem</value>
+  <data name="&gt;&gt;language.Name" xml:space="preserve">
+    <value>language</value>
   </data>
-  <data name="&gt;&gt;中文繁体ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;language.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;英文ToolStripMenuItem.Name" xml:space="preserve">
-    <value>英文ToolStripMenuItem</value>
+  <data name="&gt;&gt;Simplified_Chinese.Name" xml:space="preserve">
+    <value>Simplified_Chinese</value>
   </data>
-  <data name="&gt;&gt;英文ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;Simplified_Chinese.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;帮助ToolStripMenuItem.Name" xml:space="preserve">
-    <value>帮助ToolStripMenuItem</value>
+  <data name="&gt;&gt;Traditional_Chinese.Name" xml:space="preserve">
+    <value>Traditional_Chinese</value>
   </data>
-  <data name="&gt;&gt;帮助ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;Traditional_Chinese.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;关于ToolStripMenuItem.Name" xml:space="preserve">
-    <value>关于ToolStripMenuItem</value>
+  <data name="&gt;&gt;English.Name" xml:space="preserve">
+    <value>English</value>
   </data>
-  <data name="&gt;&gt;关于ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;English.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;help.Name" xml:space="preserve">
+    <value>help</value>
+  </data>
+  <data name="&gt;&gt;help.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;about.Name" xml:space="preserve">
+    <value>about</value>
+  </data>
+  <data name="&gt;&gt;about.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
