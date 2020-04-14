@@ -1,5 +1,7 @@
 # 使用说明
 
+[English](https://github.com/strongercjd/FontTool/blob/master/README_EN.md)
+
 免责声明：
 
 > 此工具是个人开发者维护，和任何组织和公司没有关系，开发者也不对做出的字库的正确性做保证，开发者并非专业C#开发人员，开源代码仅供参考。

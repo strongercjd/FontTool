@@ -1,5 +1,7 @@
 # Instructions for use
 
+[中文](https://github.com/strongercjd/FontTool/blob/master/README.md)
+
 Disclaimer:
 
 > This tool is maintained by individual developers and has nothing to do with any organization or company. The developers do not guarantee the correctness of the fonts. The developers are not professional C # developers. The open source code is for reference only.
