@@ -117,12 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
- <!-- 查看编辑区域 —— start -->
   <data name="TabPages0" xml:space="preserve">
     <value>view edit</value>
   </data>
   <data name="groupBoxpic" xml:space="preserve">
-    <value>font area</value>
+    <value>Preview Area</value>
   </data>
   <data name="View_mode_Button" xml:space="preserve">
     <value>view mode</value>
@@ -167,7 +166,7 @@
     <value>save font</value>
   </data>
   <data name="check_data_format" xml:space="preserve">
-    <value>add 0X和，</value>
+    <value>add 0Xand，</value>
   </data>
   <data name="labelFontInfo" xml:space="preserve">
     <value>fontmes</value>
@@ -176,11 +175,8 @@
     <value>byte num</value>
   </data>
   <data name="copyright" xml:space="preserve">
-    <value>Font card tool Copyright (C) 2017</value>
+    <value>Font card tool Copyright (C) 2020</value>
   </data>
- <!-- 查看编辑区域 —— end -->
- 
- <!-- 制作字库区域 —— start -->
   <data name="TabPages1" xml:space="preserve">
     <value>make font</value>
   </data>
@@ -235,9 +231,6 @@
   <data name="rotate_groupBox" xml:space="preserve">
     <value>clockwise rotate</value>
   </data>
-  <!-- 制作字库区域 —— end -->
-  
-  <!-- 机内码查询区域 —— start -->
   <data name="TabPages2" xml:space="preserve">
     <value>machine code</value>
   </data>
@@ -256,9 +249,6 @@
   <data name="str2hex_radioButton" xml:space="preserve">
     <value>hex to string</value>
   </data>
-  <!-- 机内码查询区域 —— end -->
-  
-  <!-- CRC16校验区域 —— start -->
   <data name="TabPages3" xml:space="preserve">
     <value>CRC16 check</value>
   </data>
@@ -271,9 +261,6 @@
   <data name="crc_clear_button" xml:space="preserve">
     <value>clear</value>
   </data>
-  <!-- CRC16校验区域 —— end -->
-  
-   <!-- 协议解析区域 —— start -->
   <data name="TabPages4" xml:space="preserve">
     <value>Protocol analysis</value>
   </data>
@@ -286,9 +273,6 @@
   <data name="label_mes" xml:space="preserve">
     <value>escape character is red,forget the escape character is blue</value>
   </data>
-  <!-- 协议解析区域 —— end -->
-  
-  <!-- 标题栏区域 —— start -->
   <data name="语言" xml:space="preserve">
     <value>language</value>
   </data>
@@ -307,14 +291,46 @@
   <data name="关于" xml:space="preserve">
     <value>about</value>
   </data>
-  <!-- 标题栏区域 —— end -->
-  
   <data name="mes_openfile" xml:space="preserve">
     <value>Please open a font file first</value>
   </data>
-  
   <data name="analysis_mes" xml:space="preserve">
     <value>Data analysis can only detect a small part of the dynamic area data error, once the error is detected, but also need to seriously look at the agreement!</value>
   </data>
-  
+  <data name="groupBox1" xml:space="preserve">
+    <value>Font type</value>
+  </data>
+  <data name="groupBox2" xml:space="preserve">
+    <value>Preview settings</value>
+  </data>
+  <data name="groupBox4" xml:space="preserve">
+    <value>Clockwise rotation</value>
+  </data>
+  <data name="groupBox5" xml:space="preserve">
+    <value>Font information</value>
+  </data>
+  <data name="groupBox6" xml:space="preserve">
+    <value>Mode selection</value>
+  </data>
+  <data name="K_radioButton" xml:space="preserve">
+    <value>Font controller</value>
+  </data>
+  <data name="label1" xml:space="preserve">
+    <value>number</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>Download the latest version</value>
+  </data>
+  <data name="makefont_Button" xml:space="preserve">
+    <value>Make Font</value>
+  </data>
+  <data name="makefont_groupBox" xml:space="preserve">
+    <value>Make Font</value>
+  </data>
+  <data name="q_radioButton" xml:space="preserve">
+    <value>6Q3</value>
+  </data>
+  <data name="viwer_font_label" xml:space="preserve">
+    <value>Preview character</value>
+  </data>
 </root>

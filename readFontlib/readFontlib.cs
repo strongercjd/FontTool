@@ -505,10 +505,9 @@ namespace readFontlib
             }
         }
 
-        private void logo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)//点击公司logo
+        private void logo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //System.Diagnostics.Process.Start("iexplore.exe", "http://www.onbonbx.com");
-            System.Diagnostics.Process.Start("http://www.onbonbx.com");
+            System.Diagnostics.Process.Start("https://github.com/strongercjd/FontTool/releases");
         }
 
         private void author_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -1484,7 +1483,6 @@ namespace readFontlib
         //根据当前的语言区域,更新主窗口菜单的语言
         private void UpDataMainFormMenuLanguage(ResourceManager rm)
         {
-            #region 查看编辑区域
             groupBoxpic.Text = rm.GetString("groupBoxpic");
             View_mode_Button.Text = rm.GetString("View_mode_Button");
             edit_mode_Button.Text = rm.GetString("edit_mode_Button");
@@ -1504,12 +1502,8 @@ namespace readFontlib
             labelFontInfo.Text = rm.GetString("labelFontInfo");
             labelNum.Text = rm.GetString("labelNum");
             richTextBoxData.Text = "";
-            richTextBoxData.AppendText ("\n" + "\n" + "\n" + "\n" + rm.GetString("copyright"));
+            richTextBoxData.AppendText ("\n" + "\n" + rm.GetString("copyright"));
 
-            #endregion 查看编辑区域
-
-
-            #region 制作字库区域
             font_groupBox.Text = rm.GetString("font_groupBox");
             check_font_button.Text = rm.GetString("check_font_button");
             font_label.Text = rm.GetString("font_label");
@@ -1523,10 +1517,24 @@ namespace readFontlib
             make_font_button.Text = rm.GetString("make_font_button");
 
 
+
+            groupBox6.Text = rm.GetString("groupBox6");
+            makefont_Button.Text = rm.GetString("makefont_Button");
+            groupBox5.Text = rm.GetString("groupBox5");
+            groupBox1.Text = rm.GetString("groupBox1");
+            K_radioButton.Text = rm.GetString("K_radioButton");
+            q_radioButton.Text = rm.GetString("q_radioButton");
+            label1.Text = rm.GetString("label1");
+            makefont_groupBox.Text = rm.GetString("makefont_groupBox");
+            groupBox4.Text = rm.GetString("groupBox4");
+            logo.Text = rm.GetString("logo");
+            viwer_font_label.Text = rm.GetString("viwer_font_label");
+            groupBox2.Text = rm.GetString("groupBox2");
+
+
             makefontsize = rm.GetString("makefontsize");
             makefontwidth = rm.GetString("font_width_label"); 
             makefontheight = rm.GetString("font_height_label");
-            #endregion 制作字库区域
 
 
             message_openfile = rm.GetString("mes_openfile");

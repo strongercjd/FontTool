@@ -117,12 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
- <!-- 查看编辑区域 —— start -->
   <data name="TabPages0" xml:space="preserve">
     <value>查看編輯</value>
   </data>
   <data name="groupBoxpic" xml:space="preserve">
-    <value>字模區</value>
+    <value>預覽區</value>
   </data>
   <data name="View_mode_Button" xml:space="preserve">
     <value>查看模式</value>
@@ -176,11 +175,8 @@
     <value>字節數</value>
   </data>
   <data name="copyright" xml:space="preserve">
-    <value>    字庫卡工具版權所有（C）2017</value>
+    <value>字庫卡工具版權所有（C）2020</value>
   </data>
- <!-- 查看编辑区域 —— end -->
- 
- <!-- 制作字库区域 —— start -->
   <data name="TabPages1" xml:space="preserve">
     <value>製作字庫</value>
   </data>
@@ -235,9 +231,6 @@
   <data name="rotate_groupBox" xml:space="preserve">
     <value>字體順時針旋轉</value>
   </data>
-  <!-- 制作字库区域 —— end -->
-  
-  <!-- 机内码查询区域 —— start -->
   <data name="TabPages2" xml:space="preserve">
     <value>機內碼查詢</value>
   </data>
@@ -250,9 +243,6 @@
   <data name="clear_button" xml:space="preserve">
     <value>清除</value>
   </data>
-  <!-- 机内码查询区域 —— end -->
-  
-  <!-- CRC16校验区域 —— start -->
   <data name="TabPages3" xml:space="preserve">
     <value>CRC16校驗</value>
   </data>
@@ -271,9 +261,6 @@
   <data name="str2hex_radioButton" xml:space="preserve">
     <value>機內碼轉字符</value>
   </data>
-  <!-- CRC16校验区域 —— end -->
-  
-  <!-- 协议解析区域 —— start -->
   <data name="TabPages4" xml:space="preserve">
     <value>數據解析</value>
   </data>
@@ -286,9 +273,6 @@
   <data name="label_mes" xml:space="preserve">
     <value>除去幀頭幀尾，轉義字符為紅色，忘記轉義字符為藍色</value>
   </data>
-  <!-- 协议解析区域 —— end -->
-  
-  <!-- 标题栏区域 —— start -->
   <data name="语言" xml:space="preserve">
     <value>語言</value>
   </data>
@@ -307,14 +291,46 @@
   <data name="关于" xml:space="preserve">
     <value>關於</value>
   </data>
-  <!-- 标题栏区域 —— end -->
-  
   <data name="mes_openfile" xml:space="preserve">
     <value>請首先打開一個字庫文件</value>
   </data>
-  
   <data name="analysis_mes" xml:space="preserve">
     <value>數據解析只能檢測出動態區數據壹小部分錯誤，壹旦檢測出錯誤，還需要認真看協議！</value>
   </data>
-  
+  <data name="groupBox1" xml:space="preserve">
+    <value>字庫類型</value>
+  </data>
+  <data name="groupBox2" xml:space="preserve">
+    <value>預覽設置</value>
+  </data>
+  <data name="groupBox4" xml:space="preserve">
+    <value>字體順時針旋轉</value>
+  </data>
+  <data name="groupBox5" xml:space="preserve">
+    <value>字庫信息</value>
+  </data>
+  <data name="groupBox6" xml:space="preserve">
+    <value>模式選擇</value>
+  </data>
+  <data name="K_radioButton" xml:space="preserve">
+    <value>字庫卡系列</value>
+  </data>
+  <data name="label1" xml:space="preserve">
+    <value>機內碼：</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>點擊下載最新版</value>
+  </data>
+  <data name="makefont_Button" xml:space="preserve">
+    <value>制作字庫</value>
+  </data>
+  <data name="makefont_groupBox" xml:space="preserve">
+    <value>制作字庫</value>
+  </data>
+  <data name="q_radioButton" xml:space="preserve">
+    <value>6Q3系列</value>
+  </data>
+  <data name="viwer_font_label" xml:space="preserve">
+    <value>預覽字符</value>
+  </data>
 </root>

@@ -211,13 +211,13 @@
     <value>10, 703</value>
   </data>
   <data name="logo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 12</value>
+    <value>89, 12</value>
   </data>
   <data name="logo.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="logo.Text" xml:space="preserve">
-    <value>上海仰邦科技股份有限公司</value>
+    <value>点击下载最新版</value>
   </data>
   <data name="&gt;&gt;logo.Name" xml:space="preserve">
     <value>logo</value>
@@ -235,13 +235,13 @@
     <value>167, 17</value>
   </metadata>
   <data name="textBoxtime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1123, 697</value>
+    <value>1099, 703</value>
   </data>
   <data name="textBoxtime.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="textBoxtime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 18</value>
+    <value>134, 18</value>
   </data>
   <data name="textBoxtime.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -927,36 +927,6 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>607, 18</value>
   </metadata>
-  <data name="jineima.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 21</value>
-  </data>
-  <data name="jineima.Text" xml:space="preserve">
-    <value>机内码查询</value>
-  </data>
-  <data name="CRC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 21</value>
-  </data>
-  <data name="CRC.Text" xml:space="preserve">
-    <value>CRC校验</value>
-  </data>
-  <data name="language.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
-  </data>
-  <data name="language.Text" xml:space="preserve">
-    <value>语言</value>
-  </data>
-  <data name="help.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
-  </data>
-  <data name="help.Text" xml:space="preserve">
-    <value>帮助</value>
-  </data>
-  <data name="about.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 21</value>
-  </data>
-  <data name="about.Text" xml:space="preserve">
-    <value>关于</value>
-  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -981,23 +951,53 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="jineima.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 21</value>
+  </data>
+  <data name="jineima.Text" xml:space="preserve">
+    <value>机内码查询</value>
+  </data>
+  <data name="CRC.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 21</value>
+  </data>
+  <data name="CRC.Text" xml:space="preserve">
+    <value>CRC校验</value>
+  </data>
+  <data name="language.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 21</value>
+  </data>
+  <data name="language.Text" xml:space="preserve">
+    <value>语言</value>
+  </data>
   <data name="Simplified_Chinese.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>124, 22</value>
   </data>
   <data name="Simplified_Chinese.Text" xml:space="preserve">
     <value>中文简体</value>
   </data>
   <data name="Traditional_Chinese.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>124, 22</value>
   </data>
   <data name="Traditional_Chinese.Text" xml:space="preserve">
     <value>中文繁体</value>
   </data>
   <data name="English.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>124, 22</value>
   </data>
   <data name="English.Text" xml:space="preserve">
     <value>英语</value>
+  </data>
+  <data name="help.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 21</value>
+  </data>
+  <data name="help.Text" xml:space="preserve">
+    <value>帮助</value>
+  </data>
+  <data name="about.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 21</value>
+  </data>
+  <data name="about.Text" xml:space="preserve">
+    <value>关于</value>
   </data>
   <data name="&gt;&gt;pictureBoxFont.Name" xml:space="preserve">
     <value>pictureBoxFont</value>
@@ -1088,126 +1088,6 @@
   </data>
   <data name="&gt;&gt;View_mode_Button.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;down_button.Name" xml:space="preserve">
-    <value>down_button</value>
-  </data>
-  <data name="&gt;&gt;down_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;down_button.Parent" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;down_button.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;up_button.Name" xml:space="preserve">
-    <value>up_button</value>
-  </data>
-  <data name="&gt;&gt;up_button.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;up_button.Parent" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;up_button.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.Name" xml:space="preserve">
-    <value>labelIndex</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.Parent" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;labelIndex.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.Name" xml:space="preserve">
-    <value>numericUpDownIndex</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.Parent" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownIndex.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.Name" xml:space="preserve">
-    <value>buttonReadFont</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.Parent" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;buttonReadFont.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.Name" xml:space="preserve">
-    <value>labelFontName</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.Parent" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;labelFontName.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.Name" xml:space="preserve">
-    <value>textBoxFontName</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.Parent" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="viwer_groupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>679, 234</value>
-  </data>
-  <data name="viwer_groupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>268, 185</value>
-  </data>
-  <data name="viwer_groupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="viwer_groupBox.Text" xml:space="preserve">
-    <value>查看模式</value>
-  </data>
-  <data name="&gt;&gt;viwer_groupBox.Name" xml:space="preserve">
-    <value>viwer_groupBox</value>
-  </data>
-  <data name="&gt;&gt;viwer_groupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;viwer_groupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;viwer_groupBox.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1414,10 +1294,10 @@
     <value>宋体, 9pt</value>
   </data>
   <data name="textBoxFontName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>72, 13</value>
+    <value>77, 13</value>
   </data>
   <data name="textBoxFontName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>193, 21</value>
+    <value>188, 21</value>
   </data>
   <data name="textBoxFontName.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -1439,6 +1319,30 @@
   </data>
   <data name="&gt;&gt;textBoxFontName.ZOrder" xml:space="preserve">
     <value>9</value>
+  </data>
+  <data name="viwer_groupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>679, 234</value>
+  </data>
+  <data name="viwer_groupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>268, 185</value>
+  </data>
+  <data name="viwer_groupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="viwer_groupBox.Text" xml:space="preserve">
+    <value>查看模式</value>
+  </data>
+  <data name="&gt;&gt;viwer_groupBox.Name" xml:space="preserve">
+    <value>viwer_groupBox</value>
+  </data>
+  <data name="&gt;&gt;viwer_groupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;viwer_groupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;viwer_groupBox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="viwer_textBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>341, 52</value>
@@ -1744,7 +1648,9 @@
     <value>2</value>
   </data>
   <data name="richTextBoxData.Text" xml:space="preserve">
-    <value />
+    <value>
+
+字库卡工具版权所有（C）2020</value>
   </data>
   <data name="&gt;&gt;richTextBoxData.Name" xml:space="preserve">
     <value>richTextBoxData</value>
